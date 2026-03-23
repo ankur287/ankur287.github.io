@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — Week 1 — French for CLB 7</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── Header ───────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <span class="header-flag">🇫🇷</span>
+    <div>
+      <div class="header-title">French for CLB 7</div>
+      <div class="header-subtitle">Week 1 — Greetings &amp; Introductions</div>
+    </div>
+  </div>
+  <div class="week-progress">
+    <div class="progress-label"><span>Week 1 of 30</span><span>3%</span></div>
+    <div class="progress-track"><div class="progress-fill" style="width:3.3%"></div></div>
+  </div>
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <a href="index.html"      class="nav-link">🏠 Home</a>
+      <a href="vocabulary.html" class="nav-link">📖 Vocabulary</a>
+      <a href="grammar.html"    class="nav-link">📐 Grammar</a>
+      <a href="reading.html"    class="nav-link">📄 Reading</a>
+      <a href="quiz.html"       class="nav-link active">✏️ Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ── Main ──────────────────────────────────────────────── -->
+<main>
+
+  <div class="page-hero">
+    <span class="week-badge">Week 1 · Quiz</span>
+    <h1>Test Your Knowledge</h1>
+    <p>10 questions on vocabulary and grammar. Answer all questions to see your final score!</p>
+  </div>
+
+  <!-- Quiz progress indicator -->
+  <div class="card" style="padding:14px 20px;margin-bottom:16px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <span style="font-size:13px;font-weight:600;color:var(--navy);" id="progress-text">Question 1 of 10</span>
+      <span style="font-size:13px;color:var(--gray-600);" id="score-display">Score: 0/0</span>
+    </div>
+    <div class="progress-track" style="background:var(--gray-200);">
+      <div class="progress-fill" id="quiz-progress" style="width:10%;"></div>
+    </div>
+  </div>
+
+  <!-- ── Questions ─────────────────────────────────────── -->
+
+  <!-- Q1 -->
+  <div class="quiz-question active" id="q1">
+    <div class="quiz-q-number">Question 1 of 10</div>
+    <div class="quiz-q-text">What does <em>« Bonjour »</em> mean in English?</div>
+    <button class="quiz-option" onclick="answer(this,1,'A')" data-correct="false">
+      <span class="option-letter">A</span> Good evening
+    </button>
+    <button class="quiz-option" onclick="answer(this,1,'B')" data-correct="true">
+      <span class="option-letter">B</span> Hello / Good morning
+    </button>
+    <button class="quiz-option" onclick="answer(this,1,'C')" data-correct="false">
+      <span class="option-letter">C</span> Goodbye
+    </button>
+    <button class="quiz-option" onclick="answer(this,1,'D')" data-correct="false">
+      <span class="option-letter">D</span> Thank you
+    </button>
+    <div class="quiz-feedback" id="fb1"></div>
+    <div class="quiz-nav">
+      <span></span>
+      <button class="btn btn-primary" id="next1" style="display:none;" onclick="nextQ(1)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-question" id="q2">
+    <div class="quiz-q-number">Question 2 of 10</div>
+    <div class="quiz-q-text">How do you say <em>« My name is »</em> in French?</div>
+    <button class="quiz-option" onclick="answer(this,2,'A')" data-correct="false">
+      <span class="option-letter">A</span> Je suis
+    </button>
+    <button class="quiz-option" onclick="answer(this,2,'B')" data-correct="false">
+      <span class="option-letter">B</span> J'ai
+    </button>
+    <button class="quiz-option" onclick="answer(this,2,'C')" data-correct="true">
+      <span class="option-letter">C</span> Je m'appelle
+    </button>
+    <button class="quiz-option" onclick="answer(this,2,'D')" data-correct="false">
+      <span class="option-letter">D</span> Comment
+    </button>
+    <div class="quiz-feedback" id="fb2"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(2)">← Back</button>
+      <button class="btn btn-primary" id="next2" style="display:none;" onclick="nextQ(2)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-question" id="q3">
+    <div class="quiz-q-number">Question 3 of 10</div>
+    <div class="quiz-q-text">Which day comes <em>after</em> Mardi (Tuesday)?</div>
+    <button class="quiz-option" onclick="answer(this,3,'A')" data-correct="false">
+      <span class="option-letter">A</span> Lundi
+    </button>
+    <button class="quiz-option" onclick="answer(this,3,'B')" data-correct="false">
+      <span class="option-letter">B</span> Jeudi
+    </button>
+    <button class="quiz-option" onclick="answer(this,3,'C')" data-correct="true">
+      <span class="option-letter">C</span> Mercredi
+    </button>
+    <button class="quiz-option" onclick="answer(this,3,'D')" data-correct="false">
+      <span class="option-letter">D</span> Vendredi
+    </button>
+    <div class="quiz-feedback" id="fb3"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(3)">← Back</button>
+      <button class="btn btn-primary" id="next3" style="display:none;" onclick="nextQ(3)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-question" id="q4">
+    <div class="quiz-q-number">Question 4 of 10</div>
+    <div class="quiz-q-text">What does <em>« Enchanté »</em> mean?</div>
+    <button class="quiz-option" onclick="answer(this,4,'A')" data-correct="false">
+      <span class="option-letter">A</span> Thank you
+    </button>
+    <button class="quiz-option" onclick="answer(this,4,'B')" data-correct="false">
+      <span class="option-letter">B</span> Goodbye
+    </button>
+    <button class="quiz-option" onclick="answer(this,4,'C')" data-correct="true">
+      <span class="option-letter">C</span> Nice to meet you
+    </button>
+    <button class="quiz-option" onclick="answer(this,4,'D')" data-correct="false">
+      <span class="option-letter">D</span> You're welcome
+    </button>
+    <div class="quiz-feedback" id="fb4"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(4)">← Back</button>
+      <button class="btn btn-primary" id="next4" style="display:none;" onclick="nextQ(4)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz-question" id="q5">
+    <div class="quiz-q-number">Question 5 of 10</div>
+    <div class="quiz-q-text">How do you say <em>« eight »</em> in French?</div>
+    <button class="quiz-option" onclick="answer(this,5,'A')" data-correct="false">
+      <span class="option-letter">A</span> Sept
+    </button>
+    <button class="quiz-option" onclick="answer(this,5,'B')" data-correct="false">
+      <span class="option-letter">B</span> Neuf
+    </button>
+    <button class="quiz-option" onclick="answer(this,5,'C')" data-correct="false">
+      <span class="option-letter">C</span> Six
+    </button>
+    <button class="quiz-option" onclick="answer(this,5,'D')" data-correct="true">
+      <span class="option-letter">D</span> Huit
+    </button>
+    <div class="quiz-feedback" id="fb5"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(5)">← Back</button>
+      <button class="btn btn-primary" id="next5" style="display:none;" onclick="nextQ(5)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz-question" id="q6">
+    <div class="quiz-q-number">Question 6 of 10</div>
+    <div class="quiz-q-text">Which month is <em>« Février »</em>?</div>
+    <button class="quiz-option" onclick="answer(this,6,'A')" data-correct="false">
+      <span class="option-letter">A</span> January
+    </button>
+    <button class="quiz-option" onclick="answer(this,6,'B')" data-correct="true">
+      <span class="option-letter">B</span> February
+    </button>
+    <button class="quiz-option" onclick="answer(this,6,'C')" data-correct="false">
+      <span class="option-letter">C</span> March
+    </button>
+    <button class="quiz-option" onclick="answer(this,6,'D')" data-correct="false">
+      <span class="option-letter">D</span> April
+    </button>
+    <div class="quiz-feedback" id="fb6"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(6)">← Back</button>
+      <button class="btn btn-primary" id="next6" style="display:none;" onclick="nextQ(6)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz-question" id="q7">
+    <div class="quiz-q-number">Question 7 of 10</div>
+    <div class="quiz-q-text">What is the <em>formal</em> way to ask <em>« How are you? »</em></div>
+    <button class="quiz-option" onclick="answer(this,7,'A')" data-correct="false">
+      <span class="option-letter">A</span> Ça va ?
+    </button>
+    <button class="quiz-option" onclick="answer(this,7,'B')" data-correct="false">
+      <span class="option-letter">B</span> Comment tu vas ?
+    </button>
+    <button class="quiz-option" onclick="answer(this,7,'C')" data-correct="true">
+      <span class="option-letter">C</span> Comment allez-vous ?
+    </button>
+    <button class="quiz-option" onclick="answer(this,7,'D')" data-correct="false">
+      <span class="option-letter">D</span> Salut !
+    </button>
+    <div class="quiz-feedback" id="fb7"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(7)">← Back</button>
+      <button class="btn btn-primary" id="next7" style="display:none;" onclick="nextQ(7)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz-question" id="q8">
+    <div class="quiz-q-number">Question 8 of 10</div>
+    <div class="quiz-q-text">How do you say <em>« five »</em> in French?</div>
+    <button class="quiz-option" onclick="answer(this,8,'A')" data-correct="false">
+      <span class="option-letter">A</span> Trois
+    </button>
+    <button class="quiz-option" onclick="answer(this,8,'B')" data-correct="false">
+      <span class="option-letter">B</span> Quatre
+    </button>
+    <button class="quiz-option" onclick="answer(this,8,'C')" data-correct="true">
+      <span class="option-letter">C</span> Cinq
+    </button>
+    <button class="quiz-option" onclick="answer(this,8,'D')" data-correct="false">
+      <span class="option-letter">D</span> Six
+    </button>
+    <div class="quiz-feedback" id="fb8"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(8)">← Back</button>
+      <button class="btn btn-primary" id="next8" style="display:none;" onclick="nextQ(8)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz-question" id="q9">
+    <div class="quiz-q-number">Question 9 of 10</div>
+    <div class="quiz-q-text">Which greeting is used specifically in the <em>evening</em>?</div>
+    <button class="quiz-option" onclick="answer(this,9,'A')" data-correct="false">
+      <span class="option-letter">A</span> Bonjour
+    </button>
+    <button class="quiz-option" onclick="answer(this,9,'B')" data-correct="true">
+      <span class="option-letter">B</span> Bonsoir
+    </button>
+    <button class="quiz-option" onclick="answer(this,9,'C')" data-correct="false">
+      <span class="option-letter">C</span> Salut
+    </button>
+    <button class="quiz-option" onclick="answer(this,9,'D')" data-correct="false">
+      <span class="option-letter">D</span> Au revoir
+    </button>
+    <div class="quiz-feedback" id="fb9"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(9)">← Back</button>
+      <button class="btn btn-primary" id="next9" style="display:none;" onclick="nextQ(9)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz-question" id="q10">
+    <div class="quiz-q-number">Question 10 of 10</div>
+    <div class="quiz-q-text">What does <em>« De rien »</em> mean?</div>
+    <button class="quiz-option" onclick="answer(this,10,'A')" data-correct="false">
+      <span class="option-letter">A</span> Please
+    </button>
+    <button class="quiz-option" onclick="answer(this,10,'B')" data-correct="false">
+      <span class="option-letter">B</span> Thank you
+    </button>
+    <button class="quiz-option" onclick="answer(this,10,'C')" data-correct="true">
+      <span class="option-letter">C</span> You're welcome
+    </button>
+    <button class="quiz-option" onclick="answer(this,10,'D')" data-correct="false">
+      <span class="option-letter">D</span> Goodbye
+    </button>
+    <div class="quiz-feedback" id="fb10"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-secondary btn-sm" onclick="prevQ(10)">← Back</button>
+      <button class="btn btn-primary" id="next10" style="display:none;" onclick="showResults()">See Results 🎉</button>
+    </div>
+  </div>
+
+  <!-- ── Results ────────────────────────────────────────── -->
+  <div class="card quiz-results" id="results">
+    <div class="score-circle" id="score-circle">
+      <span class="score-number" id="score-num">0</span>
+      <span class="score-label">/ 10</span>
+    </div>
+    <div class="score-message" id="score-msg">Loading…</div>
+    <div class="score-sub"   id="score-sub"></div>
+    <button class="btn btn-primary btn-full" onclick="retryQuiz()" style="margin-bottom:12px;">↺ Try Again</button>
+    <a href="index.html" class="btn btn-secondary btn-full">← Back to Week 1</a>
+  </div>
+
+</main>
+
+<script>
+/* ── State ──────────────────────────────────────────────── */
+let score = 0;
+let answered = {};
+const total = 10;
+let current = 1;
+
+const explanations = {
+  1:  { correct: "Correct! <em>Bonjour</em> means 'Hello' or 'Good morning' — the most common French greeting.",     wrong: "Not quite. <em>Bonjour</em> means 'Hello / Good morning', not that option." },
+  2:  { correct: "Correct! <em>Je m'appelle</em> literally means 'I call myself' — used to give your name.",          wrong: "Not quite. <em>Je m'appelle</em> = 'My name is'. <em>Je suis</em> = 'I am', <em>J'ai</em> = 'I have'." },
+  3:  { correct: "Correct! The days go: Lundi → Mardi → <strong>Mercredi</strong> → Jeudi → Vendredi → Samedi → Dimanche.", wrong: "Not quite. After Mardi comes <strong>Mercredi</strong> (Wednesday)." },
+  4:  { correct: "Correct! <em>Enchanté</em> (m) / <em>Enchantée</em> (f) = 'Nice/pleased to meet you'.",             wrong: "Not quite. <em>Enchanté(e)</em> means 'Nice to meet you'." },
+  5:  { correct: "Correct! <em>Huit</em> = eight. Remember: 6=six, 7=sept, 8=huit, 9=neuf, 10=dix.",                 wrong: "Not quite. <em>Huit</em> = eight. Sept=7, Neuf=9, Six=6." },
+  6:  { correct: "Correct! <em>Février</em> is February — the second month of the year.",                             wrong: "Not quite. <em>Février</em> = February. Janvier=January, Mars=March, Avril=April." },
+  7:  { correct: "Correct! <em>Comment allez-vous ?</em> uses the formal <em>vous</em> form.",                        wrong: "Not quite. <em>Comment allez-vous ?</em> is the formal version. <em>Ça va ?</em> is informal." },
+  8:  { correct: "Correct! <em>Cinq</em> = five. Pronounced 'sahnk'.",                                                wrong: "Not quite. <em>Cinq</em> = five. Trois=3, Quatre=4, Six=6." },
+  9:  { correct: "Correct! <em>Bonsoir</em> is specifically an evening greeting. <em>Bonjour</em> = morning/day.",    wrong: "Not quite. <em>Bonsoir</em> is for the evening. <em>Bonjour</em> is for morning/daytime." },
+  10: { correct: "Correct! <em>De rien</em> = 'You're welcome'. You can also say <em>Avec plaisir</em> = 'With pleasure'.", wrong: "Not quite. <em>De rien</em> = 'You're welcome'. <em>Merci</em>=Thank you, <em>S'il vous plaît</em>=Please." },
+};
+
+/* ── Answer handler ─────────────────────────────────────── */
+function answer(btn, qNum, letter) {
+  if (answered[qNum]) return;
+  answered[qNum] = true;
+
+  const isCorrect = btn.dataset.correct === 'true';
+  const qEl = document.getElementById(`q${qNum}`);
+  const allBtns = qEl.querySelectorAll('.quiz-option');
+  const fb = document.getElementById(`fb${qNum}`);
+  const exp = explanations[qNum];
+
+  if (isCorrect) score++;
+
+  allBtns.forEach(b => {
+    b.disabled = true;
+    if (b.dataset.correct === 'true') b.classList.add('correct');
+  });
+  if (!isCorrect) btn.classList.add('incorrect');
+
+  fb.innerHTML = isCorrect
+    ? `✅ ${exp.correct}`
+    : `❌ ${exp.wrong}`;
+  fb.className = `quiz-feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
+
+  document.getElementById(`next${qNum}`).style.display = 'inline-flex';
+
+  // Update score display
+  const answered_count = Object.keys(answered).length;
+  document.getElementById('score-display').textContent = `Score: ${score}/${answered_count}`;
+}
+
+/* ── Navigation ──────────────────────────────────────────── */
+function showQ(n) {
+  document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+  document.getElementById(`q${n}`).classList.add('active');
+  current = n;
+  document.getElementById('progress-text').textContent = `Question ${n} of ${total}`;
+  document.getElementById('quiz-progress').style.width = `${(n / total) * 100}%`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function nextQ(n) { if (n < total) showQ(n + 1); }
+function prevQ(n) { if (n > 1) showQ(n - 1); }
+
+/* ── Results ─────────────────────────────────────────────── */
+function showResults() {
+  document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
+  const results = document.getElementById('results');
+  results.classList.add('show');
+
+  document.getElementById('score-num').textContent = score;
+
+  const pct = score / total;
+  let msg, sub, color;
+
+  if (pct === 1) {
+    msg = "🏆 Parfait ! Perfect score!";
+    sub = "Outstanding! You've mastered Week 1 completely. Time for Week 2!";
+    color = 'var(--green)';
+  } else if (pct >= 0.8) {
+    msg = "🌟 Excellent travail!";
+    sub = "Great work! Review any questions you missed, then move on to Week 2.";
+    color = 'var(--blue)';
+  } else if (pct >= 0.6) {
+    msg = "👍 Pas mal !";
+    sub = "Good effort! Revisit the Vocabulary and Grammar sections before Week 2.";
+    color = 'var(--orange)';
+  } else {
+    msg = "💪 Continue à pratiquer !";
+    sub = "Keep going! Review the vocabulary and reading sections again — you've got this!";
+    color = 'var(--red)';
+  }
+
+  document.getElementById('score-msg').textContent = msg;
+  document.getElementById('score-sub').textContent = sub;
+  document.querySelector('.score-circle').style.borderColor = color;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ── Retry ────────────────────────────────────────────────── */
+function retryQuiz() {
+  score = 0;
+  answered = {};
+
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('score-display').textContent = 'Score: 0/0';
+
+  document.querySelectorAll('.quiz-option').forEach(btn => {
+    btn.disabled = false;
+    btn.classList.remove('correct', 'incorrect');
+  });
+
+  document.querySelectorAll('.quiz-feedback').forEach(fb => {
+    fb.className = 'quiz-feedback';
+    fb.innerHTML = '';
+  });
+
+  document.querySelectorAll('[id^="next"]').forEach(btn => {
+    btn.style.display = 'none';
+  });
+
+  showQ(1);
+}
+</script>
+</body>
+</html>
