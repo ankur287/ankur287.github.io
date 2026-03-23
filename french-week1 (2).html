@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>French Week 1 – Greetings, Introductions, Numbers, Days & Months</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0f1f3d; --navy2:#162847; --blue:#2563eb; --blue-l:#3b82f6;
+      --sky:#dbeafe; --sky2:#eff6ff; --white:#ffffff; --grey:#f1f5f9;
+      --text:#1e293b; --muted:#64748b; --green:#16a34a; --red:#dc2626;
+      --gold:#f59e0b; --radius:14px; --shadow:0 4px 24px rgba(15,31,61,0.10);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--grey);color:var(--text);font-size:17px;line-height:1.65;}
+
+    .site-header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:var(--white);padding:2.5rem 1.25rem 2rem;text-align:center;position:relative;overflow:hidden;}
+    .site-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 0%,rgba(59,130,246,0.18) 0%,transparent 65%);pointer-events:none;}
+    .week-badge{display:inline-block;background:var(--blue);color:#fff;font-weight:600;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.9rem;border-radius:999px;margin-bottom:0.9rem;}
+    .site-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,6vw,2.6rem);font-weight:900;line-height:1.18;margin-bottom:0.7rem;}
+    .site-header p{font-size:1rem;color:rgba(255,255,255,0.75);max-width:480px;margin:0 auto;}
+
+    .container{max-width:680px;margin:0 auto;padding:1.5rem 1rem 3rem;}
+
+    .section-label{display:flex;align-items:center;gap:0.6rem;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);margin:2.2rem 0 1rem;}
+    .section-label .icon{background:var(--sky);color:var(--blue);border-radius:8px;width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.25rem 1.2rem;margin-bottom:1rem;}
+    .vocab-card{border-left:4px solid var(--blue);}
+    .vocab-french{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:var(--navy);line-height:1.2;}
+    .vocab-phonetic{font-size:0.82rem;color:var(--muted);font-style:italic;margin:0.1rem 0 0.2rem;}
+    .vocab-english{font-weight:600;font-size:1rem;color:var(--blue);margin-bottom:0.55rem;}
+    .vocab-example{background:var(--sky2);border-radius:8px;padding:0.6rem 0.75rem;font-size:0.93rem;margin-bottom:0.55rem;}
+    .vocab-example .fr{font-weight:500;color:var(--navy);}
+    .vocab-example .en{color:var(--muted);font-size:0.85rem;margin-top:0.15rem;}
+    .btn-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.4rem;}
+
+    .btn-audio{display:inline-flex;align-items:center;gap:0.35rem;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:0.52rem 1rem;font-size:0.9rem;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;transition:background 0.18s,transform 0.1s;}
+    .btn-audio:active{transform:scale(0.96);}
+    .btn-audio:hover{background:var(--blue);}
+    .btn-audio.sentence{background:var(--blue);}
+    .btn-audio.sentence:hover{background:var(--navy);}
+    .btn-audio.playing{background:var(--gold);color:#000;}
+
+    .grammar-intro{background:var(--sky2);border-radius:10px;padding:0.9rem 1rem;font-size:0.96rem;margin-bottom:1rem;border-left:4px solid var(--gold);color:var(--text);}
+    .grammar-sentence{display:flex;flex-direction:column;gap:0.15rem;}
+    .grammar-sentence .fr{font-weight:600;font-size:1.05rem;color:var(--navy);}
+    .grammar-sentence .en{color:var(--muted);font-size:0.9rem;}
+    .grammar-sentence+.grammar-sentence{margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--sky);}
+
+    .passage-fr{font-size:1rem;line-height:1.8;color:var(--navy);margin-bottom:1rem;}
+    .passage-en{background:var(--sky2);border-radius:8px;padding:0.8rem 1rem;font-size:0.92rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+    .btn-listen-full{display:inline-flex;align-items:center;gap:0.4rem;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0.7rem 1.3rem;font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;width:100%;justify-content:center;transition:background 0.18s;}
+    .btn-listen-full:hover{background:var(--blue);}
+    .btn-listen-full.playing{background:var(--gold);color:#000;}
+
+    .listen-item{display:flex;flex-direction:column;gap:0.15rem;}
+    .listen-item .fr{font-weight:600;color:var(--navy);}
+    .listen-item .en{color:var(--muted);font-size:0.88rem;}
+    .listen-item+.listen-item{margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid var(--sky);}
+    .btn-play{display:inline-flex;align-items:center;gap:0.35rem;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:0.45rem 0.9rem;font-size:0.88rem;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;margin-top:0.35rem;transition:background 0.15s;}
+    .btn-play:hover{background:var(--navy);}
+    .btn-play.playing{background:var(--gold);color:#000;}
+
+    .quiz-q{font-weight:600;margin-bottom:0.6rem;font-size:1rem;}
+    .quiz-opts{display:flex;flex-direction:column;gap:0.4rem;}
+    .quiz-opt{background:var(--grey);border:2px solid transparent;border-radius:9px;padding:0.6rem 0.9rem;font-family:'DM Sans',sans-serif;font-size:0.96rem;cursor:pointer;text-align:left;transition:border-color 0.15s,background 0.15s;}
+    .quiz-opt:hover:not([disabled]){border-color:var(--blue-l);background:var(--sky2);}
+    .quiz-opt.correct{background:#dcfce7;border-color:var(--green);color:var(--green);font-weight:600;}
+    .quiz-opt.wrong{background:#fee2e2;border-color:var(--red);color:var(--red);}
+    .quiz-feedback{font-size:0.88rem;margin-top:0.4rem;font-weight:500;}
+    .quiz-feedback.ok{color:var(--green);}
+    .quiz-feedback.bad{color:var(--red);}
+    #quiz-score{display:none;background:var(--navy);color:#fff;border-radius:var(--radius);padding:1.2rem;text-align:center;font-size:1.1rem;font-weight:600;margin-top:1rem;}
+
+    .progress-footer{background:var(--navy);color:rgba(255,255,255,0.85);text-align:center;padding:1.5rem 1rem;font-size:0.9rem;}
+    .progress-bar-wrap{background:rgba(255,255,255,0.15);border-radius:999px;height:6px;width:180px;margin:0.6rem auto 0.8rem;overflow:hidden;}
+    .progress-bar-fill{height:100%;background:var(--gold);border-radius:999px;width:3.33%;}
+    .nav-links{display:flex;justify-content:center;gap:1rem;margin-top:0.75rem;}
+    .nav-links a{color:var(--sky);text-decoration:none;font-weight:600;font-size:0.92rem;padding:0.35rem 0.9rem;border:1px solid rgba(255,255,255,0.25);border-radius:8px;transition:background 0.15s;}
+    .nav-links a:hover{background:rgba(255,255,255,0.1);}
+    .nav-links a.disabled{opacity:0.35;pointer-events:none;}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="week-badge">Week 1 of 30</div>
+  <h1>Bonjour &amp; Bienvenue!</h1>
+  <p>Greetings, introductions, numbers, days of the week, and months — your first steps toward CLB 7.</p>
+</header>
+
+<div class="container">
+
+  <!-- ── VOCABULARY ── -->
+  <div class="section-label"><span class="icon">📚</span> Vocabulary</div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Bonjour</div>
+    <div class="vocab-phonetic">bohn-ZHOOR</div>
+    <div class="vocab-english">Hello / Good day</div>
+    <div class="vocab-example">
+      <div class="fr">Bonjour, je m'appelle Marie.</div>
+      <div class="en">Hello, my name is Marie.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Bonjour">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Bonjour, je m'appelle Marie.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Bonsoir</div>
+    <div class="vocab-phonetic">bohn-SWAHR</div>
+    <div class="vocab-english">Good evening</div>
+    <div class="vocab-example">
+      <div class="fr">Bonsoir, madame. Comment allez-vous ?</div>
+      <div class="en">Good evening, ma'am. How are you?</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Bonsoir">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Bonsoir, madame. Comment allez-vous ?">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Au revoir</div>
+    <div class="vocab-phonetic">oh ruh-VWAHR</div>
+    <div class="vocab-english">Goodbye</div>
+    <div class="vocab-example">
+      <div class="fr">Au revoir ! À demain !</div>
+      <div class="en">Goodbye! See you tomorrow!</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Au revoir">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Au revoir ! À demain !">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">S'il vous plaît</div>
+    <div class="vocab-phonetic">seel voo PLEH</div>
+    <div class="vocab-english">Please (formal)</div>
+    <div class="vocab-example">
+      <div class="fr">Un café, s'il vous plaît.</div>
+      <div class="en">A coffee, please.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="S'il vous plaît">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Un café, s'il vous plaît.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Merci</div>
+    <div class="vocab-phonetic">mehr-SEE</div>
+    <div class="vocab-english">Thank you</div>
+    <div class="vocab-example">
+      <div class="fr">Merci beaucoup pour votre aide.</div>
+      <div class="en">Thank you very much for your help.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Merci">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Merci beaucoup pour votre aide.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Enchanté(e)</div>
+    <div class="vocab-phonetic">ahn-shahn-TAY</div>
+    <div class="vocab-english">Nice to meet you</div>
+    <div class="vocab-example">
+      <div class="fr">Je m'appelle Luc. Enchanté !</div>
+      <div class="en">My name is Luc. Nice to meet you!</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Enchanté">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Je m'appelle Luc. Enchanté !">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Comment allez-vous ?</div>
+    <div class="vocab-phonetic">koh-mahn ah-lay VOO</div>
+    <div class="vocab-english">How are you? (formal)</div>
+    <div class="vocab-example">
+      <div class="fr">Bonjour, monsieur. Comment allez-vous ?</div>
+      <div class="en">Hello, sir. How are you?</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Comment allez-vous ?">🔊 Phrase</button>
+      <button class="btn-audio sentence" data-text="Bonjour, monsieur. Comment allez-vous ?">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Ça va ?</div>
+    <div class="vocab-phonetic">sah VAH</div>
+    <div class="vocab-english">How's it going? (informal)</div>
+    <div class="vocab-example">
+      <div class="fr">Salut, ça va ? — Oui, ça va bien, merci !</div>
+      <div class="en">Hi, how's it going? — Yes, I'm doing well, thanks!</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Ça va ?">🔊 Phrase</button>
+      <button class="btn-audio sentence" data-text="Salut, ça va ? Oui, ça va bien, merci !">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Je m'appelle…</div>
+    <div class="vocab-phonetic">zhuh mah-PELL</div>
+    <div class="vocab-english">My name is…</div>
+    <div class="vocab-example">
+      <div class="fr">Je m'appelle Sophie et j'habite à Montréal.</div>
+      <div class="en">My name is Sophie and I live in Montréal.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Je m'appelle">🔊 Phrase</button>
+      <button class="btn-audio sentence" data-text="Je m'appelle Sophie et j'habite à Montréal.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Excusez-moi</div>
+    <div class="vocab-phonetic">ex-kyoo-zay MWAH</div>
+    <div class="vocab-english">Excuse me (formal)</div>
+    <div class="vocab-example">
+      <div class="fr">Excusez-moi, où est la gare ?</div>
+      <div class="en">Excuse me, where is the train station?</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Excusez-moi">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="Excusez-moi, où est la gare ?">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">D'accord</div>
+    <div class="vocab-phonetic">dah-KOR</div>
+    <div class="vocab-english">Okay / Agreed</div>
+    <div class="vocab-example">
+      <div class="fr">On se retrouve à midi ? D'accord !</div>
+      <div class="en">We'll meet at noon? Okay!</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="D'accord">🔊 Word</button>
+      <button class="btn-audio sentence" data-text="On se retrouve à midi ? D'accord !">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Un, deux, trois, quatre, cinq</div>
+    <div class="vocab-phonetic">uhn, duh, trwah, KAT-ruh, sank</div>
+    <div class="vocab-english">One, two, three, four, five</div>
+    <div class="vocab-example">
+      <div class="fr">J'ai deux billets pour le concert.</div>
+      <div class="en">I have two tickets for the concert.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Un, deux, trois, quatre, cinq">🔊 Numbers</button>
+      <button class="btn-audio sentence" data-text="J'ai deux billets pour le concert.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Six, sept, huit, neuf, dix</div>
+    <div class="vocab-phonetic">sees, set, weet, nuhf, dees</div>
+    <div class="vocab-english">Six, seven, eight, nine, ten</div>
+    <div class="vocab-example">
+      <div class="fr">Le cours commence à neuf heures.</div>
+      <div class="en">The class starts at nine o'clock.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Six, sept, huit, neuf, dix">🔊 Numbers</button>
+      <button class="btn-audio sentence" data-text="Le cours commence à neuf heures.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Lundi, mardi, mercredi</div>
+    <div class="vocab-phonetic">lun-DEE, mar-DEE, mehr-kruh-DEE</div>
+    <div class="vocab-english">Monday, Tuesday, Wednesday</div>
+    <div class="vocab-example">
+      <div class="fr">Le rendez-vous est lundi matin.</div>
+      <div class="en">The appointment is Monday morning.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Lundi, mardi, mercredi">🔊 Days</button>
+      <button class="btn-audio sentence" data-text="Le rendez-vous est lundi matin.">🔊 Days</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Jeudi, vendredi, samedi, dimanche</div>
+    <div class="vocab-phonetic">zhuh-DEE, vahn-druh-DEE, sam-DEE, dee-MAHNSH</div>
+    <div class="vocab-english">Thursday, Friday, Saturday, Sunday</div>
+    <div class="vocab-example">
+      <div class="fr">Je travaille du lundi au vendredi.</div>
+      <div class="en">I work from Monday to Friday.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Jeudi, vendredi, samedi, dimanche">🔊 Days</button>
+      <button class="btn-audio sentence" data-text="Je travaille du lundi au vendredi.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Janvier, février, mars, avril</div>
+    <div class="vocab-phonetic">zhahn-vYAY, fay-vryAY, mars, ah-VREEL</div>
+    <div class="vocab-english">January, February, March, April</div>
+    <div class="vocab-example">
+      <div class="fr">Mon anniversaire est en mars.</div>
+      <div class="en">My birthday is in March.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Janvier, février, mars, avril">🔊 Months</button>
+      <button class="btn-audio sentence" data-text="Mon anniversaire est en mars.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Mai, juin, juillet, août</div>
+    <div class="vocab-phonetic">may, zhwaN, zhwee-YAY, oot</div>
+    <div class="vocab-english">May, June, July, August</div>
+    <div class="vocab-example">
+      <div class="fr">Nous partons en vacances en juillet.</div>
+      <div class="en">We go on vacation in July.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Mai, juin, juillet, août">🔊 Months</button>
+      <button class="btn-audio sentence" data-text="Nous partons en vacances en juillet.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <div class="card vocab-card">
+    <div class="vocab-french">Septembre, octobre, novembre, décembre</div>
+    <div class="vocab-phonetic">sep-TAHM-bruh, ok-TOH-bruh, noh-VAHM-bruh, day-SAHM-bruh</div>
+    <div class="vocab-english">September, October, November, December</div>
+    <div class="vocab-example">
+      <div class="fr">L'école recommence en septembre.</div>
+      <div class="en">School starts again in September.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-audio" data-text="Septembre, octobre, novembre, décembre">🔊 Months</button>
+      <button class="btn-audio sentence" data-text="L'école recommence en septembre.">🔊 Sentence</button>
+    </div>
+  </div>
+
+  <!-- ── GRAMMAR ── -->
+  <div class="section-label"><span class="icon">📖</span> Grammar Focus</div>
+  <div class="card">
+    <div class="grammar-intro">
+      <strong>Introductions in French</strong> — Use <em>Je m'appelle</em> for your name, <em>J'habite à</em> for where you live, and <em>Je suis</em> for nationality or profession. Always use <em>vous</em> (formal) with strangers; use <em>tu</em> (informal) with friends.
+    </div>
+    <div class="grammar-sentence">
+      <div class="fr">Je m'appelle Ankur et j'habite à Toronto.</div>
+      <div class="en">My name is Ankur and I live in Toronto.</div>
+      <button class="btn-play" data-text="Je m'appelle Ankur et j'habite à Toronto.">▶ Écouter</button>
+    </div>
+    <div class="grammar-sentence">
+      <div class="fr">Je suis indien et je parle français.</div>
+      <div class="en">I am Indian and I speak French.</div>
+      <button class="btn-play" data-text="Je suis indien et je parle français.">▶ Écouter</button>
+    </div>
+    <div class="grammar-sentence">
+      <div class="fr">Comment vous appelez-vous ?</div>
+      <div class="en">What is your name? (formal)</div>
+      <button class="btn-play" data-text="Comment vous appelez-vous ?">▶ Écouter</button>
+    </div>
+    <div class="grammar-sentence">
+      <div class="fr">Aujourd'hui, c'est lundi, le trois janvier.</div>
+      <div class="en">Today is Monday, the third of January.</div>
+      <button class="btn-play" data-text="Aujourd'hui, c'est lundi, le trois janvier.">▶ Écouter</button>
+    </div>
+    <div class="grammar-sentence">
+      <div class="fr">Il y a trente et un jours en janvier.</div>
+      <div class="en">There are thirty-one days in January.</div>
+      <button class="btn-play" data-text="Il y a trente et un jours en janvier.">▶ Écouter</button>
+    </div>
+  </div>
+
+  <!-- ── READING PASSAGE ── -->
+  <div class="section-label"><span class="icon">📄</span> Reading Passage</div>
+  <div class="card">
+    <div class="passage-fr">
+      Bonjour ! Je m'appelle Camille. J'habite à Montréal, au Canada. Aujourd'hui, c'est mardi, le quinze mars. Il fait beau et je suis de bonne humeur.<br><br>
+      Je rencontre mon ami Paul au café. « Bonjour Paul, ça va ? » « Oui, ça va très bien, merci ! Et toi ? » « Moi aussi, je vais bien. »<br><br>
+      Paul travaille du lundi au vendredi. Son anniversaire est en octobre, le vingt-deux. Nous parlons pendant deux heures. À la fin, nous disons au revoir et à bientôt !
+    </div>
+    <div class="passage-en">
+      Hello! My name is Camille. I live in Montréal, Canada. Today is Tuesday, March 15th. The weather is nice and I am in a good mood.<br><br>
+      I am meeting my friend Paul at the café. "Hello Paul, how are you?" "Yes, I am doing very well, thanks! And you?" "Me too, I am well."<br><br>
+      Paul works Monday through Friday. His birthday is in October, on the 22nd. We talk for two hours. At the end, we say goodbye and see you soon!
+    </div>
+    <button class="btn-listen-full" id="btn-passage">🔊 Listen to Passage</button>
+  </div>
+
+  <!-- ── LISTENING EXERCISE ── -->
+  <div class="section-label"><span class="icon">🎧</span> Listening Exercise</div>
+  <div class="card">
+    <p style="font-size:0.9rem;color:var(--muted);margin-bottom:1rem;">Press play on each sentence, listen carefully, and read along.</p>
+
+    <div class="listen-item">
+      <div class="fr">1. Bonjour, je m'appelle Thomas. Enchanté !</div>
+      <div class="en">Hello, my name is Thomas. Nice to meet you!</div>
+      <button class="btn-play" data-text="Bonjour, je m'appelle Thomas. Enchanté !">▶ Play</button>
+    </div>
+    <div class="listen-item">
+      <div class="fr">2. Aujourd'hui, c'est vendredi, le sept février.</div>
+      <div class="en">Today is Friday, February 7th.</div>
+      <button class="btn-play" data-text="Aujourd'hui, c'est vendredi, le sept février.">▶ Play</button>
+    </div>
+    <div class="listen-item">
+      <div class="fr">3. J'habite à Ottawa depuis cinq ans.</div>
+      <div class="en">I have lived in Ottawa for five years.</div>
+      <button class="btn-play" data-text="J'habite à Ottawa depuis cinq ans.">▶ Play</button>
+    </div>
+    <div class="listen-item">
+      <div class="fr">4. Mon numéro de téléphone, c'est le zéro six un deux trois quatre.</div>
+      <div class="en">My phone number is 06-12-34.</div>
+      <button class="btn-play" data-text="Mon numéro de téléphone, c'est le zéro six un deux trois quatre.">▶ Play</button>
+    </div>
+    <div class="listen-item">
+      <div class="fr">5. Le rendez-vous est samedi, le dix novembre, à dix heures.</div>
+      <div class="en">The appointment is Saturday, November 10th, at ten o'clock.</div>
+      <button class="btn-play" data-text="Le rendez-vous est samedi, le dix novembre, à dix heures.">▶ Play</button>
+    </div>
+  </div>
+
+  <!-- ── QUIZ ── -->
+  <div class="section-label"><span class="icon">✏️</span> Mini Quiz</div>
+
+  <div class="card" id="q1">
+    <div class="quiz-q">1. What does "Enchanté" mean?</div>
+    <div class="quiz-opts">
+      <button class="quiz-opt" data-correct="false">Thank you</button>
+      <button class="quiz-opt" data-correct="true">Nice to meet you</button>
+      <button class="quiz-opt" data-correct="false">Goodbye</button>
+      <button class="quiz-opt" data-correct="false">Excuse me</button>
+    </div>
+    <div class="quiz-feedback" id="q1-fb"></div>
+  </div>
+
+  <div class="card" id="q2">
+    <div class="quiz-q">2. Which day comes after "mardi" (Tuesday)?</div>
+    <div class="quiz-opts">
+      <button class="quiz-opt" data-correct="false">Lundi</button>
+      <button class="quiz-opt" data-correct="false">Jeudi</button>
+      <button class="quiz-opt" data-correct="true">Mercredi</button>
+      <button class="quiz-opt" data-correct="false">Vendredi</button>
+    </div>
+    <div class="quiz-feedback" id="q2-fb"></div>
+  </div>
+
+  <div class="card" id="q3">
+    <div class="quiz-q">3. How do you say "My name is…" in French?</div>
+    <div class="quiz-opts">
+      <button class="quiz-opt" data-correct="false">Je suis…</button>
+      <button class="quiz-opt" data-correct="false">J'habite…</button>
+      <button class="quiz-opt" data-correct="true">Je m'appelle…</button>
+      <button class="quiz-opt" data-correct="false">Je parle…</button>
+    </div>
+    <div class="quiz-feedback" id="q3-fb"></div>
+  </div>
+
+  <div class="card" id="q4">
+    <div class="quiz-q">4. What is the French word for August?</div>
+    <div class="quiz-opts">
+      <button class="quiz-opt" data-correct="false">Juillet</button>
+      <button class="quiz-opt" data-correct="true">Août</button>
+      <button class="quiz-opt" data-correct="false">Octobre</button>
+      <button class="quiz-opt" data-correct="false">Juin</button>
+    </div>
+    <div class="quiz-feedback" id="q4-fb"></div>
+  </div>
+
+  <div class="card" id="q5">
+    <div class="quiz-q">5. Which phrase is the formal way to ask "How are you?"</div>
+    <div class="quiz-opts">
+      <button class="quiz-opt" data-correct="false">Ça va ?</button>
+      <button class="quiz-opt" data-correct="false">Tu vas bien ?</button>
+      <button class="quiz-opt" data-correct="true">Comment allez-vous ?</button>
+      <button class="quiz-opt" data-correct="false">Salut !</button>
+    </div>
+    <div class="quiz-feedback" id="q5-fb"></div>
+  </div>
+
+  <div id="quiz-score"></div>
+
+</div><!-- /container -->
+
+<footer class="progress-footer">
+  <div>Week <strong>1</strong> of 30 — Greetings &amp; Introductions</div>
+  <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+  <div class="nav-links">
+    <a class="disabled" href="#">← Week 0</a>
+    <a href="french-week2.html">Week 2 →</a>
+  </div>
+</footer>
+
+<script>
+// ── SPEECH ──────────────────────────────────────────────────────────────
+var synth = window.speechSynthesis;
+var frVoice = null;
+
+function loadVoices() {
+  var voices = synth.getVoices();
+  // Prefer a fr-FR voice, fall back to any French voice
+  for (var i = 0; i < voices.length; i++) {
+    if (voices[i].lang === 'fr-FR') { frVoice = voices[i]; break; }
+  }
+  if (!frVoice) {
+    for (var i = 0; i < voices.length; i++) {
+      if (voices[i].lang.startsWith('fr')) { frVoice = voices[i]; break; }
+    }
+  }
+}
+
+// Chrome loads voices asynchronously
+loadVoices();
+if (synth.onvoiceschanged !== undefined) {
+  synth.onvoiceschanged = loadVoices;
+}
+
+function speak(text, btn) {
+  if (!synth) { alert('Speech not supported in this browser.'); return; }
+  synth.cancel();
+
+  var utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'fr-FR';
+  utt.rate = 0.88;
+  utt.pitch = 1;
+  if (frVoice) utt.voice = frVoice;
+
+  if (btn) {
+    var orig = btn.textContent;
+    btn.classList.add('playing');
+    utt.onend = function() { btn.classList.remove('playing'); };
+    utt.onerror = function() { btn.classList.remove('playing'); };
+  }
+
+  synth.speak(utt);
+}
+
+// ── WIRE UP AUDIO BUTTONS ────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+
+  // All .btn-audio and .btn-play buttons use data-text
+  document.querySelectorAll('[data-text]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-text');
+      speak(text, btn);
+    });
+  });
+
+  // Passage button
+  var passageBtn = document.getElementById('btn-passage');
+  if (passageBtn) {
+    passageBtn.addEventListener('click', function() {
+      var text = "Bonjour ! Je m'appelle Camille. J'habite à Montréal, au Canada. Aujourd'hui, c'est mardi, le quinze mars. Il fait beau et je suis de bonne humeur. Je rencontre mon ami Paul au café. Bonjour Paul, ça va ? Oui, ça va très bien, merci ! Et toi ? Moi aussi, je vais bien. Paul travaille du lundi au vendredi. Son anniversaire est en octobre, le vingt-deux. Nous parlons pendant deux heures. À la fin, nous disons au revoir et à bientôt !";
+      speak(text, passageBtn);
+    });
+  }
+
+  // ── QUIZ ──────────────────────────────────────────────────────────────
+  var answered = {};
+  var score = 0;
+  var total = 5;
+
+  var quizCards = document.querySelectorAll('.card[id^="q"]');
+  quizCards.forEach(function(card) {
+    var qId = card.id;
+    var opts = card.querySelectorAll('.quiz-opt');
+    var fb = document.getElementById(qId + '-fb');
+
+    opts.forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        if (answered[qId]) return;
+        answered[qId] = true;
+
+        var correct = opt.getAttribute('data-correct') === 'true';
+        opts.forEach(function(o) { o.disabled = true; });
+
+        if (correct) {
+          opt.classList.add('correct');
+          fb.textContent = '✅ Correct!';
+          fb.className = 'quiz-feedback ok';
+          score++;
+        } else {
+          opt.classList.add('wrong');
+          fb.textContent = '❌ Not quite — try to remember this one!';
+          fb.className = 'quiz-feedback bad';
+          opts.forEach(function(o) {
+            if (o.getAttribute('data-correct') === 'true') o.classList.add('correct');
+          });
+        }
+
+        if (Object.keys(answered).length === total) {
+          var el = document.getElementById('quiz-score');
+          el.style.display = 'block';
+          var pct = Math.round((score / total) * 100);
+          var msg = pct === 100 ? '🎉 Perfect score! Félicitations !' :
+                    pct >= 60  ? '👍 Good work! Review the ones you missed.' :
+                                 '📚 Keep practicing — you\'ve got this!';
+          el.innerHTML = 'Your Score: <strong>' + score + ' / ' + total + '</strong> (' + pct + '%)<br><span style="font-size:0.95rem;font-weight:400;opacity:0.85">' + msg + '</span>';
+        }
+      });
+    });
+  });
+
+});
+</script>
+</body>
+</html>
