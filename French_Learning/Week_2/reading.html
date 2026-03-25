@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading — Week 2</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">🇫🇷 CLB 7</a>
+      <span class="header-title">Reading</span>
+      <span class="header-week">Week 2/30</span>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" style="width:6.67%"></div>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-link"><span class="nav-icon">🏠</span> Home</a>
+      <a href="vocabulary.html" class="nav-link"><span class="nav-icon">📖</span> Vocab</a>
+      <a href="grammar.html" class="nav-link"><span class="nav-icon">✏️</span> Grammar</a>
+      <a href="reading.html" class="nav-link active"><span class="nav-icon">📄</span> Reading</a>
+      <a href="quiz.html" class="nav-link"><span class="nav-icon">🎯</span> Quiz</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="section-header">
+      <h1 class="section-title">Reading Passage</h1>
+      <p class="section-subtitle">Read the passage, listen to it, then answer the comprehension questions.</p>
+    </div>
+
+    <!-- Full Passage with Long Player -->
+    <div class="reading-passage">
+      <div class="reading-title">📖 Ma journée — My Day</div>
+      <p id="passage-text">
+        Je m'appelle Marie. Je suis canadienne et j'ai vingt-cinq ans. Le matin, je vais à l'université à huit heures. J'ai cours de français et c'est très intéressant. Après les cours, je fais les courses au supermarché. J'ai besoin de légumes et de fruits frais. Mon ami Paul est très sympa. Il fait la cuisine souvent et il a beaucoup de talent. Le soir, nous sommes ensemble à la maison. Nous faisons nos devoirs puis nous regardons la télévision. Parfois, nous allons au cinéma ou au restaurant. J'ai toujours soif après le sport, alors je bois beaucoup d'eau. Je suis heureuse parce que j'ai de bons amis et une bonne vie.
+      </p>
+    </div>
+
+    <!-- Long Player for full passage -->
+    <div id="passage-audio" style="margin-bottom:24px;"></div>
+
+    <!-- Full Translation (hidden) -->
+    <div style="margin-bottom:28px;">
+      <button class="reveal-btn" id="trans-btn">👁 Show Full Translation</button>
+      <div class="vocab-english" id="trans-text" style="font-size:15px;font-weight:400;color:var(--gray-600);line-height:1.8;padding:16px;background:var(--gray-50);border-radius:var(--radius-sm);margin-top:10px;">
+        My name is Marie. I am Canadian and I am twenty-five years old. In the morning, I go to university at eight o'clock. I have French class and it is very interesting. After class, I do the grocery shopping at the supermarket. I need fresh vegetables and fruit. My friend Paul is very nice. He cooks often and he has a lot of talent. In the evening, we are together at home. We do our homework and then we watch television. Sometimes, we go to the cinema or to a restaurant. I am always thirsty after sports, so I drink a lot of water. I am happy because I have good friends and a good life.
+      </div>
+    </div>
+
+    <!-- Sentence-by-Sentence Breakdown -->
+    <div class="sentence-breakdown">
+      <div class="breakdown-label">Sentence by Sentence</div>
+
+      <div id="breakdown-container"></div>
+    </div>
+
+    <!-- Comprehension Questions -->
+    <div class="comprehension">
+      <h2 style="font-family:'Lora',serif;font-size:20px;color:var(--navy);margin-bottom:6px;">Comprehension Questions</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:20px;">Choose the best answer based on the passage above.</p>
+
+      <!-- Q1 -->
+      <div class="comp-question">
+        <div class="comp-q-text">1. Quelle est la nationalité de Marie ?<br><em style="font-size:14px;font-weight:400;color:var(--gray-600);">(What is Marie's nationality?)</em></div>
+        <div class="comp-options" id="q1-options">
+          <button class="comp-option" onclick="checkComp(this, false, 'q1-feedback', 'Non — the passage says she is Canadian.')">Française</button>
+          <button class="comp-option" onclick="checkComp(this, true,  'q1-feedback', 'Oui ! The passage says &quot;Je suis canadienne.&quot;')">Canadienne</button>
+          <button class="comp-option" onclick="checkComp(this, false, 'q1-feedback', 'Non — Marie studies at university, she is Canadian.')">Américaine</button>
+          <button class="comp-option" onclick="checkComp(this, false, 'q1-feedback', 'Non — re-read the first sentence of the passage.')">Belge</button>
+        </div>
+        <div class="comp-feedback" id="q1-feedback"></div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="comp-question">
+        <div class="comp-q-text">2. Qu'est-ce que Marie fait après ses cours ?<br><em style="font-size:14px;font-weight:400;color:var(--gray-600);">(What does Marie do after class?)</em></div>
+        <div class="comp-options" id="q2-options">
+          <button class="comp-option" onclick="checkComp(this, false, 'q2-feedback', 'Non — she goes to the supermarket, not the cinema, after class.')">Elle va au cinéma.</button>
+          <button class="comp-option" onclick="checkComp(this, false, 'q2-feedback', 'Non — she does the grocery shopping, not homework, after class.')">Elle fait ses devoirs.</button>
+          <button class="comp-option" onclick="checkComp(this, true,  'q2-feedback', 'Oui ! &quot;Je fais les courses au supermarché&quot; — she does grocery shopping.')">Elle fait les courses.</button>
+          <button class="comp-option" onclick="checkComp(this, false, 'q2-feedback', 'Non — she exercises, but that is mentioned with thirst, not right after class.')">Elle fait du sport.</button>
+        </div>
+        <div class="comp-feedback" id="q2-feedback"></div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="comp-question">
+        <div class="comp-q-text">3. Qu'est-ce que Marie et Paul font le soir à la maison ?<br><em style="font-size:14px;font-weight:400;color:var(--gray-600);">(What do Marie and Paul do in the evening at home?)</em></div>
+        <div class="comp-options" id="q3-options">
+          <button class="comp-option" onclick="checkComp(this, false, 'q3-feedback', 'Non — they do homework then watch TV at home, not cook.')">Ils font la cuisine.</button>
+          <button class="comp-option" onclick="checkComp(this, true,  'q3-feedback', 'Oui ! &quot;Nous faisons nos devoirs puis nous regardons la télévision.&quot;')">Ils font leurs devoirs et regardent la télé.</button>
+          <button class="comp-option" onclick="checkComp(this, false, 'q3-feedback', 'Non — they sometimes go to the cinema, but not every evening.')">Ils vont au cinéma.</button>
+          <button class="comp-option" onclick="checkComp(this, false, 'q3-feedback', 'Non — Paul cooks, but this is not what they do together every evening.')">Ils font du sport.</button>
+        </div>
+        <div class="comp-feedback" id="q3-feedback"></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="audio.js"></script>
+  <script>
+    // ── Full passage audio (long player — 109 words)
+    const passageText = "Je m'appelle Marie. Je suis canadienne et j'ai vingt-cinq ans. Le matin, je vais à l'université à huit heures. J'ai cours de français et c'est très intéressant. Après les cours, je fais les courses au supermarché. J'ai besoin de légumes et de fruits frais. Mon ami Paul est très sympa. Il fait la cuisine souvent et il a beaucoup de talent. Le soir, nous sommes ensemble à la maison. Nous faisons nos devoirs puis nous regardons la télévision. Parfois, nous allons au cinéma ou au restaurant. J'ai toujours soif après le sport, alors je bois beaucoup d'eau. Je suis heureuse parce que j'ai de bons amis et une bonne vie.";
+    buildLongPlayer(passageText, "passage-audio");
+
+    // ── Full translation reveal
+    setupReveal('trans-btn','trans-text','👁 Show Full Translation','🙈 Hide Translation');
+
+    // ── Sentence breakdown data
+    const sentences = [
+      { fr: "Je m'appelle Marie.", en: "My name is Marie." },
+      { fr: "Je suis canadienne et j'ai vingt-cinq ans.", en: "I am Canadian and I am twenty-five years old." },
+      { fr: "Le matin, je vais à l'université à huit heures.", en: "In the morning, I go to university at eight o'clock." },
+      { fr: "J'ai cours de français et c'est très intéressant.", en: "I have French class and it is very interesting." },
+      { fr: "Après les cours, je fais les courses au supermarché.", en: "After class, I do the grocery shopping at the supermarket." },
+      { fr: "J'ai besoin de légumes et de fruits frais.", en: "I need fresh vegetables and fruit." },
+      { fr: "Mon ami Paul est très sympa.", en: "My friend Paul is very nice." },
+      { fr: "Il fait la cuisine souvent et il a beaucoup de talent.", en: "He cooks often and he has a lot of talent." },
+      { fr: "Le soir, nous sommes ensemble à la maison.", en: "In the evening, we are together at home." },
+      { fr: "Nous faisons nos devoirs puis nous regardons la télévision.", en: "We do our homework and then we watch television." },
+      { fr: "Parfois, nous allons au cinéma ou au restaurant.", en: "Sometimes, we go to the cinema or to a restaurant." },
+      { fr: "J'ai toujours soif après le sport, alors je bois beaucoup d'eau.", en: "I am always thirsty after sports, so I drink a lot of water." },
+      { fr: "Je suis heureuse parce que j'ai de bons amis et une bonne vie.", en: "I am happy because I have good friends and a good life." }
+    ];
+
+    const breakdownContainer = document.getElementById('breakdown-container');
+
+    sentences.forEach((s, i) => {
+      const audioId  = `s-audio-${i}`;
+      const enId     = `s-en-${i}`;
+      const enBtnId  = `s-en-btn-${i}`;
+
+      const row = document.createElement('div');
+      row.className = 'sentence-row';
+      row.innerHTML = `
+        <div class="sentence-fr">${s.fr}</div>
+        <div id="${audioId}" style="margin-bottom:8px;"></div>
+        <button class="reveal-btn" id="${enBtnId}" style="font-size:13px;min-height:44px;">👁 Show Translation</button>
+        <div class="vocab-english" id="${enId}" style="font-size:15px;font-weight:400;color:var(--gray-600);padding-top:6px;">${s.en}</div>
+      `;
+      breakdownContainer.appendChild(row);
+
+      requestAnimationFrame(() => {
+        buildPlayer(s.fr, audioId);
+        setupReveal(enBtnId, enId, '👁 Show Translation', '🙈 Hide');
+      });
+    });
+
+    // ── Comprehension check
+    function checkComp(btn, isCorrect, feedbackId, message) {
+      const optionGroup = btn.closest('.comp-question').querySelectorAll('.comp-option');
+      optionGroup.forEach(b => { b.disabled = true; });
+
+      btn.classList.add(isCorrect ? 'correct' : 'wrong');
+
+      const fb = document.getElementById(feedbackId);
+      fb.className = 'comp-feedback ' + (isCorrect ? 'correct' : 'wrong');
+      fb.innerHTML = (isCorrect ? '✅ ' : '❌ ') + message;
+    }
+  </script>
+</body>
+</html>
