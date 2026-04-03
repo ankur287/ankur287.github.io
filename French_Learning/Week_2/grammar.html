@@ -7,251 +7,202 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
 
-    /* ── Verb section card ── */
-    .verb-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--gray-200);
-      margin-bottom: 24px;
-      overflow: hidden;
-    }
-    .verb-card-header {
-      background: var(--navy);
-      padding: 18px 20px 14px;
-    }
-    .verb-card-title {
-      font-family: 'Lora', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .verb-card-meaning {
-      font-size: 15px;
-      color: var(--blue-light);
-      font-weight: 600;
-      margin-left: 10px;
-    }
-    .verb-card-desc {
-      font-size: 13px;
-      color: #94a3b8;
-      margin-top: 6px;
-      line-height: 1.5;
-    }
-    .verb-card-controls {
-      display: flex;
-      gap: 8px;
-      padding: 12px 20px;
-      border-bottom: 2px solid var(--gray-100);
-    }
-    .ctrl-btn {
-      flex: 1;
-      background: var(--navy);
-      color: white;
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      min-height: 42px;
-      font-family: 'Inter', sans-serif;
-      transition: background .2s;
-    }
-    .ctrl-btn:hover { background: var(--navy-light); }
-    .ctrl-btn.hide { background: var(--gray-100); color: var(--gray-600); }
-    .ctrl-btn.hide:hover { background: var(--gray-200); }
-
-    /* ── One pronoun block ── */
-    .pronoun-block {
-      border-bottom: 2px solid var(--gray-100);
-    }
-    .pronoun-block:last-child { border-bottom: none; }
-    .pronoun-block.even { background: var(--gray-50); }
-
-    .pronoun-header {
+    /* ── Rotate hint ── */
+    .rotate-hint {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 14px 20px 8px;
-      flex-wrap: wrap;
+      gap: 8px;
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #1e40af;
+      margin-bottom: 16px;
     }
-    .pronoun-chip {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+
+    /* ── Master table wrapper ── */
+    .master-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .master-table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 560px;
+      font-size: 14px;
+      background: white;
+    }
+
+    /* ── Column headers (verb names) ── */
+    .master-table thead tr.verb-header th {
+      background: var(--navy);
+      color: white;
+      padding: 12px 10px 6px;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 700;
+      border-right: 2px solid #2d3f6a;
+    }
+    .master-table thead tr.verb-header th:first-child {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      vertical-align: bottom;
+      padding-bottom: 10px;
+      border-right: 3px solid #4a90d9;
+    }
+    .verb-en-sub {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--blue-light);
+      margin-top: 2px;
+      padding-bottom: 8px;
+    }
+
+    /* ── Pronoun column ── */
+    .master-table td.pronoun-cell {
+      background: var(--navy);
+      color: white;
+      padding: 10px 12px;
+      border-right: 3px solid #4a90d9;
+      border-bottom: 1px solid #2d3f6a;
+      vertical-align: middle;
       min-width: 90px;
     }
-    .pronoun-fr {
+    .pron-fr {
       font-family: 'Lora', serif;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
-      color: var(--navy);
+      color: white;
     }
-    .pronoun-en {
+    .pron-en {
       font-size: 11px;
-      color: var(--blue);
+      color: #93c5fd;
+      margin-top: 2px;
       font-style: italic;
-      margin-top: 1px;
     }
-    .arrow-sep {
-      font-size: 18px;
-      color: var(--gray-300);
+
+    /* ── Verb cells ── */
+    .master-table td.verb-cell {
+      padding: 10px 10px 8px;
+      border-right: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+      vertical-align: top;
+      text-align: center;
+      min-width: 120px;
     }
-    .conj-form {
+    .master-table tr:nth-child(even) td.verb-cell {
+      background: var(--gray-50);
+    }
+    .master-table tr:nth-child(odd) td.verb-cell {
+      background: white;
+    }
+    /* Last column no right border */
+    .master-table td:last-child,
+    .master-table th:last-child { border-right: none; }
+
+    /* ── Inside each verb cell ── */
+    .cell-form {
       font-family: 'Lora', serif;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--navy);
+      margin-bottom: 3px;
     }
-    .conj-meaning {
-      font-size: 14px;
-      font-weight: 700;
-      color: #166534;
-      background: #dcfce7;
-      border-radius: 20px;
-      padding: 3px 12px;
-      margin-left: auto;
+    .cell-phonetic {
+      font-size: 11px;
+      color: #7c3aed;
+      font-style: italic;
+      margin-bottom: 6px;
+      line-height: 1.4;
     }
-    .conj-warn {
+    .cell-warn {
       display: inline-block;
       background: #fef3c7;
       border: 1px solid #fde68a;
-      border-radius: 4px;
+      border-radius: 3px;
       font-size: 9px;
-      padding: 1px 5px;
+      padding: 1px 4px;
       color: #92400e;
+      font-weight: 700;
+      font-style: normal;
       font-family: 'Inter', sans-serif;
-      font-weight: 700;
+      margin-left: 3px;
       vertical-align: super;
-      margin-left: 2px;
     }
-
-    /* ── Example list ── */
-    .example-list {
-      padding: 4px 20px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .example-item {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-sm);
-      padding: 12px 14px;
-    }
-    .pronoun-block.even .example-item {
-      background: var(--white);
-    }
-    .ex-fr {
-      font-family: 'Lora', serif;
-      font-size: 16px;
-      color: var(--navy);
-      font-style: italic;
-      margin-bottom: 4px;
-    }
-    .ex-phonetic {
-      font-size: 12px;
-      color: #7c3aed;
-      font-style: italic;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-    .ex-phonetic-label {
+    .cell-liaison {
+      display: inline-block;
+      background: #ede9fe;
+      border-radius: 3px;
       font-size: 9px;
+      padding: 1px 4px;
+      color: #6d28d9;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #a78bfa;
-      margin-right: 4px;
+      font-style: normal;
+      font-family: 'Inter', sans-serif;
+      margin-left: 3px;
+      vertical-align: super;
     }
-    .ex-controls {
+    .cell-player {
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .ex-player-wrap { display: flex; gap: 6px; }
-
-    /* Tiny play buttons */
-    .tiny-play {
-      display: inline-flex;
-      align-items: center;
+      justify-content: center;
       gap: 4px;
+      margin-top: 2px;
+    }
+    .cell-play-btn {
       background: var(--blue);
       color: white;
       border: none;
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 12px;
+      border-radius: 5px;
+      padding: 4px 10px;
+      font-size: 11px;
       font-weight: 700;
       cursor: pointer;
-      min-height: 32px;
       font-family: 'Inter', sans-serif;
+      min-height: 26px;
       transition: background .15s;
       white-space: nowrap;
     }
-    .tiny-play:hover { background: var(--blue-light); }
-    .tiny-restart {
-      display: inline-flex;
-      align-items: center;
+    .cell-play-btn:hover { background: var(--blue-light); }
+    .cell-restart-btn {
       background: var(--gray-100);
-      color: var(--gray-600);
+      color: var(--gray-500);
       border: none;
-      border-radius: 6px;
-      padding: 6px 9px;
-      font-size: 12px;
+      border-radius: 5px;
+      padding: 4px 7px;
+      font-size: 11px;
       cursor: pointer;
-      min-height: 32px;
       font-family: 'Inter', sans-serif;
+      min-height: 26px;
       transition: background .15s;
     }
-    .tiny-restart:hover { background: var(--gray-200); }
+    .cell-restart-btn:hover { background: var(--gray-200); }
 
-    /* Show EN button */
-    .ex-show-btn {
-      background: none;
-      border: none;
-      font-size: 12px;
-      color: var(--blue);
-      cursor: pointer;
-      padding: 4px 0;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      text-decoration: underline;
-      min-height: 28px;
-    }
-    .ex-en {
-      display: none;
-      font-size: 13px;
-      color: var(--gray-600);
-      font-weight: 500;
-      padding: 4px 0 0;
-    }
-    .ex-en.shown { display: block; }
-
-    /* ── Concept + legend ── */
-    .concept-box {
-      background: var(--navy);
-      color: white;
-      border-radius: var(--radius);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .concept-box h3 { font-family:'Lora',serif; font-size:17px; color:var(--blue-light); margin-bottom:10px; }
-    .concept-box p { font-size:15px; color:#cbd5e1; line-height:1.7; margin-bottom:8px; }
-    .concept-box p:last-child { margin-bottom:0; }
-
-    .phonetic-legend {
+    /* ── Legend ── */
+    .legend {
       background: #faf5ff;
       border: 1.5px solid #e9d5ff;
       border-radius: var(--radius);
-      padding: 16px;
+      padding: 14px 16px;
       margin-bottom: 20px;
+      font-size: 13px;
+      color: #581c87;
+      line-height: 1.8;
     }
-    .phonetic-legend h3 { font-size:14px; font-weight:700; color:#6b21a8; margin-bottom:10px; }
-    .phonetic-legend p { font-size:13px; color:#581c87; line-height:1.8; margin:0; }
-    .phonetic-legend code {
+    .legend strong { color: #6b21a8; }
+    .legend code {
       background: white;
       border: 1px solid #d8b4fe;
       border-radius: 4px;
@@ -260,31 +211,113 @@
       color: #7c3aed;
       font-size: 12px;
     }
+    .badge-liaison {
+      display: inline-block;
+      background: #ede9fe;
+      border-radius: 3px;
+      font-size: 10px;
+      padding: 1px 5px;
+      color: #6d28d9;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+    }
+    .badge-warn {
+      display: inline-block;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      border-radius: 3px;
+      font-size: 10px;
+      padding: 1px 5px;
+      color: #92400e;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+    }
 
-    /* ── Pronoun reference ── */
-    .pron-ref { width:100%; border-collapse:collapse; font-size:14px; }
-    .pron-ref th { background:var(--navy); color:white; padding:9px 12px; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; text-align:left; }
-    .pron-ref td { padding:10px 12px; border-bottom:1px solid var(--gray-100); }
-    .pron-ref tr:last-child td { border-bottom:none; }
-    .pron-ref tr:nth-child(even) td { background:var(--gray-50); }
-    .pron-fr-cell { font-family:'Lora',serif; font-weight:700; font-size:16px; color:var(--navy); }
-    .pron-en-cell { font-weight:700; color:#166534; font-size:14px; }
-    .pron-note-cell { font-size:12px; color:var(--gray-600); }
+    /* ── avoir info box ── */
+    .avoir-box {
+      background: #fffbeb;
+      border: 1.5px solid #fde68a;
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .avoir-box h3 { font-size:14px; color:#92400e; font-weight:700; margin-bottom:10px; }
+    .avoir-box p { font-size:13px; color:#78350f; line-height:1.9; margin:0; }
 
-    /* ── Info boxes ── */
-    .avoir-box { background:#fffbeb; border:1.5px solid #fde68a; border-radius:var(--radius-sm); padding:14px; margin:0 20px 16px; }
-    .avoir-box-title { font-size:14px; color:#92400e; font-weight:700; margin-bottom:8px; }
-    .avoir-box p { font-size:13px; color:#78350f; line-height:1.8; margin:0; }
-    .aller-box { background:#f0fdf4; border:1.5px solid #bbf7d0; border-radius:var(--radius-sm); padding:14px; margin:0 20px 16px; }
-    .aller-box-title { font-size:14px; color:#166534; font-weight:700; margin-bottom:8px; }
-    .aller-box p { font-size:13px; color:#14532d; line-height:1.8; margin:0; }
+    /* ── Example sentences section ── */
+    .examples-section { margin-bottom: 8px; }
+    .examples-title {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .examples-sub {
+      font-size: 13px;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+    }
+    .ex-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      box-shadow: var(--shadow);
+    }
+    .ex-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+      margin-bottom: 6px;
+    }
+    .ex-fr {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: var(--navy);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+    .ex-ph {
+      font-size: 12px;
+      color: #7c3aed;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .ex-player-row { margin-bottom: 8px; }
+    .ex-show-btn {
+      background: none;
+      border: none;
+      font-size: 12px;
+      color: var(--blue);
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-decoration: underline;
+      min-height: 24px;
+    }
+    .ex-en {
+      display: none;
+      font-size: 13px;
+      color: var(--gray-600);
+      font-weight: 500;
+      padding-top: 4px;
+    }
+    .ex-en.shown { display: block; }
 
-    /* ── Notes expandable ── */
-    .notes-wrap { padding: 0 20px 20px; }
-
-    /* ── Practice sentences ── */
-    .grammar-example { background:var(--blue-pale); border-left:4px solid var(--blue); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:14px 16px; margin-bottom:12px; }
-    .grammar-example .fr-sentence { font-family:'Lora',serif; font-size:17px; color:var(--navy); margin-bottom:6px; font-style:italic; }
+    .concept-box {
+      background: var(--navy);
+      color: white;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .concept-box h3 { font-family:'Lora',serif; font-size:17px; color:var(--blue-light); margin-bottom:10px; }
+    .concept-box p { font-size:14px; color:#cbd5e1; line-height:1.7; margin-bottom:8px; }
+    .concept-box p:last-child { margin-bottom:0; }
   </style>
 </head>
 <body>
@@ -312,541 +345,275 @@
 
   <main class="main">
     <div class="section-header">
-      <h1 class="section-title">Grammar: 4 Essential Verbs</h1>
-      <p class="section-subtitle">être · avoir · aller · faire — 3 spoken examples per conjugation so you can hear how sounds blend.</p>
+      <h1 class="section-title">Grammar: The 4 Verbs</h1>
+      <p class="section-subtitle">One table. All 8 pronouns × 4 verbs. Tap ▶ to hear how each sounds when spoken.</p>
     </div>
 
-    <div class="concept-box">
-      <h3>What is conjugation?</h3>
-      <p>In English, most verbs barely change: "I go, you go, she <strong>goes</strong>." In French, verbs change their ending for <strong>every subject pronoun</strong>. The four verbs this week are all <strong>irregular</strong> — their forms don't follow a pattern and must be memorised.</p>
-      <p>Each pronoun block below shows the same 3 sentences so you can compare how the verb sounds in context — not just in isolation.</p>
+    <!-- Rotate hint -->
+    <div class="rotate-hint">
+      📱 Table is wide — rotate your phone to landscape for the best view.
     </div>
 
-    <div class="phonetic-legend">
-      <h3>🔊 How to read the phonetics</h3>
+    <!-- Phonetic legend -->
+    <div class="legend">
+      <strong>🔊 Reading the phonetics</strong> — these show how the <em>pronoun + verb</em> sounds when spoken naturally together.<br>
+      <code>zh</code> = s in "measure" &nbsp;·&nbsp;
+      <code>ew</code> = round lips, say "ee" &nbsp;·&nbsp;
+      <code>ON/AN</code> = nasal sounds &nbsp;·&nbsp;
+      <span class="badge-liaison">liaison</span> = final consonant blends into next word (e.g. vous→êtes = voo-ZET) &nbsp;·&nbsp;
+      <span class="badge-warn">⚠ trap</span> = irregular pronunciation
+    </div>
+
+    <!-- avoir note -->
+    <div class="avoir-box">
+      <h3>⚠️ avoir ≠ être for body states</h3>
       <p>
-        Phonetics show how the <strong>full sentence</strong> sounds when spoken naturally. French words blend together — this is called <strong>liaison</strong>.<br><br>
-        <code>zh</code> = s in "measure" &nbsp;·&nbsp;
-        <code>ew</code> = round lips for "oo" but say "ee" &nbsp;·&nbsp;
-        <code>ON</code> = nasal (bon) &nbsp;·&nbsp;
-        <code>AN</code> = nasal (encore) &nbsp;·&nbsp;
-        <code>-Z-</code> or <code>-T-</code> between words = liaison sound blending two words together<br><br>
-        <strong>Example:</strong> <em>il est étudiant</em> — the <em>t</em> in <em>est</em> links to <em>étudiant</em> → <code>eel-EH-tay-tew-DYON</code>. Without liaison you'd expect a gap — there isn't one.
+        English uses "to be" — French uses <em>avoir</em> (to have):<br>
+        <strong>J'ai faim</strong> = I am hungry &nbsp;·&nbsp;
+        <strong>J'ai soif</strong> = I am thirsty &nbsp;·&nbsp;
+        <strong>J'ai vingt ans</strong> = I am 20 years old &nbsp;·&nbsp;
+        <strong>J'ai raison</strong> = I am right &nbsp;·&nbsp;
+        <strong>J'ai froid</strong> = I am cold
       </p>
     </div>
 
-    <div class="card">
-      <h2 style="font-family:'Lora',serif;font-size:18px;color:var(--navy);margin-bottom:14px;">📌 Subject Pronouns</h2>
-      <table class="pron-ref">
-        <thead><tr><th>French</th><th>English</th><th>When to use</th></tr></thead>
-        <tbody>
-          <tr><td class="pron-fr-cell">je (j')</td><td class="pron-en-cell">I</td><td class="pron-note-cell">Yourself. Becomes j' before a vowel.</td></tr>
-          <tr><td class="pron-fr-cell">tu</td><td class="pron-en-cell">you (casual)</td><td class="pron-note-cell">Friend, family member, child.</td></tr>
-          <tr><td class="pron-fr-cell">il</td><td class="pron-en-cell">he</td><td class="pron-note-cell">One male person.</td></tr>
-          <tr><td class="pron-fr-cell">elle</td><td class="pron-en-cell">she</td><td class="pron-note-cell">One female person.</td></tr>
-          <tr><td class="pron-fr-cell">nous</td><td class="pron-en-cell">we</td><td class="pron-note-cell">Formal "we". Informally, French speakers use "on".</td></tr>
-          <tr><td class="pron-fr-cell">vous</td><td class="pron-en-cell">you (formal or plural)</td><td class="pron-note-cell">Stranger/boss, OR multiple people at once.</td></tr>
-          <tr><td class="pron-fr-cell">ils</td><td class="pron-en-cell">they (mixed or all male)</td><td class="pron-note-cell">Group with at least one male.</td></tr>
-          <tr><td class="pron-fr-cell">elles</td><td class="pron-en-cell">they (all female)</td><td class="pron-note-cell">Only when every person in the group is female.</td></tr>
+    <!-- ═══════════ MASTER TABLE ═══════════ -->
+    <div class="master-table-wrap">
+      <table class="master-table" id="master-table">
+        <thead>
+          <tr class="verb-header">
+            <th>Pronoun</th>
+            <th>être<span class="verb-en-sub">to be</span></th>
+            <th>avoir<span class="verb-en-sub">to have</span></th>
+            <th>aller<span class="verb-en-sub">to go</span></th>
+            <th>faire<span class="verb-en-sub">to do / make</span></th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Built by JS -->
         </tbody>
       </table>
     </div>
 
-    <div id="verb-tables"></div>
-
-    <!-- Practice sentences -->
-    <div class="card">
-      <h2 style="font-family:'Lora',serif;font-size:18px;color:var(--navy);margin-bottom:16px;">Practice Sentences</h2>
-      <p style="font-size:13px;color:var(--gray-400);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">All four verbs mixed together</p>
-
-      <div class="grammar-example">
-        <div class="fr-sentence">Nous sommes étudiants et nous faisons nos devoirs tous les soirs.</div>
-        <div id="prac-audio-1"></div>
-        <div class="mt-4">
-          <button class="reveal-btn" id="pb1" style="font-size:13px;min-height:44px;">👁 Show Translation</button>
-          <div class="vocab-english" id="pe1">We are students and we do our homework every evening.</div>
-        </div>
-      </div>
-      <div class="grammar-example">
-        <div class="fr-sentence">Elle a faim parce qu'elle va souvent à la gym.</div>
-        <div id="prac-audio-2"></div>
-        <div class="mt-4">
-          <button class="reveal-btn" id="pb2" style="font-size:13px;min-height:44px;">👁 Show Translation</button>
-          <div class="vocab-english" id="pe2">She is hungry because she often goes to the gym.</div>
-        </div>
-      </div>
-      <div class="grammar-example">
-        <div class="fr-sentence">Ils ont vingt ans et ils vont à l'université.</div>
-        <div id="prac-audio-3"></div>
-        <div class="mt-4">
-          <button class="reveal-btn" id="pb3" style="font-size:13px;min-height:44px;">👁 Show Translation</button>
-          <div class="vocab-english" id="pe3">They are twenty years old and they go to university.</div>
-        </div>
-      </div>
+    <!-- ═══════════ EXAMPLE SENTENCES ═══════════ -->
+    <div class="examples-section">
+      <div class="examples-title">Example sentences</div>
+      <div class="examples-sub">One sentence per pronoun using each verb in context. Tap ▶ to hear, 👁 to reveal English.</div>
+      <div id="examples-container"></div>
     </div>
 
   </main>
 
   <script src="audio.js"></script>
   <script>
-  /* ═══════════════════════════════════════════════════════
-     VERB DATA
-     Each row has 3 examples: { fr, phonetic, en }
-     Phonetics reflect the FULL SENTENCE as spoken naturally.
-  ═══════════════════════════════════════════════════════ */
-  const verbs = [
-    {
-      fr: "être", en: "to be", num: 1,
-      desc: "Used to describe identity, profession, nationality, location, and characteristics.",
-      extraHtml: null,
-      notes: {
-        title: "Gender, liaison & on",
-        html: `<p style="margin-bottom:10px;"><strong>Gender agreement:</strong> Adjectives after être must match the subject's gender. "Il est content" (he is happy) → "Elle est content<strong>e</strong>" (she is happy). Add -e for feminine.</p>
-               <p style="margin-bottom:10px;"><strong>On = nous in speech:</strong> "On est étudiants" = "Nous sommes étudiants." Very common informally.</p>
-               <p><strong>Liaison rule:</strong> When est or sont is followed by a vowel, the final consonant blends in: "il est à" → "eel-EH-tah" (the t links). "ils sont à" → "eel-SON-tah".</p>`
-      },
-      rows: [
-        {
-          pronoun:"je", pronEn:"I", form:"suis", meaning:"I am",
-          examples:[
-            { fr:"Je suis étudiant.",    ph:"zhuh · SWEE-zay-tew-DYON",    en:"I am a student." },
-            { fr:"Je suis à la maison.", ph:"zhuh · SWEE-zah-lah-may-ZON", en:"I am at home." },
-            { fr:"Je suis canadien.",    ph:"zhuh · SWEE-kah-nah-DYAN",    en:"I am Canadian." }
-          ]
-        },
-        {
-          pronoun:"tu", pronEn:"you (friend)", form:"es", meaning:"you are",
-          examples:[
-            { fr:"Tu es étudiant.",    ph:"tew · EH-zay-tew-DYON",    en:"You are a student." },
-            { fr:"Tu es à la maison.", ph:"tew · EH-tah-lah-may-ZON", en:"You are at home." },
-            { fr:"Tu es canadien.",    ph:"tew · EH-kah-nah-DYAN",    en:"You are Canadian." }
-          ]
-        },
-        {
-          pronoun:"il", pronEn:"he", form:"est", meaning:"he is",
-          examples:[
-            { fr:"Il est étudiant.",    ph:"eel · EH-tay-tew-DYON   (t links est→étudiant)",    en:"He is a student." },
-            { fr:"Il est à la maison.", ph:"eel · EH-tah-lah-may-ZON  (t links est→à)", en:"He is at home." },
-            { fr:"Il est canadien.",    ph:"eel · EH-kah-nah-DYAN",    en:"He is Canadian." }
-          ]
-        },
-        {
-          pronoun:"elle", pronEn:"she", form:"est", meaning:"she is",
-          examples:[
-            { fr:"Elle est étudiante.",    ph:"EL · EH-tay-tew-DYONT   (t links est→étudiante)",    en:"She is a student." },
-            { fr:"Elle est à la maison.", ph:"EL · EH-tah-lah-may-ZON", en:"She is at home." },
-            { fr:"Elle est canadienne.",   ph:"EL · EH-kah-nah-DYEN",   en:"She is Canadian." }
-          ]
-        },
-        {
-          pronoun:"nous", pronEn:"we", form:"sommes", meaning:"we are",
-          examples:[
-            { fr:"Nous sommes étudiants.",   ph:"noo · SUM-zay-tew-DYON   (s links sommes→étudiants)",   en:"We are students." },
-            { fr:"Nous sommes à la maison.", ph:"noo · SUM-zah-lah-may-ZON", en:"We are at home." },
-            { fr:"Nous sommes canadiens.",   ph:"noo · SUM-kah-nah-DYAN",   en:"We are Canadian." }
-          ]
-        },
-        {
-          pronoun:"vous", pronEn:"you (formal/group)", form:"êtes", meaning:"you are",
-          examples:[
-            { fr:"Vous êtes étudiants.",   ph:"voo · ZET-zay-tew-DYON   (s links vous→êtes, s links êtes→étudiants)",   en:"You are students." },
-            { fr:"Vous êtes à la maison.", ph:"voo · ZET-ah-lah-may-ZON", en:"You are at home." },
-            { fr:"Vous êtes canadiens.",   ph:"voo · ZET-kah-nah-DYAN",  en:"You are Canadian." }
-          ]
-        },
-        {
-          pronoun:"ils", pronEn:"they (with males)", form:"sont", meaning:"they are",
-          examples:[
-            { fr:"Ils sont étudiants.",   ph:"eel · SON-tay-tew-DYON   (t links sont→étudiants)",   en:"They are students." },
-            { fr:"Ils sont à la maison.", ph:"eel · SON-tah-lah-may-ZON", en:"They are at home." },
-            { fr:"Ils sont canadiens.",   ph:"eel · SON-kah-nah-DYAN",  en:"They are Canadian." }
-          ]
-        },
-        {
-          pronoun:"elles", pronEn:"they (all female)", form:"sont", meaning:"they are",
-          examples:[
-            { fr:"Elles sont étudiantes.",  ph:"EL · SON-tay-tew-DYONT",  en:"They are students." },
-            { fr:"Elles sont à la maison.", ph:"EL · SON-tah-lah-may-ZON", en:"They are at home." },
-            { fr:"Elles sont canadiennes.", ph:"EL · SON-kah-nah-DYEN",   en:"They are Canadian." }
-          ]
-        }
-      ]
-    },
 
+  /* ═══════════════════════════════════════════════════
+     TABLE DATA
+     Each row: pronoun info + 4 verb cells
+     phonetic = how "pronoun + conjugated form" sounds
+  ═══════════════════════════════════════════════════ */
+  const rows = [
     {
-      fr: "avoir", en: "to have", num: 2,
-      desc: "Used for possession AND for states that English expresses with 'to be': hungry, thirsty, right, old.",
-      extraHtml: `<div class="avoir-box">
-        <div class="avoir-box-title">⚠️ French says 'have', English says 'be'</div>
-        <p>J'ai faim = I <em>have</em> hunger = I <em>am</em> hungry &nbsp;|&nbsp; J'ai soif = I am thirsty &nbsp;|&nbsp; J'ai vingt ans = I am twenty &nbsp;|&nbsp; J'ai raison = I am right</p>
-      </div>`,
-      notes: {
-        title: "Elision and liaison with avoir",
-        html: `<p style="margin-bottom:10px;"><strong>Elision:</strong> "je ai" → "j'ai". The e of je drops before a vowel. Same with: j'habite, j'aime.</p>
-               <p style="margin-bottom:10px;"><strong>Liaison — nous avons:</strong> "noo-ZAH-von" — the s of nous links to avons.</p>
-               <p><strong>Liaison — ils/elles ont:</strong> "eel-ZON" / "EL-ZON" — the s/s links to ont. This is why "ils ont" sounds like "eel-ZON" not "eel ON".</p>`
-      },
-      rows: [
-        {
-          pronoun:"je", pronEn:"I", form:"j'ai", meaning:"I have",
-          examples:[
-            { fr:"J'ai un chat.",     ph:"ZHAY-un-SHA",         en:"I have a cat." },
-            { fr:"J'ai faim.",        ph:"ZHAY-FAN",            en:"I am hungry." },
-            { fr:"J'ai vingt ans.",   ph:"ZHAY-VAN-tAN   (t links vingt→ans)", en:"I am twenty years old." }
-          ]
-        },
-        {
-          pronoun:"tu", pronEn:"you (friend)", form:"as", meaning:"you have",
-          examples:[
-            { fr:"Tu as un chat.",   ph:"tew · AH-ZUN-sha   (s links as→un)",  en:"You have a cat." },
-            { fr:"Tu as faim.",      ph:"tew · AH-FAN",      en:"You are hungry." },
-            { fr:"Tu as vingt ans.", ph:"tew · AH-VAN-tAN",  en:"You are twenty years old." }
-          ]
-        },
-        {
-          pronoun:"il", pronEn:"he", form:"a", meaning:"he has",
-          examples:[
-            { fr:"Il a un chat.",   ph:"eel · AH-ZUN-sha   (a→un, vowel blends)",  en:"He has a cat." },
-            { fr:"Il a faim.",      ph:"eel · AH-FAN",      en:"He is hungry." },
-            { fr:"Il a vingt ans.", ph:"eel · AH-VAN-tAN",  en:"He is twenty years old." }
-          ]
-        },
-        {
-          pronoun:"elle", pronEn:"she", form:"a", meaning:"she has",
-          examples:[
-            { fr:"Elle a un chat.",   ph:"EL · AH-ZUN-sha",   en:"She has a cat." },
-            { fr:"Elle a faim.",      ph:"EL · AH-FAN",        en:"She is hungry." },
-            { fr:"Elle a vingt ans.", ph:"EL · AH-VAN-tAN",    en:"She is twenty years old." }
-          ]
-        },
-        {
-          pronoun:"nous", pronEn:"we", form:"avons", meaning:"we have",
-          examples:[
-            { fr:"Nous avons un chat.",   ph:"noo-ZAH-VON-ZUN-sha   (s links nous→avons, s links avons→un)",   en:"We have a cat." },
-            { fr:"Nous avons faim.",      ph:"noo-ZAH-VON-FAN",      en:"We are hungry." },
-            { fr:"Nous avons vingt ans.", ph:"noo-ZAH-VON-VAN-tAN",  en:"We are twenty years old." }
-          ]
-        },
-        {
-          pronoun:"vous", pronEn:"you (formal/group)", form:"avez", meaning:"you have",
-          examples:[
-            { fr:"Vous avez un chat.",   ph:"voo-ZAH-VAY-ZUN-sha",   en:"You have a cat." },
-            { fr:"Vous avez faim.",      ph:"voo-ZAH-VAY-FAN",        en:"You are hungry." },
-            { fr:"Vous avez vingt ans.", ph:"voo-ZAH-VAY-VAN-tAN",   en:"You are twenty years old." }
-          ]
-        },
-        {
-          pronoun:"ils", pronEn:"they (with males)", form:"ont", meaning:"they have",
-          examples:[
-            { fr:"Ils ont un chat.",   ph:"eel-ZON-TUN-sha   (s links ils→ont, t links ont→un)",   en:"They have a cat." },
-            { fr:"Ils ont faim.",      ph:"eel-ZON-FAN",      en:"They are hungry." },
-            { fr:"Ils ont vingt ans.", ph:"eel-ZON-VAN-tAN",  en:"They are twenty years old." }
-          ]
-        },
-        {
-          pronoun:"elles", pronEn:"they (all female)", form:"ont", meaning:"they have",
-          examples:[
-            { fr:"Elles ont un chat.",   ph:"EL-ZON-TUN-sha",   en:"They have a cat." },
-            { fr:"Elles ont faim.",      ph:"EL-ZON-FAN",        en:"They are hungry." },
-            { fr:"Elles ont vingt ans.", ph:"EL-ZON-VAN-tAN",   en:"They are twenty years old." }
-          ]
-        }
-      ]
+      pron: "je", pronEn: "I",
+      etre:  { form:"suis",   ph:"zhuh · SWEE" },
+      avoir: { form:"j'ai",   ph:"ZHAY" },
+      aller: { form:"vais",   ph:"zhuh · VAY" },
+      faire: { form:"fais",   ph:"zhuh · FAY" }
     },
-
     {
-      fr: "aller", en: "to go", num: 3,
-      desc: "Used for movement AND to form the near future (aller + infinitive = going to do something).",
-      extraHtml: `<div class="aller-box">
-        <div class="aller-box-title">✅ Near future: aller + any infinitive verb</div>
-        <p>Je vais manger = I am going to eat &nbsp;|&nbsp; Elle va partir = She is going to leave &nbsp;|&nbsp; Nous allons travailler = We are going to work<br>
-        ⚠️ <strong>à + le = au</strong> (always): "je vais au parc" — never "à le parc".</p>
-      </div>`,
-      notes: {
-        title: "Casual greeting + au contraction",
-        html: `<p style="margin-bottom:10px;"><strong>"Ça va ?"</strong> = How are you? (lit. "it goes?"). Reply: "Ça va bien" = I'm doing well. Ça va mal = Not well.</p>
-               <p><strong>à + le = au:</strong> Must contract. "Je vais à le cinéma" is wrong → "Je vais <em>au</em> cinéma". Also: à + les = aux.</p>`
-      },
-      rows: [
-        {
-          pronoun:"je", pronEn:"I", form:"vais", meaning:"I go",
-          examples:[
-            { fr:"Je vais au parc.",     ph:"zhuh · VAY-oh-PARK",        en:"I go to the park." },
-            { fr:"Je vais à l'école.",   ph:"zhuh · VAY-ah-lay-KUL",     en:"I go to school." },
-            { fr:"Je vais bien.",        ph:"zhuh · VAY-BYAN",           en:"I am doing well." }
-          ]
-        },
-        {
-          pronoun:"tu", pronEn:"you (friend)", form:"vas", meaning:"you go",
-          examples:[
-            { fr:"Tu vas au parc.",    ph:"tew · VAH-oh-PARK",     en:"You go to the park." },
-            { fr:"Tu vas à l'école.",  ph:"tew · VAH-ah-lay-KUL",  en:"You go to school." },
-            { fr:"Tu vas bien.",       ph:"tew · VAH-BYAN",        en:"You are doing well." }
-          ]
-        },
-        {
-          pronoun:"il", pronEn:"he", form:"va", meaning:"he goes",
-          examples:[
-            { fr:"Il va au parc.",    ph:"eel · VAH-oh-PARK",     en:"He goes to the park." },
-            { fr:"Il va à l'école.",  ph:"eel · VAH-ah-lay-KUL",  en:"He goes to school." },
-            { fr:"Il va bien.",       ph:"eel · VAH-BYAN",        en:"He is doing well." }
-          ]
-        },
-        {
-          pronoun:"elle", pronEn:"she", form:"va", meaning:"she goes",
-          examples:[
-            { fr:"Elle va au parc.",    ph:"EL · VAH-oh-PARK",     en:"She goes to the park." },
-            { fr:"Elle va à l'école.",  ph:"EL · VAH-ah-lay-KUL",  en:"She goes to school." },
-            { fr:"Elle va bien.",       ph:"EL · VAH-BYAN",        en:"She is doing well." }
-          ]
-        },
-        {
-          pronoun:"nous", pronEn:"we", form:"allons", meaning:"we go",
-          examples:[
-            { fr:"Nous allons au parc.",    ph:"noo-ZAH-LON-oh-PARK    (s links nous→allons)",    en:"We go to the park." },
-            { fr:"Nous allons à l'école.",  ph:"noo-ZAH-LON-ah-lay-KUL", en:"We go to school." },
-            { fr:"Nous allons bien.",       ph:"noo-ZAH-LON-BYAN",      en:"We are doing well." }
-          ]
-        },
-        {
-          pronoun:"vous", pronEn:"you (formal/group)", form:"allez", meaning:"you go",
-          examples:[
-            { fr:"Vous allez au parc.",    ph:"voo-ZAH-LAY-oh-PARK    (s links vous→allez)",    en:"You go to the park." },
-            { fr:"Vous allez à l'école.",  ph:"voo-ZAH-LAY-ah-lay-KUL", en:"You go to school." },
-            { fr:"Vous allez bien.",       ph:"voo-ZAH-LAY-BYAN",      en:"You are doing well." }
-          ]
-        },
-        {
-          pronoun:"ils", pronEn:"they (with males)", form:"vont", meaning:"they go",
-          examples:[
-            { fr:"Ils vont au parc.",    ph:"eel · VON-toh-PARK    (t links vont→au)",    en:"They go to the park." },
-            { fr:"Ils vont à l'école.",  ph:"eel · VON-tah-lay-KUL  (t links vont→à)", en:"They go to school." },
-            { fr:"Ils vont bien.",       ph:"eel · VON-BYAN",       en:"They are doing well." }
-          ]
-        },
-        {
-          pronoun:"elles", pronEn:"they (all female)", form:"vont", meaning:"they go",
-          examples:[
-            { fr:"Elles vont au parc.",    ph:"EL · VON-toh-PARK",     en:"They go to the park." },
-            { fr:"Elles vont à l'école.",  ph:"EL · VON-tah-lay-KUL",  en:"They go to school." },
-            { fr:"Elles vont bien.",       ph:"EL · VON-BYAN",         en:"They are doing well." }
-          ]
-        }
-      ]
+      pron: "tu", pronEn: "you (friend)",
+      etre:  { form:"es",    ph:"tew · EH" },
+      avoir: { form:"as",    ph:"tew · AH" },
+      aller: { form:"vas",   ph:"tew · VAH" },
+      faire: { form:"fais",  ph:"tew · FAY" }
     },
-
     {
-      fr: "faire", en: "to do / to make", num: 4,
-      desc: "Used for activities, chores, sports, and weather. French says 'do' where English says 'cook', 'exercise', 'walk'.",
-      extraHtml: null,
-      notes: {
-        title: "Two pronunciation traps + common expressions",
-        html: `<p style="margin-bottom:10px;"><strong>⚠️ Nous faisons:</strong> Despite the spelling fai-, the vowel shifts to "fuh". Say "noo-fuh-ZON", not "noo-FAY-zon". This is a unique exception.</p>
-               <p style="margin-bottom:10px;"><strong>⚠️ Vous faites:</strong> Most -re verbs use -ez for vous (parlez, mangez). Faites is irregular — say "FET".</p>
-               <p><strong>More expressions:</strong> faire une promenade (a walk) · faire attention (pay attention) · il fait beau (nice weather) · il fait froid (cold weather) — weather uses il, not je/elle.</p>`
-      },
-      rows: [
-        {
-          pronoun:"je", pronEn:"I", form:"fais", meaning:"I do",
-          examples:[
-            { fr:"Je fais du sport.",     ph:"zhuh · FAY-dew-SPOR",      en:"I do sports / I exercise." },
-            { fr:"Je fais la cuisine.",   ph:"zhuh · FAY-lah-kwee-ZEEN", en:"I cook." },
-            { fr:"Je fais les courses.",  ph:"zhuh · FAY-lay-KOORS",     en:"I do the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"tu", pronEn:"you (friend)", form:"fais", meaning:"you do",
-          examples:[
-            { fr:"Tu fais du sport.",    ph:"tew · FAY-dew-SPOR",      en:"You do sports / You exercise." },
-            { fr:"Tu fais la cuisine.",  ph:"tew · FAY-lah-kwee-ZEEN", en:"You cook." },
-            { fr:"Tu fais les courses.", ph:"tew · FAY-lay-KOORS",     en:"You do the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"il", pronEn:"he", form:"fait", meaning:"he does",
-          examples:[
-            { fr:"Il fait du sport.",    ph:"eel · FAY-dew-SPOR",      en:"He does sports / He exercises." },
-            { fr:"Il fait la cuisine.",  ph:"eel · FAY-lah-kwee-ZEEN", en:"He cooks." },
-            { fr:"Il fait les courses.", ph:"eel · FAY-lay-KOORS",     en:"He does the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"elle", pronEn:"she", form:"fait", meaning:"she does",
-          examples:[
-            { fr:"Elle fait du sport.",    ph:"EL · FAY-dew-SPOR",      en:"She does sports / She exercises." },
-            { fr:"Elle fait la cuisine.",  ph:"EL · FAY-lah-kwee-ZEEN", en:"She cooks." },
-            { fr:"Elle fait les courses.", ph:"EL · FAY-lay-KOORS",     en:"She does the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"nous", pronEn:"we", form:"faisons", meaning:"we do",
-          warn: true,
-          examples:[
-            { fr:"Nous faisons du sport.",    ph:"noo-fuh-ZON-dew-SPOR    ⚠️ fuh not FAY",    en:"We do sports / We exercise." },
-            { fr:"Nous faisons la cuisine.",  ph:"noo-fuh-ZON-lah-kwee-ZEEN",                 en:"We cook." },
-            { fr:"Nous faisons les courses.", ph:"noo-fuh-ZON-lay-KOORS",                     en:"We do the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"vous", pronEn:"you (formal/group)", form:"faites", meaning:"you do",
-          warn: true,
-          examples:[
-            { fr:"Vous faites du sport.",    ph:"voo-FET-dew-SPOR    ⚠️ FET not FAY",    en:"You do sports / You exercise." },
-            { fr:"Vous faites la cuisine.",  ph:"voo-FET-lah-kwee-ZEEN",                 en:"You cook." },
-            { fr:"Vous faites les courses.", ph:"voo-FET-lay-KOORS",                     en:"You do the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"ils", pronEn:"they (with males)", form:"font", meaning:"they do",
-          examples:[
-            { fr:"Ils font du sport.",    ph:"eel · FON-dew-SPOR",      en:"They do sports / They exercise." },
-            { fr:"Ils font la cuisine.",  ph:"eel · FON-lah-kwee-ZEEN", en:"They cook." },
-            { fr:"Ils font les courses.", ph:"eel · FON-lay-KOORS",     en:"They do the grocery shopping." }
-          ]
-        },
-        {
-          pronoun:"elles", pronEn:"they (all female)", form:"font", meaning:"they do",
-          examples:[
-            { fr:"Elles font du sport.",    ph:"EL · FON-dew-SPOR",      en:"They do sports / They exercise." },
-            { fr:"Elles font la cuisine.",  ph:"EL · FON-lah-kwee-ZEEN", en:"They cook." },
-            { fr:"Elles font les courses.", ph:"EL · FON-lay-KOORS",     en:"They do the grocery shopping." }
-          ]
-        }
-      ]
+      pron: "il", pronEn: "he",
+      etre:  { form:"est",  ph:"eel · EH" },
+      avoir: { form:"a",    ph:"eel · AH" },
+      aller: { form:"va",   ph:"eel · VAH" },
+      faire: { form:"fait", ph:"eel · FAY" }
+    },
+    {
+      pron: "elle", pronEn: "she",
+      etre:  { form:"est",  ph:"EL · EH" },
+      avoir: { form:"a",    ph:"EL · AH" },
+      aller: { form:"va",   ph:"EL · VAH" },
+      faire: { form:"fait", ph:"EL · FAY" }
+    },
+    {
+      pron: "nous", pronEn: "we",
+      etre:  { form:"sommes", ph:"noo · SUM",    liaison:true },
+      avoir: { form:"avons",  ph:"noo-ZAH-VON",  liaison:true },
+      aller: { form:"allons", ph:"noo-ZAH-LON",  liaison:true },
+      faire: { form:"faisons",ph:"noo-fuh-ZON",  warn:"⚠ fuh not FAY" }
+    },
+    {
+      pron: "vous", pronEn: "you (formal / group)",
+      etre:  { form:"êtes",  ph:"voo-ZET",     liaison:true },
+      avoir: { form:"avez",  ph:"voo-ZAH-VAY", liaison:true },
+      aller: { form:"allez", ph:"voo-ZAH-LAY", liaison:true },
+      faire: { form:"faites",ph:"voo-FET",     warn:"⚠ FET not FAY" }
+    },
+    {
+      pron: "ils", pronEn: "they (incl. male)",
+      etre:  { form:"sont", ph:"eel · SON" },
+      avoir: { form:"ont",  ph:"eel-ZON",  liaison:true },
+      aller: { form:"vont", ph:"eel · VON" },
+      faire: { form:"font", ph:"eel · FON" }
+    },
+    {
+      pron: "elles", pronEn: "they (all female)",
+      etre:  { form:"sont", ph:"EL · SON" },
+      avoir: { form:"ont",  ph:"EL-ZON",  liaison:true },
+      aller: { form:"vont", ph:"EL · VON" },
+      faire: { form:"font", ph:"EL · FON" }
     }
   ];
 
-  /* ═══════════════════════════════════════════════════════
-     BUILD ALL VERB CARDS
-  ═══════════════════════════════════════════════════════ */
-  const container = document.getElementById('verb-tables');
+  /* ═══════════════════════════════════════════════════
+     BUILD TABLE
+  ═══════════════════════════════════════════════════ */
+  const tbody = document.getElementById('table-body');
+  const verbs = ['etre','avoir','aller','faire'];
+  // speech text: pronoun + form (as heard)
+  const speechText = {
+    etre:  r => r.pron === 'je' ? 'je suis' : `${r.pron} ${r.etre.form}`,
+    avoir: r => r.pron === 'je' ? "j'ai" : `${r.pron} ${r.avoir.form}`,
+    aller: r => `${r.pron} ${r.aller.form}`,
+    faire: r => `${r.pron} ${r.faire.form}`
+  };
 
-  verbs.forEach(verb => {
-    const vid = `v${verb.num}`;
+  rows.forEach((row, ri) => {
+    const tr = document.createElement('tr');
 
-    // Collect all en-div IDs for show/hide all
-    const allEnIds = [];
-    verb.rows.forEach((row, ri) => {
-      row.examples.forEach((_, ei) => allEnIds.push(`${vid}-r${ri}-e${ei}-en`));
-    });
+    // Pronoun cell
+    const pronTd = document.createElement('td');
+    pronTd.className = 'pronoun-cell';
+    pronTd.innerHTML = `<div class="pron-fr">${row.pron}</div><div class="pron-en">${row.pronEn}</div>`;
+    tr.appendChild(pronTd);
 
-    const card = document.createElement('div');
-    card.className = 'verb-card';
+    // 4 verb cells
+    verbs.forEach(vkey => {
+      const cell = row[vkey];
+      const td = document.createElement('td');
+      td.className = 'verb-cell';
 
-    // Header
-    card.innerHTML = `
-      <div class="verb-card-header">
-        <div>
-          <span class="verb-card-title">${verb.num}. ${verb.fr}</span>
-          <span class="verb-card-meaning">= ${verb.en}</span>
-        </div>
-        <div class="verb-card-desc">${verb.desc}</div>
-      </div>
-      <div class="verb-card-controls">
-        <button class="ctrl-btn" onclick="showAllVerb(${JSON.stringify(allEnIds)})">👁 Show All Translations</button>
-        <button class="ctrl-btn hide" onclick="hideAllVerb(${JSON.stringify(allEnIds)})">🙈 Hide All</button>
-      </div>
-    `;
+      // Badge
+      let badge = '';
+      if (cell.liaison) badge = '<span class="cell-liaison">liaison</span>';
+      if (cell.warn)    badge = `<span class="cell-warn">${cell.warn}</span>`;
 
-    // Pronoun blocks
-    verb.rows.forEach((row, ri) => {
-      const block = document.createElement('div');
-      block.className = 'pronoun-block' + (ri % 2 === 1 ? ' even' : '');
-
-      // Form display (with warning badge if needed)
-      const formHtml = row.warn
-        ? `${row.form} <span class="conj-warn">⚠ pronunciation trap</span>`
-        : row.form;
-
-      block.innerHTML = `
-        <div class="pronoun-header">
-          <div class="pronoun-chip">
-            <div class="pronoun-fr">${row.pronoun}</div>
-            <div class="pronoun-en">${row.pronEn}</div>
-          </div>
-          <div class="arrow-sep">→</div>
-          <div class="conj-form">${formHtml}</div>
-          <div class="conj-meaning">${row.meaning}</div>
-        </div>
-        <div class="example-list" id="${vid}-r${ri}-examples"></div>
+      const playId = `play-${ri}-${vkey}`;
+      td.innerHTML = `
+        <div class="cell-form">${cell.form}${badge}</div>
+        <div class="cell-phonetic">${cell.ph}</div>
+        <div class="cell-player" id="${playId}"></div>
       `;
-      card.appendChild(block);
+      tr.appendChild(td);
 
-      // Build example items after DOM ready
       requestAnimationFrame(() => {
-        const list = document.getElementById(`${vid}-r${ri}-examples`);
-        row.examples.forEach((ex, ei) => {
-          const playId = `${vid}-r${ri}-e${ei}-play`;
-          const enId   = `${vid}-r${ri}-e${ei}-en`;
-          const btnId  = `${vid}-r${ri}-e${ei}-btn`;
-
-          const item = document.createElement('div');
-          item.className = 'example-item';
-          item.innerHTML = `
-            <div class="ex-fr">${ex.fr}</div>
-            <div class="ex-phonetic">
-              <span class="ex-phonetic-label">🔊 sounds like:</span>${ex.ph}
-            </div>
-            <div class="ex-controls">
-              <div class="ex-player-wrap" id="${playId}"></div>
-              <button class="ex-show-btn" id="${btnId}" onclick="toggleExEn('${enId}','${btnId}')">👁 Show English</button>
-            </div>
-            <div class="ex-en" id="${enId}">${ex.en}</div>
-          `;
-          list.appendChild(item);
-
-          requestAnimationFrame(() => buildTinyPlayer(ex.fr, playId));
-        });
+        buildCellPlayer(speechText[vkey](row), playId);
       });
     });
 
-    // Extra HTML box (avoir warning / aller near future)
-    if (verb.extraHtml) {
-      const extra = document.createElement('div');
-      extra.innerHTML = verb.extraHtml;
-      card.appendChild(extra);
-    }
-
-    // Notes expandable
-    const notesWrap = document.createElement('div');
-    notesWrap.className = 'notes-wrap';
-    const notesId = `${vid}-notes`;
-    const notesBtnId = `${vid}-notes-btn`;
-    notesWrap.innerHTML = `
-      <div class="expandable">
-        <button class="expand-btn" id="${notesBtnId}">
-          🔍 ${verb.notes.title} <span class="expand-arrow">▼</span>
-        </button>
-        <div class="expand-content" id="${notesId}">
-          ${verb.notes.html}
-        </div>
-      </div>
-    `;
-    card.appendChild(notesWrap);
-    container.appendChild(card);
-
-    requestAnimationFrame(() => setupExpandable(notesBtnId, notesId));
+    tbody.appendChild(tr);
   });
 
-  /* ═══════════════════════════════════════════════════════
-     TINY PLAYER
-  ═══════════════════════════════════════════════════════ */
-  function buildTinyPlayer(text, containerId) {
+  /* ═══════════════════════════════════════════════════
+     EXAMPLE SENTENCES — one per pronoun, in context
+  ═══════════════════════════════════════════════════ */
+  const examples = [
+    {
+      pron:"je (I)",
+      fr:"Je suis médecin, j'ai une voiture, je vais au travail et je fais de longues journées.",
+      ph:"zhuh-SWEE-may-DSAN · ZHAY-ewn-vwah-TEWR · zhuh-VAY-oh-tra-VAY · zhuh-FAY-duh-LONG-zhoor-NAY",
+      en:"I am a doctor, I have a car, I go to work and I do long days."
+    },
+    {
+      pron:"tu (you, friend)",
+      fr:"Tu es étudiant, tu as du temps, tu vas à la bibliothèque et tu fais tes devoirs.",
+      ph:"tew-EH-zay-tew-DYON · tew-AH-dew-TON · tew-VAH-ah-lah-bib-lio-TEK · tew-FAY-tay-duh-VWAHR",
+      en:"You are a student, you have time, you go to the library and you do your homework."
+    },
+    {
+      pron:"il (he)",
+      fr:"Il est chef, il a un restaurant, il va au marché et il fait la cuisine.",
+      ph:"eel-EH-SHEF · eel-AH-ZUN-res-toh-RON · eel-VAH-oh-mar-SHAY · eel-FAY-lah-kwee-ZEEN",
+      en:"He is a chef, he has a restaurant, he goes to the market and he cooks."
+    },
+    {
+      pron:"elle (she)",
+      fr:"Elle est professeure, elle a des élèves, elle va à l'école et elle fait des cours.",
+      ph:"EL-EH-proh-fuh-SUR · EL-AH-day-ZAY-lev · EL-VAH-ah-lay-KUL · EL-FAY-day-KOOR",
+      en:"She is a teacher, she has students, she goes to school and she teaches classes."
+    },
+    {
+      pron:"nous (we)",
+      fr:"Nous sommes amis, nous avons un appartement, nous allons au parc et nous faisons du sport.",
+      ph:"noo-SUM-ZAH-mee · noo-ZAH-VON-ZUN-nah-par-tuh-MON · noo-ZAH-LON-oh-PARK · noo-fuh-ZON-dew-SPOR",
+      en:"We are friends, we have an apartment, we go to the park and we do sports."
+    },
+    {
+      pron:"vous (you, formal/group)",
+      fr:"Vous êtes ingénieurs, vous avez un bureau, vous allez au bureau et vous faites du bon travail.",
+      ph:"voo-ZET-zan-zhay-NYUR · voo-ZAH-VAY-ZUN-bew-ROH · voo-ZAH-LAY-oh-bew-ROH · voo-FET-dew-BON-tra-VAY",
+      en:"You are engineers, you have an office, you go to the office and you do good work."
+    },
+    {
+      pron:"ils (they, mixed/male)",
+      fr:"Ils sont étudiants, ils ont des livres, ils vont à la bibliothèque et ils font leurs devoirs.",
+      ph:"eel-SON-tay-tew-DYON · eel-ZON-day-LEEVR · eel-VON-ah-lah-bib-lio-TEK · eel-FON-lur-duh-VWAHR",
+      en:"They are students, they have books, they go to the library and they do their homework."
+    },
+    {
+      pron:"elles (they, all female)",
+      fr:"Elles sont médecins, elles ont des patients, elles vont à l'hôpital et elles font leur travail.",
+      ph:"EL-SON-may-DSAN · EL-ZON-day-pah-SYON · EL-VON-ah-loh-pee-TAL · EL-FON-lur-tra-VAY",
+      en:"They are doctors, they have patients, they go to the hospital and they do their work."
+    }
+  ];
+
+  const exContainer = document.getElementById('examples-container');
+  examples.forEach((ex, i) => {
+    const playId = `ex-play-${i}`;
+    const enId   = `ex-en-${i}`;
+    const btnId  = `ex-btn-${i}`;
+
+    const card = document.createElement('div');
+    card.className = 'ex-card';
+    card.innerHTML = `
+      <div class="ex-label">${ex.pron}</div>
+      <div class="ex-fr">${ex.fr}</div>
+      <div class="ex-ph">🔊 ${ex.ph}</div>
+      <div class="ex-player-row" id="${playId}"></div>
+      <button class="ex-show-btn" id="${btnId}" onclick="toggleExEn('${enId}','${btnId}')">👁 Show English</button>
+      <div class="ex-en" id="${enId}">${ex.en}</div>
+    `;
+    exContainer.appendChild(card);
+
+    requestAnimationFrame(() => buildPlayer(ex.fr, playId));
+  });
+
+  /* ═══════════════════════════════════════════════════
+     CELL PLAYER — tiny play/pause/restart
+  ═══════════════════════════════════════════════════ */
+  function buildCellPlayer(text, containerId) {
     const c = document.getElementById(containerId);
     if (!c) return;
     let paused = false;
 
     const playBtn = document.createElement('button');
-    playBtn.className = 'tiny-play';
+    playBtn.className = 'cell-play-btn';
     playBtn.innerHTML = '▶ Play';
 
-    const restartBtn = document.createElement('button');
-    restartBtn.className = 'tiny-restart';
-    restartBtn.innerHTML = '↺';
-    restartBtn.title = 'Restart';
+    const restBtn = document.createElement('button');
+    restBtn.className = 'cell-restart-btn';
+    restBtn.title = 'Restart';
+    restBtn.innerHTML = '↺';
 
     c.appendChild(playBtn);
-    c.appendChild(restartBtn);
+    c.appendChild(restBtn);
 
     function reset() { paused = false; playBtn.innerHTML = '▶ Play'; }
 
@@ -857,58 +624,27 @@
       u.lang = 'fr-FR'; u.rate = 0.85;
       u.onend = reset; u.onerror = reset;
       window.speechSynthesis.speak(u);
-      playBtn.innerHTML = '⏸ Pause';
+      playBtn.innerHTML = '⏸';
     }
 
     playBtn.addEventListener('click', () => {
       if (window.speechSynthesis.speaking && !paused) {
         window.speechSynthesis.pause(); paused = true; playBtn.innerHTML = '▶ Play';
       } else if (paused) {
-        window.speechSynthesis.resume(); paused = false; playBtn.innerHTML = '⏸ Pause';
+        window.speechSynthesis.resume(); paused = false; playBtn.innerHTML = '⏸';
       } else { speak(); }
     });
-    restartBtn.addEventListener('click', () => { reset(); speak(); });
+    restBtn.addEventListener('click', () => { reset(); speak(); });
   }
 
-  /* ═══════════════════════════════════════════════════════
-     SHOW / HIDE helpers
-  ═══════════════════════════════════════════════════════ */
+  /* toggle example English */
   function toggleExEn(enId, btnId) {
-    const el = document.getElementById(enId);
+    const el  = document.getElementById(enId);
     const btn = document.getElementById(btnId);
     if (!el || !btn) return;
     const shown = el.classList.toggle('shown');
     btn.textContent = shown ? '🙈 Hide' : '👁 Show English';
   }
-
-  function showAllVerb(ids) {
-    ids.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.add('shown');
-      const btn = document.getElementById(id.replace('-en','-btn'));
-      if (btn) btn.textContent = '🙈 Hide';
-    });
-  }
-
-  function hideAllVerb(ids) {
-    ids.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.remove('shown');
-      const btn = document.getElementById(id.replace('-en','-btn'));
-      if (btn) btn.textContent = '👁 Show English';
-    });
-  }
-
-  /* ═══════════════════════════════════════════════════════
-     PRACTICE SENTENCES
-  ═══════════════════════════════════════════════════════ */
-  buildPlayer("Nous sommes étudiants et nous faisons nos devoirs tous les soirs.", "prac-audio-1");
-  buildPlayer("Elle a faim parce qu'elle va souvent à la gym.", "prac-audio-2");
-  buildPlayer("Ils ont vingt ans et ils vont à l'université.", "prac-audio-3");
-
-  setupReveal('pb1','pe1','👁 Show Translation','🙈 Hide');
-  setupReveal('pb2','pe2','👁 Show Translation','🙈 Hide');
-  setupReveal('pb3','pe3','👁 Show Translation','🙈 Hide');
   </script>
 </body>
 </html>
