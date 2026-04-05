@@ -308,6 +308,222 @@
     }
     .ex-en.shown { display: block; }
 
+    /* ── Drill section ── */
+    .drill-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      margin-bottom: 28px;
+      overflow: hidden;
+    }
+    .drill-header {
+      background: linear-gradient(135deg, #1a2744 0%, #243560 100%);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .drill-title {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 3px;
+    }
+    .drill-sub {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* Mode toggle */
+    .drill-mode-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--gray-100);
+      flex-wrap: wrap;
+    }
+    .drill-mode-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .drill-mode-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+    .mode-btn {
+      background: var(--gray-100);
+      color: var(--gray-600);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all .15s;
+      min-height: 40px;
+    }
+    .mode-btn.active {
+      background: var(--blue-pale);
+      border-color: var(--blue);
+      color: var(--navy);
+    }
+
+    /* Drill card */
+    .drill-card {
+      padding: 24px 20px 16px;
+    }
+    .drill-prompt-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+      margin-bottom: 10px;
+    }
+    .drill-prompt {
+      font-family: 'Lora', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      line-height: 1.2;
+      min-height: 44px;
+    }
+    .drill-context {
+      font-size: 13px;
+      color: var(--gray-500);
+      font-style: italic;
+      margin-bottom: 20px;
+      min-height: 20px;
+    }
+    .drill-actions { margin-bottom: 16px; }
+    .drill-reveal-btn {
+      width: 100%;
+      background: var(--blue-pale);
+      color: var(--blue);
+      border: 2px solid var(--blue);
+      border-radius: var(--radius-sm);
+      padding: 13px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 50px;
+      font-family: 'Inter', sans-serif;
+      transition: all .15s;
+    }
+    .drill-reveal-btn:hover { background: var(--blue); color: white; }
+    .drill-answer {
+      display: none;
+      margin-top: 14px;
+      padding: 16px;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--blue);
+    }
+    .drill-answer.shown { display: block; }
+    .drill-answer-main {
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .drill-answer-ph {
+      font-size: 13px;
+      color: #7c3aed;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .drill-answer-note {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .drill-breakdown {
+      display: none;
+      margin-top: 10px;
+      padding: 12px 14px;
+      background: #eff6ff;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: #1e40af;
+      line-height: 1.7;
+    }
+    .drill-breakdown.shown { display: block; }
+
+    .drill-next-btn {
+      width: 100%;
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 52px;
+      font-family: 'Inter', sans-serif;
+      transition: background .15s;
+      letter-spacing: 0.02em;
+    }
+    .drill-next-btn:hover { background: var(--navy-light); }
+
+    /* Score strip */
+    .drill-score-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 20px;
+      border-top: 1px solid var(--gray-100);
+      background: var(--gray-50);
+      font-size: 14px;
+      color: var(--gray-600);
+      flex-wrap: wrap;
+    }
+    .drill-score-row strong { color: var(--navy); }
+    .score-reset-btn {
+      margin-left: auto;
+      background: none;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-500);
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .score-reset-btn:hover { background: var(--gray-200); }
+
+    /* Self-mark buttons */
+    .drill-self-btns {
+      display: flex;
+      gap: 8px;
+      padding: 10px 20px 16px;
+      background: var(--gray-50);
+    }
+    .self-btn {
+      flex: 1;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 48px;
+      font-family: 'Inter', sans-serif;
+      transition: opacity .15s;
+    }
+    .correct-btn { background: var(--green-pale); color: #166534; }
+    .correct-btn:hover { opacity: .85; }
+    .wrong-btn   { background: var(--red-pale);   color: #991b1b; }
+    .wrong-btn:hover { opacity: .85; }
+
     .concept-box {
       background: var(--navy);
       color: white;
@@ -393,6 +609,52 @@
           <!-- Built by JS -->
         </tbody>
       </table>
+    </div>
+
+    <!-- ═══════════ DRILL ═══════════ -->
+    <div class="drill-section">
+      <div class="drill-header">
+        <div>
+          <div class="drill-title">🎲 Practice Drill</div>
+          <div class="drill-sub">A random combination appears. Guess the meaning, then reveal the answer.</div>
+        </div>
+      </div>
+
+      <!-- Mode toggle -->
+      <div class="drill-mode-row">
+        <span class="drill-mode-label">Quiz direction:</span>
+        <div class="drill-mode-btns">
+          <button class="mode-btn active" id="mode-fr" onclick="setMode('fr')">🇫🇷 French → Guess English</button>
+          <button class="mode-btn" id="mode-en" onclick="setMode('en')">🇬🇧 English → Guess French</button>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="drill-card" id="drill-card">
+        <div class="drill-prompt-label" id="drill-prompt-label">What does this mean in English?</div>
+        <div class="drill-prompt" id="drill-prompt">—</div>
+        <div class="drill-context" id="drill-context"></div>
+
+        <div class="drill-actions">
+          <button class="drill-reveal-btn" id="drill-reveal-btn" onclick="revealAnswer()">👁 Show Answer</button>
+          <div class="drill-answer" id="drill-answer"></div>
+          <div class="drill-breakdown" id="drill-breakdown"></div>
+        </div>
+
+        <button class="drill-next-btn" id="drill-next-btn" onclick="nextCard()">🎲 New Combination</button>
+      </div>
+
+      <!-- Score strip -->
+      <div class="drill-score-row">
+        <span>✅ Correct: <strong id="score-correct">0</strong></span>
+        <span>❌ Wrong: <strong id="score-wrong">0</strong></span>
+        <span>🎯 Total: <strong id="score-total">0</strong></span>
+        <button class="score-reset-btn" onclick="resetScore()">Reset</button>
+      </div>
+      <div class="drill-self-btns">
+        <button class="self-btn correct-btn" onclick="markSelf(true)">✅ I got it right</button>
+        <button class="self-btn wrong-btn" onclick="markSelf(false)">❌ I got it wrong</button>
+      </div>
     </div>
 
     <!-- ═══════════ EXAMPLE SENTENCES ═══════════ -->
@@ -636,6 +898,176 @@
     });
     restBtn.addEventListener('click', () => { reset(); speak(); });
   }
+
+  /* ═══════════════════════════════════════════════════
+     DRILL LOGIC
+  ═══════════════════════════════════════════════════ */
+
+  // All 32 combinations: 8 pronouns × 4 verbs
+  const drillData = [];
+  rows.forEach(row => {
+    [
+      {
+        verb: 'être', verbEn: 'to be',
+        form: row.etre.form,
+        ph: row.etre.ph,
+        meaningEn: row.etre.form === 'suis' ? 'I am'
+          : row.etre.form === 'es'     ? 'you are'
+          : row.etre.form === 'est'    ? (row.pron === 'il' ? 'he is' : 'she is')
+          : row.etre.form === 'sommes' ? 'we are'
+          : row.etre.form === 'êtes'   ? 'you are'
+          : 'they are',
+        liaison: row.etre.liaison, warn: row.etre.warn,
+        note: `${row.pron} (${row.pronEn}) + être → ${row.etre.form}`
+      },
+      {
+        verb: 'avoir', verbEn: 'to have',
+        form: row.avoir.form,
+        ph: row.avoir.ph,
+        meaningEn: row.avoir.form === "j'ai" ? 'I have'
+          : row.avoir.form === 'as'    ? 'you have'
+          : row.avoir.form === 'a'     ? (row.pron === 'il' ? 'he has' : 'she has')
+          : row.avoir.form === 'avons' ? 'we have'
+          : row.avoir.form === 'avez'  ? 'you have'
+          : 'they have',
+        liaison: row.avoir.liaison, warn: row.avoir.warn,
+        note: `${row.pron} (${row.pronEn}) + avoir → ${row.avoir.form}`
+      },
+      {
+        verb: 'aller', verbEn: 'to go',
+        form: row.aller.form,
+        ph: row.aller.ph,
+        meaningEn: row.aller.form === 'vais'   ? 'I go / I am going'
+          : row.aller.form === 'vas'    ? 'you go'
+          : row.aller.form === 'va'     ? (row.pron === 'il' ? 'he goes' : 'she goes')
+          : row.aller.form === 'allons' ? 'we go'
+          : row.aller.form === 'allez'  ? 'you go'
+          : 'they go',
+        liaison: row.aller.liaison, warn: row.aller.warn,
+        note: `${row.pron} (${row.pronEn}) + aller → ${row.aller.form}`
+      },
+      {
+        verb: 'faire', verbEn: 'to do / make',
+        form: row.faire.form,
+        ph: row.faire.ph,
+        meaningEn: row.faire.form === 'fais'    ? (row.pron === 'je' ? 'I do / I make' : 'you do / you make')
+          : row.faire.form === 'fait'    ? (row.pron === 'il' ? 'he does' : 'she does')
+          : row.faire.form === 'faisons' ? 'we do / we make'
+          : row.faire.form === 'faites'  ? 'you do / you make'
+          : 'they do / they make',
+        liaison: row.faire.liaison, warn: row.faire.warn,
+        note: `${row.pron} (${row.pronEn}) + faire → ${row.faire.form}`
+      }
+    ].forEach(v => {
+      drillData.push({
+        pronoun: row.pron,
+        pronounEn: row.pronEn,
+        verb: v.verb,
+        verbEn: v.verbEn,
+        form: v.form,
+        ph: v.ph,
+        meaningEn: v.meaningEn,
+        liaison: v.liaison,
+        warn: v.warn,
+        note: v.note,
+        // The full French string = pronoun + form (natural)
+        frFull: (v.verb === 'avoir' && row.pron === 'je') ? "j'ai" : `${row.pron} ${v.form}`,
+        // English = pronoun meaning + verb meaning
+        enFull: v.meaningEn
+      });
+    });
+  });
+
+  let mode = 'fr';           // 'fr' = show French, guess English | 'en' = show English, guess French
+  let current = null;
+  let answered = false;
+  let scoreCorrect = 0, scoreWrong = 0;
+
+  function setMode(m) {
+    mode = m;
+    document.getElementById('mode-fr').classList.toggle('active', m === 'fr');
+    document.getElementById('mode-en').classList.toggle('active', m === 'en');
+    nextCard();
+  }
+
+  function nextCard() {
+    // Hide answer
+    answered = false;
+    document.getElementById('drill-answer').className = 'drill-answer';
+    document.getElementById('drill-breakdown').className = 'drill-breakdown';
+    document.getElementById('drill-reveal-btn').style.display = '';
+
+    // Pick random combo
+    current = drillData[Math.floor(Math.random() * drillData.length)];
+
+    const promptLabel = document.getElementById('drill-prompt-label');
+    const prompt      = document.getElementById('drill-prompt');
+    const context     = document.getElementById('drill-context');
+
+    if (mode === 'fr') {
+      promptLabel.textContent = 'What does this mean in English?';
+      prompt.textContent = current.frFull;
+      context.textContent = `${current.pronoun} = ${current.pronounEn}  ·  ${current.verb} = ${current.verbEn}`;
+    } else {
+      promptLabel.textContent = 'How do you say this in French?';
+      prompt.textContent = current.enFull;
+      context.textContent = `Pronoun: ${current.pronounEn}  ·  Verb: ${current.verbEn} (${current.verb})`;
+    }
+  }
+
+  function revealAnswer() {
+    answered = true;
+    document.getElementById('drill-reveal-btn').style.display = 'none';
+
+    const answerDiv    = document.getElementById('drill-answer');
+    const breakdownDiv = document.getElementById('drill-breakdown');
+
+    let mainText, phText, noteText;
+
+    if (mode === 'fr') {
+      // Showed French → reveal English
+      mainText = current.enFull;
+      phText   = `🔊 ${current.frFull} sounds like: ${current.ph}`;
+      noteText = current.note;
+    } else {
+      // Showed English → reveal French
+      mainText = current.frFull;
+      phText   = `🔊 Sounds like: ${current.ph}`;
+      noteText = current.note;
+    }
+
+    let badges = '';
+    if (current.liaison) badges += ' <span style="background:#ede9fe;border-radius:3px;font-size:11px;padding:2px 6px;color:#6d28d9;font-weight:700;">liaison</span>';
+    if (current.warn)    badges += ` <span style="background:#fef3c7;border:1px solid #fde68a;border-radius:3px;font-size:11px;padding:2px 6px;color:#92400e;font-weight:700;">${current.warn}</span>`;
+
+    answerDiv.innerHTML = `
+      <div class="drill-answer-main">${mainText}${badges}</div>
+      <div class="drill-answer-ph">${phText}</div>
+    `;
+    answerDiv.className = 'drill-answer shown';
+
+    breakdownDiv.innerHTML = `<strong>Rule:</strong> ${noteText}`;
+    breakdownDiv.className = 'drill-breakdown shown';
+  }
+
+  function markSelf(correct) {
+    if (correct) { scoreCorrect++; }
+    else         { scoreWrong++; }
+    document.getElementById('score-correct').textContent = scoreCorrect;
+    document.getElementById('score-wrong').textContent   = scoreWrong;
+    document.getElementById('score-total').textContent   = scoreCorrect + scoreWrong;
+    nextCard();
+  }
+
+  function resetScore() {
+    scoreCorrect = 0; scoreWrong = 0;
+    document.getElementById('score-correct').textContent = 0;
+    document.getElementById('score-wrong').textContent   = 0;
+    document.getElementById('score-total').textContent   = 0;
+  }
+
+  // Init first card
+  nextCard();
 
   /* toggle example English */
   function toggleExEn(enId, btnId) {
