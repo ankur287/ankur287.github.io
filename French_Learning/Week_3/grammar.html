@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammaire — Semaine 3 | French CLB 7</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="week-label">Semaine 3 de 30</div>
+  <h1>Grammaire</h1>
+  <span class="topic-tag">Articles définis &amp; indéfinis · Genre</span>
+</header>
+
+<div class="progress-container">
+  <div class="progress-label">Progression — Semaine 3 / 30</div>
+  <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+</div>
+
+<nav class="section-nav">
+  <a href="index.html">🏠 Accueil</a>
+  <a href="vocabulary.html">📚 Vocabulaire</a>
+  <a href="grammar.html" class="active">📖 Grammaire</a>
+  <a href="reading.html">📰 Lecture</a>
+  <a href="quiz.html">✏️ Quiz</a>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h2 class="page-title">Articles &amp; Genre</h2>
+    <p class="page-subtitle">Every French noun has a gender. The article you choose must match it.</p>
+  </div>
+
+  <!-- ── SECTION 1: DEFINITE ARTICLES ─────────────────────── -->
+  <div class="grammar-section-title">1. Articles définis — "The"</div>
+  <p style="font-size:14px;color:var(--text-sm);margin-bottom:14px;line-height:1.7;">
+    Definite articles refer to a specific noun — one you and your listener both know about. They must agree in gender and number with the noun.
+  </p>
+
+  <!-- le -->
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill masc">le</div>
+      <div class="grammar-card-info">
+        <h3>Masculin singulier</h3>
+        <p>Used before masculine singular nouns that begin with a consonant.</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-masc">Le</span> garçon mange une pomme.</div>
+        <div class="phonetics">luh gar-SOHN mahnh ün POM</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The boy eats an apple.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-masc">Le</span> bureau est grand.</div>
+        <div class="phonetics">luh bü-ROH eh GRAHN</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The office is big.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- la -->
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill fem">la</div>
+      <div class="grammar-card-info">
+        <h3>Féminin singulier</h3>
+        <p>Used before feminine singular nouns that begin with a consonant.</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-fem">La</span> femme lit un livre.</div>
+        <div class="phonetics">la FAM lee AN lee-vruh</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The woman reads a book.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-fem">La</span> voiture est rouge.</div>
+        <div class="phonetics">la vwa-TUR eh ROOZH</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The car is red.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- l' -->
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill neutral">l'</div>
+      <div class="grammar-card-info">
+        <h3>Élision — masculin ou féminin</h3>
+        <p><strong>le</strong> and <strong>la</strong> both shorten to <strong>l'</strong> before a vowel or silent <em>h</em>. Gender is still present — hidden inside the noun itself.</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-masc">L'</span>homme est grand. <em style="font-size:12px;color:var(--gray-mid)">(masculin)</em></div>
+        <div class="phonetics">LOM eh GRAHN</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The man is tall.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-fem">L'</span>école est loin. <em style="font-size:12px;color:var(--gray-mid)">(féminin)</em></div>
+        <div class="phonetics">lay-KOL eh LWAN</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The school is far.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-fem">L'</span>eau est froide. <em style="font-size:12px;color:var(--gray-mid)">(féminin)</em></div>
+        <div class="phonetics">LOH eh FRWAHD</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The water is cold.</div>
+      </div>
+
+      <div class="explainer">
+        <button class="explainer-toggle" onclick="toggleExplainer(this)">
+          💡 Why does elision happen? <span class="arrow">▼</span>
+        </button>
+        <div class="explainer-content">
+          French avoids two vowel sounds running together (called <strong>hiatus</strong>). When <em>le</em> or <em>la</em> ends in a vowel and the following word also starts with a vowel, the article vowel is dropped and replaced with an apostrophe: <strong>le + école → l'école</strong>. This is mandatory — you cannot say <em>le école</em> in standard French. Silent <em>h</em> (like in <em>l'homme</em>) behaves like a vowel for this purpose.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- les -->
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill plural">les</div>
+      <div class="grammar-card-info">
+        <h3>Pluriel — masculin &amp; féminin</h3>
+        <p><strong>les</strong> is the plural "the" for ALL genders. The noun usually adds <strong>-s</strong> (silent in speech).</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-blue">Les</span> enfants jouent dans le jardin.</div>
+        <div class="phonetics">lay-zan-FAHN zhoo dahn luh zhar-DAN &nbsp;<span style="color:var(--phonetic);font-size:11px;">🔗 les enfants → /lay-z/ liaison</span></div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The children play in the garden.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr"><span class="hl-blue">Les</span> livres sont sur la table.</div>
+        <div class="phonetics">lay lee-vruh sohn sür la TA-bluh</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">The books are on the table.</div>
+      </div>
+
+      <div class="explainer">
+        <button class="explainer-toggle" onclick="toggleExplainer(this)">
+          💡 Liaison with <em>les</em> <span class="arrow">▼</span>
+        </button>
+        <div class="explainer-content">
+          When <strong>les</strong> is followed by a word starting with a vowel or silent <em>h</em>, the normally silent <strong>-s</strong> is pronounced as <strong>/z/</strong> and links to the next word. This is called <strong>liaison obligatoire</strong> (mandatory liaison). Example: <em>les enfants</em> → /lay-<strong>z</strong>-ahn-FAHN/. You must always make this liaison — omitting it sounds unnatural in French.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 2: INDEFINITE ARTICLES ───────────────────── -->
+  <div class="grammar-section-title">2. Articles indéfinis — "A / An / Some"</div>
+  <p style="font-size:14px;color:var(--text-sm);margin-bottom:14px;line-height:1.7;">
+    Indefinite articles refer to a non-specific noun — something new being introduced, or one among many.
+  </p>
+
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill indef">un</div>
+      <div class="grammar-card-info">
+        <h3>Masculin singulier — "a / an"</h3>
+        <p>One masculine thing, not specifically identified.</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr">Je veux <span class="hl-masc">un</span> café, s'il vous plaît.</div>
+        <div class="phonetics">zhuh vuh AN ka-FAY, seel voo PLEH</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">I want a coffee, please.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr">C'est <span class="hl-masc">un</span> beau pays.</div>
+        <div class="phonetics">seh AN boh pay-EE</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">It is a beautiful country.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill indef" style="background:var(--fem);">une</div>
+      <div class="grammar-card-info">
+        <h3>Féminin singulier — "a / an"</h3>
+        <p>One feminine thing, not specifically identified.</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr">Elle a <span class="hl-fem">une</span> belle voiture.</div>
+        <div class="phonetics">el ah ün BEL vwa-TUR</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">She has a beautiful car.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr">Je cherche <span class="hl-fem">une</span> clé.</div>
+        <div class="phonetics">zhuh SHAYRSH ün KLAY</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">I am looking for a key.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grammar-card">
+    <div class="grammar-card-header">
+      <div class="article-pill plural">des</div>
+      <div class="grammar-card-info">
+        <h3>Pluriel — "some / any"</h3>
+        <p><strong>des</strong> is the plural of both <em>un</em> and <em>une</em>. English often omits it, but French requires it.</p>
+      </div>
+    </div>
+    <div class="grammar-card-body">
+      <div class="grammar-example">
+        <div class="fr">Il y a <span class="hl-blue">des</span> fleurs dans le jardin.</div>
+        <div class="phonetics">eel ee ah day FLUR dahn luh zhar-DAN</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">There are (some) flowers in the garden.</div>
+      </div>
+      <div class="grammar-example">
+        <div class="fr">Je mange <span class="hl-blue">des</span> pommes chaque matin.</div>
+        <div class="phonetics">zhuh MAHNH day POM shak ma-TAN</div>
+        <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+        <div class="en">I eat (some) apples every morning.</div>
+      </div>
+
+      <div class="explainer">
+        <button class="explainer-toggle" onclick="toggleExplainer(this)">
+          💡 Why is "des" required in French? <span class="arrow">▼</span>
+        </button>
+        <div class="explainer-content">
+          In English you can say <em>"I eat apples"</em> — the plural noun stands alone. In French, you almost always need an article: <em>"Je mange <strong>des</strong> pommes."</em> The word <strong>des</strong> tells your listener the noun is plural and indefinite (unspecified apples, not a specific basket). Omitting it sounds telegraphic and unnatural in everyday speech.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 3: GENDER TIPS ────────────────────────────── -->
+  <div class="grammar-section-title">3. Masculine vs Feminine — Pattern Tips</div>
+  <p style="font-size:14px;color:var(--text-sm);margin-bottom:14px;line-height:1.7;">
+    There is no perfect rule, but word <strong>endings</strong> give strong clues. Always learn new nouns with their articles — that's the most reliable strategy.
+  </p>
+
+  <div class="gender-tips">
+    <div class="gender-tip masc-tip">
+      <h4>Usually Masculine</h4>
+      <ul>
+        <li><strong>-age</strong> le fromage</li>
+        <li><strong>-ment</strong> l'appartement</li>
+        <li><strong>-eau</strong> le bureau</li>
+        <li><strong>-isme</strong> le tourisme</li>
+        <li><strong>-in</strong> le matin</li>
+      </ul>
+    </div>
+    <div class="gender-tip fem-tip">
+      <h4>Usually Feminine</h4>
+      <ul>
+        <li><strong>-tion</strong> la question</li>
+        <li><strong>-té</strong> la liberté</li>
+        <li><strong>-eur</strong> la couleur*</li>
+        <li><strong>-ure</strong> la voiture</li>
+        <li><strong>-ette</strong> la fenêtre</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:16px;">* Professions ending in -eur are often masculine: <em>le professeur</em></p>
+
+  <!-- ── SECTION 4: PRACTICE SENTENCES ────────────────────── -->
+  <div class="grammar-section-title">4. Phrases de pratique</div>
+  <div class="controls-bar">
+    <button class="show-all-btn" onclick="showAllEn()">👁 Show All English</button>
+    <button class="hide-all-btn" onclick="hideAllEn()">🙈 Hide All English</button>
+  </div>
+
+  <div class="practice-sentence">
+    <div class="ps-num">Phrase 1</div>
+    <div class="ps-fr">
+      <span class="hl-fem">La</span> fille cherche <span class="hl-masc">un</span> stylo sur <span class="hl-fem">la</span> table.
+    </div>
+    <div class="ps-phonetic">la FEE-yuh SHAYRSH AN stee-LOH sür la TA-bluh</div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="ps-en">The girl is looking for a pen on the table.</div>
+    <div class="player-wrap" style="margin-top:10px;">
+      <div class="short-player" id="ps1" data-audio="La fille cherche un stylo sur la table.">
+        <button class="play-btn">▶ Play</button>
+        <button class="restart-btn">↺</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="practice-sentence">
+    <div class="ps-num">Phrase 2</div>
+    <div class="ps-fr">
+      <span class="hl-blue">Les</span> enfants jouent avec <span class="hl-blue">des</span> jouets.
+    </div>
+    <div class="ps-phonetic">lay-zan-FAHN zhoo a-VEK day zhoo-EH &nbsp;<span style="color:var(--phonetic);font-size:11px;">🔗 les enfants → /z/ liaison</span></div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="ps-en">The children play with (some) toys.</div>
+    <div class="player-wrap" style="margin-top:10px;">
+      <div class="short-player" id="ps2" data-audio="Les enfants jouent avec des jouets.">
+        <button class="play-btn">▶ Play</button>
+        <button class="restart-btn">↺</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="practice-sentence">
+    <div class="ps-num">Phrase 3</div>
+    <div class="ps-fr">
+      <span class="hl-fem">L'</span>eau et <span class="hl-masc">le</span> pain sont sur <span class="hl-fem">la</span> table.
+    </div>
+    <div class="ps-phonetic">LOH ay luh PAN sohn sür la TA-bluh</div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="ps-en">The water and the bread are on the table.</div>
+    <div class="player-wrap" style="margin-top:10px;">
+      <div class="short-player" id="ps3" data-audio="L'eau et le pain sont sur la table.">
+        <button class="play-btn">▶ Play</button>
+        <button class="restart-btn">↺</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="practice-sentence">
+    <div class="ps-num">Phrase 4</div>
+    <div class="ps-fr">
+      <span class="hl-masc">Le</span> monsieur lit <span class="hl-masc">un</span> journal dans <span class="hl-masc">le</span> café.
+    </div>
+    <div class="ps-phonetic">luh muh-SYUH lee AN zhoor-NAL dahn luh ka-FAY</div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="ps-en">The man reads a newspaper in the café.</div>
+    <div class="player-wrap" style="margin-top:10px;">
+      <div class="short-player" id="ps4" data-audio="Le monsieur lit un journal dans le café.">
+        <button class="play-btn">▶ Play</button>
+        <button class="restart-btn">↺</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="practice-sentence">
+    <div class="ps-num">Phrase 5</div>
+    <div class="ps-fr">
+      <span class="hl-fem">Une</span> amie m'apporte <span class="hl-blue">des</span> fleurs et <span class="hl-masc">un</span> livre.
+    </div>
+    <div class="ps-phonetic">ün na-MEE ma-PORT day FLUR ay AN lee-vruh &nbsp;<span style="color:var(--phonetic);font-size:11px;">🔗 une amie → /ün-na-MEE/</span></div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="ps-en">A (female) friend brings me some flowers and a book.</div>
+    <div class="player-wrap" style="margin-top:10px;">
+      <div class="short-player" id="ps5" data-audio="Une amie m'apporte des fleurs et un livre.">
+        <button class="play-btn">▶ Play</button>
+        <button class="restart-btn">↺</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="audio.js"></script>
+<script>
+function toggleNext(btn) {
+  const el = btn.nextElementSibling;
+  if (!el) return;
+  const vis = el.classList.contains('visible') || el.style.display === 'block';
+  if (vis) {
+    el.classList.remove('visible');
+    el.style.display = '';
+    btn.textContent = 'Show English';
+  } else {
+    el.classList.add('visible');
+    el.style.display = 'block';
+    btn.textContent = 'Hide English';
+  }
+}
+function toggleExplainer(btn) {
+  const content = btn.nextElementSibling;
+  btn.classList.toggle('open');
+  content.classList.toggle('open');
+}
+function showAllEn() {
+  document.querySelectorAll('.ps-en').forEach(el => el.classList.add('visible'));
+  document.querySelectorAll('.show-english-btn').forEach(b => b.textContent = 'Hide English');
+}
+function hideAllEn() {
+  document.querySelectorAll('.ps-en').forEach(el => el.classList.remove('visible'));
+  document.querySelectorAll('.show-english-btn').forEach(b => b.textContent = 'Show English');
+}
+// Grammar en toggles
+document.querySelectorAll('.grammar-example .show-english-btn').forEach(btn => {
+  btn.addEventListener('click', () => toggleNext(btn));
+});
+</script>
+</body>
+</html>

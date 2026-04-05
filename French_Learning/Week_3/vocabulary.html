@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulaire — Semaine 3 | French CLB 7</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="week-label">Semaine 3 de 30</div>
+  <h1>Vocabulaire</h1>
+  <span class="topic-tag">50 noms avec articles</span>
+</header>
+
+<div class="progress-container">
+  <div class="progress-label">Progression — Semaine 3 / 30</div>
+  <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+</div>
+
+<nav class="section-nav">
+  <a href="index.html">🏠 Accueil</a>
+  <a href="vocabulary.html" class="active">📚 Vocabulaire</a>
+  <a href="grammar.html">📖 Grammaire</a>
+  <a href="reading.html">📰 Lecture</a>
+  <a href="quiz.html">✏️ Quiz</a>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h2 class="page-title">50 Noms essentiels</h2>
+    <p class="page-subtitle">Learn each noun with its article — this reveals its gender. Try to recall the English before revealing it!</p>
+  </div>
+
+  <div class="controls-bar">
+    <button class="show-all-btn" onclick="showAll()">👁 Show All English</button>
+    <button class="hide-all-btn" onclick="hideAll()">🙈 Hide All English</button>
+  </div>
+
+  <div id="vocab-container"></div>
+</main>
+
+<script src="audio.js"></script>
+<script>
+// ── Vocabulary Data ──────────────────────────────────────────
+// gender: 'masc' | 'fem'
+// elision: show l' note if true
+// exFr: innerHTML with highlighted article
+// exFrAudio: plain text for audio
+// liaison: optional liaison note string
+const vocab = [
+  // ── MASCULINE ────────────────────────────────────────────
+  {
+    id:1, gender:'masc',
+    french:'le livre', phonetic:'luh LEE-vruh',
+    english:'book',
+    exFr:'Je lis <span class="hl-masc">un</span> livre intéressant.',
+    exFrAudio:'Je lis un livre intéressant.',
+    exPhonetic:'zhuh lee AN lee-vruh an-tay-ray-SAHN',
+    exEn:'I am reading an interesting book.'
+  },
+  {
+    id:2, gender:'masc',
+    french:'le stylo', phonetic:'luh stee-LOH',
+    english:'pen',
+    exFr:'<span class="hl-masc">Mon</span> stylo est rouge.',
+    exFrAudio:'Mon stylo est rouge.',
+    exPhonetic:'mohn stee-LOH eh ROOZH',
+    exEn:'My pen is red.'
+  },
+  {
+    id:3, gender:'masc',
+    french:'le téléphone', phonetic:'luh tay-lay-FON',
+    english:'phone',
+    exFr:'<span class="hl-masc">Le</span> téléphone sonne dans la cuisine.',
+    exFrAudio:'Le téléphone sonne dans la cuisine.',
+    exPhonetic:'luh tay-lay-FON son dahn la kwee-ZEEN',
+    exEn:'The phone is ringing in the kitchen.'
+  },
+  {
+    id:4, gender:'masc',
+    french:'le sac', phonetic:'luh SAK',
+    english:'bag',
+    exFr:'Elle pose son sac sur <span class="hl-masc">la</span> table.',
+    exFrAudio:'Elle pose son sac sur la table.',
+    exPhonetic:'el POHZ sohn SAK sür la TA-bluh',
+    exEn:'She puts her bag on the table.'
+  },
+  {
+    id:5, gender:'masc',
+    french:'le garçon', phonetic:'luh gar-SOHN',
+    english:'boy',
+    exFr:'<span class="hl-masc">Le</span> garçon joue dans <span class="hl-masc">le</span> jardin.',
+    exFrAudio:'Le garçon joue dans le jardin.',
+    exPhonetic:'luh gar-SOHN zhoo dahn luh zhar-DAN',
+    exEn:'The boy plays in the garden.'
+  },
+  {
+    id:6, gender:'masc', elision:true,
+    french:"l'homme", phonetic:'LOM',
+    english:'man',
+    exFr:"<span class=\"hl-masc\">L'</span>homme parle à son ami.",
+    exFrAudio:"L'homme parle à son ami.",
+    exPhonetic:"LOM par-luh ah sohn na-MEE",
+    liaison:'son ami → /sohn-na-MEE/ (nasal n links)',
+    exEn:'The man speaks to his friend.'
+  },
+  {
+    id:7, gender:'masc', elision:true,
+    french:"l'ami", phonetic:'la-MEE',
+    english:'(male) friend',
+    exFr:"Mon <span class=\"hl-masc\">ami</span> habite à Montréal.",
+    exFrAudio:'Mon ami habite à Montréal.',
+    exPhonetic:'mohn na-MEE a-BEET ah mohn-ray-AL',
+    liaison:'mon ami → /mohn-na-MEE/ (liaison: n)',
+    exEn:'My friend lives in Montreal.'
+  },
+  {
+    id:8, gender:'masc',
+    french:'le pays', phonetic:'luh pay-EE',
+    english:'country',
+    exFr:'Le Canada est <span class="hl-masc">un</span> grand pays.',
+    exFrAudio:'Le Canada est un grand pays.',
+    exPhonetic:'luh ka-na-DA ay AN grahn pay-EE',
+    exEn:'Canada is a large country.'
+  },
+  {
+    id:9, gender:'masc',
+    french:'le bureau', phonetic:'luh bü-ROH',
+    english:'office / desk',
+    exFr:'Je travaille dans <span class="hl-masc">un</span> bureau moderne.',
+    exFrAudio:'Je travaille dans un bureau moderne.',
+    exPhonetic:'zhuh tra-VY dahn zan bü-ROH mo-DAIRN',
+    liaison:'dans un → /dahn-zan/',
+    exEn:'I work in a modern office.'
+  },
+  {
+    id:10, gender:'masc',
+    french:'le restaurant', phonetic:'luh res-toh-RAHN',
+    english:'restaurant',
+    exFr:'Nous allons <span class="hl-masc">au</span> restaurant ce soir.',
+    exFrAudio:'Nous allons au restaurant ce soir.',
+    exPhonetic:'noo za-LOHN oh res-toh-RAHN suh SWAR',
+    liaison:'nous allons → /noo-za-LOHN/ (liaison: z)',
+    exEn:'We are going to the restaurant tonight.'
+  },
+  {
+    id:11, gender:'masc',
+    french:'le café', phonetic:'luh ka-FAY',
+    english:'coffee / café',
+    exFr:'Je bois <span class="hl-masc">un</span> café chaque matin.',
+    exFrAudio:'Je bois un café chaque matin.',
+    exPhonetic:'zhuh BWAH AN ka-FAY shak ma-TAN',
+    exEn:'I drink a coffee every morning.'
+  },
+  {
+    id:12, gender:'masc',
+    french:'le pain', phonetic:'luh PAN',
+    english:'bread',
+    exFr:'Elle achète du pain frais à <span class="hl-fem">la</span> boulangerie.',
+    exFrAudio:'Elle achète du pain frais à la boulangerie.',
+    exPhonetic:'el a-SHET dü PAN freh ah la boo-lahn-zhuh-REE',
+    exEn:'She buys fresh bread at the bakery.'
+  },
+  {
+    id:13, gender:'masc',
+    french:'le fromage', phonetic:'luh froh-MAZH',
+    english:'cheese',
+    exFr:'<span class="hl-masc">Le</span> fromage canadien est délicieux.',
+    exFrAudio:'Le fromage canadien est délicieux.',
+    exPhonetic:'luh froh-MAZH ka-na-DYAN ay day-lee-SYUH',
+    exEn:'Canadian cheese is delicious.'
+  },
+  {
+    id:14, gender:'masc',
+    french:'le soleil', phonetic:'luh so-LAY',
+    english:'sun',
+    exFr:'<span class="hl-masc">Le</span> soleil brille dans <span class="hl-masc">le</span> ciel bleu.',
+    exFrAudio:'Le soleil brille dans le ciel bleu.',
+    exPhonetic:'luh so-LAY bree-yuh dahn luh SYEL bluh',
+    exEn:'The sun shines in the blue sky.'
+  },
+  {
+    id:15, gender:'masc',
+    french:'le jardin', phonetic:'luh zhar-DAN',
+    english:'garden',
+    exFr:'Il y a des fleurs dans <span class="hl-masc">le</span> jardin.',
+    exFrAudio:'Il y a des fleurs dans le jardin.',
+    exPhonetic:'eel ee ah day FLUR dahn luh zhar-DAN',
+    exEn:'There are flowers in the garden.'
+  },
+  {
+    id:16, gender:'masc',
+    french:'le matin', phonetic:'luh ma-TAN',
+    english:'morning',
+    exFr:'Je me lève tôt <span class="hl-masc">le</span> matin.',
+    exFrAudio:'Je me lève tôt le matin.',
+    exPhonetic:'zhuh muh LEHV toh luh ma-TAN',
+    exEn:'I wake up early in the morning.'
+  },
+  {
+    id:17, gender:'masc',
+    french:'le soir', phonetic:'luh SWAR',
+    english:'evening',
+    exFr:'Nous regardons la télévision <span class="hl-masc">le</span> soir.',
+    exFrAudio:'Nous regardons la télévision le soir.',
+    exPhonetic:'noo ruh-gar-DOHN la tay-lay-vee-ZYOHN luh SWAR',
+    exEn:'We watch television in the evening.'
+  },
+  {
+    id:18, gender:'masc',
+    french:'le jour', phonetic:'luh ZHOOR',
+    english:'day',
+    exFr:"C'est <span class=\"hl-masc\">un</span> beau jour aujourd'hui.",
+    exFrAudio:"C'est un beau jour aujourd'hui.",
+    exPhonetic:'seh AN boh ZHOOR oh-zhoor-DWEE',
+    exEn:"It is a beautiful day today."
+  },
+  {
+    id:19, gender:'masc',
+    french:'le mois', phonetic:'luh MWAH',
+    english:'month',
+    exFr:'<span class="hl-masc">Le</span> mois de janvier est très froid.',
+    exFrAudio:'Le mois de janvier est très froid.',
+    exPhonetic:'luh MWAH duh zhahn-VYAY eh treh FRWAH',
+    exEn:'The month of January is very cold.'
+  },
+  {
+    id:20, gender:'masc',
+    french:'le magasin', phonetic:'luh ma-ga-ZAN',
+    english:'store / shop',
+    exFr:'<span class="hl-masc">Le</span> magasin ouvre à neuf heures.',
+    exFrAudio:'Le magasin ouvre à neuf heures.',
+    exPhonetic:'luh ma-ga-ZAN OO-vruh ah nuhv-UR',
+    liaison:'neuf heures → /nuhv-UR/ (liaison: v)',
+    exEn:'The store opens at nine o\'clock.'
+  },
+  {
+    id:21, gender:'masc',
+    french:'le temps', phonetic:'luh TAHN',
+    english:'time / weather',
+    exFr:'<span class="hl-masc">Le</span> temps passe vite en hiver.',
+    exFrAudio:'Le temps passe vite en hiver.',
+    exPhonetic:'luh TAHN pas VEET ahn ee-VAIR',
+    exEn:'Time passes quickly in winter.'
+  },
+  {
+    id:22, gender:'masc', elision:true,
+    french:"l'appartement", phonetic:'la-par-tuh-MAHN',
+    english:'apartment',
+    exFr:"Leur <span class=\"hl-masc\">appartement</span> est grand et lumineux.",
+    exFrAudio:"Leur appartement est grand et lumineux.",
+    exPhonetic:'lur a-par-tuh-MAHN eh grahn ay lü-mee-NUH',
+    exEn:'Their apartment is large and bright.'
+  },
+  {
+    id:23, gender:'masc',
+    french:'le monsieur', phonetic:'luh muh-SYUH',
+    english:'mister / sir / man',
+    exFr:'<span class="hl-masc">Le</span> monsieur attend l\'autobus.',
+    exFrAudio:"Le monsieur attend l'autobus.",
+    exPhonetic:"luh muh-SYUH a-TAHN loh-toh-BÜSS",
+    exEn:'The man is waiting for the bus.'
+  },
+  {
+    id:24, gender:'masc',
+    french:'le chemin', phonetic:'luh shuh-MAN',
+    english:'path / way',
+    exFr:'Quel chemin prend-on pour aller à l\'école?',
+    exFrAudio:"Quel chemin prend-on pour aller à l'école?",
+    exPhonetic:"kel shuh-MAN prahn-TOHN poor a-LAY ah lay-KOL",
+    exEn:'Which path do we take to get to school?'
+  },
+  {
+    id:25, gender:'masc',
+    french:'le problème', phonetic:'luh proh-BLEM',
+    english:'problem',
+    exFr:"Il y a <span class=\"hl-masc\">un</span> problème avec l'ordinateur.",
+    exFrAudio:"Il y a un problème avec l'ordinateur.",
+    exPhonetic:"eel ee ah AN proh-BLEM a-VEK lor-dee-na-TUR",
+    exEn:'There is a problem with the computer.'
+  },
+  // ── FEMININE ─────────────────────────────────────────────
+  {
+    id:26, gender:'fem',
+    french:'la femme', phonetic:'la FAM',
+    english:'woman / wife',
+    exFr:'<span class="hl-fem">La</span> femme travaille dans <span class="hl-masc">un</span> hôpital.',
+    exFrAudio:"La femme travaille dans un hôpital.",
+    exPhonetic:'la FAM tra-VY dahn zan oh-pee-TAL',
+    exEn:'The woman works in a hospital.'
+  },
+  {
+    id:27, gender:'fem',
+    french:'la fille', phonetic:'la FEE-yuh',
+    english:'girl / daughter',
+    exFr:'<span class="hl-fem">La</span> fille lit <span class="hl-masc">un</span> livre dans sa chambre.',
+    exFrAudio:'La fille lit un livre dans sa chambre.',
+    exPhonetic:'la FEE-yuh lee AN lee-vruh dahn sa SHAHM-bruh',
+    exEn:'The girl reads a book in her room.'
+  },
+  {
+    id:28, gender:'fem', elision:true,
+    french:"l'amie", phonetic:'la-MEE',
+    english:'(female) friend',
+    exFr:"Mon <span class=\"hl-fem\">amie</span> s'appelle Marie.",
+    exFrAudio:"Mon amie s'appelle Marie.",
+    exPhonetic:'mohn na-MEE sa-PEL ma-REE',
+    liaison:'mon amie → /mohn-na-MEE/ (liaison: n)',
+    exEn:"My friend's name is Marie."
+  },
+  {
+    id:29, gender:'fem',
+    french:'la ville', phonetic:'la VEEL',
+    english:'city / town',
+    exFr:'Montréal est <span class="hl-fem">une</span> grande ville.',
+    exFrAudio:'Montréal est une grande ville.',
+    exPhonetic:'mohn-ray-AL ay ün granhd VEEL',
+    exEn:'Montreal is a big city.'
+  },
+  {
+    id:30, gender:'fem',
+    french:'la rue', phonetic:'la RÜ',
+    english:'street',
+    exFr:'Il marche dans <span class="hl-fem">la</span> rue principale.',
+    exFrAudio:'Il marche dans la rue principale.',
+    exPhonetic:'eel MARSH dahn la RÜ pran-see-PAL',
+    exEn:'He walks on the main street.'
+  },
+  {
+    id:31, gender:'fem', elision:true,
+    french:"l'école", phonetic:'lay-KOL',
+    english:'school',
+    exFr:'Les enfants vont à <span class="hl-fem">l\'école</span> le lundi.',
+    exFrAudio:"Les enfants vont à l'école le lundi.",
+    exPhonetic:'lay-zan-FAHN vohn ah lay-KOL luh LAN-dee',
+    liaison:'les enfants → /lay-zan-FAHN/ (liaison: z)',
+    exEn:'The children go to school on Monday.'
+  },
+  {
+    id:32, gender:'fem',
+    french:'la maison', phonetic:'la may-ZOHN',
+    english:'house',
+    exFr:'Notre maison est près du parc.',
+    exFrAudio:'Notre maison est près du parc.',
+    exPhonetic:'no-truh may-ZOHN eh preh dü PARK',
+    exEn:'Our house is near the park.'
+  },
+  {
+    id:33, gender:'fem',
+    french:'la table', phonetic:'la TA-bluh',
+    english:'table',
+    exFr:'Les assiettes sont sur <span class="hl-fem">la</span> table.',
+    exFrAudio:'Les assiettes sont sur la table.',
+    exPhonetic:'lay-za-SYET sohn sür la TA-bluh',
+    liaison:'les assiettes → /lay-za-SYET/ (liaison: z)',
+    exEn:'The plates are on the table.'
+  },
+  {
+    id:34, gender:'fem',
+    french:'la chaise', phonetic:'la SHEZ',
+    english:'chair',
+    exFr:'Elle s\'assoit sur <span class="hl-fem">la</span> chaise rouge.',
+    exFrAudio:"Elle s'assoit sur la chaise rouge.",
+    exPhonetic:'el sa-SWAH sür la SHEZ ROOZH',
+    exEn:'She sits on the red chair.'
+  },
+  {
+    id:35, gender:'fem',
+    french:'la fenêtre', phonetic:'la fuh-NET-ruh',
+    english:'window',
+    exFr:'Il ouvre <span class="hl-fem">la</span> fenêtre pour aérer la pièce.',
+    exFrAudio:'Il ouvre la fenêtre pour aérer la pièce.',
+    exPhonetic:'eel OO-vruh la fuh-NET-ruh poor ah-ay-RAY la PYES',
+    exEn:'He opens the window to air out the room.'
+  },
+  {
+    id:36, gender:'fem',
+    french:'la porte', phonetic:'la PORT',
+    english:'door',
+    exFr:'Ferme <span class="hl-fem">la</span> porte, s\'il te plaît.',
+    exFrAudio:"Ferme la porte, s'il te plaît.",
+    exPhonetic:'FAIRM la PORT, seel tuh PLEH',
+    exEn:'Close the door, please.'
+  },
+  {
+    id:37, gender:'fem',
+    french:'la clé', phonetic:'la KLAY',
+    english:'key',
+    exFr:'Je cherche ma clé de voiture.',
+    exFrAudio:'Je cherche ma clé de voiture.',
+    exPhonetic:'zhuh SHAYRSH ma KLAY duh vwa-TUR',
+    exEn:'I am looking for my car key.'
+  },
+  {
+    id:38, gender:'fem',
+    french:'la voiture', phonetic:'la vwa-TUR',
+    english:'car',
+    exFr:'<span class="hl-fem">La</span> voiture rouge appartient à ma sœur.',
+    exFrAudio:'La voiture rouge appartient à ma sœur.',
+    exPhonetic:'la vwa-TUR ROOZH a-par-TYAN ah ma SUR',
+    exEn:'The red car belongs to my sister.'
+  },
+  {
+    id:39, gender:'fem', elision:true,
+    french:"l'eau", phonetic:'LOH',
+    english:'water',
+    exFr:"Buvez de <span class=\"hl-fem\">l'eau</span> avant de manger.",
+    exFrAudio:"Buvez de l'eau avant de manger.",
+    exPhonetic:'bü-VAY duh LOH a-VAHN duh mahn-ZHAY',
+    exEn:'Drink some water before eating.'
+  },
+  {
+    id:40, gender:'fem',
+    french:'la pomme', phonetic:'la POM',
+    english:'apple',
+    exFr:'Elle mange <span class="hl-fem">une</span> pomme fraîche chaque jour.',
+    exFrAudio:'Elle mange une pomme fraîche chaque jour.',
+    exPhonetic:'el MAHNH ün POM fresh shak ZHOOR',
+    exEn:'She eats a fresh apple every day.'
+  },
+  {
+    id:41, gender:'fem',
+    french:'la fleur', phonetic:'la FLUR',
+    english:'flower',
+    exFr:'Elle offre des fleurs à sa mère.',
+    exFrAudio:'Elle offre des fleurs à sa mère.',
+    exPhonetic:'el OF-ruh day FLUR ah sa MAIR',
+    exEn:'She gives flowers to her mother.'
+  },
+  {
+    id:42, gender:'fem',
+    french:'la lune', phonetic:'la LÜN',
+    english:'moon',
+    exFr:'<span class="hl-fem">La</span> lune brille dans le ciel étoilé.',
+    exFrAudio:'La lune brille dans le ciel étoilé.',
+    exPhonetic:'la LÜN bree-yuh dahn luh SYEL ay-twa-LAY',
+    exEn:'The moon shines in the starry sky.'
+  },
+  {
+    id:43, gender:'fem',
+    french:'la nuit', phonetic:'la NWEE',
+    english:'night',
+    exFr:'Il fait froid <span class="hl-fem">la</span> nuit en hiver.',
+    exFrAudio:'Il fait froid la nuit en hiver.',
+    exPhonetic:'eel feh FRWAH la NWEE ahn ee-VAIR',
+    exEn:'It is cold at night in winter.'
+  },
+  {
+    id:44, gender:'fem',
+    french:'la semaine', phonetic:'la suh-MEN',
+    english:'week',
+    exFr:'Je travaille cinq jours par semaine.',
+    exFrAudio:'Je travaille cinq jours par semaine.',
+    exPhonetic:'zhuh tra-VY SANK zhoor par suh-MEN',
+    exEn:'I work five days a week.'
+  },
+  {
+    id:45, gender:'fem',
+    french:'la question', phonetic:'la kes-TYOHN',
+    english:'question',
+    exFr:"C'est <span class=\"hl-fem\">une</span> bonne question, merci.",
+    exFrAudio:"C'est une bonne question, merci.",
+    exPhonetic:'seh ün BON kes-TYOHN, mair-SEE',
+    exEn:"That's a good question, thank you."
+  },
+  {
+    id:46, gender:'fem',
+    french:'la réponse', phonetic:'la ray-POHNS',
+    english:'answer',
+    exFr:'Je ne connais pas <span class="hl-fem">la</span> réponse.',
+    exFrAudio:'Je ne connais pas la réponse.',
+    exPhonetic:'zhuh nuh ko-NEH pah la ray-POHNS',
+    exEn:"I don't know the answer."
+  },
+  {
+    id:47, gender:'fem',
+    french:'la langue', phonetic:'la LAHNG',
+    english:'language',
+    exFr:'Le français est <span class="hl-fem">une</span> belle langue.',
+    exFrAudio:'Le français est une belle langue.',
+    exPhonetic:'luh frahn-SEH ay ün BEL LAHNG',
+    exEn:'French is a beautiful language.'
+  },
+  {
+    id:48, gender:'fem',
+    french:'la France', phonetic:'la FRAHNS',
+    english:'France',
+    exFr:'<span class="hl-fem">La</span> France est célèbre pour sa cuisine.',
+    exFrAudio:'La France est célèbre pour sa cuisine.',
+    exPhonetic:'la FRAHNS eh say-LE-bruh poor sa kwee-ZEEN',
+    exEn:'France is famous for its cuisine.'
+  },
+  {
+    id:49, gender:'fem',
+    french:'la couleur', phonetic:'la koo-LUR',
+    english:'color / colour',
+    exFr:'Quelle est ta couleur préférée?',
+    exFrAudio:'Quelle est ta couleur préférée?',
+    exPhonetic:'KEL eh ta koo-LUR pray-fay-RAY',
+    exEn:'What is your favorite color?'
+  },
+  {
+    id:50, gender:'fem',
+    french:'la liberté', phonetic:'la lee-ber-TAY',
+    english:'freedom / liberty',
+    exFr:'<span class="hl-fem">La</span> liberté est une valeur fondamentale au Canada.',
+    exFrAudio:'La liberté est une valeur fondamentale au Canada.',
+    exPhonetic:'la lee-ber-TAY ay ün va-LUR fohn-da-mahn-TAL oh ka-na-DA',
+    exEn:'Freedom is a fundamental value in Canada.'
+  }
+];
+
+// ── Render Cards ─────────────────────────────────────────────
+function renderVocab() {
+  const container = document.getElementById('vocab-container');
+  const masc = vocab.filter(w => w.gender === 'masc');
+  const fem  = vocab.filter(w => w.gender === 'fem');
+
+  let html = '';
+
+  // Masculine section
+  html += `<div class="section-divider" style="color:var(--masc)">
+    <span style="background:var(--masc-bg);color:var(--masc);padding:3px 14px;border-radius:20px;font-size:11px;">
+      ♂ Masculin — 25 noms
+    </span>
+  </div>`;
+  masc.forEach(w => { html += buildCard(w); });
+
+  // Feminine section
+  html += `<div class="section-divider" style="color:var(--fem)">
+    <span style="background:var(--fem-bg);color:var(--fem);padding:3px 14px;border-radius:20px;font-size:11px;">
+      ♀ Féminin — 25 noms
+    </span>
+  </div>`;
+  fem.forEach(w => { html += buildCard(w); });
+
+  container.innerHTML = html;
+
+  // Attach show/hide toggle handlers
+  container.querySelectorAll('.show-english-btn').forEach(btn => {
+    btn.addEventListener('click', function() { toggleTranslation(this); });
+  });
+}
+
+function buildCard(w) {
+  const isMasc = w.gender === 'masc';
+  const gClass = isMasc ? 'masc' : 'fem';
+  const gLabel = isMasc ? 'Masculin' : 'Féminin';
+  const wid    = 'wp-' + w.id;
+  const sid    = 'sp-' + w.id;
+
+  const elisionNote = w.elision
+    ? `<div style="font-size:11px;color:var(--phonetic);margin-top:3px;">💡 Élision: <strong>le/la</strong> → <strong>l'</strong> before a vowel</div>`
+    : '';
+
+  const liaisonNote = w.liaison
+    ? `<div class="liaison-note">🔗 Liaison: ${w.liaison}</div>`
+    : '';
+
+  return `
+  <div class="vocab-card">
+    <div class="vocab-card-header">
+      <span class="gender-badge ${gClass}">${gLabel}</span>
+      <div class="french-word">${w.french}</div>
+      <div class="phonetic-guide">${w.phonetic}</div>
+      ${elisionNote}
+      <div class="player-wrap">
+        <div class="short-player" id="${wid}" data-audio="${w.french}">
+          <button class="play-btn">▶ Play</button>
+          <button class="restart-btn">↺</button>
+        </div>
+      </div>
+    </div>
+    <div class="vocab-card-body">
+      <button class="show-english-btn">Show English</button>
+      <div class="vocab-translation">${w.english}</div>
+
+      <div class="example-section">
+        <div class="example-label">Exemple</div>
+        <div class="example-french">${w.exFr}</div>
+        <div class="example-phonetics">
+          ${w.exPhonetic}
+          ${liaisonNote}
+        </div>
+        <div class="player-wrap">
+          <div class="short-player" id="${sid}" data-audio="${escAttr(w.exFrAudio)}">
+            <button class="play-btn">▶ Play</button>
+            <button class="restart-btn">↺</button>
+          </div>
+        </div>
+        <button class="show-english-btn">Show English</button>
+        <div class="example-translation">${w.exEn}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function escAttr(s) { return s.replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
+
+function toggleTranslation(btn) {
+  const target = btn.nextElementSibling;
+  if (!target) return;
+  const showing = target.classList.contains('visible');
+  target.classList.toggle('visible', !showing);
+  btn.textContent = showing ? 'Show English' : 'Hide English';
+}
+
+function showAll() {
+  document.querySelectorAll('.vocab-translation, .example-translation').forEach(el => el.classList.add('visible'));
+  document.querySelectorAll('.show-english-btn').forEach(btn => btn.textContent = 'Hide English');
+}
+function hideAll() {
+  document.querySelectorAll('.vocab-translation, .example-translation').forEach(el => el.classList.remove('visible'));
+  document.querySelectorAll('.show-english-btn').forEach(btn => btn.textContent = 'Show English');
+}
+
+// Render on load, then init audio players
+document.addEventListener('DOMContentLoaded', () => {
+  renderVocab();
+  // audio.js auto-init fires after DOMContentLoaded too,
+  // so re-trigger manually after render:
+  document.querySelectorAll('[data-audio]').forEach(el => {
+    const text = el.getAttribute('data-audio');
+    if (!text || !el.id) return;
+    const wc = text.trim().split(/\s+/).filter(Boolean).length;
+    if (wc < 20) buildShortPlayer(text, el.id);
+    else          buildLongPlayer(text, el.id);
+  });
+});
+</script>
+</body>
+</html>

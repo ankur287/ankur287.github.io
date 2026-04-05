@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture — Semaine 3 | French CLB 7</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="week-label">Semaine 3 de 30</div>
+  <h1>Lecture</h1>
+  <span class="topic-tag">Mon quartier · 130 mots</span>
+</header>
+
+<div class="progress-container">
+  <div class="progress-label">Progression — Semaine 3 / 30</div>
+  <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+</div>
+
+<nav class="section-nav">
+  <a href="index.html">🏠 Accueil</a>
+  <a href="vocabulary.html">📚 Vocabulaire</a>
+  <a href="grammar.html">📖 Grammaire</a>
+  <a href="reading.html" class="active">📰 Lecture</a>
+  <a href="quiz.html">✏️ Quiz</a>
+</nav>
+
+<main>
+  <div class="page-header">
+    <h2 class="page-title">Mon quartier</h2>
+    <p class="page-subtitle">Read the full passage, then work through it sentence by sentence. Answer the comprehension questions at the end.</p>
+  </div>
+
+  <!-- FULL PASSAGE CARD -->
+  <div class="passage-card">
+    <div class="passage-header">
+      <div class="passage-title">Mon quartier</div>
+      <div class="passage-meta">130 mots · Niveau débutant-intermédiaire</div>
+    </div>
+    <div class="passage-body">
+      <!-- Full passage long player -->
+      <div class="player-wrap" style="margin-bottom:14px;">
+        <div class="long-player" id="full-passage"
+          data-audio="J'habite dans un beau quartier à Montréal. Dans mon quartier, il y a une école, un restaurant, un café et un grand parc. La rue principale est longue et animée. Le matin, les enfants vont à l'école et les hommes et les femmes vont au bureau. Il y a aussi une boulangerie où je achète du pain frais chaque matin. La boulangère s'appelle Marie. C'est une femme très gentille. Le soir, les gens se promènent dans le parc et mangent dans le restaurant du quartier. J'aime beaucoup mon quartier parce que c'est un endroit calme et agréable.">
+          <div class="player-controls">
+            <button class="play-btn">▶ Play</button>
+            <button class="restart-btn">↺</button>
+          </div>
+          <div class="slider-wrap">
+            <div class="slider-fill"></div>
+            <input type="range" class="progress-slider" min="0" max="100" value="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="passage-text">
+        J'habite dans un beau quartier à Montréal. Dans mon quartier, il y a une école, un restaurant, un café et un grand parc. La rue principale est longue et animée. Le matin, les enfants vont à l'école et les hommes et les femmes vont au bureau. Il y a aussi une boulangerie où j'achète du pain frais chaque matin. La boulangère s'appelle Marie. C'est une femme très gentille. Le soir, les gens se promènent dans le parc et mangent dans le restaurant du quartier. J'aime beaucoup mon quartier parce que c'est un endroit calme et agréable.
+      </div>
+
+      <button class="show-english-btn" id="full-trans-btn" onclick="toggleFullTranslation()" style="margin-top:14px;">
+        Show Full English Translation
+      </button>
+      <div class="passage-translation" id="full-translation">
+        I live in a beautiful neighbourhood in Montreal. In my neighbourhood, there is a school, a restaurant, a café and a big park. The main street is long and lively. In the morning, the children go to school and the men and women go to the office. There is also a bakery where I buy fresh bread every morning. The baker's name is Marie. She is a very kind woman. In the evening, people stroll in the park and eat at the neighbourhood restaurant. I love my neighbourhood a lot because it is a calm and pleasant place.
+      </div>
+    </div>
+  </div>
+
+  <!-- SENTENCE BREAKDOWN -->
+  <div class="grammar-section-title">Phrase par phrase</div>
+
+  <!-- S1 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 1</div>
+    <div class="breakdown-fr">J'habite dans <span class="hl-masc">un</span> beau quartier à Montréal.</div>
+    <div class="breakdown-phonetics">
+      zha-BEET dahn AN boh kar-TYAY ah mohn-ray-AL
+      <div class="liaison-note">🔗 dans un → /dahn-zan/ (liaison: n links to vowel)</div>
+    </div>
+    <div class="player-wrap">
+      <div class="short-player" id="s1" data-audio="J'habite dans un beau quartier à Montréal.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">I live in a beautiful neighbourhood in Montreal.</div>
+    <div class="explainer" style="margin-top:10px;">
+      <button class="explainer-toggle" onclick="toggleExplainer(this)">💡 Grammar note <span class="arrow">▼</span></button>
+      <div class="explainer-content"><strong>J'habite</strong> = Je + habite (élision before silent <em>h</em>). <strong>un quartier</strong> = indefinite article + masculine noun (a neighbourhood). <strong>beau</strong> = adjective, masculine form (feminine: <em>belle</em>).</div>
+    </div>
+  </div>
+
+  <!-- S2 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 2</div>
+    <div class="breakdown-fr">Dans mon quartier, il y a <span class="hl-fem">une</span> école, <span class="hl-masc">un</span> restaurant, <span class="hl-masc">un</span> café et <span class="hl-masc">un</span> grand parc.</div>
+    <div class="breakdown-phonetics">
+      dahn mohn kar-TYAY, eel ee ah ün nay-KOL, AN res-toh-RAHN, AN ka-FAY ay AN GRAHN PARK
+      <div class="liaison-note">🔗 une école → /ün-nay-KOL/ (liaison: n)</div>
+    </div>
+    <div class="player-wrap">
+      <div class="short-player" id="s2" data-audio="Dans mon quartier, il y a une école, un restaurant, un café et un grand parc.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">In my neighbourhood, there is a school, a restaurant, a café and a big park.</div>
+    <div class="explainer" style="margin-top:10px;">
+      <button class="explainer-toggle" onclick="toggleExplainer(this)">💡 Grammar note <span class="arrow">▼</span></button>
+      <div class="explainer-content"><strong>Il y a</strong> = "there is / there are" — a fixed expression. Notice: <em>une école</em> (f.), <em>un restaurant</em> (m.), <em>un café</em> (m.), <em>un parc</em> (m.). Each noun gets its matching indefinite article.</div>
+    </div>
+  </div>
+
+  <!-- S3 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 3</div>
+    <div class="breakdown-fr"><span class="hl-fem">La</span> rue principale est longue et animée.</div>
+    <div class="breakdown-phonetics">la RÜ pran-see-PAL eh LOHNG ay a-nee-MAY</div>
+    <div class="player-wrap">
+      <div class="short-player" id="s3" data-audio="La rue principale est longue et animée.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">The main street is long and lively.</div>
+  </div>
+
+  <!-- S4 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 4</div>
+    <div class="breakdown-fr"><span class="hl-masc">Le</span> matin, <span class="hl-blue">les</span> enfants vont à <span class="hl-fem">l'</span>école et <span class="hl-blue">les</span> hommes et <span class="hl-blue">les</span> femmes vont au bureau.</div>
+    <div class="breakdown-phonetics">
+      luh ma-TAN, lay-zan-FAHN vohn ah lay-KOL ay lay-ZOM ay lay FAM vohn oh bü-ROH
+      <div class="liaison-note">🔗 les enfants → /z/ · les hommes → /z/</div>
+    </div>
+    <div class="player-wrap">
+      <div class="short-player" id="s4" data-audio="Le matin, les enfants vont à l'école et les hommes et les femmes vont au bureau.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">In the morning, the children go to school and the men and women go to the office.</div>
+    <div class="explainer" style="margin-top:10px;">
+      <button class="explainer-toggle" onclick="toggleExplainer(this)">💡 Grammar note <span class="arrow">▼</span></button>
+      <div class="explainer-content"><strong>au bureau</strong> = à + le → <strong>au</strong> (contracted — you can never say "à le"). <strong>vont</strong> = ils/elles vont (aller, Week 2). Two liaisons in one sentence: <em>les enfants</em> and <em>les hommes</em> both trigger the /z/ sound.</div>
+    </div>
+  </div>
+
+  <!-- S5 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 5</div>
+    <div class="breakdown-fr">Il y a aussi <span class="hl-fem">une</span> boulangerie où j'achète du pain frais chaque matin.</div>
+    <div class="breakdown-phonetics">eel ee ah oh-SEE ün boo-lahn-zhuh-REE oo zha-SHET dü PAN freh shak ma-TAN</div>
+    <div class="player-wrap">
+      <div class="short-player" id="s5" data-audio="Il y a aussi une boulangerie où j'achète du pain frais chaque matin.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">There is also a bakery where I buy fresh bread every morning.</div>
+    <div class="explainer" style="margin-top:10px;">
+      <button class="explainer-toggle" onclick="toggleExplainer(this)">💡 Grammar note <span class="arrow">▼</span></button>
+      <div class="explainer-content"><strong>une boulangerie</strong> (f.) = a bakery. <strong>du pain</strong> = de + le → <strong>du</strong> (partitive article — "some bread", an uncountable amount). <strong>où</strong> = where (relative pronoun connecting the two clauses — we'll study these in Week 19!).</div>
+    </div>
+  </div>
+
+  <!-- S6 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 6</div>
+    <div class="breakdown-fr"><span class="hl-fem">La</span> boulangère s'appelle Marie.</div>
+    <div class="breakdown-phonetics">la boo-lahn-ZHAIR sa-PEL ma-REE</div>
+    <div class="player-wrap">
+      <div class="short-player" id="s6" data-audio="La boulangère s'appelle Marie.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">The baker's name is Marie.</div>
+  </div>
+
+  <!-- S7 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 7</div>
+    <div class="breakdown-fr">C'est <span class="hl-fem">une</span> femme très gentille.</div>
+    <div class="breakdown-phonetics">seh ün FAM treh zhahn-TEE-yuh</div>
+    <div class="player-wrap">
+      <div class="short-player" id="s7" data-audio="C'est une femme très gentille.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">She is a very kind woman.</div>
+  </div>
+
+  <!-- S8 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 8</div>
+    <div class="breakdown-fr"><span class="hl-masc">Le</span> soir, <span class="hl-blue">les</span> gens se promènent dans <span class="hl-masc">le</span> parc et mangent dans <span class="hl-masc">le</span> restaurant du quartier.</div>
+    <div class="breakdown-phonetics">luh SWAR, lay ZHAHN suh pro-MEN dahn luh PARK ay MAHNH dahn luh res-toh-RAHN dü kar-TYAY</div>
+    <div class="player-wrap">
+      <div class="short-player" id="s8" data-audio="Le soir, les gens se promènent dans le parc et mangent dans le restaurant du quartier.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">In the evening, people stroll in the park and eat at the neighbourhood restaurant.</div>
+  </div>
+
+  <!-- S9 -->
+  <div class="breakdown-item">
+    <div class="breakdown-num">Phrase 9</div>
+    <div class="breakdown-fr">J'aime beaucoup mon quartier parce que c'est <span class="hl-masc">un</span> endroit calme et agréable.</div>
+    <div class="breakdown-phonetics">zhem boh-KOO mohn kar-TYAY par-suh kuh seh AN ahn-DRWAH KALM ay a-gray-AH-bluh</div>
+    <div class="player-wrap">
+      <div class="short-player" id="s9" data-audio="J'aime beaucoup mon quartier parce que c'est un endroit calme et agréable.">
+        <button class="play-btn">▶ Play</button><button class="restart-btn">↺</button>
+      </div>
+    </div>
+    <button class="show-english-btn" onclick="toggleNext(this)">Show English</button>
+    <div class="breakdown-en">I love my neighbourhood a lot because it is a calm and pleasant place.</div>
+    <div class="explainer" style="margin-top:10px;">
+      <button class="explainer-toggle" onclick="toggleExplainer(this)">💡 Grammar note <span class="arrow">▼</span></button>
+      <div class="explainer-content"><strong>parce que</strong> = because (connector word — links cause and result). <strong>un endroit</strong> (m.) = a place. Notice <em>un</em> (indefinite) because "a calm place" is not a specific, previously mentioned place.</div>
+    </div>
+  </div>
+
+  <!-- COMPREHENSION -->
+  <div class="grammar-section-title">Questions de compréhension</div>
+
+  <!-- Q1 -->
+  <div class="comp-card">
+    <div class="comp-q-label">Question 1</div>
+    <div class="comp-q-text">What does the narrator buy at the bakery every morning?</div>
+    <button class="comp-option" onclick="checkAnswer(this, false)">Un café</button>
+    <button class="comp-option" onclick="checkAnswer(this, true)">Du pain frais</button>
+    <button class="comp-option" onclick="checkAnswer(this, false)">Une pomme</button>
+    <button class="comp-option" onclick="checkAnswer(this, false)">Des fleurs</button>
+    <div class="comp-feedback" id="fb1"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="comp-card">
+    <div class="comp-q-label">Question 2</div>
+    <div class="comp-q-text">What do people do in the park in the evening?</div>
+    <button class="comp-option" onclick="checkAnswer(this, false)">They buy bread</button>
+    <button class="comp-option" onclick="checkAnswer(this, false)">They go to school</button>
+    <button class="comp-option" onclick="checkAnswer(this, true)">They stroll (se promènent)</button>
+    <button class="comp-option" onclick="checkAnswer(this, false)">They work</button>
+    <div class="comp-feedback" id="fb2"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="comp-card">
+    <div class="comp-q-label">Question 3</div>
+    <div class="comp-q-text">Why does the narrator love their neighbourhood?</div>
+    <button class="comp-option" onclick="checkAnswer(this, false)">Because it has a big library</button>
+    <button class="comp-option" onclick="checkAnswer(this, false)">Because it is near a metro station</button>
+    <button class="comp-option" onclick="checkAnswer(this, true)">Because it is calm and pleasant</button>
+    <button class="comp-option" onclick="checkAnswer(this, false)">Because the rent is cheap</button>
+    <div class="comp-feedback" id="fb3"></div>
+  </div>
+
+</main>
+
+<script src="audio.js"></script>
+<script>
+function toggleNext(btn) {
+  const el = btn.nextElementSibling;
+  if (!el) return;
+  const vis = el.classList.contains('visible');
+  el.classList.toggle('visible', !vis);
+  btn.textContent = vis ? 'Show English' : 'Hide English';
+}
+function toggleExplainer(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+function toggleFullTranslation() {
+  const el  = document.getElementById('full-translation');
+  const btn = document.getElementById('full-trans-btn');
+  const vis = el.classList.contains('visible');
+  el.classList.toggle('visible', !vis);
+  btn.textContent = vis ? 'Show Full English Translation' : 'Hide English Translation';
+}
+
+let answered = [false, false, false];
+function checkAnswer(btn, isCorrect) {
+  const card    = btn.closest('.comp-card');
+  const fbEl    = card.querySelector('.comp-feedback');
+  const buttons = card.querySelectorAll('.comp-option');
+  const idx     = [...document.querySelectorAll('.comp-card')].indexOf(card);
+  if (answered[idx]) return;
+  answered[idx] = true;
+
+  buttons.forEach(b => b.disabled = true);
+  if (isCorrect) {
+    btn.classList.add('correct');
+    fbEl.textContent = '✅ Correct! Well done.';
+    fbEl.className = 'comp-feedback correct-fb';
+  } else {
+    btn.classList.add('incorrect');
+    const correctBtn = [...buttons].find(b => b.getAttribute('onclick').includes('true'));
+    if (correctBtn) correctBtn.classList.add('correct');
+    fbEl.textContent = '❌ Not quite. The highlighted answer is correct — re-read the passage to find it.';
+    fbEl.className = 'comp-feedback incorrect-fb';
+  }
+  fbEl.style.display = 'block';
+}
+</script>
+</body>
+</html>
