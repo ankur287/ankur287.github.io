@@ -8,205 +8,407 @@
 </head>
 <body>
 
-<div class="quiz-wrap">
+<div class="quiz-header">
+  <h1>✏️ Quiz — Semaine 3</h1>
+  <p>Noms, Articles &amp; Genre · 50 questions</p>
+</div>
 
-  <div class="quiz-top-bar">
-    <h1>✏️ Quiz — Semaine 3</h1>
-    <p>Noms, Articles &amp; Genre · 50 questions</p>
+<div class="quiz-progress">
+  <span class="qp-label" id="q-counter">Question 1 / 50</span>
+  <div class="quiz-progress-track">
+    <div class="quiz-progress-fill" id="q-bar" style="width:2%"></div>
   </div>
+  <span class="qp-label" id="q-score">✅ 0</span>
+</div>
 
-  <div class="quiz-progress-bar">
-    <span class="qp-label" id="q-counter">Question 1 / 50</span>
-    <div class="quiz-progress-track">
-      <div class="quiz-progress-fill" id="q-progress" style="width:2%"></div>
-    </div>
-    <span class="qp-label" id="q-score">✅ 0</span>
+<div id="q-area"></div>
+
+<div class="results-screen" id="results">
+  <div class="score-circle">
+    <div class="score-num" id="r-num">0</div>
+    <div class="score-sub-lbl">/ 50</div>
   </div>
-
-  <div id="question-area"></div>
-
-  <div class="results-screen" id="results">
-    <div class="score-circle">
-      <div class="score-num" id="final-num">0</div>
-      <div class="score-lbl">/ 50</div>
-    </div>
-    <div class="score-msg" id="score-msg"></div>
-    <div class="score-sub" id="score-sub"></div>
-    <div class="score-breakdown card">
-      <div class="score-breakdown-row"><span>Easy (15 Qs)</span><span id="easy-score">0 / 15</span></div>
-      <div class="score-breakdown-row"><span>Medium (25 Qs)</span><span id="med-score">0 / 25</span></div>
-      <div class="score-breakdown-row"><span>Hard (10 Qs)</span><span id="hard-score">0 / 10</span></div>
-    </div>
-    <button class="retry-btn" onclick="retryQuiz()">↺ Réessayer</button>
+  <div class="score-msg" id="r-msg"></div>
+  <div class="score-detail" id="r-detail"></div>
+  <div class="score-breakdown">
+    <div class="sb-row"><span>Facile — 15 questions</span><span id="r-easy">0 / 15</span></div>
+    <div class="sb-row"><span>Moyen — 25 questions</span><span id="r-med">0 / 25</span></div>
+    <div class="sb-row"><span>Difficile — 10 questions</span><span id="r-hard">0 / 10</span></div>
   </div>
-
+  <button class="retry-btn" onclick="startQuiz()">↺ Réessayer</button>
 </div>
 
 <script src="audio.js"></script>
 <script>
-const questions = [
-  // ── EASY (15) ────────────────────────────────────────────
-  {diff:'easy', q:'What is the French definite article for a masculine singular noun?', opts:['la','le','les','un'], ans:1, exp:'"Le" is the masculine singular definite article. Example: le livre.'},
-  {diff:'easy', q:'What is the French definite article for a feminine singular noun?', opts:['le','un','la','les'], ans:2, exp:'"La" is the feminine singular definite article. Example: la table.'},
-  {diff:'easy', q:'What article replaces le/la before a vowel or silent h?', opts:["l'","le","les","un"], ans:0, exp:'Elision: le and la shorten to l\' before a vowel. Example: l\'école, l\'homme.'},
-  {diff:'easy', q:'Which article means "some" for plural nouns?', opts:['un','une','le','des'], ans:3, exp:'"Des" is the plural indefinite article: des livres (some books).'},
-  {diff:'easy', q:'Choose the correct article: ___ livre (book)', opts:['la','une','le','les'], ans:2, exp:'Livre is masculine → le livre.'},
-  {diff:'easy', q:'Choose the correct article: ___ table (table)', opts:['le','un','la','des'], ans:2, exp:'Table is feminine → la table.'},
-  {diff:'easy', q:'Choose the correct article: ___ école (school)', opts:["l'","le","la","des"], ans:0, exp:'École starts with a vowel → l\'école (elision, feminine).'},
-  {diff:'easy', q:'What is the plural definite article for ALL genders?', opts:['un','une','le','les'], ans:3, exp:'"Les" is the plural definite article for both masculine and feminine nouns.'},
-  {diff:'easy', q:'What is the masculine indefinite article ("a")?', opts:['le','la','un','une'], ans:2, exp:'"Un" is the masculine indefinite article: un café, un sac.'},
-  {diff:'easy', q:'What is the feminine indefinite article ("a")?', opts:['le','la','un','une'], ans:3, exp:'"Une" is the feminine indefinite article: une maison, une fleur.'},
-  {diff:'easy', q:'Which word means "neighbourhood" in French?', opts:['le quartier','la rue','le pays','le jardin'], ans:0, exp:'Le quartier = neighbourhood. Remember: masculine!'},
-  {diff:'easy', q:'Which word means "street" in French?', opts:['le chemin','la rue','le matin','la porte'], ans:1, exp:'La rue = street. Feminine!'},
-  {diff:'easy', q:'What does "l\'eau" mean?', opts:['the sun','the fire','the water','the air'], ans:2, exp:'L\'eau = the water. Feminine noun starting with a vowel → elision.'},
-  {diff:'easy', q:'What does "le pain" mean?', opts:['the wine','the butter','the bread','the cheese'], ans:2, exp:'Le pain = bread. Masculine noun.'},
-  {diff:'easy', q:'What does "la maison" mean?', opts:['the store','the house','the school','the office'], ans:1, exp:'La maison = house/home. Feminine noun.'},
+// Each question has: diff, q (text), fr (optional French in Lora), opts[], ans (0-based index), exp
+const allQ = [
 
-  // ── MEDIUM (25) ──────────────────────────────────────────
-  {diff:'medium', q:'Fill in the blank: ___ enfants jouent dans le jardin.', opts:['Le','La','Les','Un'], ans:2, exp:'"Les enfants" = the children (plural). Always use les for plural.'},
-  {diff:'medium', q:'Which sentence uses articles correctly?', opts:['Je lis la livre.','Je lis un livre.','Je lis le livre frais.','Je lis des livre.'], ans:1, exp:'"Je lis un livre" = I read a book. Un is correct for indefinite masculine singular.'},
-  {diff:'medium', q:'What happens when les is followed by a vowel?', opts:['Nothing changes','The s becomes silent','The s is pronounced as /z/ (liaison)','les changes to l\''], ans:2, exp:'Mandatory liaison: les enfants → /lay-z-ahn-FAHN/. The silent s becomes /z/.'},
-  {diff:'medium', q:'Which noun is feminine?', opts:['le livre','le café','la voiture','le soir'], ans:2, exp:'La voiture (car) is feminine. The others are masculine.'},
-  {diff:'medium', q:'Which noun is masculine?', opts:['la fleur','la maison','la rue','le soleil'], ans:3, exp:'Le soleil (sun) is masculine. The others are feminine.'},
-  {diff:'medium', q:'What does "au bureau" mean? (au = à + le)', opts:['at the school','at the store','at the office','at the restaurant'], ans:2, exp:'Au = à + le (contraction). Bureau = office. So "au bureau" = at the office.'},
-  {diff:'medium', q:'What does "il y a" mean?', opts:['he goes','he has','there is/are','it is'], ans:2, exp:'"Il y a" is a fixed expression meaning "there is" or "there are". Very common!'},
-  {diff:'medium', q:'Choose the correct sentence:', opts:["L'homme est grand.","Le homme est grand.","La homme est grand.","Un homme est grande."], ans:0, exp:'Homme starts with silent h → elision: l\'homme. It\'s masculine so "grand" (not "grande").'},
-  {diff:'medium', q:'What is the gender of "la liberté"?', opts:['Masculine','Feminine','Neutral','It depends'], ans:1, exp:'La liberté is feminine. Words ending in -té are almost always feminine.'},
-  {diff:'medium', q:'Fill in: ___ amie s\'appelle Marie.', opts:['Le','La','Mon','Son'], ans:2, exp:'Mon amie — even though amie is feminine, mon is used before vowels to avoid the clash: "ma amie" → "mon amie".'},
-  {diff:'medium', q:'Which ending is typically MASCULINE?', opts:['-tion','-té','-eau','-eure'], ans:2, exp:'Words ending in -eau are typically masculine: le bureau, le gâteau, le chapeau.'},
-  {diff:'medium', q:'Which ending is typically FEMININE?', opts:['-age','-ment','-eau','-tion'], ans:3, exp:'Words ending in -tion are almost always feminine: la question, la nation, la solution.'},
-  {diff:'medium', q:'What does "des fleurs" mean?', opts:['a flower','the flower','the flowers','some flowers'], ans:3, exp:'"Des fleurs" = some flowers. Des is the plural indefinite article.'},
-  {diff:'medium', q:'Fill in: Je mange ___ pommes chaque matin.', opts:['le','la','un','des'], ans:3, exp:'"Des pommes" = some apples. Plural indefinite → des. You can\'t say "je mange les pommes" (too specific).'},
-  {diff:'medium', q:'What does "le fromage" mean?', opts:['the fruit','the bread','the cheese','the butter'], ans:2, exp:'Le fromage = cheese. Masculine (ending in -age is a clue!).'},
-  {diff:'medium', q:'What does "la fenêtre" mean?', opts:['the door','the window','the floor','the wall'], ans:1, exp:'La fenêtre = window. Feminine noun.'},
-  {diff:'medium', q:'Which sentence is correct?', opts:['Il y a une école et un café.','Il y a la école et le café.','Il y a une école et la café.','Il y a un école et une café.'], ans:0, exp:'École (f.) → une école. Café (m.) → un café. Both indefinite (first mention).'},
-  {diff:'medium', q:'What does "le quartier" mean?', opts:['the store','the city','the neighbourhood','the country'], ans:2, exp:'Le quartier = neighbourhood. Masculine noun.'},
-  {diff:'medium', q:'What does "la boulangerie" mean?', opts:['the pharmacy','the bookshop','the grocery','the bakery'], ans:3, exp:'La boulangerie = bakery. The person who works there: la boulangère (f.) / le boulanger (m.).'},
-  {diff:'medium', q:'Identify the correct article for "appartement" (apartment):', opts:['la','une','le','des'], ans:2, exp:'L\'appartement is masculine (ending -ment → usually masculine). Le when not starting with a vowel in the dictionary form, l\' in use.'},
-  {diff:'medium', q:'Which sentence uses the correct liaison?', opts:['les enfants → /lay-ahn-FAHN/','les enfants → /lay-zahn-FAHN/','les enfants → /leh-ahn-FAHN/','les enfants → /le-ahn-FAHN/'], ans:1, exp:'Mandatory liaison: the silent -s of "les" becomes /z/ before the vowel in "enfants".'},
-  {diff:'medium', q:'What does "l\'homme" literally mean?', opts:['the woman','the man','the human','the boy'], ans:1, exp:'L\'homme = the man. Homme starts with silent h (aspirate h would block elision, but h in homme is silent).'},
-  {diff:'medium', q:'Fill in: ___ voiture rouge appartient à ma sœur.', opts:['Un','Le','La','Les'], ans:2, exp:'"La voiture rouge" — definite article because it\'s a specific car already identified (the red one).'},
-  {diff:'medium', q:'What does "parce que" mean?', opts:['because','although','when','if'], ans:0, exp:'"Parce que" = because. It connects a cause to a result: J\'aime mon quartier parce que c\'est calme.'},
-  {diff:'medium', q:'Which noun ends in -ité and is feminine?', opts:['le café','le sac','la liberté','le bureau'], ans:2, exp:'La liberté ends in -té (liberté → -ité). Words ending in -té are almost always feminine.'},
+  // ═══════════════════════════ EASY (15) ════════════════════════════
+  { diff:'easy',
+    q: 'What is the masculine definite article in French?',
+    opts:['la','le','les','un'], ans:1,
+    exp:'"Le" is the masculine definite article. Example: le parc, le garçon.' },
 
-  // ── HARD (10) ────────────────────────────────────────────
-  {diff:'hard', q:'Why can\'t you say "à le restaurant"?', opts:['Because à is only for people','Because le and à contract into au','Because restaurant is feminine','Because à requires des'], ans:1, exp:'À + le always contracts to "au". Similarly à + les = aux. You cannot separate them: à le restaurant → au restaurant.'},
-  {diff:'hard', q:'In the sentence "Mon amie est gentille", why is "mon" used instead of "ma"?', opts:['Because amie is masculine','Because mon is used for all possessives','To avoid two vowels clashing (ma amie → mon amie)','Because gentille requires mon'], ans:2, exp:'Before a feminine noun starting with a vowel, French uses mon/ton/son instead of ma/ta/sa to prevent hiatus (vowel clash). Ma amie → mon amie.'},
-  {diff:'hard', q:'What is the difference between "le café" and "un café"?', opts:['le café is feminine, un café is masculine','le café = a specific café, un café = any café','le café = the coffee, un café = a large café','There is no difference'], ans:1, exp:'"Le café" (definite) refers to a specific café both speaker and listener know. "Un café" (indefinite) = any café, or one being mentioned for the first time.'},
-  {diff:'hard', q:'In "du pain", what does "du" represent?', opts:['A masculine plural article','De + les contracted','A partitive article meaning some (de + le)','A feminine article'], ans:2, exp:'"Du" = de + le (partitive article). Used for uncountable nouns to mean "some". Du pain = some bread (an unspecified amount, not a whole loaf).'},
-  {diff:'hard', q:'Which sentence correctly uses articles?', opts:['Je bois le eau froide.','Je bois la eau froide.',"Je bois de l'eau froide.",'Je bois des eau froide.'], ans:2, exp:'"De l\'eau froide" — partitive article (de + l\'). You drink some water (uncountable). Le/la eau is impossible because of obligatory elision and article type mismatch.'},
-  {diff:'hard', q:'Why does "les hommes" trigger liaison but "les haricots" (beans) does not?', opts:['Haricots is plural so no liaison','Homme has silent h (aspirate), haricot has aspirate h (blocks liaison)','Les always makes liaison','Haricots is masculine'], ans:1, exp:'French h splits into "mute h" (silent, allows liaison/elision) and "aspirate h" (blocks liaison). Homme → mute h → l\'homme. Haricot → aspirate h → les haricots (no z sound). This must be memorized per word.'},
-  {diff:'hard', q:'What gender is "le problème" and what gender clue does it give?', opts:['Feminine, -ème endings are feminine','Masculine, many -ème words are masculine','Neutral, -ème is always neutral','Feminine, all Greek-origin words are feminine'], ans:1, exp:'Le problème is masculine. Many words of Greek origin ending in -ème or -ème are masculine: le thème, le système, le schème.'},
-  {diff:'hard', q:'Complete: "C\'est ___ endroit calme." — Which article and why?', opts:['le — specific place','la — endroit is feminine','un — introducing a quality/description with c\'est','des — we are talking about places in general'], ans:2, exp:'After "c\'est", use an indefinite article (un/une) when describing with an adjective: c\'est un endroit calme = it\'s a calm place. This is a key rule: c\'est + article + noun + adjective.'},
-  {diff:'hard', q:'In "les gens se promènent", what does "se" indicate?', opts:['It is a subject pronoun','It marks a reflexive verb (the action is done to oneself)','It replaces "les"','It is an object of promènent'], ans:1, exp:'"Se promener" is a reflexive verb: the subject performs the action on themselves. Les gens se promènent = the people walk (themselves). Reflexive verbs are common in French and use se (ils/elles), me (je), te (tu), etc.'},
-  {diff:'hard', q:'Which statement about French gender is TRUE?', opts:['All animals are masculine','All professions are masculine','Gender must be memorized per noun, but endings give strong clues','Feminine nouns always end in -e'], ans:2, exp:'There is no single rule. Gender must be learned with each noun. However, endings like -tion (f.), -té (f.), -eau (m.), -age (m.) provide reliable patterns that cover many words.'},
+  { diff:'easy',
+    q: 'What is the feminine definite article?',
+    opts:['le','un','la','les'], ans:2,
+    exp:'"La" is the feminine definite article. Example: la maison, la fille.' },
+
+  { diff:'easy',
+    q: 'Which article replaces le and la before a vowel?',
+    opts:["l'","le","les","un"], ans:0,
+    exp:'Elision: le/la → l\' before a vowel or silent h. Example: l\'école, l\'homme.' },
+
+  { diff:'easy',
+    q: 'Which article means "some" for plural nouns?',
+    opts:['un','une','le','des'], ans:3,
+    exp:'"Des" is the plural indefinite article: des livres (some books), des fleurs (some flowers).' },
+
+  { diff:'easy',
+    q: 'Choose the correct article for "parc" (park) — masculine.',
+    opts:['la','une','le','des'], ans:2,
+    exp:'Parc is masculine → le parc.' },
+
+  { diff:'easy',
+    q: 'Choose the correct article for "maison" (house) — feminine.',
+    opts:['le','un','la','des'], ans:2,
+    exp:'Maison is feminine → la maison.' },
+
+  { diff:'easy',
+    q: 'Choose the correct article for "école" (school) — feminine, starts with vowel.',
+    opts:["l'","le","la","des"], ans:0,
+    exp:'École starts with a vowel → l\'école (elision, feminine).' },
+
+  { diff:'easy',
+    q: 'What is the plural definite article for ALL genders?',
+    opts:['un','une','le','les'], ans:3,
+    exp:'"Les" replaces both le and la in the plural: les parcs, les maisons.' },
+
+  { diff:'easy',
+    q: 'What is the masculine indefinite article ("a")?',
+    opts:['le','la','un','une'], ans:2,
+    exp:'"Un" is the masculine indefinite article: un café, un livre.' },
+
+  { diff:'easy',
+    q: 'What is the feminine indefinite article ("a")?',
+    opts:['le','la','un','une'], ans:3,
+    exp:'"Une" is the feminine indefinite article: une école, une pomme.' },
+
+  { diff:'easy',
+    q: 'What does "le matin" mean?',
+    opts:['the evening','the night','the afternoon','the morning'], ans:3,
+    exp:'Le matin = the morning. Masculine noun.' },
+
+  { diff:'easy',
+    q: 'What does "la rue" mean?',
+    opts:['the river','the street','the road sign','the railway'], ans:1,
+    exp:'La rue = the street. Feminine noun.' },
+
+  { diff:'easy',
+    q: 'What does "le livre" mean?',
+    opts:['the pen','the notebook','the book','the page'], ans:2,
+    exp:'Le livre = the book. Masculine noun.' },
+
+  { diff:'easy',
+    q: 'What does "la maison" mean?',
+    opts:['the store','the school','the house','the office'], ans:2,
+    exp:'La maison = the house/home. Feminine noun.' },
+
+  { diff:'easy',
+    q: 'What does "le garçon" mean?',
+    opts:['the man','the boy','the child','the son'], ans:1,
+    exp:'Le garçon = the boy. Masculine noun.' },
+
+  // ═══════════════════════════ MEDIUM (25) ══════════════════════════
+  { diff:'medium',
+    q: 'Fill in the blank.',
+    fr: '___ enfants jouent dans le parc.',
+    opts:['Le','La','Les','Un'], ans:2,
+    exp:'"Les enfants" = the children (plural). Always use les for plural definite.' },
+
+  { diff:'medium',
+    q: 'Which sentence uses articles correctly?',
+    opts:['Je lis la livre.','Je lis un livre.','Je lis le livre frais.','Je lis des livre.'], ans:1,
+    exp:'"Je lis un livre" = I read a book. Un is correct for indefinite masculine singular.' },
+
+  { diff:'medium',
+    q: 'What happens to the silent -s of "les" before a vowel?',
+    opts:['Nothing — it stays silent','It is pronounced as /z/ (liaison)','Les changes to l\'','It is pronounced as /s/'], ans:1,
+    exp:'Mandatory liaison: les enfants → /lay-z-ahn-FAHN/. The silent s becomes /z/.' },
+
+  { diff:'medium',
+    q: 'Which noun is feminine?',
+    opts:['le livre','le café','la voiture','le soir'], ans:2,
+    exp:'La voiture (car) is feminine. The others are masculine.' },
+
+  { diff:'medium',
+    q: 'Which noun is masculine?',
+    opts:['la fleur','la maison','la rue','le soleil'], ans:3,
+    exp:'Le soleil (sun) is masculine. The others are feminine.' },
+
+  { diff:'medium',
+    q: 'What does "au bureau" mean? (au = à + le)',
+    opts:['at the school','at the store','at the office','at the restaurant'], ans:2,
+    exp:'Au = à + le. Bureau = office. So "au bureau" = at the office.' },
+
+  { diff:'medium',
+    q: 'What does "il y a" mean?',
+    opts:['he goes','he has','there is / there are','it is'], ans:2,
+    exp:'"Il y a" is a fixed expression meaning "there is" or "there are". Very common!' },
+
+  { diff:'medium',
+    q: 'Which sentence is correct?',
+    opts:["L'homme est grand.","Le homme est grand.","La homme est grand.","Un homme est grande."], ans:0,
+    exp:'Homme starts with silent h → elision: l\'homme. Masculine, so "grand" (not "grande").' },
+
+  { diff:'medium',
+    q: 'Which word ending is typically MASCULINE?',
+    opts:['-tion','-té','-eau','-ure'], ans:2,
+    exp:'Words ending in -eau are typically masculine: le bureau, le bateau, le chapeau.' },
+
+  { diff:'medium',
+    q: 'Which word ending is typically FEMININE?',
+    opts:['-age','-ment','-eau','-tion'], ans:3,
+    exp:'Words ending in -tion are almost always feminine: la question, la nation, la situation.' },
+
+  { diff:'medium',
+    q: 'What does "des fleurs" mean?',
+    opts:['a flower','the flower','the flowers','some flowers'], ans:3,
+    exp:'"Des fleurs" = some flowers. Des is the plural indefinite article.' },
+
+  { diff:'medium',
+    q: 'Fill in the blank.',
+    fr: 'Elle mange ___ pomme chaque jour.',
+    opts:['le','la','un','une'], ans:3,
+    exp:'"Une pomme" — pomme is feminine (une), and it\'s one specific apple (singular indefinite).' },
+
+  { diff:'medium',
+    q: 'What does "le fromage" mean?',
+    opts:['the fruit','the bread','the cheese','the butter'], ans:2,
+    exp:'Le fromage = cheese. Masculine (ending -age is a masculin clue).' },
+
+  { diff:'medium',
+    q: 'Fill in the blank.',
+    fr: 'Il y a ___ école dans mon quartier.',
+    opts:['le','la','un','une'], ans:3,
+    exp:'"Une école" — école is feminine (une), and indefinite (first mention).' },
+
+  { diff:'medium',
+    q: 'What does "le quartier" mean?',
+    opts:['the store','the city','the neighbourhood','the country'], ans:2,
+    exp:'Le quartier = neighbourhood. Masculine noun.' },
+
+  { diff:'medium',
+    q: 'Which sentence correctly uses "au"?',
+    opts:['Je vais à le café.','Je vais au café.','Je vais le café.','Je vais de café.'], ans:1,
+    exp:'À + le always contracts to "au". You cannot say "à le café" — it must be "au café".' },
+
+  { diff:'medium',
+    q: 'What does "la fenêtre" mean?',
+    opts:['the door','the window','the floor','the wall'], ans:1,
+    exp:'La fenêtre = window. Feminine noun.' },
+
+  { diff:'medium',
+    q: 'Which sentence is correct?',
+    opts:['Il y a une école et un café.','Il y a la école et le café.','Il y a une école et la café.','Il y a un école et une café.'], ans:0,
+    exp:'École (f.) → une école. Café (m.) → un café. Both indefinite (first introduction).' },
+
+  { diff:'medium',
+    q: 'What does "le soir" mean?',
+    opts:['the morning','the night','the afternoon','the evening'], ans:3,
+    exp:'Le soir = the evening. Masculine noun.' },
+
+  { diff:'medium',
+    q: 'Fill in the blank.',
+    fr: 'J\'achète ___ pain tous les matins.',
+    opts:['le','la','du','une'], ans:2,
+    exp:'"Du pain" — pain is masculine (du = de + le). It\'s a partitive article for uncountable "some bread".' },
+
+  { diff:'medium',
+    q: 'What does "parce que" mean?',
+    opts:['because','although','when','if'], ans:0,
+    exp:'"Parce que" = because. Connector word: J\'aime ça parce que c\'est bon.' },
+
+  { diff:'medium',
+    q: 'What is the gender of "la liberté"?',
+    opts:['Masculine','Feminine','Neutral','Depends on context'], ans:1,
+    exp:'La liberté is feminine. Words ending in -té are almost always feminine.' },
+
+  { diff:'medium',
+    q: 'Fill in: ___ fille est à l\'école.',
+    opts:['Le','Un','La','Une'], ans:2,
+    exp:'"La fille" — fille is feminine, and we use definite la because we\'re talking about a specific girl.' },
+
+  { diff:'medium',
+    q: 'What does "la clé" mean?',
+    opts:['the lock','the door','the key','the code'], ans:2,
+    exp:'La clé = the key. Feminine noun.' },
+
+  { diff:'medium',
+    q: 'Identify the correct article: "___ ami de Marc s\'appelle Paul."',
+    opts:["L'","La","Le","Un"], ans:0,
+    exp:'Ami starts with a vowel → l\'ami (elision, masculine). "L\'ami de Marc" = Marc\'s friend.' },
+
+  // ═══════════════════════════ HARD (10) ════════════════════════════
+  { diff:'hard',
+    q: 'Why can\'t you say "à le restaurant"?',
+    opts:['Because à is only used for people','Because à + le contracts to au','Because restaurant is feminine','Because à requires des'], ans:1,
+    exp:'À + le always contracts to "au". Similarly à + les = aux. You can never separate them: à le → au.' },
+
+  { diff:'hard',
+    q: 'In the sentence "Mon amie est gentille", why is "mon" used instead of "ma"?',
+    opts:['Because amie is masculine','Because mon is used for all possessives','To avoid two vowels clashing: ma amie → mon amie','Because gentille requires mon'], ans:2,
+    exp:'Before a feminine noun starting with a vowel, French uses mon/ton/son instead of ma/ta/sa to prevent vowel clash (hiatus). Ma amie → mon amie.' },
+
+  { diff:'hard',
+    q: 'What is the difference between "le café" and "un café"?',
+    opts:['le café is feminine, un café is masculine','le café = a specific known café; un café = any café','le café = the hot drink; un café = a large building','There is no meaningful difference'], ans:1,
+    exp:'"Le café" (definite) refers to a specific café both speaker and listener know. "Un café" (indefinite) = any café, or one introduced for the first time.' },
+
+  { diff:'hard',
+    q: 'In "il fait du pain", what does "du" represent?',
+    opts:['A masculine plural article','De + les contracted','A partitive article meaning some (de + le)','A feminine article'], ans:2,
+    exp:'"Du" = de + le (partitive article). Used for uncountable nouns: du pain = some bread (an unspecified amount).' },
+
+  { diff:'hard',
+    q: 'Why does "les enfants" trigger liaison but "les haricots" (beans) does not?',
+    opts:['Haricots is plural so liaison is blocked','Enfants has mute h; haricot has aspirate h which blocks liaison','Les always makes liaison','Haricots is masculine so no liaison'], ans:1,
+    exp:'French h divides into mute h (allows liaison/elision) and aspirate h (blocks it). Enfants → mute h. Haricot → aspirate h. This must be memorised per word.' },
+
+  { diff:'hard',
+    q: 'In "C\'est une bonne ville", why is "une" used rather than "la"?',
+    opts:['Because ville is feminine and indefinite','After c\'est, always use indefinite article when describing with adjective','Because "bonne" blocks definite articles','Because la ville is already known'], ans:1,
+    exp:'After "c\'est", use indefinite article + noun when the description introduces a quality: c\'est une bonne ville = it\'s a good city. This is a fixed grammatical pattern.' },
+
+  { diff:'hard',
+    q: 'Which sentence correctly shows un → le (indefinite to definite)?',
+    opts:[
+      'Il y a un parc. Le parc est grand.',
+      'Il y a un parc. Un parc est grand.',
+      'Il y a le parc. Un parc est grand.',
+      'Il y a un parc. Des parcs sont grands.'
+    ], ans:0,
+    exp:'First mention = indefinite (un parc). Second mention = definite (le parc) because both speaker and listener now know which park. This is how French articles work in context.' },
+
+  { diff:'hard',
+    q: 'Which statement about French gender is TRUE?',
+    opts:['All animals are masculine','All professions are masculine','Gender must be memorised per noun, but endings give strong clues','All nouns ending in -e are feminine'], ans:2,
+    exp:'Gender cannot be deduced from a single rule. You must learn it with each noun. However, endings like -tion (f.), -té (f.), -eau (m.), -age (m.) cover many words reliably.' },
+
+  { diff:'hard',
+    q: 'What does "faire la cuisine" mean as a set expression?',
+    opts:['to buy a kitchen','to clean the kitchen','to cook / to do the cooking','to design a kitchen'], ans:2,
+    exp:'"Faire la cuisine" is an idiomatic expression meaning "to cook". Faire + definite article + activity noun is a common pattern in French: faire le ménage, faire le sport.' },
+
+  { diff:'hard',
+    q: 'In "nous allons au restaurant", what is "au" a contraction of?',
+    opts:['à + un','à + le','de + le','de + les'], ans:1,
+    exp:'"Au" = à + le. Restaurant is masculine (le restaurant), so à + le = au. This contraction is mandatory in French.' },
 ];
 
-let order = [], cur = 0, score = 0;
-let easyRight = 0, medRight = 0, hardRight = 0;
-let answered = false;
+let order = [], cur = 0, score = 0, eR = 0, mR = 0, hR = 0, answered = false;
 
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return arr;
+  return a;
 }
 
 function startQuiz() {
-  const easy   = shuffle(questions.filter(q => q.diff === 'easy'));
-  const medium = shuffle(questions.filter(q => q.diff === 'medium'));
-  const hard   = shuffle(questions.filter(q => q.diff === 'hard'));
-  order = [...easy, ...medium, ...hard];
-  cur = 0; score = 0; easyRight = 0; medRight = 0; hardRight = 0;
-  document.getElementById('results').classList.remove('visible');
-  renderQuestion();
+  const e = shuffle(allQ.filter(q => q.diff === 'easy'));
+  const m = shuffle(allQ.filter(q => q.diff === 'medium'));
+  const h = shuffle(allQ.filter(q => q.diff === 'hard'));
+  order = [...e, ...m, ...h];
+  cur = 0; score = 0; eR = 0; mR = 0; hR = 0;
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('q-score').textContent = '✅ 0';
+  renderQ();
 }
 
-function renderQuestion() {
+function renderQ() {
   if (cur >= order.length) { showResults(); return; }
   answered = false;
   const q = order[cur];
-  const pct = Math.round(((cur) / order.length) * 100) + 2;
   document.getElementById('q-counter').textContent = `Question ${cur + 1} / ${order.length}`;
-  document.getElementById('q-progress').style.width = pct + '%';
+  document.getElementById('q-bar').style.width = (Math.round((cur / order.length) * 100) + 2) + '%';
 
-  const shuffledIdxs = shuffle([0,1,2,3]);
-  const optionHTML = shuffledIdxs.map((oi, display) => {
-    const letter = ['A','B','C','D'][display];
-    const isCorrect = oi === q.ans;
-    return `<button class="quiz-option" onclick="selectAnswer(this, ${isCorrect}, '${q.diff}')" data-correct="${isCorrect}">
-      <span class="opt-lbl">${letter}</span> ${q.opts[oi]}
+  const idxs = shuffle([0,1,2,3]);
+  const opts = idxs.map((oi, di) => {
+    const letter = ['A','B','C','D'][di];
+    const isRight = oi === q.ans;
+    return `<button class="quiz-opt" onclick="pick(this,${isRight},'${q.diff}')" data-correct="${isRight}">
+      <span class="ol">${letter}</span>${q.opts[oi]}
     </button>`;
   }).join('');
 
-  document.getElementById('question-area').innerHTML = `
+  const frBlock = q.fr
+    ? `<div class="question-french">${q.fr}</div>`
+    : '';
+
+  document.getElementById('q-area').innerHTML = `
     <div class="question-card">
-      <div class="question-card-header">
+      <div class="question-card-top">
         <span class="q-num">Q${cur + 1}</span>
-        <span class="diff-badge ${q.diff}">${q.diff}</span>
+        <span class="diff-badge ${q.diff}">${q.diff === 'easy' ? 'Facile' : q.diff === 'medium' ? 'Moyen' : 'Difficile'}</span>
       </div>
       <div class="question-text">${q.q}</div>
-      <div class="quiz-options">${optionHTML}</div>
+      ${frBlock}
+      <div class="quiz-options">${opts}</div>
       <div class="quiz-feedback" id="qfb"></div>
-      <div class="quiz-next-wrap" style="display:none;" id="next-wrap">
-        <button class="quiz-next-btn" onclick="nextQuestion()">
+      <div class="quiz-next-wrap" style="display:none" id="qnext">
+        <button class="quiz-next-btn" onclick="nextQ()">
           ${cur + 1 < order.length ? 'Question suivante →' : 'Voir les résultats →'}
         </button>
       </div>
     </div>`;
 }
 
-function selectAnswer(btn, isCorrect, diff) {
+function pick(btn, correct, diff) {
   if (answered) return;
   answered = true;
   const card = btn.closest('.question-card');
-  card.querySelectorAll('.quiz-option').forEach(b => {
+  card.querySelectorAll('.quiz-opt').forEach(b => {
     b.disabled = true;
     if (b.dataset.correct === 'true') b.classList.add('correct');
   });
-  if (isCorrect) {
+  if (correct) {
     btn.classList.add('correct');
     score++;
-    if (diff === 'easy')   easyRight++;
-    if (diff === 'medium') medRight++;
-    if (diff === 'hard')   hardRight++;
+    if (diff === 'easy')   eR++;
+    if (diff === 'medium') mR++;
+    if (diff === 'hard')   hR++;
   } else {
     btn.classList.add('incorrect');
   }
-  const q = order[cur];
   const fb = document.getElementById('qfb');
-  fb.textContent = (isCorrect ? '✅ ' : '❌ ') + q.exp;
-  fb.className = 'quiz-feedback ' + (isCorrect ? 'correct-fb' : 'incorrect-fb');
+  fb.textContent = (correct ? '✅ ' : '❌ ') + order[cur].exp;
+  fb.className = 'quiz-feedback ' + (correct ? 'ok' : 'no');
   fb.style.display = 'block';
-  document.getElementById('next-wrap').style.display = 'block';
+  document.getElementById('qnext').style.display = 'block';
   document.getElementById('q-score').textContent = '✅ ' + score;
 }
 
-function nextQuestion() { cur++; renderQuestion(); }
+function nextQ() { cur++; renderQ(); }
 
 function showResults() {
-  document.getElementById('question-area').innerHTML = '';
-  document.getElementById('q-progress').style.width = '100%';
-  const pct = Math.round((score / order.length) * 100);
-  document.getElementById('final-num').textContent = score;
-  document.getElementById('easy-score').textContent = `${easyRight} / 15`;
-  document.getElementById('med-score').textContent  = `${medRight} / 25`;
-  document.getElementById('hard-score').textContent = `${hardRight} / 10`;
-
-  let msg, sub;
-  if (pct >= 90) { msg = '🏆 Excellent!'; sub = 'You have a strong grasp of French nouns and articles. Keep building on this foundation!'; }
-  else if (pct >= 75) { msg = '🎉 Très bien!'; sub = 'Good work! Review any article mistakes and focus on gender patterns.'; }
-  else if (pct >= 60) { msg = '👍 Pas mal!'; sub = 'A solid effort. Spend extra time on gender rules and elision — they\'re foundational.'; }
-  else { msg = '💪 Continue!'; sub = 'Gender and articles take practice. Re-read the grammar page and try the quiz again!'; }
-
-  document.getElementById('score-msg').textContent = msg;
-  document.getElementById('score-sub').textContent = sub;
-  document.getElementById('results').classList.add('visible');
+  document.getElementById('q-area').innerHTML = '';
+  document.getElementById('q-bar').style.width = '100%';
+  const pct = Math.round((score / 50) * 100);
+  document.getElementById('r-num').textContent = score;
+  document.getElementById('r-easy').textContent = `${eR} / 15`;
+  document.getElementById('r-med').textContent  = `${mR} / 25`;
+  document.getElementById('r-hard').textContent = `${hR} / 10`;
+  let msg, detail;
+  if (pct >= 90) { msg = '🏆 Excellent!'; detail = 'You have a strong grasp of French articles and gender. Build on this in Week 4 with adjectives!'; }
+  else if (pct >= 75) { msg = '🎉 Très bien!'; detail = 'Good work! Review any article mistakes — focus on when to use le/un and when to use la/une.'; }
+  else if (pct >= 60) { msg = '👍 Pas mal!'; detail = 'Solid effort. Spend more time on elision (l\') and the definite vs indefinite distinction.'; }
+  else { msg = '💪 Continue!'; detail = 'Articles and gender take practice. Re-read the grammar page and vocabulary, then try again!'; }
+  document.getElementById('r-msg').textContent = msg;
+  document.getElementById('r-detail').textContent = detail;
+  document.getElementById('results').classList.add('show');
 }
-
-function retryQuiz() { startQuiz(); }
 
 window.addEventListener('DOMContentLoaded', startQuiz);
 </script>
