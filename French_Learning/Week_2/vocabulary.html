@@ -6,7 +6,6 @@
   <title>Vocabulary — Week 2</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* ── Section dividers ── */
     .vocab-section-title {
       font-family: 'Lora', serif;
       font-size: 13px;
@@ -18,8 +17,6 @@
       border-bottom: 2px solid var(--gray-100);
       margin-bottom: 14px;
     }
-
-    /* ── Card ── */
     .vocab-card {
       background: var(--white);
       border-radius: var(--radius);
@@ -27,10 +24,7 @@
       border: 1px solid var(--gray-200);
       padding: 18px;
       margin-bottom: 12px;
-      transition: box-shadow .2s;
     }
-    .vocab-card:hover { box-shadow: var(--shadow-md); }
-
     .vocab-french {
       font-family: 'Lora', serif;
       font-size: 22px;
@@ -44,11 +38,7 @@
       font-style: italic;
       margin-bottom: 10px;
     }
-
-    /* Player sits right after phonetic */
     .word-player-wrap { margin-bottom: 12px; }
-
-    /* Show English button */
     .reveal-wrap { margin-bottom: 14px; }
     .reveal-btn {
       background: var(--blue-pale);
@@ -73,15 +63,7 @@
       padding: 10px 0 4px;
     }
     .vocab-english.shown { display: block; }
-
-    /* Divider */
-    .vocab-divider {
-      border: none;
-      border-top: 1px solid var(--gray-100);
-      margin: 12px 0;
-    }
-
-    /* Example */
+    .vocab-divider { border: none; border-top: 1px solid var(--gray-100); margin: 12px 0; }
     .example-label {
       font-size: 10px;
       font-weight: 700;
@@ -114,13 +96,10 @@
       display: none;
       font-size: 14px;
       color: var(--gray-600);
-      font-weight: 400;
       padding-top: 4px;
       line-height: 1.5;
     }
     .example-en.shown { display: block; }
-
-    /* Show all / hide all bar */
     .showallbar {
       display: flex;
       gap: 10px;
@@ -143,7 +122,6 @@
     .showallbar button:hover { background: var(--navy-light); }
     .showallbar button.hide-btn { background: var(--gray-200); color: var(--gray-600); }
     .showallbar button.hide-btn:hover { background: var(--gray-300, #d1d5db); }
-
     .count-badge {
       display: inline-block;
       background: var(--blue-pale);
@@ -154,10 +132,19 @@
       font-weight: 700;
       margin-left: 8px;
     }
+    .grammar-tip {
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #1e40af;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-inner">
       <a href="../index.html" class="header-logo">🇫🇷 CLB 7</a>
@@ -181,8 +168,14 @@
 
   <main class="main">
     <div class="section-header">
-      <h1 class="section-title">Vocabulary <span class="count-badge">55 words</span></h1>
-      <p class="section-subtitle">Tap <strong>Show English</strong> to test yourself. Press ▶ to hear the word or sentence spoken.</p>
+      <h1 class="section-title">Vocabulary <span class="count-badge">38 words</span></h1>
+      <p class="section-subtitle">Everything except verbs. Verbs and their conjugations are in the Grammar page.</p>
+    </div>
+
+    <div class="grammar-tip">
+      💡 Verbs (être, avoir, aller, faire) and all their forms live in the
+      <a href="grammar.html" style="color:var(--blue);font-weight:700;">Grammar page</a>.
+      This page has nouns, expressions, adverbs, time words, connectors and question words.
     </div>
 
     <div class="showallbar">
@@ -195,181 +188,121 @@
 
   <script src="audio.js"></script>
   <script>
-  /*
-    Sections and words.
-    Each word: { fr, ph, en, ex, exEn }
-    No grammar explanations — those live in grammar.html
-  */
   const sections = [
     {
-      title: "The 4 core verbs — infinitive (dictionary) form",
+      title: "avoir expressions — French says 'have', English says 'be'",
       words: [
-        { fr:"être",  ph:"EH-tr",       en:"to be",           ex:"Je suis étudiant.",    exEn:"I am a student." },
-        { fr:"avoir", ph:"ah-VWAHR",    en:"to have",         ex:"J'ai un livre.",       exEn:"I have a book." },
-        { fr:"aller", ph:"ah-LAY",      en:"to go",           ex:"Je vais au marché.",   exEn:"I go to the market." },
-        { fr:"faire", ph:"FAIR",        en:"to do / to make", ex:"Je fais la cuisine.",  exEn:"I cook." },
+        { fr:"avoir faim",     ph:"ah-VWAHR FAN",      en:"to be hungry (lit: to have hunger)",  ex:"J'ai faim après le sport.",     exEn:"I am hungry after sports." },
+        { fr:"avoir soif",     ph:"ah-VWAHR SWAHF",    en:"to be thirsty (lit: to have thirst)", ex:"Elle a soif.",                  exEn:"She is thirsty." },
+        { fr:"avoir raison",   ph:"ah-VWAHR ray-ZON",  en:"to be right (lit: to have reason)",   ex:"Tu as toujours raison.",        exEn:"You are always right." },
+        { fr:"avoir tort",     ph:"ah-VWAHR TOR",      en:"to be wrong (lit: to have fault)",    ex:"Il a tort.",                    exEn:"He is wrong." },
+        { fr:"avoir besoin de",ph:"ah-VWAHR buh-ZWAN duh", en:"to need (lit: to have need of)", ex:"J'ai besoin d'aide.",           exEn:"I need help." },
       ]
     },
     {
-      title: "être — all forms",
+      title: "faire expressions — activities French expresses with 'do'",
       words: [
-        { fr:"je suis",    ph:"zhuh SWEE",   en:"I am",                          ex:"Je suis content.",         exEn:"I am happy." },
-        { fr:"tu es",      ph:"tew EH",      en:"you are (friend)",               ex:"Tu es gentil.",            exEn:"You are kind." },
-        { fr:"il est",     ph:"eel EH",      en:"he is",                         ex:"Il est médecin.",          exEn:"He is a doctor." },
-        { fr:"elle est",   ph:"EL EH",       en:"she is",                        ex:"Elle est professeure.",    exEn:"She is a teacher." },
-        { fr:"nous sommes",ph:"noo SUM",     en:"we are",                        ex:"Nous sommes canadiens.",   exEn:"We are Canadian." },
-        { fr:"vous êtes",  ph:"voo ZET",     en:"you are (formal or group)",     ex:"Vous êtes aimable.",       exEn:"You are kind." },
-        { fr:"ils sont",   ph:"eel SON",     en:"they are (group with males)",   ex:"Ils sont à l'école.",     exEn:"They are at school." },
-        { fr:"elles sont", ph:"EL SON",      en:"they are (all female)",         ex:"Elles sont amies.",        exEn:"They are friends." },
+        { fr:"faire la cuisine",    ph:"FAIR lah kwee-ZEEN", en:"to cook (lit: to do the cooking)",   ex:"Elle fait la cuisine le soir.",      exEn:"She cooks in the evening." },
+        { fr:"faire les courses",   ph:"FAIR lay KOORS",     en:"to do the grocery shopping",          ex:"Nous faisons les courses.",           exEn:"We do the grocery shopping." },
+        { fr:"faire du sport",      ph:"FAIR dew SPOR",      en:"to exercise / play sports",           ex:"Il fait du sport tous les jours.",    exEn:"He exercises every day." },
+        { fr:"faire une promenade", ph:"FAIR ewn prom-NAHD", en:"to go for a walk",                   ex:"Nous faisons une promenade au parc.", exEn:"We go for a walk in the park." },
+        { fr:"faire les devoirs",   ph:"FAIR lay duh-VWAHR", en:"to do homework",                     ex:"Je fais mes devoirs le soir.",        exEn:"I do my homework in the evening." },
       ]
     },
     {
-      title: "avoir — all forms",
+      title: "places — used with aller",
       words: [
-        { fr:"j'ai",       ph:"ZHAY",        en:"I have",                        ex:"J'ai faim.",               exEn:"I am hungry." },
-        { fr:"tu as",      ph:"tew AH",      en:"you have (friend)",             ex:"Tu as raison.",            exEn:"You are right." },
-        { fr:"il a",       ph:"eel AH",      en:"he has",                        ex:"Il a une voiture.",        exEn:"He has a car." },
-        { fr:"elle a",     ph:"EL AH",       en:"she has",                       ex:"Elle a un chat.",          exEn:"She has a cat." },
-        { fr:"nous avons", ph:"noo ZAH-VON", en:"we have",                       ex:"Nous avons deux enfants.", exEn:"We have two children." },
-        { fr:"vous avez",  ph:"voo ZAH-VAY", en:"you have (formal or group)",    ex:"Vous avez de la chance.",  exEn:"You are lucky." },
-        { fr:"ils ont",    ph:"eel ZON",     en:"they have",                     ex:"Ils ont un appartement.",  exEn:"They have an apartment." },
-        { fr:"elles ont",  ph:"EL ZON",      en:"they have (all female)",        ex:"Elles ont un chat.",       exEn:"They have a cat." },
+        { fr:"le marché",         ph:"luh mar-SHAY",    en:"the market",        ex:"Il va au marché.",         exEn:"He goes to the market." },
+        { fr:"la maison",         ph:"lah may-ZON",     en:"the house / home",  ex:"Nous sommes à la maison.", exEn:"We are at home." },
+        { fr:"le bureau",         ph:"luh bew-ROH",     en:"the office",        ex:"Elle va au bureau.",        exEn:"She goes to the office." },
+        { fr:"l'école",           ph:"lay-KUL",         en:"the school",        ex:"Ils vont à l'école.",      exEn:"They go to school." },
+        { fr:"le parc",           ph:"luh PARK",        en:"the park",          ex:"Tu vas au parc.",           exEn:"You go to the park." },
+        { fr:"le cinéma",         ph:"luh see-nay-MAH", en:"the cinema",        ex:"Nous allons au cinéma.",    exEn:"We go to the cinema." },
+        { fr:"la bibliothèque",   ph:"lah bib-lio-TEK", en:"the library",       ex:"Il va à la bibliothèque.", exEn:"He goes to the library." },
+        { fr:"la gym",            ph:"lah ZHEEM",       en:"the gym",           ex:"Elle va à la gym.",         exEn:"She goes to the gym." },
       ]
     },
     {
-      title: "aller — all forms",
+      title: "nouns — things and people",
       words: [
-        { fr:"je vais",    ph:"zhuh VAY",    en:"I go / I am going",             ex:"Je vais au bureau.",       exEn:"I go to the office." },
-        { fr:"tu vas",     ph:"tew VAH",     en:"you go (friend)",               ex:"Tu vas bien ?",            exEn:"Are you doing well?" },
-        { fr:"il va",      ph:"eel VAH",     en:"he goes",                       ex:"Il va à la bibliothèque.", exEn:"He goes to the library." },
-        { fr:"elle va",    ph:"EL VAH",      en:"she goes",                      ex:"Elle va au marché.",       exEn:"She goes to the market." },
-        { fr:"nous allons",ph:"noo ZAH-LON", en:"we go",                         ex:"Nous allons au cinéma.",   exEn:"We go to the cinema." },
-        { fr:"vous allez", ph:"voo ZAH-LAY", en:"you go (formal or group)",      ex:"Vous allez où ?",          exEn:"Where are you going?" },
-        { fr:"ils vont",   ph:"eel VON",     en:"they go",                       ex:"Ils vont au parc.",        exEn:"They go to the park." },
-        { fr:"elles vont", ph:"EL VON",      en:"they go (all female)",          ex:"Elles vont à l'école.",   exEn:"They go to school." },
-      ]
-    },
-    {
-      title: "faire — all forms",
-      words: [
-        { fr:"je fais",    ph:"zhuh FAY",    en:"I do / I make",                 ex:"Je fais du sport.",        exEn:"I exercise." },
-        { fr:"tu fais",    ph:"tew FAY",     en:"you do / you make (friend)",    ex:"Tu fais quoi ce soir ?",   exEn:"What are you doing tonight?" },
-        { fr:"il fait",    ph:"eel FAY",     en:"he does / he makes",            ex:"Il fait ses devoirs.",     exEn:"He does his homework." },
-        { fr:"elle fait",  ph:"EL FAY",      en:"she does / she makes",          ex:"Elle fait la cuisine.",    exEn:"She cooks." },
-        { fr:"nous faisons",ph:"noo fuh-ZON",en:"we do / we make",               ex:"Nous faisons une promenade.", exEn:"We go for a walk." },
-        { fr:"vous faites",ph:"voo FET",     en:"you do / you make (formal/group)", ex:"Vous faites du bon travail.", exEn:"You do good work." },
-        { fr:"ils font",   ph:"eel FON",     en:"they do / they make",           ex:"Ils font la fête.",        exEn:"They are having a party." },
-        { fr:"elles font", ph:"EL FON",      en:"they do / they make (all female)", ex:"Elles font les courses.", exEn:"They do the grocery shopping." },
-      ]
-    },
-    {
-      title: "avoir expressions — where French says 'have', English says 'be'",
-      words: [
-        { fr:"avoir faim",   ph:"ah-VWAHR FAN",     en:"to be hungry (lit: to have hunger)",  ex:"J'ai faim après le sport.",    exEn:"I am hungry after sports." },
-        { fr:"avoir soif",   ph:"ah-VWAHR SWAHF",   en:"to be thirsty (lit: to have thirst)", ex:"Tu as soif ?",                 exEn:"Are you thirsty?" },
-        { fr:"avoir raison", ph:"ah-VWAHR ray-ZON", en:"to be right (lit: to have reason)",   ex:"Elle a toujours raison.",      exEn:"She is always right." },
-        { fr:"avoir tort",   ph:"ah-VWAHR TOR",     en:"to be wrong (lit: to have fault)",    ex:"Il a tort cette fois.",        exEn:"He is wrong this time." },
-        { fr:"avoir besoin", ph:"ah-VWAHR buh-ZWAN",en:"to need (lit: to have need of)",      ex:"J'ai besoin d'aide.",          exEn:"I need help." },
-        { fr:"avoir faim",   ph:"ah-VWAHR FAN",     en:"to be hungry",                        ex:"Nous avons très faim ce soir.", exEn:"We are very hungry tonight." },
-      ]
-    },
-    {
-      title: "faire expressions — common activities",
-      words: [
-        { fr:"faire la cuisine",   ph:"FAIR lah kwee-ZEEN", en:"to cook",                   ex:"Il fait la cuisine le soir.",    exEn:"He cooks in the evening." },
-        { fr:"faire les courses",  ph:"FAIR lay KOORS",     en:"to do the grocery shopping", ex:"Elle fait les courses.",         exEn:"She does the grocery shopping." },
-        { fr:"faire du sport",     ph:"FAIR dew SPOR",      en:"to exercise / play sports",  ex:"Nous faisons du sport.",        exEn:"We exercise." },
-        { fr:"faire une promenade",ph:"FAIR ewn prom-NAHD", en:"to go for a walk",           ex:"Ils font une promenade.",       exEn:"They go for a walk." },
-      ]
-    },
-    {
-      title: "aller + à — going to places",
-      words: [
-        { fr:"aller au marché",         ph:"ah-LAY oh mar-SHAY",      en:"to go to the market",        ex:"Je vais au marché.",           exEn:"I go to the market." },
-        { fr:"aller à l'école",         ph:"ah-LAY ah lay-KUL",       en:"to go to school",            ex:"Ils vont à l'école.",          exEn:"They go to school." },
-        { fr:"aller au cinéma",         ph:"ah-LAY oh see-nay-MAH",   en:"to go to the cinema",        ex:"Nous allons au cinéma.",       exEn:"We go to the cinema." },
-        { fr:"aller au travail",        ph:"ah-LAY oh tra-VAY",       en:"to go to work",              ex:"Elle va au travail.",          exEn:"She goes to work." },
-        { fr:"aller au bureau",         ph:"ah-LAY oh bew-ROH",       en:"to go to the office",        ex:"Je vais au bureau.",           exEn:"I go to the office." },
+        { fr:"le travail",              ph:"luh tra-VAY",           en:"work / the job",        ex:"J'ai du travail.",         exEn:"I have work." },
+        { fr:"les devoirs",             ph:"lay duh-VWAHR",         en:"the homework",          ex:"Il fait ses devoirs.",     exEn:"He does his homework." },
+        { fr:"le sport",                ph:"luh SPOR",              en:"sport / exercise",      ex:"Nous faisons du sport.",   exEn:"We exercise." },
+        { fr:"la cuisine",              ph:"lah kwee-ZEEN",         en:"cooking / the kitchen", ex:"Elle fait la cuisine.",    exEn:"She cooks." },
+        { fr:"le chat",                 ph:"luh SHA",               en:"the cat",               ex:"Il a un chat.",            exEn:"He has a cat." },
+        { fr:"la voiture",              ph:"lah vwah-TEWR",         en:"the car",               ex:"Elle a une voiture.",      exEn:"She has a car." },
+        { fr:"l'ami / l'amie",          ph:"lah-MEE",               en:"the friend (m / f)",    ex:"Ils sont amis.",           exEn:"They are friends." },
+        { fr:"l'étudiant / l'étudiante",ph:"lay-tew-DYON / lay-tew-DYONT", en:"the student (m / f)", ex:"Je suis étudiant.", exEn:"I am a student." },
       ]
     },
     {
       title: "frequency adverbs — how often",
       words: [
-        { fr:"toujours",      ph:"too-ZHOOR",  en:"always",    ex:"Il est toujours à l'heure.",   exEn:"He is always on time." },
-        { fr:"souvent",       ph:"soo-VON",    en:"often",     ex:"Nous allons souvent au parc.", exEn:"We often go to the park." },
-        { fr:"parfois",       ph:"par-FWAH",   en:"sometimes", ex:"Elle fait parfois des erreurs.", exEn:"She sometimes makes mistakes." },
-        { fr:"jamais",        ph:"zhah-MAY",   en:"never",     ex:"Je ne fais jamais ça.",        exEn:"I never do that." },
-        { fr:"tous les jours",ph:"too lay ZHOOR",en:"every day", ex:"Il fait du sport tous les jours.", exEn:"He exercises every day." },
+        { fr:"toujours",      ph:"too-ZHOOR",   en:"always",    ex:"Il est toujours à l'heure.",   exEn:"He is always on time." },
+        { fr:"souvent",       ph:"soo-VON",     en:"often",     ex:"Nous allons souvent au parc.",  exEn:"We often go to the park." },
+        { fr:"parfois",       ph:"par-FWAH",    en:"sometimes", ex:"Elle fait parfois du sport.",   exEn:"She sometimes exercises." },
+        { fr:"jamais",        ph:"zhah-MAY",    en:"never",     ex:"Je ne fais jamais ça.",         exEn:"I never do that." },
+        { fr:"tous les jours",ph:"too lay ZHOOR",en:"every day",ex:"Il fait du sport tous les jours.", exEn:"He exercises every day." },
       ]
     },
     {
       title: "time expressions — when",
       words: [
-        { fr:"maintenant",  ph:"man-tuh-NON",  en:"now",              ex:"Je vais au marché maintenant.",  exEn:"I am going to the market now." },
-        { fr:"le matin",    ph:"luh ma-TAN",   en:"in the morning",   ex:"Je fais du café le matin.",      exEn:"I make coffee in the morning." },
-        { fr:"le soir",     ph:"luh SWAHR",    en:"in the evening",   ex:"Nous faisons du sport le soir.", exEn:"We exercise in the evening." },
-        { fr:"ce soir",     ph:"suh SWAHR",    en:"tonight",          ex:"Ils vont au cinéma ce soir.",   exEn:"They go to the cinema tonight." },
-        { fr:"aujourd'hui", ph:"oh-zhoor-DWEE",en:"today",            ex:"Elle est à la maison aujourd'hui.", exEn:"She is at home today." },
-      ]
-    },
-    {
-      title: "nouns — people and places used in this week's sentences",
-      words: [
-        { fr:"le marché",      ph:"luh mar-SHAY",    en:"the market",     ex:"Il va au marché.",             exEn:"He goes to the market." },
-        { fr:"la maison",      ph:"lah may-ZON",     en:"the house / home", ex:"Nous sommes à la maison.",  exEn:"We are at home." },
-        { fr:"le bureau",      ph:"luh bew-ROH",     en:"the office",     ex:"Elle va au bureau.",           exEn:"She goes to the office." },
-        { fr:"l'école",        ph:"lay-KUL",         en:"the school",     ex:"Ils vont à l'école.",         exEn:"They go to school." },
-        { fr:"le parc",        ph:"luh PARK",        en:"the park",       ex:"Je vais au parc.",             exEn:"I go to the park." },
-        { fr:"le cinéma",      ph:"luh see-nay-MAH", en:"the cinema",     ex:"Tu vas au cinéma ?",           exEn:"Are you going to the cinema?" },
-        { fr:"le travail",     ph:"luh tra-VAY",     en:"work / the job", ex:"Il fait son travail.",         exEn:"He does his work." },
-        { fr:"le sport",       ph:"luh SPOR",        en:"sport / exercise", ex:"Nous faisons du sport.",   exEn:"We exercise." },
-        { fr:"la cuisine",     ph:"lah kwee-ZEEN",   en:"cooking / kitchen", ex:"Elle fait la cuisine.",   exEn:"She cooks." },
-        { fr:"les cours",      ph:"lay KOOR",        en:"the classes / lessons", ex:"Je vais aux cours.", exEn:"I go to class." },
-        { fr:"les devoirs",    ph:"lay duh-VWAHR",   en:"the homework",   ex:"Il fait ses devoirs.",         exEn:"He does his homework." },
+        { fr:"maintenant",  ph:"man-tuh-NON",   en:"now",             ex:"Je vais au marché maintenant.",     exEn:"I am going to the market now." },
+        { fr:"le matin",    ph:"luh ma-TAN",    en:"in the morning",  ex:"Je fais du sport le matin.",        exEn:"I exercise in the morning." },
+        { fr:"le soir",     ph:"luh SWAHR",     en:"in the evening",  ex:"Elle fait la cuisine le soir.",     exEn:"She cooks in the evening." },
+        { fr:"aujourd'hui", ph:"oh-zhoor-DWEE", en:"today",           ex:"Ils sont à la maison aujourd'hui.", exEn:"They are at home today." },
+        { fr:"ce soir",     ph:"suh SWAHR",     en:"tonight",         ex:"Nous allons au cinéma ce soir.",    exEn:"We are going to the cinema tonight." },
       ]
     },
     {
       title: "question words",
       words: [
-        { fr:"comment", ph:"kuh-MON",  en:"how",   ex:"Comment tu vas ?",          exEn:"How are you?" },
-        { fr:"pourquoi",ph:"poor-KWAH",en:"why",   ex:"Pourquoi tu vas là-bas ?",  exEn:"Why are you going there?" },
-        { fr:"où",      ph:"OO",       en:"where", ex:"Où allez-vous ?",            exEn:"Where are you going?" },
-        { fr:"quand",   ph:"KON",      en:"when",  ex:"Quand fais-tu du sport ?",  exEn:"When do you exercise?" },
+        { fr:"comment",  ph:"kuh-MON",   en:"how",   ex:"Comment tu vas ?",         exEn:"How are you?" },
+        { fr:"pourquoi", ph:"poor-KWAH", en:"why",   ex:"Pourquoi tu vas là-bas ?", exEn:"Why are you going there?" },
+        { fr:"où",       ph:"OO",        en:"where", ex:"Où allez-vous ?",           exEn:"Where are you going?" },
+        { fr:"quand",    ph:"KON",       en:"when",  ex:"Quand fais-tu du sport ?",  exEn:"When do you exercise?" },
       ]
-    }
+    },
+    {
+      title: "connectors — joining sentences together",
+      words: [
+        { fr:"et",        ph:"AY",        en:"and",          ex:"Il va au marché et il fait la cuisine.", exEn:"He goes to the market and he cooks." },
+        { fr:"mais",      ph:"MAY",       en:"but",          ex:"Elle va au bureau, mais il est à la maison.", exEn:"She goes to the office, but he is at home." },
+        { fr:"alors",     ph:"ah-LOR",   en:"so / therefore",ex:"J'ai faim, alors je vais au marché.", exEn:"I am hungry, so I go to the market." },
+        { fr:"parce que", ph:"par-suh KUH",en:"because",     ex:"Il fait du sport parce qu'il a faim.", exEn:"He exercises because he is hungry." },
+      ]
+    },
   ];
 
-  /* ── All IDs for show all / hide all ── */
-  const allEnIds = [];
+  const allEnIds   = [];
   const allExEnIds = [];
 
   function showAllEnglish() {
-    allEnIds.forEach(id   => { const el = document.getElementById(id);   if(el) el.classList.add('shown'); });
-    allExEnIds.forEach(id => { const el = document.getElementById(id);   if(el) el.classList.add('shown'); });
-    document.querySelectorAll('.reveal-btn').forEach(b     => b.textContent = '🙈 Hide English');
+    allEnIds.forEach(id   => { const el = document.getElementById(id); if (el) el.classList.add('shown'); });
+    allExEnIds.forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('shown'); });
+    document.querySelectorAll('.reveal-btn').forEach(b => b.textContent = '🙈 Hide English');
     document.querySelectorAll('.reveal-translation-btn').forEach(b => b.textContent = '🙈 Hide');
   }
 
   function hideAllEnglish() {
-    allEnIds.forEach(id   => { const el = document.getElementById(id);   if(el) el.classList.remove('shown'); });
-    allExEnIds.forEach(id => { const el = document.getElementById(id);   if(el) el.classList.remove('shown'); });
-    document.querySelectorAll('.reveal-btn').forEach(b     => b.textContent = '👁 Show English');
+    allEnIds.forEach(id   => { const el = document.getElementById(id); if (el) el.classList.remove('shown'); });
+    allExEnIds.forEach(id => { const el = document.getElementById(id); if (el) el.classList.remove('shown'); });
+    document.querySelectorAll('.reveal-btn').forEach(b => b.textContent = '👁 Show English');
     document.querySelectorAll('.reveal-translation-btn').forEach(b => b.textContent = '👁 Show Translation');
   }
 
-  /* ── Build cards ── */
   const container = document.getElementById('vocab-container');
   let idx = 0;
 
   sections.forEach(section => {
-    // Section title
     const secTitle = document.createElement('div');
     secTitle.className = 'vocab-section-title';
     secTitle.textContent = section.title;
     container.appendChild(secTitle);
 
     section.words.forEach(word => {
-      const i = idx++;
+      const i          = idx++;
       const wordAudioId = `wa-${i}`;
       const exAudioId   = `ea-${i}`;
       const enId        = `en-${i}`;
@@ -385,30 +318,25 @@
       card.innerHTML = `
         <div class="vocab-french">${word.fr}</div>
         <div class="vocab-phonetic">🔊 ${word.ph}</div>
-
         <div class="word-player-wrap" id="${wordAudioId}"></div>
-
         <div class="reveal-wrap">
           <button class="reveal-btn" id="${enBtnId}">👁 Show English</button>
           <div class="vocab-english" id="${enId}">${word.en}</div>
         </div>
-
         <hr class="vocab-divider" />
-
         <div class="example-label">Example</div>
         <div class="example-fr">${word.ex}</div>
         <div class="example-player-wrap" id="${exAudioId}"></div>
         <button class="reveal-translation-btn" id="${exEnBtnId}">👁 Show Translation</button>
         <div class="example-en" id="${exEnId}">${word.exEn}</div>
       `;
-
       container.appendChild(card);
 
       requestAnimationFrame(() => {
-        buildPlayer(word.fr.replace(/<[^>]+>/g,''), wordAudioId);
-        buildPlayer(word.ex.replace(/<[^>]+>/g,''), exAudioId);
-        setupReveal(enBtnId,   enId,   '👁 Show English',      '🙈 Hide English');
-        setupReveal(exEnBtnId, exEnId, '👁 Show Translation',  '🙈 Hide');
+        buildPlayer(word.fr, wordAudioId);
+        buildPlayer(word.ex, exAudioId);
+        setupReveal(enBtnId,   enId,   '👁 Show English',     '🙈 Hide English');
+        setupReveal(exEnBtnId, exEnId, '👁 Show Translation', '🙈 Hide');
       });
     });
   });
