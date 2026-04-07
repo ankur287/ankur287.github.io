@@ -6,69 +6,121 @@
   <title>Vocabulary — Week 2</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .verb-highlight {
-      background: #fef3c7;
-      border-bottom: 2px solid #f59e0b;
-      padding: 0 3px;
-      border-radius: 3px;
-      font-weight: 700;
-      font-style: normal;
-    }
-    .verb-note {
-      background: #eff6ff;
-      border: 1.5px solid #bfdbfe;
-      border-radius: 8px;
-      padding: 12px 14px;
-      margin-top: 12px;
-      font-size: 13px;
-      color: #1e40af;
-      line-height: 1.7;
-    }
-    .verb-note-title { font-weight: 700; margin-bottom: 6px; }
-    .verb-chain {
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 0;
-      margin-top: 10px;
-    }
-    .chain-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-right: 4px;
-    }
-    .chain-fr {
-      background: white;
-      border: 1.5px solid #93c5fd;
-      border-radius: 6px;
-      padding: 5px 12px;
+    /* ── Section dividers ── */
+    .vocab-section-title {
       font-family: 'Lora', serif;
+      font-size: 13px;
       font-weight: 700;
-      color: #1e3a8a;
-      font-size: 14px;
-      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      padding: 20px 0 8px;
+      border-bottom: 2px solid var(--gray-100);
+      margin-bottom: 14px;
     }
-    .chain-label-text {
-      font-size: 10px;
-      color: #64748b;
-      margin-top: 3px;
-      max-width: 80px;
-      line-height: 1.3;
+
+    /* ── Card ── */
+    .vocab-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-200);
+      padding: 18px;
+      margin-bottom: 12px;
+      transition: box-shadow .2s;
     }
-    .chain-arrow {
-      font-size: 18px;
-      color: #60a5fa;
-      margin: 0 2px;
-      padding-top: 8px;
+    .vocab-card:hover { box-shadow: var(--shadow-md); }
+
+    .vocab-french {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
     }
-    .chain-tip {
-      margin-top: 8px;
-      color: #2563eb;
+    .vocab-phonetic {
+      font-size: 13px;
+      color: #7c3aed;
       font-style: italic;
-      font-size: 12px;
+      margin-bottom: 10px;
     }
+
+    /* Player sits right after phonetic */
+    .word-player-wrap { margin-bottom: 12px; }
+
+    /* Show English button */
+    .reveal-wrap { margin-bottom: 14px; }
+    .reveal-btn {
+      background: var(--blue-pale);
+      color: var(--blue);
+      border: 1.5px solid var(--blue);
+      border-radius: var(--radius-sm);
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      min-height: 48px;
+      width: 100%;
+      transition: background .2s, color .2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .reveal-btn:hover { background: var(--blue); color: white; }
+    .vocab-english {
+      display: none;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      padding: 10px 0 4px;
+    }
+    .vocab-english.shown { display: block; }
+
+    /* Divider */
+    .vocab-divider {
+      border: none;
+      border-top: 1px solid var(--gray-100);
+      margin: 12px 0;
+    }
+
+    /* Example */
+    .example-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+      margin-bottom: 5px;
+    }
+    .example-fr {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: var(--navy);
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .example-player-wrap { margin-bottom: 8px; }
+    .reveal-translation-btn {
+      background: none;
+      border: none;
+      font-size: 12px;
+      color: var(--blue);
+      cursor: pointer;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-decoration: underline;
+      min-height: 24px;
+    }
+    .example-en {
+      display: none;
+      font-size: 14px;
+      color: var(--gray-600);
+      font-weight: 400;
+      padding-top: 4px;
+      line-height: 1.5;
+    }
+    .example-en.shown { display: block; }
+
+    /* Show all / hide all bar */
     .showallbar {
       display: flex;
       gap: 10px;
@@ -90,8 +142,9 @@
     }
     .showallbar button:hover { background: var(--navy-light); }
     .showallbar button.hide-btn { background: var(--gray-200); color: var(--gray-600); }
-    .showallbar button.hide-btn:hover { background: var(--gray-400); color: white; }
-    .word-count-badge {
+    .showallbar button.hide-btn:hover { background: var(--gray-300, #d1d5db); }
+
+    .count-badge {
       display: inline-block;
       background: var(--blue-pale);
       color: var(--blue);
@@ -100,15 +153,6 @@
       font-size: 12px;
       font-weight: 700;
       margin-left: 8px;
-    }
-    .highlight-legend {
-      background: #fffbeb;
-      border: 1.5px solid #fde68a;
-      border-radius: 8px;
-      padding: 10px 14px;
-      margin-bottom: 20px;
-      font-size: 13px;
-      color: #92400e;
     }
   </style>
 </head>
@@ -137,19 +181,13 @@
 
   <main class="main">
     <div class="section-header">
-      <h1 class="section-title">Vocabulary <span class="word-count-badge">55 words</span></h1>
-      <p class="section-subtitle">Tap <strong>Show English</strong> to test yourself before revealing the answer.</p>
+      <h1 class="section-title">Vocabulary <span class="count-badge">55 words</span></h1>
+      <p class="section-subtitle">Tap <strong>Show English</strong> to test yourself. Press ▶ to hear the word or sentence spoken.</p>
     </div>
 
-    <!-- Legend -->
-    <div class="highlight-legend">
-      🟡 The <span style="background:#fef3c7;border-bottom:2px solid #f59e0b;padding:0 4px;border-radius:3px;font-weight:700;">highlighted word</span> in each sentence shows where the vocabulary word appears. Verbs change their ending depending on who does the action — tap 💡 to see how.
-    </div>
-
-    <!-- Show All / Hide All -->
     <div class="showallbar">
-      <button onclick="showAll()">👁 Show All English</button>
-      <button class="hide-btn" onclick="hideAll()">🙈 Hide All</button>
+      <button onclick="showAllEnglish()">👁 Show All English</button>
+      <button class="hide-btn" onclick="hideAllEnglish()">🙈 Hide All</button>
     </div>
 
     <div id="vocab-container"></div>
@@ -157,532 +195,223 @@
 
   <script src="audio.js"></script>
   <script>
-    const vocab = [
-      {
-        fr: "être", ph: "EH-tr", en: "to be",
-        ex: "Je <span class='verb-highlight'>suis</span> étudiant.",
-        exPlain: "The word <strong>être</strong> (to be) changes to <strong>suis</strong> when the subject is <em>je</em> (I).",
-        exEn: "I <strong>am</strong> a student.",
-        verbNote: {
-          what: "Verbs change form depending on who does the action. This is called <em>conjugation</em>.",
-          chain: [
-            { fr:"être", label:"dictionary form\n(to be)" },
-            { fr:"je suis", label:"with je (I)\n→ I am" },
-            { fr:"il est", label:"with il (he)\n→ he is" }
-          ],
-          tip: "Just like English: 'to be' → 'I am', 'you are', 'he is'. French does the same but with different endings."
-        }
-      },
-      {
-        fr: "avoir", ph: "ah-VWAHR", en: "to have",
-        ex: "J'<span class='verb-highlight'>ai</span> un livre.",
-        exPlain: "The word <strong>avoir</strong> (to have) changes to <strong>ai</strong> when the subject is <em>je</em> (I). <em>Je ai</em> → <em>j'ai</em> (the e drops before a vowel).",
-        exEn: "I <strong>have</strong> a book.",
-        verbNote: {
-          what: "avoir is irregular — its forms look very different from the infinitive.",
-          chain: [
-            { fr:"avoir", label:"dictionary form\n(to have)" },
-            { fr:"j'ai", label:"with je (I)\n→ I have" },
-            { fr:"il a", label:"with il (he)\n→ he has" }
-          ],
-          tip: "Note: je ai → j'ai. The e of je disappears before a vowel (elision)."
-        }
-      },
-      {
-        fr: "aller", ph: "ah-LAY", en: "to go",
-        ex: "Je <span class='verb-highlight'>vais</span> au marché.",
-        exPlain: "The word <strong>aller</strong> (to go) changes completely to <strong>vais</strong> for <em>je</em> (I). This is a highly irregular verb!",
-        exEn: "I <strong>am going</strong> to the market.",
-        verbNote: {
-          what: "aller is one of the most irregular verbs. 'Vais' looks nothing like 'aller' — you must memorise it.",
-          chain: [
-            { fr:"aller", label:"dictionary form\n(to go)" },
-            { fr:"je vais", label:"with je (I)\n→ I go" },
-            { fr:"il va", label:"with il (he)\n→ he goes" }
-          ],
-          tip: "Think of English: 'to go' → 'I went' (completely different word). French aller is similar."
-        }
-      },
-      {
-        fr: "faire", ph: "FAIR", en: "to do / to make",
-        ex: "Je <span class='verb-highlight'>fais</span> la cuisine.",
-        exPlain: "<strong>faire</strong> (to do) becomes <strong>fais</strong> for <em>je</em> (I). 'Faire la cuisine' literally means 'to do the cooking'.",
-        exEn: "I <strong>cook</strong>. (lit. I do the cooking.)",
-        verbNote: {
-          what: "faire is irregular. It means both 'to do' and 'to make' depending on context.",
-          chain: [
-            { fr:"faire", label:"dictionary form\n(to do/make)" },
-            { fr:"je fais", label:"with je (I)\n→ I do" },
-            { fr:"il fait", label:"with il (he)\n→ he does" }
-          ],
-          tip: "French uses faire (to do) where English says 'to cook', 'to exercise', 'to take a walk'."
-        }
-      },
-      {
-        fr: "je suis", ph: "zhuh SWEE", en: "I am",
-        ex: "Je <span class='verb-highlight'>suis</span> content aujourd'hui.",
-        exPlain: "<strong>je suis</strong> = I am. This is être conjugated for the first person (I).",
-        exEn: "I <strong>am</strong> happy today.",
-        verbNote: null
-      },
-      {
-        fr: "tu es", ph: "tew EH", en: "you are (to one friend)",
-        ex: "Tu <span class='verb-highlight'>es</span> très gentil.",
-        exPlain: "<strong>tu es</strong> = you are (talking to one person informally, like a friend or family member).",
-        exEn: "You <strong>are</strong> very kind.",
-        verbNote: null
-      },
-      {
-        fr: "il est", ph: "eel EH", en: "he is",
-        ex: "Il <span class='verb-highlight'>est</span> médecin.",
-        exPlain: "<strong>il est</strong> = he is. Note: in French you do NOT say 'un médecin' here — just 'médecin' for professions.",
-        exEn: "He <strong>is</strong> a doctor.",
-        verbNote: null
-      },
-      {
-        fr: "elle est", ph: "EL EH", en: "she is",
-        ex: "Elle <span class='verb-highlight'>est</span> professeure.",
-        exPlain: "<strong>elle est</strong> = she is. <em>Elle</em> is the feminine pronoun (she), <em>il</em> is masculine (he).",
-        exEn: "She <strong>is</strong> a teacher.",
-        verbNote: null
-      },
-      {
-        fr: "nous sommes", ph: "noo SUM", en: "we are",
-        ex: "Nous <span class='verb-highlight'>sommes</span> canadiens.",
-        exPlain: "<strong>nous sommes</strong> = we are. <em>Sommes</em> is the nous (we) form of être.",
-        exEn: "We <strong>are</strong> Canadian.",
-        verbNote: null
-      },
-      {
-        fr: "vous êtes", ph: "voo ZET", en: "you are (formal or to a group)",
-        ex: "Vous <span class='verb-highlight'>êtes</span> très aimable.",
-        exPlain: "<strong>vous êtes</strong> = you are. Used either formally (to a stranger, boss) or to multiple people.",
-        exEn: "You <strong>are</strong> very kind.",
-        verbNote: null
-      },
-      {
-        fr: "ils sont", ph: "eel SON", en: "they are (group with at least one male)",
-        ex: "Ils <span class='verb-highlight'>sont</span> à l'école.",
-        exPlain: "<strong>ils sont</strong> = they are. <em>Ils</em> is used for a group that includes at least one male.",
-        exEn: "They <strong>are</strong> at school.",
-        verbNote: null
-      },
-      {
-        fr: "elles sont", ph: "EL SON", en: "they are (all-female group)",
-        ex: "Elles <span class='verb-highlight'>sont</span> amies.",
-        exPlain: "<strong>elles sont</strong> = they are. <em>Elles</em> is only used when every person in the group is female.",
-        exEn: "They <strong>are</strong> friends.",
-        verbNote: null
-      },
-      {
-        fr: "j'ai", ph: "ZHAY", en: "I have",
-        ex: "J'<span class='verb-highlight'>ai</span> faim maintenant.",
-        exPlain: "<strong>j'ai faim</strong> = I have hunger = I am hungry. French uses avoir (to have) for hunger.",
-        exEn: "I am hungry now. (lit. I <strong>have</strong> hunger now.)",
-        verbNote: null
-      },
-      {
-        fr: "tu as", ph: "tew AH", en: "you have (to one friend)",
-        ex: "Tu <span class='verb-highlight'>as</span> raison.",
-        exPlain: "<strong>tu as raison</strong> = you have reason = you are right. English says 'to be right'; French says 'to have reason'.",
-        exEn: "You are right. (lit. You <strong>have</strong> reason.)",
-        verbNote: null
-      },
-      {
-        fr: "il a", ph: "eel AH", en: "he has",
-        ex: "Il <span class='verb-highlight'>a</span> une voiture.",
-        exPlain: "<strong>il a</strong> = he has. The third-person singular of avoir is just 'a'.",
-        exEn: "He <strong>has</strong> a car.",
-        verbNote: null
-      },
-      {
-        fr: "nous avons", ph: "noo za-VON", en: "we have",
-        ex: "Nous <span class='verb-highlight'>avons</span> deux enfants.",
-        exPlain: "<strong>nous avons</strong> = we have. Pronounced 'noo-za-VON' — the s of nous links to avons.",
-        exEn: "We <strong>have</strong> two children.",
-        verbNote: null
-      },
-      {
-        fr: "vous avez", ph: "voo za-VAY", en: "you have (formal or to a group)",
-        ex: "Vous <span class='verb-highlight'>avez</span> de la chance.",
-        exPlain: "<strong>vous avez de la chance</strong> = you are lucky. Literally 'you have luck'.",
-        exEn: "You are lucky. (lit. You <strong>have</strong> luck.)",
-        verbNote: null
-      },
-      {
-        fr: "ils ont", ph: "eel ZON", en: "they have",
-        ex: "Ils <span class='verb-highlight'>ont</span> un grand appartement.",
-        exPlain: "<strong>ils ont</strong> = they have. Pronounced 'eel-ZON' — the s of ils links to ont (liaison).",
-        exEn: "They <strong>have</strong> a big apartment.",
-        verbNote: null
-      },
-      {
-        fr: "je vais", ph: "zhuh VAY", en: "I go / I am going",
-        ex: "Je <span class='verb-highlight'>vais</span> au bureau.",
-        exPlain: "<strong>je vais</strong> = I go / I am going. First person of aller (to go).",
-        exEn: "I <strong>am going</strong> to the office.",
-        verbNote: null
-      },
-      {
-        fr: "tu vas", ph: "tew VAH", en: "you go (to one friend)",
-        ex: "Tu <span class='verb-highlight'>vas</span> bien ?",
-        exPlain: "<strong>tu vas bien ?</strong> is the casual 'How are you?' Literally: 'You go well?'",
-        exEn: "Are you doing well? (lit. You <strong>go</strong> well?)",
-        verbNote: null
-      },
-      {
-        fr: "il va", ph: "eel VAH", en: "he goes / he is going",
-        ex: "Il <span class='verb-highlight'>va</span> à la bibliothèque.",
-        exPlain: "<strong>il va</strong> = he goes. Third-person singular of aller (to go).",
-        exEn: "He <strong>goes</strong> to the library.",
-        verbNote: null
-      },
-      {
-        fr: "nous allons", ph: "noo za-LON", en: "we go / we are going",
-        ex: "Nous <span class='verb-highlight'>allons</span> au cinéma.",
-        exPlain: "<strong>nous allons</strong> = we go. Pronounced 'noo-za-LON' — the s of nous links to allons.",
-        exEn: "We <strong>are going</strong> to the cinema.",
-        verbNote: null
-      },
-      {
-        fr: "vous allez", ph: "voo za-LAY", en: "you go (formal or to a group)",
-        ex: "Vous <span class='verb-highlight'>allez</span> où ?",
-        exPlain: "<strong>vous allez où ?</strong> = Where are you going? Où = where (question word).",
-        exEn: "Where are you going?",
-        verbNote: null
-      },
-      {
-        fr: "ils vont", ph: "eel VON", en: "they go / they are going",
-        ex: "Ils <span class='verb-highlight'>vont</span> souvent au parc.",
-        exPlain: "<strong>ils vont</strong> = they go. Third-person plural of aller (to go).",
-        exEn: "They often <strong>go</strong> to the park.",
-        verbNote: null
-      },
-      {
-        fr: "je fais", ph: "zhuh FAY", en: "I do / I make / I am doing",
-        ex: "Je <span class='verb-highlight'>fais</span> du sport le matin.",
-        exPlain: "<strong>je fais</strong> = I do. First person of faire. 'Faire du sport' = to exercise.",
-        exEn: "I <strong>do</strong> sports in the morning.",
-        verbNote: null
-      },
-      {
-        fr: "tu fais", ph: "tew FAY", en: "you do / you make (to one friend)",
-        ex: "Tu <span class='verb-highlight'>fais</span> quoi ce soir ?",
-        exPlain: "<strong>tu fais quoi ?</strong> is casual for 'What are you doing?' (more formal: Qu'est-ce que tu fais ?)",
-        exEn: "What are you <strong>doing</strong> tonight?",
-        verbNote: null
-      },
-      {
-        fr: "il fait", ph: "eel FAY", en: "he does / he makes",
-        ex: "Il <span class='verb-highlight'>fait</span> ses devoirs.",
-        exPlain: "<strong>il fait</strong> = he does. Third-person singular of faire. Devoirs = homework.",
-        exEn: "He <strong>does</strong> his homework.",
-        verbNote: null
-      },
-      {
-        fr: "nous faisons", ph: "noo fuh-ZON", en: "we do / we make",
-        ex: "Nous <span class='verb-highlight'>faisons</span> une promenade.",
-        exPlain: "⚠️ <strong>nous faisons</strong> is pronounced 'fuh-ZON', NOT 'FAY-zon'. This is a pronunciation exception in French.",
-        exEn: "We are taking a walk.",
-        verbNote: null
-      },
-      {
-        fr: "vous faites", ph: "voo FET", en: "you do / you make (formal or to a group)",
-        ex: "Vous <span class='verb-highlight'>faites</span> du bon travail.",
-        exPlain: "⚠️ <strong>vous faites</strong> (not 'faites') is irregular — most verbs use -ez for vous (parlez, mangez), but faire uses -tes.",
-        exEn: "You <strong>do</strong> good work.",
-        verbNote: null
-      },
-      {
-        fr: "ils font", ph: "eel FON", en: "they do / they make",
-        ex: "Ils <span class='verb-highlight'>font</span> la fête.",
-        exPlain: "<strong>ils font</strong> = they do/make. 'Faire la fête' = to party (lit. 'to make the party').",
-        exEn: "They are partying. (lit. They <strong>make</strong> the party.)",
-        verbNote: null
-      },
-      {
-        fr: "maintenant", ph: "man-tuh-NON", en: "now (time adverb)",
-        ex: "Je travaille <span class='verb-highlight'>maintenant</span>.",
-        exPlain: "<strong>maintenant</strong> = now. It goes at the end of the sentence or at the start.",
-        exEn: "I am working <strong>now</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "toujours", ph: "too-ZHOOR", en: "always (frequency adverb)",
-        ex: "Il est <span class='verb-highlight'>toujours</span> à l'heure.",
-        exPlain: "<strong>toujours</strong> = always. Frequency adverbs usually go directly after the verb.",
-        exEn: "He is <strong>always</strong> on time.",
-        verbNote: null
-      },
-      {
-        fr: "souvent", ph: "soo-VON", en: "often (frequency adverb)",
-        ex: "Nous allons <span class='verb-highlight'>souvent</span> au restaurant.",
-        exPlain: "<strong>souvent</strong> = often. It comes after the verb: 'nous allons souvent' (we go often).",
-        exEn: "We <strong>often</strong> go to the restaurant.",
-        verbNote: null
-      },
-      {
-        fr: "parfois", ph: "par-FWAH", en: "sometimes (frequency adverb)",
-        ex: "Elle fait <span class='verb-highlight'>parfois</span> des erreurs.",
-        exPlain: "<strong>parfois</strong> = sometimes. Also: <em>quelquefois</em> = sometimes (slightly more formal).",
-        exEn: "She <strong>sometimes</strong> makes mistakes.",
-        verbNote: null
-      },
-      {
-        fr: "jamais", ph: "zhah-MAY", en: "never (frequency adverb)",
-        ex: "Je ne fais <span class='verb-highlight'>jamais</span> ça.",
-        exPlain: "<strong>jamais</strong> = never. It always comes with <em>ne</em>: 'ne…jamais' = never. The ne goes before the verb, jamais after.",
-        exEn: "I <strong>never</strong> do that.",
-        verbNote: null
-      },
-      {
-        fr: "tous les jours", ph: "too lay ZHOOR", en: "every day",
-        ex: "Il va à la gym <span class='verb-highlight'>tous les jours</span>.",
-        exPlain: "<strong>tous les jours</strong> = every day. This phrase comes at the end of the sentence.",
-        exEn: "He goes to the gym <strong>every day</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "le matin", ph: "luh ma-TAN", en: "in the morning",
-        ex: "Je fais du café <span class='verb-highlight'>le matin</span>.",
-        exPlain: "<strong>le matin</strong> = in the morning. Also: le soir = in the evening, l'après-midi = in the afternoon.",
-        exEn: "I make coffee <strong>in the morning</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "le soir", ph: "luh SWAHR", en: "in the evening",
-        ex: "Nous regardons la télé <span class='verb-highlight'>le soir</span>.",
-        exPlain: "<strong>le soir</strong> = in the evening. Notice: 'regardons' = we watch (from regarder, a regular -er verb).",
-        exEn: "We watch TV <strong>in the evening</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "avoir faim", ph: "ah-VWAHR FAN", en: "to be hungry (lit: to have hunger)",
-        ex: "J'<span class='verb-highlight'>ai faim</span> ce midi.",
-        exPlain: "<strong>avoir faim</strong> = to have hunger = to be hungry. With je (I), avoir → ai, so 'j'ai faim'.",
-        exEn: "I <strong>am hungry</strong> at noon.",
-        verbNote: {
-          what: "French says 'to have hunger/thirst/cold/hot' where English says 'to be hungry/thirsty/cold/hot'.",
-          chain: [
-            { fr:"avoir faim", label:"expression\n(to have hunger)" },
-            { fr:"j'ai faim", label:"with je (I)\n→ I am hungry" },
-            { fr:"il a faim", label:"with il (he)\n→ he is hungry" }
-          ],
-          tip: "avoir faim, avoir soif, avoir chaud, avoir froid — all use avoir, not être."
-        }
-      },
-      {
-        fr: "avoir soif", ph: "ah-VWAHR SWAHF", en: "to be thirsty (lit: to have thirst)",
-        ex: "Tu <span class='verb-highlight'>as soif</span> après le sport ?",
-        exPlain: "<strong>tu as soif</strong> = you have thirst = you are thirsty. With tu (you), avoir → as.",
-        exEn: "Are you <strong>thirsty</strong> after sports?",
-        verbNote: null
-      },
-      {
-        fr: "avoir raison", ph: "ah-VWAHR ray-ZON", en: "to be right (lit: to have reason)",
-        ex: "Elle <span class='verb-highlight'>a</span> toujours <span class='verb-highlight'>raison</span>.",
-        exPlain: "<strong>elle a raison</strong> = she has reason = she is right. With elle (she), avoir → a.",
-        exEn: "She is always <strong>right</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "avoir tort", ph: "ah-VWAHR TOR", en: "to be wrong (lit: to have fault)",
-        ex: "Il <span class='verb-highlight'>a tort</span> cette fois.",
-        exPlain: "<strong>il a tort</strong> = he has fault = he is wrong. The opposite of avoir raison.",
-        exEn: "He is <strong>wrong</strong> this time.",
-        verbNote: null
-      },
-      {
-        fr: "avoir besoin", ph: "ah-VWAHR buh-ZWAN", en: "to need (lit: to have need)",
-        ex: "J'<span class='verb-highlight'>ai besoin</span> d'aide.",
-        exPlain: "<strong>j'ai besoin de</strong> = I have need of = I need. Always followed by de (of): j'ai besoin <em>de</em> quelque chose.",
-        exEn: "I <strong>need</strong> help.",
-        verbNote: null
-      },
-      {
-        fr: "aller à l'école", ph: "ah-LAY ah lay-KUL", en: "to go to school",
-        ex: "Les enfants <span class='verb-highlight'>vont</span> à l'école.",
-        exPlain: "<strong>vont</strong> = ils/elles vont = they go. Third-person plural of aller. 'À l'école' = to school (à + l' before vowel).",
-        exEn: "The children <strong>go</strong> to school.",
-        verbNote: null
-      },
-      {
-        fr: "le travail", ph: "luh tra-VAY", en: "work / job (noun)",
-        ex: "Il fait son <span class='verb-highlight'>travail</span> sérieusement.",
-        exPlain: "<strong>le travail</strong> = work. It is a masculine noun. 'Son travail' = his work (son = his/her for masculine nouns).",
-        exEn: "He does his <strong>work</strong> seriously.",
-        verbNote: null
-      },
-      {
-        fr: "la maison", ph: "lah may-ZON", en: "house / home (noun)",
-        ex: "Nous sommes à la <span class='verb-highlight'>maison</span>.",
-        exPlain: "<strong>la maison</strong> = house/home. Feminine noun, so 'la'. 'À la maison' = at home.",
-        exEn: "We are at <strong>home</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "faire les courses", ph: "FAIR lay KOORS", en: "to do the grocery shopping",
-        ex: "Elle <span class='verb-highlight'>fait les courses</span> le vendredi.",
-        exPlain: "<strong>faire les courses</strong> = to do the shopping. With elle (she), faire → fait. Vendredi = Friday.",
-        exEn: "She <strong>does the grocery shopping</strong> on Friday.",
-        verbNote: null
-      },
-      {
-        fr: "faire du sport", ph: "FAIR dew SPOR", en: "to exercise / to play sports",
-        ex: "Il <span class='verb-highlight'>fait du sport</span> tous les soirs.",
-        exPlain: "<strong>faire du sport</strong> = to exercise. 'Du' = de + le (contraction). You can't say 'faire le sport'.",
-        exEn: "He <strong>exercises</strong> every evening.",
-        verbNote: null
-      },
-      {
-        fr: "faire la cuisine", ph: "FAIR lah kwee-ZEEN", en: "to cook (lit: to do the cooking)",
-        ex: "J'aime <span class='verb-highlight'>faire la cuisine</span>.",
-        exPlain: "<strong>faire la cuisine</strong> = to cook. Here faire is in its infinitive form (after aimer = to love).",
-        exEn: "I love <strong>to cook</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "bien", ph: "BYAN", en: "well / good (adverb)",
-        ex: "Elle parle <span class='verb-highlight'>bien</span> français.",
-        exPlain: "<strong>bien</strong> = well. It describes how someone does something (an adverb). It goes after the verb.",
-        exEn: "She speaks French <strong>well</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "mal", ph: "MAL", en: "badly / poorly (adverb)",
-        ex: "Je parle <span class='verb-highlight'>mal</span> l'espagnol.",
-        exPlain: "<strong>mal</strong> = badly/poorly. The opposite of bien. Also used in 'avoir mal' = to be in pain.",
-        exEn: "I speak Spanish <strong>poorly</strong>.",
-        verbNote: null
-      },
-      {
-        fr: "comment", ph: "kuh-MON", en: "how (question word)",
-        ex: "<span class='verb-highlight'>Comment</span> tu t'appelles ?",
-        exPlain: "<strong>Comment</strong> = how. 'Comment tu t'appelles ?' is casual for 'What is your name?' (lit. How do you call yourself?)",
-        exEn: "<strong>How</strong> do you call yourself? = What is your name?",
-        verbNote: null
-      },
-      {
-        fr: "pourquoi", ph: "poor-KWAH", en: "why (question word)",
-        ex: "<span class='verb-highlight'>Pourquoi</span> tu vas là-bas ?",
-        exPlain: "<strong>Pourquoi</strong> = why. It goes at the start of the question. Là-bas = over there.",
-        exEn: "<strong>Why</strong> are you going there?",
-        verbNote: null
-      },
-      {
-        fr: "où", ph: "OO", en: "where (question word)",
-        ex: "<span class='verb-highlight'>Où</span> allez-vous ce soir ?",
-        exPlain: "<strong>Où</strong> = where. The accent (grave) is needed to distinguish it from ou = or.",
-        exEn: "<strong>Where</strong> are you going tonight?",
-        verbNote: null
-      },
-      {
-        fr: "quand", ph: "KON", en: "when (question word)",
-        ex: "<span class='verb-highlight'>Quand</span> fais-tu tes devoirs ?",
-        exPlain: "<strong>Quand</strong> = when. 'Fais-tu' is a formal question structure (verb-subject inversion).",
-        exEn: "<strong>When</strong> do you do your homework?",
-        verbNote: null
-      }
-    ];
-
-    const allEnIds = [];
-    const allExEnIds = [];
-
-    function showAll() {
-      allEnIds.forEach(id => { const el=document.getElementById(id); if(el) el.classList.add('shown'); });
-      allExEnIds.forEach(id => { const el=document.getElementById(id); if(el) el.classList.add('shown'); });
-      document.querySelectorAll('[data-type="en-btn"]').forEach(b => b.textContent='🙈 Hide English');
-      document.querySelectorAll('[data-type="exen-btn"]').forEach(b => b.textContent='🙈 Hide Translation');
+  /*
+    Sections and words.
+    Each word: { fr, ph, en, ex, exEn }
+    No grammar explanations — those live in grammar.html
+  */
+  const sections = [
+    {
+      title: "The 4 core verbs — infinitive (dictionary) form",
+      words: [
+        { fr:"être",  ph:"EH-tr",       en:"to be",           ex:"Je suis étudiant.",    exEn:"I am a student." },
+        { fr:"avoir", ph:"ah-VWAHR",    en:"to have",         ex:"J'ai un livre.",       exEn:"I have a book." },
+        { fr:"aller", ph:"ah-LAY",      en:"to go",           ex:"Je vais au marché.",   exEn:"I go to the market." },
+        { fr:"faire", ph:"FAIR",        en:"to do / to make", ex:"Je fais la cuisine.",  exEn:"I cook." },
+      ]
+    },
+    {
+      title: "être — all forms",
+      words: [
+        { fr:"je suis",    ph:"zhuh SWEE",   en:"I am",                          ex:"Je suis content.",         exEn:"I am happy." },
+        { fr:"tu es",      ph:"tew EH",      en:"you are (friend)",               ex:"Tu es gentil.",            exEn:"You are kind." },
+        { fr:"il est",     ph:"eel EH",      en:"he is",                         ex:"Il est médecin.",          exEn:"He is a doctor." },
+        { fr:"elle est",   ph:"EL EH",       en:"she is",                        ex:"Elle est professeure.",    exEn:"She is a teacher." },
+        { fr:"nous sommes",ph:"noo SUM",     en:"we are",                        ex:"Nous sommes canadiens.",   exEn:"We are Canadian." },
+        { fr:"vous êtes",  ph:"voo ZET",     en:"you are (formal or group)",     ex:"Vous êtes aimable.",       exEn:"You are kind." },
+        { fr:"ils sont",   ph:"eel SON",     en:"they are (group with males)",   ex:"Ils sont à l'école.",     exEn:"They are at school." },
+        { fr:"elles sont", ph:"EL SON",      en:"they are (all female)",         ex:"Elles sont amies.",        exEn:"They are friends." },
+      ]
+    },
+    {
+      title: "avoir — all forms",
+      words: [
+        { fr:"j'ai",       ph:"ZHAY",        en:"I have",                        ex:"J'ai faim.",               exEn:"I am hungry." },
+        { fr:"tu as",      ph:"tew AH",      en:"you have (friend)",             ex:"Tu as raison.",            exEn:"You are right." },
+        { fr:"il a",       ph:"eel AH",      en:"he has",                        ex:"Il a une voiture.",        exEn:"He has a car." },
+        { fr:"elle a",     ph:"EL AH",       en:"she has",                       ex:"Elle a un chat.",          exEn:"She has a cat." },
+        { fr:"nous avons", ph:"noo ZAH-VON", en:"we have",                       ex:"Nous avons deux enfants.", exEn:"We have two children." },
+        { fr:"vous avez",  ph:"voo ZAH-VAY", en:"you have (formal or group)",    ex:"Vous avez de la chance.",  exEn:"You are lucky." },
+        { fr:"ils ont",    ph:"eel ZON",     en:"they have",                     ex:"Ils ont un appartement.",  exEn:"They have an apartment." },
+        { fr:"elles ont",  ph:"EL ZON",      en:"they have (all female)",        ex:"Elles ont un chat.",       exEn:"They have a cat." },
+      ]
+    },
+    {
+      title: "aller — all forms",
+      words: [
+        { fr:"je vais",    ph:"zhuh VAY",    en:"I go / I am going",             ex:"Je vais au bureau.",       exEn:"I go to the office." },
+        { fr:"tu vas",     ph:"tew VAH",     en:"you go (friend)",               ex:"Tu vas bien ?",            exEn:"Are you doing well?" },
+        { fr:"il va",      ph:"eel VAH",     en:"he goes",                       ex:"Il va à la bibliothèque.", exEn:"He goes to the library." },
+        { fr:"elle va",    ph:"EL VAH",      en:"she goes",                      ex:"Elle va au marché.",       exEn:"She goes to the market." },
+        { fr:"nous allons",ph:"noo ZAH-LON", en:"we go",                         ex:"Nous allons au cinéma.",   exEn:"We go to the cinema." },
+        { fr:"vous allez", ph:"voo ZAH-LAY", en:"you go (formal or group)",      ex:"Vous allez où ?",          exEn:"Where are you going?" },
+        { fr:"ils vont",   ph:"eel VON",     en:"they go",                       ex:"Ils vont au parc.",        exEn:"They go to the park." },
+        { fr:"elles vont", ph:"EL VON",      en:"they go (all female)",          ex:"Elles vont à l'école.",   exEn:"They go to school." },
+      ]
+    },
+    {
+      title: "faire — all forms",
+      words: [
+        { fr:"je fais",    ph:"zhuh FAY",    en:"I do / I make",                 ex:"Je fais du sport.",        exEn:"I exercise." },
+        { fr:"tu fais",    ph:"tew FAY",     en:"you do / you make (friend)",    ex:"Tu fais quoi ce soir ?",   exEn:"What are you doing tonight?" },
+        { fr:"il fait",    ph:"eel FAY",     en:"he does / he makes",            ex:"Il fait ses devoirs.",     exEn:"He does his homework." },
+        { fr:"elle fait",  ph:"EL FAY",      en:"she does / she makes",          ex:"Elle fait la cuisine.",    exEn:"She cooks." },
+        { fr:"nous faisons",ph:"noo fuh-ZON",en:"we do / we make",               ex:"Nous faisons une promenade.", exEn:"We go for a walk." },
+        { fr:"vous faites",ph:"voo FET",     en:"you do / you make (formal/group)", ex:"Vous faites du bon travail.", exEn:"You do good work." },
+        { fr:"ils font",   ph:"eel FON",     en:"they do / they make",           ex:"Ils font la fête.",        exEn:"They are having a party." },
+        { fr:"elles font", ph:"EL FON",      en:"they do / they make (all female)", ex:"Elles font les courses.", exEn:"They do the grocery shopping." },
+      ]
+    },
+    {
+      title: "avoir expressions — where French says 'have', English says 'be'",
+      words: [
+        { fr:"avoir faim",   ph:"ah-VWAHR FAN",     en:"to be hungry (lit: to have hunger)",  ex:"J'ai faim après le sport.",    exEn:"I am hungry after sports." },
+        { fr:"avoir soif",   ph:"ah-VWAHR SWAHF",   en:"to be thirsty (lit: to have thirst)", ex:"Tu as soif ?",                 exEn:"Are you thirsty?" },
+        { fr:"avoir raison", ph:"ah-VWAHR ray-ZON", en:"to be right (lit: to have reason)",   ex:"Elle a toujours raison.",      exEn:"She is always right." },
+        { fr:"avoir tort",   ph:"ah-VWAHR TOR",     en:"to be wrong (lit: to have fault)",    ex:"Il a tort cette fois.",        exEn:"He is wrong this time." },
+        { fr:"avoir besoin", ph:"ah-VWAHR buh-ZWAN",en:"to need (lit: to have need of)",      ex:"J'ai besoin d'aide.",          exEn:"I need help." },
+        { fr:"avoir faim",   ph:"ah-VWAHR FAN",     en:"to be hungry",                        ex:"Nous avons très faim ce soir.", exEn:"We are very hungry tonight." },
+      ]
+    },
+    {
+      title: "faire expressions — common activities",
+      words: [
+        { fr:"faire la cuisine",   ph:"FAIR lah kwee-ZEEN", en:"to cook",                   ex:"Il fait la cuisine le soir.",    exEn:"He cooks in the evening." },
+        { fr:"faire les courses",  ph:"FAIR lay KOORS",     en:"to do the grocery shopping", ex:"Elle fait les courses.",         exEn:"She does the grocery shopping." },
+        { fr:"faire du sport",     ph:"FAIR dew SPOR",      en:"to exercise / play sports",  ex:"Nous faisons du sport.",        exEn:"We exercise." },
+        { fr:"faire une promenade",ph:"FAIR ewn prom-NAHD", en:"to go for a walk",           ex:"Ils font une promenade.",       exEn:"They go for a walk." },
+      ]
+    },
+    {
+      title: "aller + à — going to places",
+      words: [
+        { fr:"aller au marché",         ph:"ah-LAY oh mar-SHAY",      en:"to go to the market",        ex:"Je vais au marché.",           exEn:"I go to the market." },
+        { fr:"aller à l'école",         ph:"ah-LAY ah lay-KUL",       en:"to go to school",            ex:"Ils vont à l'école.",          exEn:"They go to school." },
+        { fr:"aller au cinéma",         ph:"ah-LAY oh see-nay-MAH",   en:"to go to the cinema",        ex:"Nous allons au cinéma.",       exEn:"We go to the cinema." },
+        { fr:"aller au travail",        ph:"ah-LAY oh tra-VAY",       en:"to go to work",              ex:"Elle va au travail.",          exEn:"She goes to work." },
+        { fr:"aller au bureau",         ph:"ah-LAY oh bew-ROH",       en:"to go to the office",        ex:"Je vais au bureau.",           exEn:"I go to the office." },
+      ]
+    },
+    {
+      title: "frequency adverbs — how often",
+      words: [
+        { fr:"toujours",      ph:"too-ZHOOR",  en:"always",    ex:"Il est toujours à l'heure.",   exEn:"He is always on time." },
+        { fr:"souvent",       ph:"soo-VON",    en:"often",     ex:"Nous allons souvent au parc.", exEn:"We often go to the park." },
+        { fr:"parfois",       ph:"par-FWAH",   en:"sometimes", ex:"Elle fait parfois des erreurs.", exEn:"She sometimes makes mistakes." },
+        { fr:"jamais",        ph:"zhah-MAY",   en:"never",     ex:"Je ne fais jamais ça.",        exEn:"I never do that." },
+        { fr:"tous les jours",ph:"too lay ZHOOR",en:"every day", ex:"Il fait du sport tous les jours.", exEn:"He exercises every day." },
+      ]
+    },
+    {
+      title: "time expressions — when",
+      words: [
+        { fr:"maintenant",  ph:"man-tuh-NON",  en:"now",              ex:"Je vais au marché maintenant.",  exEn:"I am going to the market now." },
+        { fr:"le matin",    ph:"luh ma-TAN",   en:"in the morning",   ex:"Je fais du café le matin.",      exEn:"I make coffee in the morning." },
+        { fr:"le soir",     ph:"luh SWAHR",    en:"in the evening",   ex:"Nous faisons du sport le soir.", exEn:"We exercise in the evening." },
+        { fr:"ce soir",     ph:"suh SWAHR",    en:"tonight",          ex:"Ils vont au cinéma ce soir.",   exEn:"They go to the cinema tonight." },
+        { fr:"aujourd'hui", ph:"oh-zhoor-DWEE",en:"today",            ex:"Elle est à la maison aujourd'hui.", exEn:"She is at home today." },
+      ]
+    },
+    {
+      title: "nouns — people and places used in this week's sentences",
+      words: [
+        { fr:"le marché",      ph:"luh mar-SHAY",    en:"the market",     ex:"Il va au marché.",             exEn:"He goes to the market." },
+        { fr:"la maison",      ph:"lah may-ZON",     en:"the house / home", ex:"Nous sommes à la maison.",  exEn:"We are at home." },
+        { fr:"le bureau",      ph:"luh bew-ROH",     en:"the office",     ex:"Elle va au bureau.",           exEn:"She goes to the office." },
+        { fr:"l'école",        ph:"lay-KUL",         en:"the school",     ex:"Ils vont à l'école.",         exEn:"They go to school." },
+        { fr:"le parc",        ph:"luh PARK",        en:"the park",       ex:"Je vais au parc.",             exEn:"I go to the park." },
+        { fr:"le cinéma",      ph:"luh see-nay-MAH", en:"the cinema",     ex:"Tu vas au cinéma ?",           exEn:"Are you going to the cinema?" },
+        { fr:"le travail",     ph:"luh tra-VAY",     en:"work / the job", ex:"Il fait son travail.",         exEn:"He does his work." },
+        { fr:"le sport",       ph:"luh SPOR",        en:"sport / exercise", ex:"Nous faisons du sport.",   exEn:"We exercise." },
+        { fr:"la cuisine",     ph:"lah kwee-ZEEN",   en:"cooking / kitchen", ex:"Elle fait la cuisine.",   exEn:"She cooks." },
+        { fr:"les cours",      ph:"lay KOOR",        en:"the classes / lessons", ex:"Je vais aux cours.", exEn:"I go to class." },
+        { fr:"les devoirs",    ph:"lay duh-VWAHR",   en:"the homework",   ex:"Il fait ses devoirs.",         exEn:"He does his homework." },
+      ]
+    },
+    {
+      title: "question words",
+      words: [
+        { fr:"comment", ph:"kuh-MON",  en:"how",   ex:"Comment tu vas ?",          exEn:"How are you?" },
+        { fr:"pourquoi",ph:"poor-KWAH",en:"why",   ex:"Pourquoi tu vas là-bas ?",  exEn:"Why are you going there?" },
+        { fr:"où",      ph:"OO",       en:"where", ex:"Où allez-vous ?",            exEn:"Where are you going?" },
+        { fr:"quand",   ph:"KON",      en:"when",  ex:"Quand fais-tu du sport ?",  exEn:"When do you exercise?" },
+      ]
     }
+  ];
 
-    function hideAll() {
-      allEnIds.forEach(id => { const el=document.getElementById(id); if(el) el.classList.remove('shown'); });
-      allExEnIds.forEach(id => { const el=document.getElementById(id); if(el) el.classList.remove('shown'); });
-      document.querySelectorAll('[data-type="en-btn"]').forEach(b => b.textContent='👁 Show English');
-      document.querySelectorAll('[data-type="exen-btn"]').forEach(b => b.textContent='👁 Show Translation');
-    }
+  /* ── All IDs for show all / hide all ── */
+  const allEnIds = [];
+  const allExEnIds = [];
 
-    const container = document.getElementById('vocab-container');
+  function showAllEnglish() {
+    allEnIds.forEach(id   => { const el = document.getElementById(id);   if(el) el.classList.add('shown'); });
+    allExEnIds.forEach(id => { const el = document.getElementById(id);   if(el) el.classList.add('shown'); });
+    document.querySelectorAll('.reveal-btn').forEach(b     => b.textContent = '🙈 Hide English');
+    document.querySelectorAll('.reveal-translation-btn').forEach(b => b.textContent = '🙈 Hide');
+  }
 
-    vocab.forEach((word, i) => {
-      const wordAudioId = `audio-word-${i}`;
-      const exAudioId   = `audio-ex-${i}`;
+  function hideAllEnglish() {
+    allEnIds.forEach(id   => { const el = document.getElementById(id);   if(el) el.classList.remove('shown'); });
+    allExEnIds.forEach(id => { const el = document.getElementById(id);   if(el) el.classList.remove('shown'); });
+    document.querySelectorAll('.reveal-btn').forEach(b     => b.textContent = '👁 Show English');
+    document.querySelectorAll('.reveal-translation-btn').forEach(b => b.textContent = '👁 Show Translation');
+  }
+
+  /* ── Build cards ── */
+  const container = document.getElementById('vocab-container');
+  let idx = 0;
+
+  sections.forEach(section => {
+    // Section title
+    const secTitle = document.createElement('div');
+    secTitle.className = 'vocab-section-title';
+    secTitle.textContent = section.title;
+    container.appendChild(secTitle);
+
+    section.words.forEach(word => {
+      const i = idx++;
+      const wordAudioId = `wa-${i}`;
+      const exAudioId   = `ea-${i}`;
       const enId        = `en-${i}`;
       const exEnId      = `exen-${i}`;
-      const exPlainId   = `expl-${i}`;
-      const enBtnId     = `btn-en-${i}`;
-      const exEnBtnId   = `btn-exen-${i}`;
-      const noteId      = `note-${i}`;
-      const noteBtnId   = `notebtn-${i}`;
+      const enBtnId     = `enb-${i}`;
+      const exEnBtnId   = `exenb-${i}`;
 
       allEnIds.push(enId);
       allExEnIds.push(exEnId);
-
-      let verbNoteHTML = '';
-      if (word.verbNote) {
-        const chainHTML = word.verbNote.chain.map((c, ci) => {
-          const arrow = ci < word.verbNote.chain.length - 1 ? '<span class="chain-arrow">→</span>' : '';
-          return `<div class="chain-step"><div class="chain-fr">${c.fr}</div><div class="chain-label-text">${c.label.replace(/\n/g,'<br>')}</div></div>${arrow}`;
-        }).join('');
-        const tipHTML = word.verbNote.tip
-          ? `<div class="chain-tip">💡 ${word.verbNote.tip}</div>`
-          : '';
-
-        verbNoteHTML = `
-          <div class="expandable" style="margin-top:12px;">
-            <button class="expand-btn" id="${noteBtnId}" style="font-size:13px;background:#eff6ff;border-color:#bfdbfe;color:#1e40af;">
-              💡 Why does the sentence look different? <span class="expand-arrow">▼</span>
-            </button>
-            <div class="expand-content" id="${noteId}" style="background:#eff6ff;border-color:#bfdbfe;">
-              <p style="margin-bottom:10px;">${word.verbNote.what}</p>
-              <div class="verb-chain">${chainHTML}</div>
-              ${tipHTML}
-            </div>
-          </div>
-        `;
-      }
 
       const card = document.createElement('div');
       card.className = 'vocab-card';
       card.innerHTML = `
         <div class="vocab-french">${word.fr}</div>
-        <div class="vocab-phonetic">${word.ph}</div>
-        <div id="${wordAudioId}"></div>
+        <div class="vocab-phonetic">🔊 ${word.ph}</div>
 
-        <div class="vocab-english-wrap mt-4">
-          <button class="reveal-btn" id="${enBtnId}" data-type="en-btn">👁 Show English</button>
+        <div class="word-player-wrap" id="${wordAudioId}"></div>
+
+        <div class="reveal-wrap">
+          <button class="reveal-btn" id="${enBtnId}">👁 Show English</button>
           <div class="vocab-english" id="${enId}">${word.en}</div>
         </div>
 
         <hr class="vocab-divider" />
 
-        <div class="vocab-example-label">Example sentence</div>
-        <div class="vocab-example-fr">${word.ex}</div>
-        <div id="${exAudioId}"></div>
-
-        <p style="font-size:12px;color:var(--gray-400);margin-top:8px;margin-bottom:0;">${word.exPlain}</p>
-
-        <div class="vocab-example-en mt-4">
-          <button class="reveal-btn" id="${exEnBtnId}" style="font-size:13px;min-height:44px;" data-type="exen-btn">👁 Show Translation</button>
-          <div class="vocab-english" id="${exEnId}" style="font-size:15px;font-weight:400;color:var(--gray-600);">${word.exEn}</div>
-        </div>
-
-        ${verbNoteHTML}
+        <div class="example-label">Example</div>
+        <div class="example-fr">${word.ex}</div>
+        <div class="example-player-wrap" id="${exAudioId}"></div>
+        <button class="reveal-translation-btn" id="${exEnBtnId}">👁 Show Translation</button>
+        <div class="example-en" id="${exEnId}">${word.exEn}</div>
       `;
 
       container.appendChild(card);
 
-      const plainEx = word.ex.replace(/<[^>]+>/g, '');
-      const plainFr = word.fr;
-
       requestAnimationFrame(() => {
-        buildPlayer(plainFr, wordAudioId);
-        buildPlayer(plainEx, exAudioId);
-        setupReveal(enBtnId, enId, '👁 Show English', '🙈 Hide English');
-        setupReveal(exEnBtnId, exEnId, '👁 Show Translation', '🙈 Hide Translation');
-        if (word.verbNote) setupExpandable(noteBtnId, noteId);
+        buildPlayer(word.fr.replace(/<[^>]+>/g,''), wordAudioId);
+        buildPlayer(word.ex.replace(/<[^>]+>/g,''), exAudioId);
+        setupReveal(enBtnId,   enId,   '👁 Show English',      '🙈 Hide English');
+        setupReveal(exEnBtnId, exEnId, '👁 Show Translation',  '🙈 Hide');
       });
     });
+  });
   </script>
 </body>
 </html>
