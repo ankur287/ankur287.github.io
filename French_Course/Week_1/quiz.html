@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="audio.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="../index.html">Course Home</a>
+        <a href="index.html">Week 1</a>
+      </div>
+      <div class="nav-links">
+        <a href="writing.html">Writing</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card hero">
+      <h1>Week 1 Quiz</h1>
+      <p>This quiz mixes vocabulary recognition, grammar control, reading/listening checks, and a small cumulative memory block.</p>
+    </section>
+
+    <form id="mainQuiz">
+      <section class="card">
+        <h2>1. Quick review quiz</h2>
+        <div class="quiz-question" data-answer="hello" data-type="radio" data-explain="Bonjour means hello / good day.">
+          <p><strong>1.</strong> What does <em>bonjour</em> mean?</p>
+          <label><input type="radio" name="q1" value="hello"> hello</label><br>
+          <label><input type="radio" name="q1" value="goodbye"> goodbye</label><br>
+          <label><input type="radio" name="q1" value="please"> please</label>
+          <div class="feedback"></div>
+        </div>
+        <div class="quiz-question" data-answer="merci" data-type="text" data-explain="The French word is merci.">
+          <p><strong>2.</strong> Type the French word for “thank you”.</p>
+          <input type="text" name="q2">
+          <div class="feedback"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2. Main weekly quiz</h2>
+        <div class="quiz-question" data-answer="suis" data-type="text" data-explain="With je, the form is suis.">
+          <p><strong>3.</strong> Complete: Je ______ Alex.</p>
+          <input type="text" name="q3">
+          <div class="feedback"></div>
+        </div>
+        <div class="quiz-question" data-answer="est" data-type="text" data-explain="With il, the form is est.">
+          <p><strong>4.</strong> Complete: Il ______ Marc.</p>
+          <input type="text" name="q4">
+          <div class="feedback"></div>
+        </div>
+        <div class="quiz-question" data-answer="vous" data-type="radio" data-explain="Vous is the formal or plural you.">
+          <p><strong>5.</strong> Which pronoun is used for one person politely?</p>
+          <label><input type="radio" name="q5" value="tu"> tu</label><br>
+          <label><input type="radio" name="q5" value="vous"> vous</label><br>
+          <label><input type="radio" name="q5" value="je"> je</label>
+          <div class="feedback"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3. Reading / listening mini checks</h2>
+        <div class="quiz-question" data-answer="lundi" data-type="text" data-explain="In the Week 1 reading and listening, the class is on lundi.">
+          <p><strong>6.</strong> Which day appears in the Week 1 reading and listening?</p>
+          <input type="text" name="q6">
+          <div class="feedback"></div>
+        </div>
+        <div class="quiz-question" data-answer="madame dupont" data-type="text" data-explain="Madame Dupont is the teacher in Week 1.">
+          <p><strong>7.</strong> Who is the teacher?</p>
+          <input type="text" name="q7">
+          <div class="feedback"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>4. Cumulative review block</h2>
+        <p class="muted">There are no older weeks yet, so this block checks whether the core Week 1 forms are becoming stable.</p>
+        <div class="quiz-question" data-answer="je m'appelle" data-type="text" data-explain="Use je m'appelle to say your name.">
+          <p><strong>8.</strong> Type the French phrase for “my name is”.</p>
+          <input type="text" name="q8">
+          <div class="feedback"></div>
+        </div>
+      </section>
+    </form>
+
+    <section class="card">
+      <h2>5. Final score</h2>
+      <div class="controls">
+        <button class="btn primary" onclick="gradeQuiz('mainQuiz','quizResult')">Check all answers</button>
+        <button class="btn" onclick="resetQuiz('mainQuiz','quizResult')">6. Retry button</button>
+      </div>
+      <div id="quizResult" class="notice"></div>
+    </section>
+
+    <div class="footer-nav">
+      <a class="btn" href="writing.html">← Writing</a>
+      <a class="btn" href="../index.html">Back to course home</a>
+    </div>
+  </main>
+</body>
+</html>
