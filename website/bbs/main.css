@@ -625,8 +625,6 @@ nav.scrolled { height:58px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-  background: var(--sky-pale);
 }
 
 .reg-photo img {
