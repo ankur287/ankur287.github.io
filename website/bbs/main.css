@@ -229,7 +229,7 @@ nav.scrolled { height:58px; }
 
 .hero-photo {
   position:absolute; inset:0; z-index:1;
-  background:url('../images/gondola-hero.jpg') center 40% / cover no-repeat;
+  background:url('gondola-hero.jpg') center 40% / cover no-repeat;
   transform:scale(1.08);
   will-change:transform;
 }
