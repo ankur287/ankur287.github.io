@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 Vocabulary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav">
+      <a class="secondary" href="../index.html">Course home</a>
+      <a class="secondary" href="index.html">Week 2 home</a>
+      <a href="grammar.html">Next: Grammar</a>
+    </nav>
+
+    <section class="card hero">
+      <h1>Week 2 Vocabulary</h1>
+      <p>First review Week 1. Then learn the small new set that you need for age, family, and personal profiles.</p>
+      <div class="button-row">
+        <button type="button" class="secondary" onclick="toggleAll(true)">Show all English</button>
+        <button type="button" class="secondary" onclick="toggleAll(false)">Hide all English</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. New this week</h2>
+
+      <div class="word-card">
+        <h3>j'ai <span class="tag">new</span> <span class="tag">grammar</span> <span class="tag">appears in reading</span></h3>
+        <p><strong>Pronunciation:</strong> zhay</p>
+        <p><strong>Example:</strong> J'ai un livre.</p>
+        <div class="button-row">
+          <button type="button" onclick="speakText(`j'ai`)">Play word</button>
+          <button type="button" onclick="speakText(`J'ai un livre.`)">Play sentence</button>
+          <button type="button" class="secondary" onclick="toggleOne('w1')">Show / hide English</button>
+        </div>
+        <div id="w1" class="reveal" hidden>
+          <p><strong>English:</strong> I have</p>
+          <p><strong>Sentence English:</strong> I have a book.</p>
+        </div>
+      </div>
+
+      <div class="word-card">
+        <h3>tu as / il a / elle a / nous avons / vous avez <span class="tag">new</span> <span class="tag">grammar</span></h3>
+        <p><strong>Pronunciation:</strong> too ah / eel ah / el ah / noo zah-VOHN / voo zah-VAY</p>
+        <p><strong>Example:</strong> Elle a un téléphone.</p>
+        <div class="button-row">
+          <button type="button" onclick="speakText(`tu as, il a, elle a, nous avons, vous avez`)">Play forms</button>
+          <button type="button" onclick="speakText(`Elle a un téléphone.`)">Play sentence</button>
+          <button type="button" class="secondary" onclick="toggleOne('w2')">Show / hide English</button>
+        </div>
+        <div id="w2" class="reveal" hidden>
+          <p><strong>English:</strong> you have / he has / she has / we have / you have</p>
+          <p><strong>Sentence English:</strong> She has a phone.</p>
+        </div>
+      </div>
+
+      <div class="word-card">
+        <h3>ans <span class="tag">new</span> <span class="tag">age</span></h3>
+        <p><strong>Pronunciation:</strong> ahn</p>
+        <p><strong>Example:</strong> J'ai 30 ans.</p>
+        <div class="button-row">
+          <button type="button" onclick="speakText(`ans`)">Play word</button>
+          <button type="button" onclick="speakText(`J'ai trente ans.`)">Play sentence</button>
+          <button type="button" class="secondary" onclick="toggleOne('w3')">Show / hide English</button>
+        </div>
+        <div id="w3" class="reveal" hidden>
+          <p><strong>English:</strong> years old</p>
+          <p><strong>Sentence English:</strong> I am 30 years old.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="word-card">
+          <h3>la famille <span class="tag">new</span> <span class="tag">appears in writing</span></h3>
+          <p><strong>Pronunciation:</strong> lah fah-MEE</p>
+          <p><strong>Example:</strong> J'ai une famille.</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(`la famille`)">Play word</button>
+            <button type="button" onclick="speakText(`J'ai une famille.`)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('w4')">Show / hide English</button>
+          </div>
+          <div id="w4" class="reveal" hidden>
+            <p><strong>English:</strong> family</p>
+            <p><strong>Sentence English:</strong> I have a family.</p>
+          </div>
+        </div>
+
+        <div class="word-card">
+          <h3>la mère / le père <span class="tag">new</span></h3>
+          <p><strong>Pronunciation:</strong> mehr / pehr</p>
+          <p><strong>Example:</strong> Marc a une mère et un père.</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(`la mère, le père`)">Play words</button>
+            <button type="button" onclick="speakText(`Marc a une mère et un père.`)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('w5')">Show / hide English</button>
+          </div>
+          <div id="w5" class="reveal" hidden>
+            <p><strong>English:</strong> mother / father</p>
+            <p><strong>Sentence English:</strong> Marc has a mother and a father.</p>
+          </div>
+        </div>
+
+        <div class="word-card">
+          <h3>le frère / la sœur <span class="tag">new</span></h3>
+          <p><strong>Pronunciation:</strong> frair / suhr</p>
+          <p><strong>Example:</strong> Samira a un frère.</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(`le frère, la sœur`)">Play words</button>
+            <button type="button" onclick="speakText(`Samira a un frère.`)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('w6')">Show / hide English</button>
+          </div>
+          <div id="w6" class="reveal" hidden>
+            <p><strong>English:</strong> brother / sister</p>
+            <p><strong>Sentence English:</strong> Samira has a brother.</p>
+          </div>
+        </div>
+
+        <div class="word-card">
+          <h3>un livre / un téléphone <span class="tag">new</span> <span class="tag">common objects</span></h3>
+          <p><strong>Pronunciation:</strong> lEE-vruh / tay-lay-FOHN</p>
+          <p><strong>Example:</strong> J'ai un téléphone.</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(`un livre, un téléphone`)">Play words</button>
+            <button type="button" onclick="speakText(`J'ai un téléphone.`)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('w7')">Show / hide English</button>
+          </div>
+          <div id="w7" class="reveal" hidden>
+            <p><strong>English:</strong> a book / a phone</p>
+            <p><strong>Sentence English:</strong> I have a phone.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="word-card">
+        <h3>Numbers 0-10 <span class="tag">new</span> <span class="tag">age support</span></h3>
+        <p><strong>zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix</strong></p>
+        <p><strong>Pronunciation:</strong> zay-ROH, uhn, duh, trwah, kaht-ruh, sank, sees, set, weet, nuhf, dees</p>
+        <p><strong>Example:</strong> Marc a dix ans.</p>
+        <div class="button-row">
+          <button type="button" onclick="speakText(`zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix`)">Play numbers</button>
+          <button type="button" onclick="speakText(`Marc a dix ans.`)">Play sentence</button>
+          <button type="button" class="secondary" onclick="toggleOne('w8')">Show / hide English</button>
+        </div>
+        <div id="w8" class="reveal" hidden>
+          <p><strong>English:</strong> zero to ten</p>
+          <p><strong>Sentence English:</strong> Marc is ten years old.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Review words from recent weeks</h2>
+      <div class="grid-2">
+        <div class="word-card">
+          <h3>bonjour / merci / au revoir <span class="tag">review</span></h3>
+          <p><strong>Example:</strong> Bonjour, Madame Dupont. Merci. Au revoir.</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(`Bonjour, Madame Dupont. Merci. Au revoir.`)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('r1')">Show / hide English</button>
+          </div>
+          <div id="r1" class="reveal" hidden><p>Hello, Ms. Dupont. Thank you. Goodbye.</p></div>
+        </div>
+        <div class="word-card">
+          <h3>je m'appelle / je suis <span class="tag">review</span></h3>
+          <p><strong>Example:</strong> Je m'appelle Alex. Je suis Alex.</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(`Je m'appelle Alex. Je suis Alex.`)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('r2')">Show / hide English</button>
+          </div>
+          <div id="r2" class="reveal" hidden><p>My name is Alex. I am Alex.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Older core words returning this week</h2>
+      <p>These Week 1 days return inside reading, listening, and quiz work: <strong>lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche</strong>.</p>
+      <div class="button-row">
+        <button type="button" onclick="speakText(`lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche`)">Play days</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4. Built with words you already know</h2>
+      <p>Known pattern from Week 1: <strong>Je suis Alex.</strong></p>
+      <p>New pattern from Week 2: <strong>J'ai un téléphone.</strong></p>
+      <p>Combined profile: <strong>Bonjour. Je m'appelle Alex. Je suis Alex. J'ai 30 ans. J'ai un frère.</strong></p>
+      <div class="button-row">
+        <button type="button" onclick="speakText(`Bonjour. Je m'appelle Alex. Je suis Alex. J'ai trente ans. J'ai un frère.`)">Play profile</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5. Mini practice</h2>
+      <div class="question">
+        <p><strong>A.</strong> Which line means “I have a book”?</p>
+        <p>1. Je suis un livre.<br>2. J'ai un livre.<br>3. Je m'appelle livre.</p>
+        <details><summary>Answer</summary><p>2. <strong>J'ai un livre.</strong></p></details>
+      </div>
+      <div class="question">
+        <p><strong>B.</strong> Fill the gap: Samira ___ un téléphone.</p>
+        <details><summary>Answer</summary><p><strong>a</strong> → Samira a un téléphone.</p></details>
+      </div>
+    </section>
+
+    <div class="footer-nav">
+      <a class="button secondary" href="index.html">← Week home</a>
+      <a class="button" href="grammar.html">Next: Grammar →</a>
+    </div>
+  </main>
+
+  <script>
+    function toggleOne(id){
+      const el=document.getElementById(id);
+      el.hidden=!el.hidden;
+    }
+    function toggleAll(show){
+      document.querySelectorAll('.reveal').forEach(el=>el.hidden=!show);
+    }
+  </script>
+  <script src="audio.js"></script>
+</body>
+</html>
