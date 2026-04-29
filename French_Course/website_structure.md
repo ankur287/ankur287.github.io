@@ -5,9 +5,9 @@ The generated website must be deployable directly on GitHub Pages.
 
 Required root-level structure:
 - `index.html` — course homepage
-- `week-01/`
-- `week-02/`
-- `week-03/`
+- `Week_1/`
+- `Week_2/`
+- `Week_3/`
 - and so on
 
 ### Root index.html requirements

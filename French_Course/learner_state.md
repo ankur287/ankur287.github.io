@@ -61,6 +61,12 @@
 - formal register: not introduced
 
 ## Vocabulary tracking
+### Ordered vocabulary bank status
+- Week 1 vocabulary page now has 50 numbered practice items.
+- Week 2 vocabulary page now has 50 numbered practice items.
+- `vocabulary_bank.csv` now tracks 100 entries total, with 50 entries per week.
+- New week pages should reuse earlier words inside examples, reading, listening, writing, and quiz questions instead of showing them only as isolated review lists.
+
 ### Core stable vocabulary
 - bonjour
 - merci

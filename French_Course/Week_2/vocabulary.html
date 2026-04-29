@@ -16,7 +16,7 @@
 
     <section class="card hero">
       <h1>Week 2 Vocabulary</h1>
-      <p>First review Week 1. Then learn the small new set that you need for age, family, and personal profiles.</p>
+      <p>Each numbered word has its own sound button, sample sentence, and hidden English. First test yourself, then reveal.</p>
       <div class="button-row">
         <button type="button" class="secondary" onclick="toggleAll(true)">Show all English</button>
         <button type="button" class="secondary" onclick="toggleAll(false)">Hide all English</button>
@@ -24,183 +24,52 @@
     </section>
 
     <section class="card">
-      <h2>1. New this week</h2>
+      <h2>1. Ordered vocabulary bank: 50 words</h2>
+      <p class="muted">Main new focus: <strong>avoir</strong>, age, family, numbers, classroom words, and simple connectors. The examples deliberately reuse Week 1 words.</p>
+      <div id="vocabList" class="grid-2"></div>
+    </section>
 
-      <div class="word-card">
-        <h3>j'ai <span class="tag">new</span> <span class="tag">grammar</span> <span class="tag">appears in reading</span></h3>
-        <p><strong>Pronunciation:</strong> zhay</p>
-        <p><strong>Example:</strong> J'ai un livre.</p>
-        <div class="button-row">
-          <button type="button" onclick="speakText(`j'ai`)">Play word</button>
-          <button type="button" onclick="speakText(`J'ai un livre.`)">Play sentence</button>
-          <button type="button" class="secondary" onclick="toggleOne('w1')">Show / hide English</button>
-        </div>
-        <div id="w1" class="reveal" hidden>
-          <p><strong>English:</strong> I have</p>
-          <p><strong>Sentence English:</strong> I have a book.</p>
-        </div>
-      </div>
-
-      <div class="word-card">
-        <h3>tu as / il a / elle a / nous avons / vous avez <span class="tag">new</span> <span class="tag">grammar</span></h3>
-        <p><strong>Pronunciation:</strong> too ah / eel ah / el ah / noo zah-VOHN / voo zah-VAY</p>
-        <p><strong>Example:</strong> Elle a un téléphone.</p>
-        <div class="button-row">
-          <button type="button" onclick="speakText(`tu as, il a, elle a, nous avons, vous avez`)">Play forms</button>
-          <button type="button" onclick="speakText(`Elle a un téléphone.`)">Play sentence</button>
-          <button type="button" class="secondary" onclick="toggleOne('w2')">Show / hide English</button>
-        </div>
-        <div id="w2" class="reveal" hidden>
-          <p><strong>English:</strong> you have / he has / she has / we have / you have</p>
-          <p><strong>Sentence English:</strong> She has a phone.</p>
-        </div>
-      </div>
-
-      <div class="word-card">
-        <h3>ans <span class="tag">new</span> <span class="tag">age</span></h3>
-        <p><strong>Pronunciation:</strong> ahn</p>
-        <p><strong>Example:</strong> J'ai 30 ans.</p>
-        <div class="button-row">
-          <button type="button" onclick="speakText(`ans`)">Play word</button>
-          <button type="button" onclick="speakText(`J'ai trente ans.`)">Play sentence</button>
-          <button type="button" class="secondary" onclick="toggleOne('w3')">Show / hide English</button>
-        </div>
-        <div id="w3" class="reveal" hidden>
-          <p><strong>English:</strong> years old</p>
-          <p><strong>Sentence English:</strong> I am 30 years old.</p>
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <div class="word-card">
-          <h3>la famille <span class="tag">new</span> <span class="tag">appears in writing</span></h3>
-          <p><strong>Pronunciation:</strong> lah fah-MEE</p>
-          <p><strong>Example:</strong> J'ai une famille.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`la famille`)">Play word</button>
-            <button type="button" onclick="speakText(`J'ai une famille.`)">Play sentence</button>
-            <button type="button" class="secondary" onclick="toggleOne('w4')">Show / hide English</button>
-          </div>
-          <div id="w4" class="reveal" hidden>
-            <p><strong>English:</strong> family</p>
-            <p><strong>Sentence English:</strong> I have a family.</p>
-          </div>
-        </div>
-
-        <div class="word-card">
-          <h3>la mère / le père <span class="tag">new</span></h3>
-          <p><strong>Pronunciation:</strong> mehr / pehr</p>
-          <p><strong>Example:</strong> Marc a une mère et un père.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`la mère, le père`)">Play words</button>
-            <button type="button" onclick="speakText(`Marc a une mère et un père.`)">Play sentence</button>
-            <button type="button" class="secondary" onclick="toggleOne('w5')">Show / hide English</button>
-          </div>
-          <div id="w5" class="reveal" hidden>
-            <p><strong>English:</strong> mother / father</p>
-            <p><strong>Sentence English:</strong> Marc has a mother and a father.</p>
-          </div>
-        </div>
-
-        <div class="word-card">
-          <h3>le frère / la sœur <span class="tag">new</span></h3>
-          <p><strong>Pronunciation:</strong> frair / suhr</p>
-          <p><strong>Example:</strong> Samira a un frère.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`le frère, la sœur`)">Play words</button>
-            <button type="button" onclick="speakText(`Samira a un frère.`)">Play sentence</button>
-            <button type="button" class="secondary" onclick="toggleOne('w6')">Show / hide English</button>
-          </div>
-          <div id="w6" class="reveal" hidden>
-            <p><strong>English:</strong> brother / sister</p>
-            <p><strong>Sentence English:</strong> Samira has a brother.</p>
-          </div>
-        </div>
-
-        <div class="word-card">
-          <h3>un livre / un téléphone <span class="tag">new</span> <span class="tag">common objects</span></h3>
-          <p><strong>Pronunciation:</strong> lEE-vruh / tay-lay-FOHN</p>
-          <p><strong>Example:</strong> J'ai un téléphone.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`un livre, un téléphone`)">Play words</button>
-            <button type="button" onclick="speakText(`J'ai un téléphone.`)">Play sentence</button>
-            <button type="button" class="secondary" onclick="toggleOne('w7')">Show / hide English</button>
-          </div>
-          <div id="w7" class="reveal" hidden>
-            <p><strong>English:</strong> a book / a phone</p>
-            <p><strong>Sentence English:</strong> I have a phone.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="word-card">
-        <h3>Numbers 0-10 <span class="tag">new</span> <span class="tag">age support</span></h3>
-        <p><strong>zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix</strong></p>
-        <p><strong>Pronunciation:</strong> zay-ROH, uhn, duh, trwah, kaht-ruh, sank, sees, set, weet, nuhf, dees</p>
-        <p><strong>Example:</strong> Marc a dix ans.</p>
-        <div class="button-row">
-          <button type="button" onclick="speakText(`zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix`)">Play numbers</button>
-          <button type="button" onclick="speakText(`Marc a dix ans.`)">Play sentence</button>
-          <button type="button" class="secondary" onclick="toggleOne('w8')">Show / hide English</button>
-        </div>
-        <div id="w8" class="reveal" hidden>
-          <p><strong>English:</strong> zero to ten</p>
-          <p><strong>Sentence English:</strong> Marc is ten years old.</p>
-        </div>
+    <section class="card">
+      <h2>2. Review words from Week 1 used this week</h2>
+      <p>These are not just shown for practice; they appear inside the Week 2 examples, reading, listening, writing, and quiz.</p>
+      <div class="question">
+        <p><strong>Test yourself:</strong> What do these mean?</p>
+        <ol class="tight">
+          <li>Bonjour, je m'appelle Alex.</li>
+          <li>Je suis en classe lundi.</li>
+          <li>Merci. Au revoir.</li>
+        </ol>
+        <details><summary>Show answers</summary><p>Hello, my name is Alex. I am in class on Monday. Thank you. Goodbye.</p></details>
       </div>
     </section>
 
     <section class="card">
-      <h2>2. Review words from recent weeks</h2>
-      <div class="grid-2">
-        <div class="word-card">
-          <h3>bonjour / merci / au revoir <span class="tag">review</span></h3>
-          <p><strong>Example:</strong> Bonjour, Madame Dupont. Merci. Au revoir.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`Bonjour, Madame Dupont. Merci. Au revoir.`)">Play sentence</button>
-            <button type="button" class="secondary" onclick="toggleOne('r1')">Show / hide English</button>
-          </div>
-          <div id="r1" class="reveal" hidden><p>Hello, Ms. Dupont. Thank you. Goodbye.</p></div>
-        </div>
-        <div class="word-card">
-          <h3>je m'appelle / je suis <span class="tag">review</span></h3>
-          <p><strong>Example:</strong> Je m'appelle Alex. Je suis Alex.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`Je m'appelle Alex. Je suis Alex.`)">Play sentence</button>
-            <button type="button" class="secondary" onclick="toggleOne('r2')">Show / hide English</button>
-          </div>
-          <div id="r2" class="reveal" hidden><p>My name is Alex. I am Alex.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>3. Older core words returning this week</h2>
-      <p>These Week 1 days return inside reading, listening, and quiz work: <strong>lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche</strong>.</p>
-      <div class="button-row">
-        <button type="button" onclick="speakText(`lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche`)">Play days</button>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>4. Built with words you already know</h2>
+      <h2>3. Built with words you already know</h2>
       <p>Known pattern from Week 1: <strong>Je suis Alex.</strong></p>
       <p>New pattern from Week 2: <strong>J'ai un téléphone.</strong></p>
-      <p>Combined profile: <strong>Bonjour. Je m'appelle Alex. Je suis Alex. J'ai 30 ans. J'ai un frère.</strong></p>
+      <p>Combined profile: <strong>Bonjour. Je m'appelle Alex. Je suis Alex. J'ai dix ans. J'ai un frère.</strong></p>
       <div class="button-row">
-        <button type="button" onclick="speakText(`Bonjour. Je m'appelle Alex. Je suis Alex. J'ai trente ans. J'ai un frère.`)">Play profile</button>
+        <button type="button" onclick="speakText(`Bonjour. Je m'appelle Alex. Je suis Alex. J'ai dix ans. J'ai un frère.`)">Play profile</button>
       </div>
     </section>
 
     <section class="card">
-      <h2>5. Mini practice</h2>
+      <h2>4. Test-style practice</h2>
       <div class="question">
-        <p><strong>A.</strong> Which line means “I have a book”?</p>
+        <p><strong>A.</strong> What does <strong>Elle a une sœur.</strong> mean?</p>
+        <details><summary>Answer</summary><p>She has a sister.</p></details>
+      </div>
+      <div class="question">
+        <p><strong>B.</strong> Which sentence means “I have a book”?</p>
         <p>1. Je suis un livre.<br>2. J'ai un livre.<br>3. Je m'appelle livre.</p>
         <details><summary>Answer</summary><p>2. <strong>J'ai un livre.</strong></p></details>
       </div>
       <div class="question">
-        <p><strong>B.</strong> Fill the gap: Samira ___ un téléphone.</p>
+        <p><strong>C.</strong> Translate: <strong>Nous avons quatre livres.</strong></p>
+        <details><summary>Answer</summary><p>We have four books.</p></details>
+      </div>
+      <div class="question">
+        <p><strong>D.</strong> Fill the gap: Samira ___ un téléphone.</p>
         <details><summary>Answer</summary><p><strong>a</strong> → Samira a un téléphone.</p></details>
       </div>
     </section>
@@ -212,13 +81,36 @@
   </main>
 
   <script>
+    const vocab = [{"n":1,"french":"j'ai","article":"","english":"I have","phonetic":"zhay","example":"J'ai un livre.","exampleEnglish":"I have a book."},{"n":2,"french":"tu as","article":"","english":"you have","phonetic":"too ah","example":"Tu as un téléphone.","exampleEnglish":"You have a phone."},{"n":3,"french":"il a","article":"","english":"he has","phonetic":"eel ah","example":"Il a dix ans.","exampleEnglish":"He is ten years old."},{"n":4,"french":"elle a","article":"","english":"she has","phonetic":"el ah","example":"Elle a une sœur.","exampleEnglish":"She has a sister."},{"n":5,"french":"nous avons","article":"","english":"we have","phonetic":"noo zah-VOHN","example":"Nous avons un livre.","exampleEnglish":"We have a book."},{"n":6,"french":"vous avez","article":"","english":"you have","phonetic":"voo zah-VAY","example":"Vous avez un téléphone.","exampleEnglish":"You have a phone."},{"n":7,"french":"ans","article":"","english":"years old","phonetic":"ahn","example":"J'ai dix ans.","exampleEnglish":"I am ten years old."},{"n":8,"french":"famille","article":"la","english":"family","phonetic":"fah-MEE","example":"J'ai une famille.","exampleEnglish":"I have a family."},{"n":9,"french":"mère","article":"la","english":"mother","phonetic":"mehr","example":"Samira a une mère.","exampleEnglish":"Samira has a mother."},{"n":10,"french":"père","article":"le","english":"father","phonetic":"pehr","example":"Marc a un père.","exampleEnglish":"Marc has a father."},{"n":11,"french":"frère","article":"le","english":"brother","phonetic":"frair","example":"Alex a un frère.","exampleEnglish":"Alex has a brother."},{"n":12,"french":"sœur","article":"la","english":"sister","phonetic":"suhr","example":"Samira a une sœur.","exampleEnglish":"Samira has a sister."},{"n":13,"french":"livre","article":"un","english":"book","phonetic":"leev-ruh","example":"J'ai un livre.","exampleEnglish":"I have a book."},{"n":14,"french":"téléphone","article":"un","english":"phone","phonetic":"tay-lay-FOHN","example":"Elle a un téléphone.","exampleEnglish":"She has a phone."},{"n":15,"french":"zéro","article":"","english":"zero","phonetic":"zay-ROH","example":"Marc a zéro livre.","exampleEnglish":"Marc has zero books."},{"n":16,"french":"un","article":"","english":"one","phonetic":"uhn","example":"J'ai un livre.","exampleEnglish":"I have one book."},{"n":17,"french":"deux","article":"","english":"two","phonetic":"duh","example":"J'ai deux livres.","exampleEnglish":"I have two books."},{"n":18,"french":"trois","article":"","english":"three","phonetic":"trwah","example":"Samira a trois livres.","exampleEnglish":"Samira has three books."},{"n":19,"french":"quatre","article":"","english":"four","phonetic":"kaht-ruh","example":"Nous avons quatre livres.","exampleEnglish":"We have four books."},{"n":20,"french":"cinq","article":"","english":"five","phonetic":"sank","example":"Vous avez cinq livres.","exampleEnglish":"You have five books."},{"n":21,"french":"six","article":"","english":"six","phonetic":"sees","example":"Samira a six ans.","exampleEnglish":"Samira is six years old."},{"n":22,"french":"sept","article":"","english":"seven","phonetic":"set","example":"Il a sept livres.","exampleEnglish":"He has seven books."},{"n":23,"french":"huit","article":"","english":"eight","phonetic":"weet","example":"Elle a huit livres.","exampleEnglish":"She has eight books."},{"n":24,"french":"neuf","article":"","english":"nine","phonetic":"nuhf","example":"J'ai neuf livres.","exampleEnglish":"I have nine books."},{"n":25,"french":"dix","article":"","english":"ten","phonetic":"dees","example":"Alex a dix ans.","exampleEnglish":"Alex is ten years old."},{"n":26,"french":"ami","article":"un","english":"friend","phonetic":"ah-MEE","example":"Marc est un ami.","exampleEnglish":"Marc is a friend."},{"n":27,"french":"amie","article":"une","english":"friend","phonetic":"ah-MEE","example":"Samira est une amie.","exampleEnglish":"Samira is a friend."},{"n":28,"french":"classe","article":"la","english":"class","phonetic":"klass","example":"Nous avons une classe lundi.","exampleEnglish":"We have a class on Monday."},{"n":29,"french":"professeure","article":"la","english":"teacher","phonetic":"pro-feh-SUR","example":"Madame Dupont est la professeure.","exampleEnglish":"Madame Dupont is the teacher."},{"n":30,"french":"exercice","article":"un","english":"exercise","phonetic":"eg-zer-SEES","example":"J'ai un exercice.","exampleEnglish":"I have an exercise."},{"n":31,"french":"question","article":"une","english":"question","phonetic":"kes-tee-OHN","example":"Tu as une question.","exampleEnglish":"You have a question."},{"n":32,"french":"réponse","article":"une","english":"answer","phonetic":"ray-POHNS","example":"J'ai une réponse.","exampleEnglish":"I have an answer."},{"n":33,"french":"page","article":"une","english":"page","phonetic":"pahzh","example":"Nous avons une page.","exampleEnglish":"We have a page."},{"n":34,"french":"mot","article":"un","english":"word","phonetic":"moh","example":"Elle a un mot.","exampleEnglish":"She has a word."},{"n":35,"french":"phrase","article":"une","english":"sentence","phonetic":"fraz","example":"J'ai une phrase.","exampleEnglish":"I have a sentence."},{"n":36,"french":"cahier","article":"un","english":"notebook","phonetic":"kah-YAY","example":"Alex a un cahier.","exampleEnglish":"Alex has a notebook."},{"n":37,"french":"stylo","article":"un","english":"pen","phonetic":"stee-LOH","example":"Samira a un stylo.","exampleEnglish":"Samira has a pen."},{"n":38,"french":"sac","article":"un","english":"bag","phonetic":"sak","example":"Marc a un sac.","exampleEnglish":"Marc has a bag."},{"n":39,"french":"table","article":"une","english":"table","phonetic":"tahbl","example":"Nous avons une table.","exampleEnglish":"We have a table."},{"n":40,"french":"chaise","article":"une","english":"chair","phonetic":"shehz","example":"Vous avez une chaise.","exampleEnglish":"You have a chair."},{"n":41,"french":"maison","article":"la","english":"house / home","phonetic":"meh-ZOHN","example":"J'ai une maison.","exampleEnglish":"I have a home."},{"n":42,"french":"café","article":"le","english":"cafe","phonetic":"kah-FAY","example":"Marc est au café.","exampleEnglish":"Marc is at the cafe."},{"n":43,"french":"parc","article":"le","english":"park","phonetic":"park","example":"Samira est au parc.","exampleEnglish":"Samira is at the park."},{"n":44,"french":"avec","article":"","english":"with","phonetic":"ah-VEK","example":"Je suis avec Samira.","exampleEnglish":"I am with Samira."},{"n":45,"french":"et","article":"","english":"and","phonetic":"ay","example":"J'ai un frère et une sœur.","exampleEnglish":"I have a brother and a sister."},{"n":46,"french":"mais","article":"","english":"but","phonetic":"meh","example":"J'ai un livre, mais pas de téléphone.","exampleEnglish":"I have a book, but no phone."},{"n":47,"french":"oui","article":"","english":"yes","phonetic":"wee","example":"Oui, j'ai un livre.","exampleEnglish":"Yes, I have a book."},{"n":48,"french":"non","article":"","english":"no","phonetic":"noh","example":"Non, je n'ai pas de téléphone.","exampleEnglish":"No, I do not have a phone."},{"n":49,"french":"voici","article":"","english":"here is","phonetic":"vwah-SEE","example":"Voici un livre.","exampleEnglish":"Here is a book."},{"n":50,"french":"dans","article":"","english":"in","phonetic":"dahn","example":"Le livre est dans le sac.","exampleEnglish":"The book is in the bag."}];
+    function esc(value){
+      return String(value).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+    }
+    function renderVocab(){
+      const root = document.getElementById('vocabList');
+      root.innerHTML = vocab.map(item => `
+        <article class="word-card">
+          <h3>${item.n}. ${item.article ? esc(item.article) + ' ' : ''}${esc(item.french)} <span class="tag">Week 2</span></h3>
+          <p><strong>Pronunciation:</strong> ${esc(item.phonetic)}</p>
+          <p><strong>Example:</strong> ${esc(item.example)}</p>
+          <div class="button-row">
+            <button type="button" onclick="speakText(vocab[${item.n - 1}].french)">Play word</button>
+            <button type="button" onclick="speakText(vocab[${item.n - 1}].example)">Play sentence</button>
+            <button type="button" class="secondary" onclick="toggleOne('w2-${item.n}')">Show / hide English</button>
+          </div>
+          <div id="w2-${item.n}" class="reveal" hidden>
+            <p><strong>Word:</strong> ${esc(item.english)}</p>
+            <p><strong>Sentence:</strong> ${esc(item.exampleEnglish)}</p>
+          </div>
+        </article>`).join('');
+    }
     function toggleOne(id){
       const el=document.getElementById(id);
-      el.hidden=!el.hidden;
+      if(el) el.hidden=!el.hidden;
     }
     function toggleAll(show){
       document.querySelectorAll('.reveal').forEach(el=>el.hidden=!show);
     }
+    renderVocab();
   </script>
   <script src="audio.js"></script>
 </body>

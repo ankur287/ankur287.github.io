@@ -2,7 +2,7 @@
 
 ## Week info
 - Week number: 2
-- Title: J'ai 30 ans
+- Title: J'ai dix ans
 - Date created: 2026-04-13
 
 ## Main teaching targets
@@ -11,6 +11,11 @@
 - Main vocabulary themes: age, family basics, numbers 0-10, common objects
 
 ## New vocabulary introduced
+- Ordered Week 2 vocabulary bank now contains 50 numbered items.
+- Each item has its own word audio button, sentence audio button, example, and hidden English.
+- Test-style practice asks the learner to infer meaning before revealing answers.
+
+### Core new targets
 - j'ai
 - tu as
 - il a
