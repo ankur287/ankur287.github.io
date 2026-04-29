@@ -4,13 +4,17 @@
 - Week number: 1
 - Title: Bonjour, je suis Alex
 - Date created: 2026-04-10
+- Vocabulary count: 75 ordered items
 
 ## Main teaching targets
 - Main grammar: subject pronouns + être basics
 - Review grammar: none yet; in-week repetition only
-- Main vocabulary themes: greetings, names, courtesy words, days of the week
+- Main vocabulary themes: greetings, names, courtesy words, classroom objects, learning words, simple adjectives, days grouped as one item, months grouped as one item
 
 ## New vocabulary introduced
+- 75 ordered vocabulary cards total
+- days of the week grouped into one card
+- months of the year grouped into one card
 - bonjour
 - salut
 - au revoir
@@ -42,9 +46,9 @@
 - older cumulative review: none yet
 
 ## Reading
-- passage topic: first day introduction in language class
+- passage topic: first day introduction in language class with classroom objects
 - major structures used: je m'appelle, je suis, elle est, il est, nous sommes
-- new words inside passage: lundi, classe, professeure, merci, au revoir
+- new words inside passage: lundi, classe, professeure, livre, cahier, stylo, table, tableau, phrase, question, facile, merci, au revoir
 
 ## Listening
 - listening type: short controlled dialogue
@@ -56,7 +60,9 @@
 - supports provided: sentence frames, word bank, checklist, hidden model answer, rubric
 
 ## Quiz / assessment
-- current-week focus: vocabulary recognition, être forms, names, day recognition
+- current-week focus: vocabulary recognition in sentences, être forms, names, classroom objects, day/month group recognition
+- quiz length: 50 questions
+- random vocabulary drill: French → English and English → French
 - review focus: internal Week 1 recycling across pages
 - cumulative focus: none yet beyond core Week 1 stabilization
 

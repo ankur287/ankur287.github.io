@@ -6,6 +6,14 @@
 3. cumulative review in quiz/testing
 4. a short section using older material
 
+## Embedded review rule
+- Previous-week vocabulary and grammar must appear inside the new week's main examples, reading passage, listening passage, writing prompts, and quiz questions.
+- Do not make review only a separate list or a small review block.
+- The current week should be enough for active revision of prior weeks; the learner should not need to constantly go back to old weeks.
+- Each new week quiz must have 50 questions with a meaningful cumulative mix.
+- Questions should test words inside sentences whenever possible.
+- Vocabulary pages must include a random bidirectional drill: French → English and English → French.
+
 ## Weekly mix
 ### Weeks 1-8
 - 60% current week

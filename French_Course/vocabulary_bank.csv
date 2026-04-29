@@ -1,101 +1,151 @@
 word_id,french,article,english,phonetic,week_introduced,topic,status,high_frequency,appears_in_reading,appears_in_writing,example_french,example_english,notes
-W0001,bonjour,,hello / good day,bohn-ZHOOR,1,greetings,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",Ordered Week 1 vocabulary item 1
-W0002,salut,,hi / bye,sah-LUU,1,greetings,active,yes,yes,yes,"Salut, Samira !","Hi, Samira!",Ordered Week 1 vocabulary item 2
-W0003,au revoir,,goodbye,oh ruh-VWAHR,1,greetings,active,yes,yes,yes,"Au revoir, Madame Dupont.","Goodbye, Madame Dupont.",Ordered Week 1 vocabulary item 3
-W0004,merci,,thank you,mehr-SEE,1,greetings,active,yes,yes,yes,"Merci, Marc.","Thank you, Marc.",Ordered Week 1 vocabulary item 4
-W0005,s'il vous plaît,,please,seel voo PLEH,1,greetings,active,yes,yes,yes,"Bonjour, s'il vous plaît.","Hello, please.",Ordered Week 1 vocabulary item 5
-W0006,je,,I,zhuh,1,grammar,active,yes,yes,yes,Je suis Alex.,I am Alex.,Ordered Week 1 vocabulary item 6
-W0007,tu,,you,too,1,grammar,active,yes,yes,yes,Tu es Samira.,You are Samira.,Ordered Week 1 vocabulary item 7
-W0008,il,,he,eel,1,grammar,active,yes,yes,yes,Il est Marc.,He is Marc.,Ordered Week 1 vocabulary item 8
-W0009,elle,,she,el,1,grammar,active,yes,yes,yes,Elle est Samira.,She is Samira.,Ordered Week 1 vocabulary item 9
-W0010,nous,,we,noo,1,grammar,active,yes,yes,yes,Nous sommes en classe.,We are in class.,Ordered Week 1 vocabulary item 10
-W0011,vous,,you,voo,1,grammar,active,yes,yes,yes,Vous êtes Madame Dupont.,You are Madame Dupont.,Ordered Week 1 vocabulary item 11
-W0012,ils,,they (masculine/mixed),eel,1,grammar,active,yes,yes,yes,Ils sont en classe.,They are in class.,Ordered Week 1 vocabulary item 12
-W0013,elles,,they (feminine),el,1,grammar,active,yes,yes,yes,Elles sont en classe.,They are in class.,Ordered Week 1 vocabulary item 13
-W0014,je m'appelle,,my name is,zhuh mah-PELL,1,grammar,active,yes,yes,yes,Je m'appelle Alex.,My name is Alex.,Ordered Week 1 vocabulary item 14
-W0015,je suis,,I am,zhuh swee,1,grammar,active,yes,yes,yes,Je suis Alex.,I am Alex.,Ordered Week 1 vocabulary item 15
-W0016,tu es,,you are,too eh,1,grammar,active,yes,yes,yes,Tu es Samira.,You are Samira.,Ordered Week 1 vocabulary item 16
-W0017,il est,,he is,eel eh,1,grammar,active,yes,yes,yes,Il est Marc.,He is Marc.,Ordered Week 1 vocabulary item 17
-W0018,elle est,,she is,el eh,1,grammar,active,yes,yes,yes,Elle est Madame Dupont.,She is Madame Dupont.,Ordered Week 1 vocabulary item 18
-W0019,nous sommes,,we are,noo sohm,1,grammar,active,yes,yes,yes,Nous sommes en classe.,We are in class.,Ordered Week 1 vocabulary item 19
-W0020,vous êtes,,you are,voo zet,1,grammar,active,yes,yes,yes,Vous êtes Madame Dupont.,You are Madame Dupont.,Ordered Week 1 vocabulary item 20
-W0021,sont,,are,sohn,1,grammar,active,yes,yes,yes,Ils sont en classe.,They are in class.,Ordered Week 1 vocabulary item 21
-W0022,être,,to be,EHTR,1,grammar,active,yes,yes,yes,Être est le verbe de la semaine.,To be is the verb of the week.,Ordered Week 1 vocabulary item 22
-W0023,Alex,,Alex,ah-LEKS,1,people,active,yes,yes,yes,Je m'appelle Alex.,My name is Alex.,Ordered Week 1 vocabulary item 23
-W0024,Samira,,Samira,sah-MEE-rah,1,people,active,yes,yes,yes,Elle est Samira.,She is Samira.,Ordered Week 1 vocabulary item 24
-W0025,Marc,,Marc,mark,1,people,active,yes,yes,yes,Il est Marc.,He is Marc.,Ordered Week 1 vocabulary item 25
-W0026,Madame Dupont,,Ms. Dupont,mah-DAHM duu-POHN,1,people,active,yes,yes,yes,Vous êtes Madame Dupont.,You are Ms. Dupont.,Ordered Week 1 vocabulary item 26
-W0027,classe,la,class,klass,1,people,active,yes,yes,yes,Nous sommes en classe.,We are in class.,Ordered Week 1 vocabulary item 27
-W0028,professeure,la,teacher,pro-feh-SUR,1,people,active,yes,yes,yes,Madame Dupont est la professeure.,Madame Dupont is the teacher.,Ordered Week 1 vocabulary item 28
-W0029,ami,un,friend,ah-MEE,1,people,active,yes,yes,yes,Marc est un ami.,Marc is a friend.,Ordered Week 1 vocabulary item 29
-W0030,amie,une,friend,ah-MEE,1,people,active,yes,yes,yes,Samira est une amie.,Samira is a friend.,Ordered Week 1 vocabulary item 30
-W0031,lundi,,Monday,luhn-DEE,1,days,active,yes,yes,yes,"Lundi, je suis en classe.","On Monday, I am in class.",Ordered Week 1 vocabulary item 31
-W0032,mardi,,Tuesday,mahr-DEE,1,days,active,yes,yes,no,"Mardi, Samira est au café.","On Tuesday, Samira is at the cafe.",Ordered Week 1 vocabulary item 32
-W0033,mercredi,,Wednesday,mehr-cruh-DEE,1,days,active,yes,yes,no,"Mercredi, Marc est au parc.","On Wednesday, Marc is at the park.",Ordered Week 1 vocabulary item 33
-W0034,jeudi,,Thursday,zhuh-DEE,1,days,active,yes,yes,no,"Jeudi, nous sommes en classe.","On Thursday, we are in class.",Ordered Week 1 vocabulary item 34
-W0035,vendredi,,Friday,vahn-druh-DEE,1,days,active,yes,yes,no,"Vendredi, je suis avec Samira.","On Friday, I am with Samira.",Ordered Week 1 vocabulary item 35
-W0036,samedi,,Saturday,sahm-DEE,1,days,active,yes,yes,no,"Samedi, Marc est au café.","On Saturday, Marc is at the cafe.",Ordered Week 1 vocabulary item 36
-W0037,dimanche,,Sunday,dee-MAHNSH,1,days,active,yes,yes,no,"Dimanche, je suis à la maison.","On Sunday, I am at home.",Ordered Week 1 vocabulary item 37
-W0038,au café,,at the cafe,oh kah-FAY,1,support,active,yes,no,no,Samira est au café.,Samira is at the cafe.,Ordered Week 1 vocabulary item 38
-W0039,au parc,,at the park,oh park,1,support,active,yes,no,no,Marc est au parc.,Marc is at the park.,Ordered Week 1 vocabulary item 39
-W0040,à la maison,,at home,ah lah meh-ZOHN,1,support,active,yes,no,no,Je suis à la maison.,I am at home.,Ordered Week 1 vocabulary item 40
-W0041,avec,,with,ah-VEK,1,support,active,yes,yes,no,Je suis avec Samira.,I am with Samira.,Ordered Week 1 vocabulary item 41
-W0042,et,,and,ay,1,support,active,yes,yes,no,Alex et Samira sont en classe.,Alex and Samira are in class.,Ordered Week 1 vocabulary item 42
-W0043,oui,,yes,wee,1,support,active,yes,no,no,"Oui, je suis Alex.","Yes, I am Alex.",Ordered Week 1 vocabulary item 43
-W0044,non,,no,noh,1,support,active,yes,no,no,"Non, je suis Marc.","No, I am Marc.",Ordered Week 1 vocabulary item 44
-W0045,qui,,who,kee,1,support,active,yes,no,no,Qui est Samira ?,Who is Samira?,Ordered Week 1 vocabulary item 45
-W0046,quoi,,what,kwah,1,support,active,yes,no,no,Quoi ? Bonjour ?,What? Hello?,Ordered Week 1 vocabulary item 46
-W0047,ici,,here,ee-SEE,1,support,active,yes,no,no,Je suis ici.,I am here.,Ordered Week 1 vocabulary item 47
-W0048,très,,very,treh,1,support,active,yes,no,no,"Très bien, merci.","Very well, thank you.",Ordered Week 1 vocabulary item 48
-W0049,bien,,well / good,bee-EN,1,support,active,yes,no,no,Je suis bien.,I am well.,Ordered Week 1 vocabulary item 49
-W0050,pardon,,sorry / excuse me,par-DOHN,1,support,active,yes,no,no,"Pardon, Madame Dupont.","Excuse me, Ms. Dupont.",Ordered Week 1 vocabulary item 50
-W0051,j'ai,,I have,zhay,2,avoir_forms,active,yes,yes,yes,J'ai un livre.,I have a book.,Ordered Week 2 vocabulary item 1
-W0052,tu as,,you have,too ah,2,avoir_forms,active,yes,yes,yes,Tu as un téléphone.,You have a phone.,Ordered Week 2 vocabulary item 2
-W0053,il a,,he has,eel ah,2,avoir_forms,active,yes,yes,yes,Il a dix ans.,He is ten years old.,Ordered Week 2 vocabulary item 3
-W0054,elle a,,she has,el ah,2,avoir_forms,active,yes,yes,yes,Elle a une sœur.,She has a sister.,Ordered Week 2 vocabulary item 4
-W0055,nous avons,,we have,noo zah-VOHN,2,avoir_forms,active,yes,yes,yes,Nous avons un livre.,We have a book.,Ordered Week 2 vocabulary item 5
-W0056,vous avez,,you have,voo zah-VAY,2,avoir_forms,active,yes,yes,yes,Vous avez un téléphone.,You have a phone.,Ordered Week 2 vocabulary item 6
-W0057,ans,,years old,ahn,2,avoir_forms,active,yes,yes,yes,J'ai dix ans.,I am ten years old.,Ordered Week 2 vocabulary item 7
-W0058,famille,la,family,fah-MEE,2,family_objects,active,yes,yes,yes,J'ai une famille.,I have a family.,Ordered Week 2 vocabulary item 8
-W0059,mère,la,mother,mehr,2,family_objects,active,yes,yes,yes,Samira a une mère.,Samira has a mother.,Ordered Week 2 vocabulary item 9
-W0060,père,le,father,pehr,2,family_objects,active,yes,yes,yes,Marc a un père.,Marc has a father.,Ordered Week 2 vocabulary item 10
-W0061,frère,le,brother,frair,2,family_objects,active,yes,yes,yes,Alex a un frère.,Alex has a brother.,Ordered Week 2 vocabulary item 11
-W0062,sœur,la,sister,suhr,2,family_objects,active,yes,yes,yes,Samira a une sœur.,Samira has a sister.,Ordered Week 2 vocabulary item 12
-W0063,livre,un,book,leev-ruh,2,family_objects,active,yes,yes,yes,J'ai un livre.,I have a book.,Ordered Week 2 vocabulary item 13
-W0064,téléphone,un,phone,tay-lay-FOHN,2,family_objects,active,yes,yes,yes,Elle a un téléphone.,She has a phone.,Ordered Week 2 vocabulary item 14
-W0065,zéro,,zero,zay-ROH,2,numbers,active,yes,yes,yes,Marc a zéro livre.,Marc has zero books.,Ordered Week 2 vocabulary item 15
-W0066,un,,one,uhn,2,numbers,active,yes,yes,yes,J'ai un livre.,I have one book.,Ordered Week 2 vocabulary item 16
-W0067,deux,,two,duh,2,numbers,active,yes,yes,yes,J'ai deux livres.,I have two books.,Ordered Week 2 vocabulary item 17
-W0068,trois,,three,trwah,2,numbers,active,yes,yes,yes,Samira a trois livres.,Samira has three books.,Ordered Week 2 vocabulary item 18
-W0069,quatre,,four,kaht-ruh,2,numbers,active,yes,yes,yes,Nous avons quatre livres.,We have four books.,Ordered Week 2 vocabulary item 19
-W0070,cinq,,five,sank,2,numbers,active,yes,yes,yes,Vous avez cinq livres.,You have five books.,Ordered Week 2 vocabulary item 20
-W0071,six,,six,sees,2,numbers,active,yes,yes,yes,Samira a six ans.,Samira is six years old.,Ordered Week 2 vocabulary item 21
-W0072,sept,,seven,set,2,numbers,active,yes,yes,yes,Il a sept livres.,He has seven books.,Ordered Week 2 vocabulary item 22
-W0073,huit,,eight,weet,2,numbers,active,yes,yes,yes,Elle a huit livres.,She has eight books.,Ordered Week 2 vocabulary item 23
-W0074,neuf,,nine,nuhf,2,numbers,active,yes,yes,yes,J'ai neuf livres.,I have nine books.,Ordered Week 2 vocabulary item 24
-W0075,dix,,ten,dees,2,numbers,active,yes,yes,yes,Alex a dix ans.,Alex is ten years old.,Ordered Week 2 vocabulary item 25
-W0076,ami,un,friend,ah-MEE,2,classroom,active,yes,yes,no,Marc est un ami.,Marc is a friend.,Ordered Week 2 vocabulary item 26
-W0077,amie,une,friend,ah-MEE,2,classroom,active,yes,yes,no,Samira est une amie.,Samira is a friend.,Ordered Week 2 vocabulary item 27
-W0078,classe,la,class,klass,2,classroom,active,yes,yes,no,Nous avons une classe lundi.,We have a class on Monday.,Ordered Week 2 vocabulary item 28
-W0079,professeure,la,teacher,pro-feh-SUR,2,classroom,active,yes,yes,no,Madame Dupont est la professeure.,Madame Dupont is the teacher.,Ordered Week 2 vocabulary item 29
-W0080,exercice,un,exercise,eg-zer-SEES,2,classroom,active,yes,no,no,J'ai un exercice.,I have an exercise.,Ordered Week 2 vocabulary item 30
-W0081,question,une,question,kes-tee-OHN,2,classroom,active,yes,no,yes,Tu as une question.,You have a question.,Ordered Week 2 vocabulary item 31
-W0082,réponse,une,answer,ray-POHNS,2,classroom,active,yes,no,yes,J'ai une réponse.,I have an answer.,Ordered Week 2 vocabulary item 32
-W0083,page,une,page,pahzh,2,classroom,active,yes,no,no,Nous avons une page.,We have a page.,Ordered Week 2 vocabulary item 33
-W0084,mot,un,word,moh,2,classroom,active,yes,no,no,Elle a un mot.,She has a word.,Ordered Week 2 vocabulary item 34
-W0085,phrase,une,sentence,fraz,2,classroom,active,yes,no,yes,J'ai une phrase.,I have a sentence.,Ordered Week 2 vocabulary item 35
-W0086,cahier,un,notebook,kah-YAY,2,classroom,active,yes,no,no,Alex a un cahier.,Alex has a notebook.,Ordered Week 2 vocabulary item 36
-W0087,stylo,un,pen,stee-LOH,2,classroom,active,yes,no,no,Samira a un stylo.,Samira has a pen.,Ordered Week 2 vocabulary item 37
-W0088,sac,un,bag,sak,2,classroom,active,yes,no,no,Marc a un sac.,Marc has a bag.,Ordered Week 2 vocabulary item 38
-W0089,table,une,table,tahbl,2,classroom,active,yes,no,no,Nous avons une table.,We have a table.,Ordered Week 2 vocabulary item 39
-W0090,chaise,une,chair,shehz,2,classroom,active,yes,no,no,Vous avez une chaise.,You have a chair.,Ordered Week 2 vocabulary item 40
-W0091,maison,la,house / home,meh-ZOHN,2,classroom,active,yes,no,no,J'ai une maison.,I have a home.,Ordered Week 2 vocabulary item 41
-W0092,café,le,cafe,kah-FAY,2,classroom,active,yes,no,no,Marc est au café.,Marc is at the cafe.,Ordered Week 2 vocabulary item 42
-W0093,parc,le,park,park,2,classroom,active,yes,no,no,Samira est au parc.,Samira is at the park.,Ordered Week 2 vocabulary item 43
-W0094,avec,,with,ah-VEK,2,connectors,active,yes,yes,no,Je suis avec Samira.,I am with Samira.,Ordered Week 2 vocabulary item 44
-W0095,et,,and,ay,2,connectors,active,yes,yes,no,J'ai un frère et une sœur.,I have a brother and a sister.,Ordered Week 2 vocabulary item 45
-W0096,mais,,but,meh,2,connectors,active,yes,no,no,"J'ai un livre, mais pas de téléphone.","I have a book, but no phone.",Ordered Week 2 vocabulary item 46
-W0097,oui,,yes,wee,2,connectors,active,yes,no,no,"Oui, j'ai un livre.","Yes, I have a book.",Ordered Week 2 vocabulary item 47
-W0098,non,,no,noh,2,connectors,active,yes,no,no,"Non, je n'ai pas de téléphone.","No, I do not have a phone.",Ordered Week 2 vocabulary item 48
-W0099,voici,,here is,vwah-SEE,2,connectors,active,yes,no,no,Voici un livre.,Here is a book.,Ordered Week 2 vocabulary item 49
-W0100,dans,,in,dahn,2,connectors,active,yes,yes,no,Le livre est dans le sac.,The book is in the bag.,Ordered Week 2 vocabulary item 50
+W0001,bonjour,,hello / good day,bohn-ZHOOR,1,core,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",Ordered Week 1 vocabulary item 1
+W0002,salut,,hi / bye,sah-LUU,1,core,active,yes,yes,yes,"Salut, Samira !","Hi, Samira!",Ordered Week 1 vocabulary item 2
+W0003,au revoir,,goodbye,oh ruh-VWAHR,1,core,active,yes,yes,yes,"Au revoir, Madame Dupont.","Goodbye, Madame Dupont.",Ordered Week 1 vocabulary item 3
+W0004,merci,,thank you,mehr-SEE,1,core,active,yes,yes,yes,"Merci, Marc.","Thank you, Marc.",Ordered Week 1 vocabulary item 4
+W0005,s'il vous plaît,,please,seel voo PLEH,1,core,active,yes,yes,yes,"Bonjour, s'il vous plaît.","Hello, please.",Ordered Week 1 vocabulary item 5
+W0006,je,,I,zhuh,1,core,active,yes,yes,yes,Je suis Alex.,I am Alex.,Ordered Week 1 vocabulary item 6
+W0007,tu,,you,too,1,core,active,yes,yes,yes,Tu es Samira.,You are Samira.,Ordered Week 1 vocabulary item 7
+W0008,il,,he,eel,1,core,active,yes,yes,yes,Il est Marc.,He is Marc.,Ordered Week 1 vocabulary item 8
+W0009,elle,,she,el,1,core,active,yes,yes,yes,Elle est Samira.,She is Samira.,Ordered Week 1 vocabulary item 9
+W0010,nous,,we,noo,1,core,active,yes,yes,yes,Nous sommes en classe.,We are in class.,Ordered Week 1 vocabulary item 10
+W0011,vous,,you,voo,1,core,active,yes,yes,yes,Vous êtes Madame Dupont.,You are Madame Dupont.,Ordered Week 1 vocabulary item 11
+W0012,ils,,they (masculine/mixed),eel,1,core,active,yes,yes,yes,Ils sont en classe.,They are in class.,Ordered Week 1 vocabulary item 12
+W0013,elles,,they (feminine),el,1,core,active,yes,yes,yes,Elles sont en classe.,They are in class.,Ordered Week 1 vocabulary item 13
+W0014,je m'appelle,,my name is,zhuh mah-PELL,1,core,active,yes,yes,yes,Je m'appelle Alex.,My name is Alex.,Ordered Week 1 vocabulary item 14
+W0015,je suis,,I am,zhuh swee,1,core,active,yes,yes,yes,Je suis Alex.,I am Alex.,Ordered Week 1 vocabulary item 15
+W0016,tu es,,you are,too eh,1,core,active,yes,yes,yes,Tu es Samira.,You are Samira.,Ordered Week 1 vocabulary item 16
+W0017,il est,,he is,eel eh,1,core,active,yes,yes,yes,Il est Marc.,He is Marc.,Ordered Week 1 vocabulary item 17
+W0018,elle est,,she is,el eh,1,core,active,yes,yes,yes,Elle est Madame Dupont.,She is Madame Dupont.,Ordered Week 1 vocabulary item 18
+W0019,nous sommes,,we are,noo sohm,1,core,active,yes,yes,yes,Nous sommes en classe.,We are in class.,Ordered Week 1 vocabulary item 19
+W0020,vous êtes,,you are,voo zet,1,core,active,yes,yes,yes,Vous êtes Madame Dupont.,You are Madame Dupont.,Ordered Week 1 vocabulary item 20
+W0021,sont,,are,sohn,1,core,active,yes,yes,yes,Ils sont en classe.,They are in class.,Ordered Week 1 vocabulary item 21
+W0022,être,,to be,EHTR,1,core,active,yes,yes,yes,Être est le verbe de la semaine.,To be is the verb of the week.,Ordered Week 1 vocabulary item 22
+W0023,Alex,,Alex,ah-LEKS,1,core,active,yes,yes,yes,Je m'appelle Alex.,My name is Alex.,Ordered Week 1 vocabulary item 23
+W0024,Samira,,Samira,sah-MEE-rah,1,core,active,yes,yes,yes,Elle est Samira.,She is Samira.,Ordered Week 1 vocabulary item 24
+W0025,Marc,,Marc,mark,1,core,active,yes,yes,yes,Il est Marc.,He is Marc.,Ordered Week 1 vocabulary item 25
+W0026,Madame Dupont,,Ms. Dupont,mah-DAHM duu-POHN,1,core,active,yes,yes,yes,Vous êtes Madame Dupont.,You are Ms. Dupont.,Ordered Week 1 vocabulary item 26
+W0027,classe,la,class,klass,1,core,active,yes,yes,yes,Nous sommes en classe.,We are in class.,Ordered Week 1 vocabulary item 27
+W0028,professeure,la,teacher,pro-feh-SUR,1,core,active,yes,yes,yes,Madame Dupont est la professeure.,Madame Dupont is the teacher.,Ordered Week 1 vocabulary item 28
+W0029,ami,un,friend,ah-MEE,1,core,active,yes,yes,yes,Marc est un ami.,Marc is a friend.,Ordered Week 1 vocabulary item 29
+W0030,amie,une,friend,ah-MEE,1,core,active,yes,yes,yes,Samira est une amie.,Samira is a friend.,Ordered Week 1 vocabulary item 30
+W0031,au café,,at the cafe,oh kah-FAY,1,core,active,yes,yes,yes,Samira est au café.,Samira is at the cafe.,Ordered Week 1 vocabulary item 31
+W0032,au parc,,at the park,oh park,1,core,active,yes,yes,yes,Marc est au parc.,Marc is at the park.,Ordered Week 1 vocabulary item 32
+W0033,à la maison,,at home,ah lah meh-ZOHN,1,core,active,yes,yes,yes,Je suis à la maison.,I am at home.,Ordered Week 1 vocabulary item 33
+W0034,avec,,with,ah-VEK,1,core,active,yes,yes,yes,Je suis avec Samira.,I am with Samira.,Ordered Week 1 vocabulary item 34
+W0035,et,,and,ay,1,core,active,yes,yes,yes,Alex et Samira sont en classe.,Alex and Samira are in class.,Ordered Week 1 vocabulary item 35
+W0036,oui,,yes,wee,1,core,active,yes,yes,yes,"Oui, je suis Alex.","Yes, I am Alex.",Ordered Week 1 vocabulary item 36
+W0037,non,,no,noh,1,core,active,yes,yes,yes,"Non, je suis Marc.","No, I am Marc.",Ordered Week 1 vocabulary item 37
+W0038,qui,,who,kee,1,core,active,yes,yes,yes,Qui est Samira ?,Who is Samira?,Ordered Week 1 vocabulary item 38
+W0039,quoi,,what,kwah,1,core,active,yes,yes,yes,Quoi ? Bonjour ?,What? Hello?,Ordered Week 1 vocabulary item 39
+W0040,ici,,here,ee-SEE,1,core,active,yes,yes,yes,Je suis ici.,I am here.,Ordered Week 1 vocabulary item 40
+W0041,très,,very,treh,1,core,active,yes,yes,yes,"Très bien, merci.","Very well, thank you.",Ordered Week 1 vocabulary item 41
+W0042,bien,,well / good,bee-EN,1,core,active,yes,yes,yes,Je suis bien.,I am well.,Ordered Week 1 vocabulary item 42
+W0043,pardon,,sorry / excuse me,par-DOHN,1,core,active,yes,yes,yes,"Pardon, Madame Dupont.","Excuse me, Ms. Dupont.",Ordered Week 1 vocabulary item 43
+W0044,days of the week,,"Monday to Sunday: lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche",luhn-DEE ... dee-MAHNSH,1,calendar,active,yes,yes,yes,Nous sommes en classe lundi.,We are in class on Monday.,Grouped set: lundi; mardi; mercredi; jeudi; vendredi; samedi; dimanche
+W0045,months of the year,,"January to December: janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre",zhahn-VYAY ... day-SAHNBR,1,calendar,active,yes,yes,yes,Janvier est un mois.,January is a month.,Grouped set: janvier; février; mars; avril; mai; juin; juillet; août; septembre; octobre; novembre; décembre
+W0046,salle,la,room,sahl,1,classroom,active,yes,yes,yes,La salle est simple.,The room is simple.,Ordered Week 1 vocabulary item 46
+W0047,tableau,le,board,tah-BLOH,1,classroom,active,yes,yes,yes,Le tableau est en classe.,The board is in class.,Ordered Week 1 vocabulary item 47
+W0048,porte,la,door,port,1,classroom,active,yes,yes,yes,La porte est ici.,The door is here.,Ordered Week 1 vocabulary item 48
+W0049,lecture,la,reading,lek-TUR,1,skills,active,yes,yes,yes,La lecture est courte.,The reading is short.,Ordered Week 1 vocabulary item 49
+W0050,écoute,l',listening,ay-KOOT,1,skills,active,yes,yes,yes,L'écoute est courte.,The listening is short.,Ordered Week 1 vocabulary item 50
+W0051,écriture,l',writing,ay-kree-TUR,1,skills,active,yes,yes,yes,L'écriture est simple.,The writing is simple.,Ordered Week 1 vocabulary item 51
+W0052,lire,,to read,leer,1,learning,active,yes,yes,yes,Lire la phrase.,Read the sentence.,Ordered Week 1 vocabulary item 52
+W0053,écouter,,to listen,ay-koo-TAY,1,learning,active,yes,yes,yes,Écouter la phrase.,Listen to the sentence.,Ordered Week 1 vocabulary item 53
+W0054,écrire,,to write,ay-KREER,1,learning,active,yes,yes,yes,Écrire une phrase.,Write a sentence.,Ordered Week 1 vocabulary item 54
+W0055,répéter,,to repeat,ray-pay-TAY,1,learning,active,yes,yes,yes,Répéter le mot.,Repeat the word.,Ordered Week 1 vocabulary item 55
+W0056,regarder,,to look,ruh-gar-DAY,1,learning,active,yes,yes,yes,Regarder le tableau.,Look at the board.,Ordered Week 1 vocabulary item 56
+W0057,simple,,simple,sampl,1,adjectives,active,yes,yes,yes,La phrase est simple.,The sentence is simple.,Ordered Week 1 vocabulary item 57
+W0058,court / courte,,short,koor / koort,1,adjectives,active,yes,yes,yes,Le quiz est court.,The quiz is short.,Ordered Week 1 vocabulary item 58
+W0059,nouveau / nouvelle,,new,noo-VOH / noo-VEL,1,adjectives,active,yes,yes,yes,Le mot est nouveau.,The word is new.,Ordered Week 1 vocabulary item 59
+W0060,facile,,easy,fah-SEEL,1,adjectives,active,yes,yes,yes,La réponse est facile.,The answer is easy.,Ordered Week 1 vocabulary item 60
+W0061,difficile,,difficult,dee-fee-SEEL,1,adjectives,active,yes,yes,support,La question est difficile.,The question is difficult.,Ordered Week 1 vocabulary item 61
+W0062,aujourd'hui,,today,oh-zhoor-DWEE,1,time,active,yes,yes,support,"Aujourd'hui, je suis en classe.","Today, I am in class.",Ordered Week 1 vocabulary item 62
+W0063,demain,,tomorrow,duh-MAN,1,time,active,yes,yes,support,"Demain, je suis à la maison.","Tomorrow, I am at home.",Ordered Week 1 vocabulary item 63
+W0064,maintenant,,now,mant-NAHN,1,time,active,yes,yes,support,"Maintenant, je suis ici.","Now, I am here.",Ordered Week 1 vocabulary item 64
+W0065,bienvenue,,welcome,byen-vuh-NUU,1,greetings,active,yes,yes,support,Bienvenue en classe.,Welcome to class.,Ordered Week 1 vocabulary item 65
+W0066,en retard,,late,ahn ruh-TAR,1,time,active,yes,yes,support,Je suis en retard.,I am late.,Ordered Week 1 vocabulary item 66
+W0067,présent / présente,,present,pray-ZAHN / pray-ZAHNT,1,classroom,active,yes,yes,support,Je suis présent.,I am present.,Ordered Week 1 vocabulary item 67
+W0068,absent / absente,,absent,ab-SAHN / ab-SAHNT,1,classroom,active,yes,yes,support,Marc est absent.,Marc is absent.,Ordered Week 1 vocabulary item 68
+W0069,calme,,calm / quiet,kalm,1,adjectives,active,yes,yes,support,La classe est calme.,The class is quiet.,Ordered Week 1 vocabulary item 69
+W0070,prêt / prête,,ready,preh / pret,1,adjectives,active,yes,yes,support,Je suis prêt.,I am ready.,Ordered Week 1 vocabulary item 70
+W0071,important / importante,,important,an-por-TAHN,1,adjectives,active,yes,yes,support,La question est importante.,The question is important.,Ordered Week 1 vocabulary item 71
+W0072,utile,,useful,uu-TEEL,1,adjectives,active,yes,yes,support,Le mot est utile.,The word is useful.,Ordered Week 1 vocabulary item 72
+W0073,correct / correcte,,correct,ko-REKT,1,adjectives,active,yes,yes,support,La réponse est correcte.,The answer is correct.,Ordered Week 1 vocabulary item 73
+W0074,premier / première,,first,pruh-MYAY / pruh-MYAIR,1,order,active,yes,yes,support,La première phrase est courte.,The first sentence is short.,Ordered Week 1 vocabulary item 74
+W0075,dernier / dernière,,last,dehr-NYAY / dehr-NYAIR,1,order,active,yes,yes,support,La dernière question est facile.,The last question is easy.,Ordered Week 1 vocabulary item 75
+W0076,numbers 0-10,,"zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix","zay-ROH, uhn, duh...",2,numbers,active,yes,yes,yes,Samira a six ans. Alex a dix ans.,Samira is six years old. Alex is ten years old.,Grouped set: zéro; un; deux; trois; quatre; cinq; six; sept; huit; neuf; dix
+W0077,j'ai,,I have,zhay,2,core,active,yes,yes,yes,J'ai un livre.,I have a book.,Ordered Week 2 vocabulary item 2
+W0078,tu as,,you have,too ah,2,core,active,yes,yes,yes,Tu as un téléphone.,You have a phone.,Ordered Week 2 vocabulary item 3
+W0079,il a,,he has,eel ah,2,core,active,yes,yes,yes,Il a dix ans.,He is ten years old.,Ordered Week 2 vocabulary item 4
+W0080,elle a,,she has,el ah,2,core,active,yes,yes,yes,Elle a une sœur.,She has a sister.,Ordered Week 2 vocabulary item 5
+W0081,nous avons,,we have,noo zah-VOHN,2,core,active,yes,yes,yes,Nous avons un livre.,We have a book.,Ordered Week 2 vocabulary item 6
+W0082,vous avez,,you have,voo zah-VAY,2,core,active,yes,yes,yes,Vous avez un téléphone.,You have a phone.,Ordered Week 2 vocabulary item 7
+W0083,ans,,years old,ahn,2,core,active,yes,yes,yes,J'ai dix ans.,I am ten years old.,Ordered Week 2 vocabulary item 8
+W0084,famille,la,family,fah-MEE,2,core,active,yes,yes,yes,J'ai une famille.,I have a family.,Ordered Week 2 vocabulary item 9
+W0085,mère,la,mother,mehr,2,core,active,yes,yes,yes,Samira a une mère.,Samira has a mother.,Ordered Week 2 vocabulary item 10
+W0086,père,le,father,pehr,2,core,active,yes,yes,yes,Marc a un père.,Marc has a father.,Ordered Week 2 vocabulary item 11
+W0087,frère,le,brother,frair,2,core,active,yes,yes,yes,Alex a un frère.,Alex has a brother.,Ordered Week 2 vocabulary item 12
+W0088,sœur,la,sister,suhr,2,core,active,yes,yes,yes,Samira a une sœur.,Samira has a sister.,Ordered Week 2 vocabulary item 13
+W0089,livre,un,book,leev-ruh,2,core,active,yes,yes,yes,J'ai un livre.,I have a book.,Ordered Week 2 vocabulary item 14
+W0090,téléphone,un,phone,tay-lay-FOHN,2,core,active,yes,yes,yes,Elle a un téléphone.,She has a phone.,Ordered Week 2 vocabulary item 15
+W0091,ami,un,friend,ah-MEE,2,core,active,yes,yes,yes,Marc est un ami.,Marc is a friend.,Ordered Week 2 vocabulary item 16
+W0092,amie,une,friend,ah-MEE,2,core,active,yes,yes,yes,Samira est une amie.,Samira is a friend.,Ordered Week 2 vocabulary item 17
+W0093,classe,la,class,klass,2,core,active,yes,yes,yes,Nous avons une classe lundi.,We have a class on Monday.,Ordered Week 2 vocabulary item 18
+W0094,professeure,la,teacher,pro-feh-SUR,2,core,active,yes,yes,yes,Madame Dupont est la professeure.,Madame Dupont is the teacher.,Ordered Week 2 vocabulary item 19
+W0095,exercice,un,exercise,eg-zer-SEES,2,core,active,yes,yes,yes,J'ai un exercice.,I have an exercise.,Ordered Week 2 vocabulary item 20
+W0096,question,une,question,kes-tee-OHN,2,core,active,yes,yes,yes,Tu as une question.,You have a question.,Ordered Week 2 vocabulary item 21
+W0097,réponse,une,answer,ray-POHNS,2,core,active,yes,yes,yes,J'ai une réponse.,I have an answer.,Ordered Week 2 vocabulary item 22
+W0098,page,une,page,pahzh,2,core,active,yes,yes,yes,Nous avons une page.,We have a page.,Ordered Week 2 vocabulary item 23
+W0099,mot,un,word,moh,2,core,active,yes,yes,yes,Elle a un mot.,She has a word.,Ordered Week 2 vocabulary item 24
+W0100,phrase,une,sentence,fraz,2,core,active,yes,yes,yes,J'ai une phrase.,I have a sentence.,Ordered Week 2 vocabulary item 25
+W0101,cahier,un,notebook,kah-YAY,2,core,active,yes,yes,yes,Alex a un cahier.,Alex has a notebook.,Ordered Week 2 vocabulary item 26
+W0102,stylo,un,pen,stee-LOH,2,core,active,yes,yes,yes,Samira a un stylo.,Samira has a pen.,Ordered Week 2 vocabulary item 27
+W0103,sac,un,bag,sak,2,core,active,yes,yes,yes,Marc a un sac.,Marc has a bag.,Ordered Week 2 vocabulary item 28
+W0104,table,une,table,tahbl,2,core,active,yes,yes,yes,Nous avons une table.,We have a table.,Ordered Week 2 vocabulary item 29
+W0105,chaise,une,chair,shehz,2,core,active,yes,yes,yes,Vous avez une chaise.,You have a chair.,Ordered Week 2 vocabulary item 30
+W0106,maison,la,house / home,meh-ZOHN,2,core,active,yes,yes,yes,J'ai une maison.,I have a home.,Ordered Week 2 vocabulary item 31
+W0107,café,le,cafe,kah-FAY,2,core,active,yes,yes,yes,Marc est au café.,Marc is at the cafe.,Ordered Week 2 vocabulary item 32
+W0108,parc,le,park,park,2,core,active,yes,yes,yes,Samira est au parc.,Samira is at the park.,Ordered Week 2 vocabulary item 33
+W0109,avec,,with,ah-VEK,2,core,active,yes,yes,yes,Je suis avec Samira.,I am with Samira.,Ordered Week 2 vocabulary item 34
+W0110,et,,and,ay,2,core,active,yes,yes,yes,J'ai un frère et une sœur.,I have a brother and a sister.,Ordered Week 2 vocabulary item 35
+W0111,mais,,but,meh,2,core,active,yes,yes,yes,"J'ai un livre, mais pas de téléphone.","I have a book, but no phone.",Ordered Week 2 vocabulary item 36
+W0112,oui,,yes,wee,2,core,active,yes,yes,yes,"Oui, j'ai un livre.","Yes, I have a book.",Ordered Week 2 vocabulary item 37
+W0113,non,,no,noh,2,core,active,yes,yes,yes,"Non, je n'ai pas de téléphone.","No, I do not have a phone.",Ordered Week 2 vocabulary item 38
+W0114,voici,,here is,vwah-SEE,2,core,active,yes,yes,yes,Voici un livre.,Here is a book.,Ordered Week 2 vocabulary item 39
+W0115,dans,,in,dahn,2,core,active,yes,yes,yes,Le livre est dans le sac.,The book is in the bag.,Ordered Week 2 vocabulary item 40
+W0116,days group review,,days as one review set: lundi to dimanche,luhn-DEE ... dee-MAHNSH,2,review,active,yes,yes,yes,Nous sommes en classe lundi.,We are in class on Monday.,Grouped set: lundi; mardi; mercredi; jeudi; vendredi; samedi; dimanche
+W0117,months group review,,months as one review set: janvier to décembre,zhahn-VYAY ... day-SAHNBR,2,review,active,yes,yes,yes,Janvier est un mois.,January is a month.,Grouped set: janvier; février; mars; avril; mai; juin; juillet; août; septembre; octobre; novembre; décembre
+W0118,clé,une,key,klay,2,objects,active,yes,yes,yes,J'ai une clé.,I have a key.,Ordered Week 2 vocabulary item 43
+W0119,carte,une,card / map,kart,2,objects,active,yes,yes,yes,Samira a une carte.,Samira has a card.,Ordered Week 2 vocabulary item 44
+W0120,adresse,une,address,ah-DRESS,2,personal,active,yes,yes,yes,J'ai une adresse.,I have an address.,Ordered Week 2 vocabulary item 45
+W0121,nom,le,name / last name,nohm,2,personal,active,yes,yes,yes,Le nom est Dupont.,The name is Dupont.,Ordered Week 2 vocabulary item 46
+W0122,prénom,le,first name,pray-NOHM,2,personal,active,yes,yes,yes,Le prénom est Alex.,The first name is Alex.,Ordered Week 2 vocabulary item 47
+W0123,numéro,le,number,nuu-may-ROH,2,personal,active,yes,yes,yes,Le numéro est dix.,The number is ten.,Ordered Week 2 vocabulary item 48
+W0124,rue,la,street,ruu,2,personal,active,yes,yes,yes,La rue est simple.,The street is simple.,Ordered Week 2 vocabulary item 49
+W0125,ville,la,city,veel,2,places,active,yes,yes,yes,La ville est ici.,The city is here.,Ordered Week 2 vocabulary item 50
+W0126,pays,le,country,pay-EE,2,places,active,yes,yes,yes,Le pays est le Canada.,The country is Canada.,Ordered Week 2 vocabulary item 51
+W0127,Canada,,Canada,kah-nah-DAH,2,places,active,yes,yes,yes,Je suis au Canada.,I am in Canada.,Ordered Week 2 vocabulary item 52
+W0128,école,l',school,ay-KOHL,2,places,active,yes,yes,yes,L'école est dans la ville.,The school is in the city.,Ordered Week 2 vocabulary item 53
+W0129,bureau,le,office / desk,buu-ROH,2,places,active,yes,yes,yes,Le stylo est sur le bureau.,The pen is on the desk.,Ordered Week 2 vocabulary item 54
+W0130,avec moi,,with me,ah-VEK mwah,2,phrases,active,yes,yes,yes,Samira est avec moi.,Samira is with me.,Ordered Week 2 vocabulary item 55
+W0131,sur,,on,sur,2,place,active,yes,yes,yes,Le livre est sur la table.,The book is on the table.,Ordered Week 2 vocabulary item 56
+W0132,pour,,for,poor,2,connectors,active,yes,yes,yes,Le livre est pour Samira.,The book is for Samira.,Ordered Week 2 vocabulary item 57
+W0133,de,,of / from,duh,2,connectors,active,yes,yes,yes,La mère de Samira est ici.,Samira’s mother is here.,Ordered Week 2 vocabulary item 58
+W0134,pas,,not,pah,2,negation,active,yes,yes,yes,Je n'ai pas de téléphone.,I do not have a phone.,Ordered Week 2 vocabulary item 59
+W0135,je n'ai pas,,I do not have,zhuh nay pah,2,negation,active,yes,yes,yes,Je n'ai pas de frère.,I do not have a brother.,Ordered Week 2 vocabulary item 60
+W0136,beaucoup,,a lot,boh-KOO,2,quantity,active,yes,yes,support,J'ai beaucoup de mots.,I have a lot of words.,Ordered Week 2 vocabulary item 61
+W0137,un peu,,a little,uhn puh,2,quantity,active,yes,yes,support,J'ai un peu de temps.,I have a little time.,Ordered Week 2 vocabulary item 62
+W0138,temps,le,time,tahn,2,time,active,yes,yes,support,J'ai le temps.,I have time.,Ordered Week 2 vocabulary item 63
+W0139,bonsoir,,good evening,bohn-SWAHR,2,greetings,active,yes,yes,support,"Bonsoir, Madame Dupont.","Good evening, Ms. Dupont.",Ordered Week 2 vocabulary item 64
+W0140,qui,,who,kee,2,questions,active,yes,yes,support,Qui a le livre ?,Who has the book?,Ordered Week 2 vocabulary item 65
+W0141,quoi,,what,kwah,2,questions,active,yes,yes,support,Tu as quoi ?,What do you have?,Ordered Week 2 vocabulary item 66
+W0142,où,,where,oo,2,questions,active,yes,yes,support,Où est le livre ?,Where is the book?,Ordered Week 2 vocabulary item 67
+W0143,combien,,how many,kohm-BYAN,2,questions,active,yes,yes,support,Combien de livres ?,How many books?,Ordered Week 2 vocabulary item 68
+W0144,voilà,,there is / there you go,vwah-LAH,2,phrases,active,yes,yes,support,Voilà la réponse.,There is the answer.,Ordered Week 2 vocabulary item 69
+W0145,d'accord,,okay,dah-KOR,2,phrases,active,yes,yes,support,"D'accord, merci.","Okay, thank you.",Ordered Week 2 vocabulary item 70
+W0146,important / importante,,important,an-por-TAHN,2,adjectives,active,yes,yes,support,La question est importante.,The question is important.,Ordered Week 2 vocabulary item 71
+W0147,même,,same,mem,2,adjectives,active,yes,yes,support,Nous avons le même livre.,We have the same book.,Ordered Week 2 vocabulary item 72
+W0148,autre,,other / another,ohtr,2,adjectives,active,yes,yes,support,J'ai une autre question.,I have another question.,Ordered Week 2 vocabulary item 73
+W0149,aussi,,also / too,oh-SEE,2,connectors,active,yes,yes,support,J'ai un livre aussi.,I have a book too.,Ordered Week 2 vocabulary item 74
+W0150,déjà,,already,day-ZHAH,2,time,active,yes,yes,support,J'ai déjà une réponse.,I already have an answer.,Ordered Week 2 vocabulary item 75

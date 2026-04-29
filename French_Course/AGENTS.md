@@ -30,6 +30,11 @@ If files conflict, use this priority:
 
 Core rules:
 - Every week must include review, controlled new content, and integration of old + new.
+- Review must be embedded inside the actual new week content, not isolated only in a review block.
+- A learner should be able to study the current week and automatically revise earlier weeks without repeatedly returning to old week pages.
+- Every reading, listening, writing task, vocabulary example, grammar example, and quiz must use a meaningful mix of current-week content plus previous-week vocabulary and grammar.
+- Quizzes must include 50 questions and should test cumulative content through sentences, not only isolated word recall.
+- Vocabulary pages must include a random bidirectional drill: French prompt to hidden English answer, and English prompt to hidden French answer.
 - Use mostly previously learned language in reading, listening, and writing.
 - Keep new vocabulary load small, useful, and recyclable.
 - Use recurring characters, places, and routines from story_world.md.

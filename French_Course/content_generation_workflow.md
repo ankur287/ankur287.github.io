@@ -16,6 +16,7 @@ Decide:
 - new vocabulary set
 - recent review set
 - long-term review set
+- exact previous-week vocabulary and grammar that will be embedded in new examples, readings, listenings, writing prompts, and quiz questions
 - reading goal
 - listening goal
 - writing goal
@@ -43,6 +44,15 @@ Build in this order:
 
 ## Step 5
 Cross-link all important new content across multiple sections.
+
+Also verify that previous-week content is used inside the new content itself:
+- vocabulary example sentences
+- grammar example sentences
+- main reading passage
+- main listening passage
+- writing warm-ups and final writing test
+- 50-question quiz
+- random vocabulary drill
 
 ## Step 6
 Run qa_checklist.

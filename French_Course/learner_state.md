@@ -62,9 +62,13 @@
 
 ## Vocabulary tracking
 ### Ordered vocabulary bank status
-- Week 1 vocabulary page now has 50 numbered practice items.
-- Week 2 vocabulary page now has 50 numbered practice items.
-- `vocabulary_bank.csv` now tracks 100 entries total, with 50 entries per week.
+- Week 1 vocabulary page now has 75 numbered practice items.
+- Week 2 vocabulary page now has 75 numbered practice items.
+- `vocabulary_bank.csv` now tracks 150 entries total, with 75 entries per week.
+- Days, months, and numbers are taught as grouped sequence cards, not as one slot per word.
+- Week quizzes now target 50 questions.
+- Vocabulary pages include random bidirectional drills for French → English and English → French recall.
+- Future weeks should embed previous-week content directly inside new examples, passages, writing prompts, and quizzes.
 - New week pages should reuse earlier words inside examples, reading, listening, writing, and quiz questions instead of showing them only as isolated review lists.
 
 ### Core stable vocabulary

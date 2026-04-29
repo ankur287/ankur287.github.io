@@ -4,16 +4,19 @@
 - Week number: 2
 - Title: J'ai dix ans
 - Date created: 2026-04-13
+- Vocabulary count: 75 ordered items
 
 ## Main teaching targets
 - Main grammar: avoir basics + age
 - Review grammar: être basics
-- Main vocabulary themes: age, family basics, numbers 0-10, common objects
+- Main vocabulary themes: age, family basics, numbers 0-10 as one grouped card, common objects, personal information, question words, negation
 
 ## New vocabulary introduced
-- Ordered Week 2 vocabulary bank now contains 50 numbered items.
+- Ordered Week 2 vocabulary bank now contains 75 numbered items.
 - Each item has its own word audio button, sentence audio button, example, and hidden English.
 - Test-style practice asks the learner to infer meaning before revealing answers.
+- Numbers 0-10 are grouped into one card instead of separate items.
+- Week 1 days and months return as grouped review cards.
 
 ### Core new targets
 - j'ai
@@ -67,7 +70,7 @@
 - new words inside passage: ans, mère, père, frère, sœur, livre, téléphone, dix
 
 ## Listening
-- listening type: short controlled dialogue / personal profile
+- listening type: short controlled dialogue / personal profile with objects, questions, and avoir forms
 - skills targeted: identifying speaker, day, age, family detail, and one object; gap-fill with ai / ans / avons
 
 ## Writing
@@ -76,7 +79,10 @@
 - supports provided: sentence frames, checklist, hidden model answer, rubric
 
 ## Quiz / assessment
-- current-week focus: avoir forms, age pattern, family words, object words, numbers
+- current-week focus: avoir forms, age pattern, family words, object words, numbers group, question words, negation
+- quiz length: 50 questions
+- review style: Week 1 vocabulary and grammar are embedded in Week 2 sentence questions, reading, listening, and writing prompts
+- random vocabulary drill: French → English and English → French
 - review focus: greetings, je m'appelle, je suis, day recognition
 - cumulative focus: combining Week 1 and Week 2 in one short self-introduction
 
