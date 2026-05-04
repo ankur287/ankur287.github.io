@@ -149,3 +149,753 @@ W0147,même,,same,mem,2,adjectives,active,yes,yes,support,Nous avons le même li
 W0148,autre,,other / another,ohtr,2,adjectives,active,yes,yes,support,J'ai une autre question.,I have another question.,Ordered Week 2 vocabulary item 73
 W0149,aussi,,also / too,oh-SEE,2,connectors,active,yes,yes,support,J'ai un livre aussi.,I have a book too.,Ordered Week 2 vocabulary item 74
 W0150,déjà,,already,day-ZHAH,2,time,active,yes,yes,support,J'ai déjà une réponse.,I already have an answer.,Ordered Week 2 vocabulary item 75
+W0151,un,,a / an masculine,listen and repeat,3,articles,active,yes,yes,yes,J'ai un livre dans mon sac.,I have a book in my bag.,new; Week 3 cumulative practice item 1
+W0152,une,,a / an feminine,listen and repeat,3,articles,active,yes,yes,yes,Samira a une lampe sur la table.,Samira has a lamp on the table.,new; Week 3 cumulative practice item 2
+W0153,le,,the masculine,listen and repeat,3,articles,active,yes,yes,yes,Le livre est sur le bureau.,The book is on the desk.,new; Week 3 cumulative practice item 3
+W0154,la,,the feminine,listen and repeat,3,articles,active,yes,yes,yes,La lampe est pres du lit.,The lamp is near the bed.,new; Week 3 cumulative practice item 4
+W0155,l',,the before vowel,listen and repeat,3,articles,active,yes,yes,yes,L'ordinateur est dans la classe.,The computer is in the class.,new; Week 3 cumulative practice item 5
+W0156,les,,the plural,listen and repeat,3,articles,active,yes,yes,yes,Les stylos sont sur la table.,The pens are on the table.,new; Week 3 cumulative practice item 6
+W0157,des,,some / plural a,listen and repeat,3,articles,active,yes,yes,yes,J'ai des cahiers pour la classe.,I have some notebooks for class.,new; Week 3 cumulative practice item 7
+W0158,livre,un,book,leevr,3,classroom,active,yes,yes,yes,Alex a un livre bleu.,Alex has a blue book.,new; Week 3 cumulative practice item 8
+W0159,lampe,une,lamp,lahmp,3,home,active,yes,yes,yes,La lampe est dans la chambre.,The lamp is in the bedroom.,new; Week 3 cumulative practice item 9
+W0160,table,une,table,TAHBL,3,home,active,yes,yes,yes,Une table est pres de la fenetre.,A table is near the window.,new; Week 3 cumulative practice item 10
+W0161,bureau,un,desk / office,boo-ROH,3,home,active,yes,yes,yes,Le bureau de Madame Dupont est propre.,Madame Dupont's desk is clean.,new; Week 3 cumulative practice item 11
+W0162,chaise,une,chair,shehz,3,home,active,yes,yes,yes,La chaise est a cote de la table.,The chair is beside the table.,new; Week 3 cumulative practice item 12
+W0163,lit,un,bed,lee,3,home,active,yes,yes,yes,Le lit est dans la chambre.,The bed is in the bedroom.,new; Week 3 cumulative practice item 13
+W0164,chambre,une,bedroom,SHAHMBR,3,home,active,yes,yes,yes,"Dans ma chambre, j'ai une lampe.","In my bedroom, I have a lamp.",new; Week 3 cumulative practice item 14
+W0165,cuisine,une,kitchen,kwee-ZEEN,3,home,active,yes,yes,yes,La cuisine est petite.,The kitchen is small.,new; Week 3 cumulative practice item 15
+W0166,salon,un,living room,sah-LOHN,3,home,active,yes,yes,yes,Le salon est calme.,The living room is calm.,new; Week 3 cumulative practice item 16
+W0167,fenetre,une,window,fuh-NEHTR,3,home,active,yes,yes,yes,La fenetre est ouverte.,The window is open.,new; Week 3 cumulative practice item 17
+W0168,porte,une,door,port,3,home,active,yes,yes,yes,La porte est fermee.,The door is closed.,new; Week 3 cumulative practice item 18
+W0169,cle,une,key,klay,3,home,active,yes,yes,yes,J'ai une cle dans mon sac.,I have a key in my bag.,new; Week 3 cumulative practice item 19
+W0170,sac,un,bag,sak,3,classroom,active,yes,yes,yes,Marc a un sac noir.,Marc has a black bag.,new; Week 3 cumulative practice item 20
+W0171,cahier,un,notebook,kah-YAY,3,classroom,active,yes,yes,yes,Le cahier est sur le bureau.,The notebook is on the desk.,new; Week 3 cumulative practice item 21
+W0172,stylo,un,pen,stee-LOH,3,classroom,active,yes,yes,yes,J'ai des stylos pour la classe.,I have pens for class.,new; Week 3 cumulative practice item 22
+W0173,ordinateur,un,computer,or-dee-nah-TUHR,3,classroom,active,yes,yes,yes,L'ordinateur est a cote du livre.,The computer is next to the book.,new; Week 3 cumulative practice item 23
+W0174,telephone,un,phone,tay-lay-FOHN,3,objects,active,yes,yes,yes,Le telephone de Samira est dans son sac.,Samira's phone is in her bag.,new; Week 3 cumulative practice item 24
+W0175,sur,,on,listen and repeat,3,place,active,yes,yes,yes,Le livre est sur la table.,The book is on the table.,new; Week 3 cumulative practice item 25
+W0176,dans,,in,listen and repeat,3,place,active,yes,yes,yes,La cle est dans le sac.,The key is in the bag.,new; Week 3 cumulative practice item 26
+W0177,pres de,,near,listen and repeat,3,place,active,yes,yes,yes,La lampe est pres du lit.,The lamp is near the bed.,new; Week 3 cumulative practice item 27
+W0178,a cote de,,next to,listen and repeat,3,place,active,yes,yes,yes,La chaise est a cote de la table.,The chair is next to the table.,new; Week 3 cumulative practice item 28
+W0179,devant,,in front of,listen and repeat,3,place,active,yes,yes,yes,Marc est devant la porte.,Marc is in front of the door.,new; Week 3 cumulative practice item 29
+W0180,derriere,,behind,listen and repeat,3,place,active,yes,yes,yes,Le sac est derriere la chaise.,The bag is behind the chair.,new; Week 3 cumulative practice item 30
+W0181,je suis,,I am,zhuh swee,3,review from Weeks 1-2,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,recent review; Week 3 cumulative practice item 31
+W0182,j'ai,,I have,zhay,3,review from Weeks 1-2,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,recent review; Week 3 cumulative practice item 32
+W0183,bonjour,,hello,bohn-ZHOOR,3,review from Weeks 1-2,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",recent review; Week 3 cumulative practice item 33
+W0184,la famille,,family,lah fah-MEE,3,review from Weeks 1-2,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,recent review; Week 3 cumulative practice item 34
+W0185,le cafe,,cafe,luh kah-FAY,3,review from Weeks 1-2,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,recent review; Week 3 cumulative practice item 35
+W0186,le bus,,bus,luh boos,3,review from Weeks 1-2,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,recent review; Week 3 cumulative practice item 36
+W0187,aujourd hui,,today,oh-zhoor-DWEE,3,review from Weeks 1-2,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",recent review; Week 3 cumulative practice item 37
+W0188,une petite table,,a small table,oon puh-TEET tahbl,3,review from Weeks 1-2,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,recent review; Week 3 cumulative practice item 38
+W0189,mon livre,,my book,mohn leevr,3,review from Weeks 1-2,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,recent review; Week 3 cumulative practice item 39
+W0190,du pain,,some bread,doo pan,3,review from Weeks 1-2,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,recent review; Week 3 cumulative practice item 40
+W0191,ou est-ce que,,where is it that,oo ess-kuh,3,review from Weeks 1-2,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,recent review; Week 3 cumulative practice item 41
+W0192,je me prepare,,I get ready,zhuh muh pray-PAHR,3,review from Weeks 1-2,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",recent review; Week 3 cumulative practice item 42
+W0193,je suis,,I am,zhuh swee,3,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 3 cumulative practice item 43
+W0194,j'ai,,I have,zhay,3,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 3 cumulative practice item 44
+W0195,bonjour,,hello,bohn-ZHOOR,3,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 3 cumulative practice item 45
+W0196,la famille,,family,lah fah-MEE,3,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 3 cumulative practice item 46
+W0197,le cafe,,cafe,luh kah-FAY,3,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 3 cumulative practice item 47
+W0198,le bus,,bus,luh boos,3,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 3 cumulative practice item 48
+W0199,aujourd hui,,today,oh-zhoor-DWEE,3,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 3 cumulative practice item 49
+W0200,une petite table,,a small table,oon puh-TEET tahbl,3,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 3 cumulative practice item 50
+W0201,mon livre,,my book,mohn leevr,3,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 3 cumulative practice item 51
+W0202,du pain,,some bread,doo pan,3,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 3 cumulative practice item 52
+W0203,ou est-ce que,,where is it that,oo ess-kuh,3,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 3 cumulative practice item 53
+W0204,je me prepare,,I get ready,zhuh muh pray-PAHR,3,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 3 cumulative practice item 54
+W0205,je suis,,I am,zhuh swee,3,review from Weeks 1-2,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,recent review; Week 3 cumulative practice item 55
+W0206,j'ai,,I have,zhay,3,review from Weeks 1-2,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,recent review; Week 3 cumulative practice item 56
+W0207,bonjour,,hello,bohn-ZHOOR,3,review from Weeks 1-2,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",recent review; Week 3 cumulative practice item 57
+W0208,la famille,,family,lah fah-MEE,3,review from Weeks 1-2,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,recent review; Week 3 cumulative practice item 58
+W0209,le cafe,,cafe,luh kah-FAY,3,review from Weeks 1-2,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,recent review; Week 3 cumulative practice item 59
+W0210,le bus,,bus,luh boos,3,review from Weeks 1-2,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,recent review; Week 3 cumulative practice item 60
+W0211,aujourd hui,,today,oh-zhoor-DWEE,3,review from Weeks 1-2,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",recent review; Week 3 cumulative practice item 61
+W0212,une petite table,,a small table,oon puh-TEET tahbl,3,review from Weeks 1-2,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,recent review; Week 3 cumulative practice item 62
+W0213,mon livre,,my book,mohn leevr,3,review from Weeks 1-2,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,recent review; Week 3 cumulative practice item 63
+W0214,du pain,,some bread,doo pan,3,review from Weeks 1-2,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,recent review; Week 3 cumulative practice item 64
+W0215,ou est-ce que,,where is it that,oo ess-kuh,3,review from Weeks 1-2,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,recent review; Week 3 cumulative practice item 65
+W0216,je me prepare,,I get ready,zhuh muh pray-PAHR,3,review from Weeks 1-2,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",recent review; Week 3 cumulative practice item 66
+W0217,je suis,,I am,zhuh swee,3,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 3 cumulative practice item 67
+W0218,j'ai,,I have,zhay,3,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 3 cumulative practice item 68
+W0219,bonjour,,hello,bohn-ZHOOR,3,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 3 cumulative practice item 69
+W0220,la famille,,family,lah fah-MEE,3,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 3 cumulative practice item 70
+W0221,le cafe,,cafe,luh kah-FAY,3,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 3 cumulative practice item 71
+W0222,le bus,,bus,luh boos,3,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 3 cumulative practice item 72
+W0223,aujourd hui,,today,oh-zhoor-DWEE,3,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 3 cumulative practice item 73
+W0224,une petite table,,a small table,oon puh-TEET tahbl,3,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 3 cumulative practice item 74
+W0225,mon livre,,my book,mohn leevr,3,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 3 cumulative practice item 75
+W0226,petit / petite,,small,listen and repeat,4,size,active,yes,yes,yes,J'ai une petite cle dans mon sac.,I have a small key in my bag.,new; Week 4 cumulative practice item 1
+W0227,grand / grande,,big / tall,listen and repeat,4,size,active,yes,yes,yes,Le bureau est grand.,The desk is big.,new; Week 4 cumulative practice item 2
+W0228,rouge,,red,listen and repeat,4,color,active,yes,yes,yes,Alex a un livre rouge.,Alex has a red book.,new; Week 4 cumulative practice item 3
+W0229,bleu / bleue,,blue,listen and repeat,4,color,active,yes,yes,yes,Samira porte une chemise bleue.,Samira wears a blue shirt.,new; Week 4 cumulative practice item 4
+W0230,vert / verte,,green,listen and repeat,4,color,active,yes,yes,yes,Le cahier vert est sur la table.,The green notebook is on the table.,new; Week 4 cumulative practice item 5
+W0231,jaune,,yellow,listen and repeat,4,color,active,yes,yes,yes,La lampe jaune est pres du lit.,The yellow lamp is near the bed.,new; Week 4 cumulative practice item 6
+W0232,blanc / blanche,,white,listen and repeat,4,color,active,yes,yes,yes,La table blanche est propre.,The white table is clean.,new; Week 4 cumulative practice item 7
+W0233,noir / noire,,black,listen and repeat,4,color,active,yes,yes,yes,Marc a un sac noir.,Marc has a black bag.,new; Week 4 cumulative practice item 8
+W0234,gris / grise,,gray,listen and repeat,4,color,active,yes,yes,yes,Le telephone est gris.,The phone is gray.,new; Week 4 cumulative practice item 9
+W0235,propre,,clean,listen and repeat,4,description,active,yes,yes,yes,La classe est propre.,The classroom is clean.,new; Week 4 cumulative practice item 10
+W0236,sale,,dirty,listen and repeat,4,description,active,yes,yes,yes,La tasse n'est pas propre; elle est sale.,The cup is not clean; it is dirty.,new; Week 4 cumulative practice item 11
+W0237,facile,,easy,listen and repeat,4,description,active,yes,yes,yes,La question est facile.,The question is easy.,new; Week 4 cumulative practice item 12
+W0238,difficile,,difficult,listen and repeat,4,description,active,yes,yes,yes,L'exercice est difficile mais utile.,The exercise is difficult but useful.,new; Week 4 cumulative practice item 13
+W0239,clair / claire,,clear / bright,listen and repeat,4,description,active,yes,yes,yes,La phrase est claire.,The sentence is clear.,new; Week 4 cumulative practice item 14
+W0240,sombre,,dark,listen and repeat,4,description,active,yes,yes,yes,La chambre est sombre le soir.,The room is dark in the evening.,new; Week 4 cumulative practice item 15
+W0241,joli / jolie,,pretty,listen and repeat,4,description,active,yes,yes,yes,La photo de famille est jolie.,The family photo is pretty.,new; Week 4 cumulative practice item 16
+W0242,nouveau / nouvelle,,new,listen and repeat,4,description,active,yes,yes,yes,Samira a une nouvelle lampe.,Samira has a new lamp.,new; Week 4 cumulative practice item 17
+W0243,bon / bonne,,good,listen and repeat,4,description,active,yes,yes,yes,C'est une bonne reponse.,It is a good answer.,new; Week 4 cumulative practice item 18
+W0244,mauvais / mauvaise,,bad,listen and repeat,4,description,active,yes,yes,yes,Ce n'est pas une mauvaise idee.,It is not a bad idea.,new; Week 4 cumulative practice item 19
+W0245,long / longue,,long,listen and repeat,4,description,active,yes,yes,yes,La phrase est longue.,The sentence is long.,new; Week 4 cumulative practice item 20
+W0246,court / courte,,short,listen and repeat,4,description,active,yes,yes,yes,Le texte est court.,The text is short.,new; Week 4 cumulative practice item 21
+W0247,tres,,very,listen and repeat,4,degree,active,yes,yes,yes,La chambre est tres claire.,The room is very bright.,new; Week 4 cumulative practice item 22
+W0248,un peu,,a little,listen and repeat,4,degree,active,yes,yes,yes,Le cafe est un peu chaud.,The coffee is a little hot.,new; Week 4 cumulative practice item 23
+W0249,trop,,too / too much,listen and repeat,4,degree,active,yes,yes,yes,La question est trop longue.,The question is too long.,new; Week 4 cumulative practice item 24
+W0250,assez,,enough / quite,listen and repeat,4,degree,active,yes,yes,yes,Le texte est assez facile.,The text is quite easy.,new; Week 4 cumulative practice item 25
+W0251,couleur,une,color,koo-LUHR,4,description,active,yes,yes,yes,Quelle couleur est la lampe ?,What color is the lamp?,new; Week 4 cumulative practice item 26
+W0252,taille,une,size,tahy,4,description,active,yes,yes,yes,Quelle taille est la table ?,What size is the table?,new; Week 4 cumulative practice item 27
+W0253,pret / prete,,ready,listen and repeat,4,description,active,yes,yes,yes,Nous sommes prets pour le quiz.,We are ready for the quiz.,new; Week 4 cumulative practice item 28
+W0254,content / contente,,happy,listen and repeat,4,description,active,yes,yes,yes,Samira est contente en classe.,Samira is happy in class.,new; Week 4 cumulative practice item 29
+W0255,fatigue / fatiguee,,tired,listen and repeat,4,description,active,yes,yes,yes,Alex est fatigue le soir.,Alex is tired in the evening.,new; Week 4 cumulative practice item 30
+W0256,un,,a / an masculine,listen and repeat,4,review from Week 3,active,yes,yes,yes,J'ai un livre dans mon sac.,I have a book in my bag.,recent review; Week 4 cumulative practice item 31
+W0257,une,,a / an feminine,listen and repeat,4,review from Week 3,active,yes,yes,yes,Samira a une lampe sur la table.,Samira has a lamp on the table.,recent review; Week 4 cumulative practice item 32
+W0258,le,,the masculine,listen and repeat,4,review from Week 3,active,yes,yes,yes,Le livre est sur le bureau.,The book is on the desk.,recent review; Week 4 cumulative practice item 33
+W0259,la,,the feminine,listen and repeat,4,review from Week 3,active,yes,yes,yes,La lampe est pres du lit.,The lamp is near the bed.,recent review; Week 4 cumulative practice item 34
+W0260,l',,the before vowel,listen and repeat,4,review from Week 3,active,yes,yes,yes,L'ordinateur est dans la classe.,The computer is in the class.,recent review; Week 4 cumulative practice item 35
+W0261,les,,the plural,listen and repeat,4,review from Week 3,active,yes,yes,yes,Les stylos sont sur la table.,The pens are on the table.,recent review; Week 4 cumulative practice item 36
+W0262,des,,some / plural a,listen and repeat,4,review from Week 3,active,yes,yes,yes,J'ai des cahiers pour la classe.,I have some notebooks for class.,recent review; Week 4 cumulative practice item 37
+W0263,livre,un,book,leevr,4,review from Week 3,active,yes,yes,yes,Alex a un livre bleu.,Alex has a blue book.,recent review; Week 4 cumulative practice item 38
+W0264,lampe,une,lamp,lahmp,4,review from Week 3,active,yes,yes,yes,La lampe est dans la chambre.,The lamp is in the bedroom.,recent review; Week 4 cumulative practice item 39
+W0265,table,une,table,TAHBL,4,review from Week 3,active,yes,yes,yes,Une table est pres de la fenetre.,A table is near the window.,recent review; Week 4 cumulative practice item 40
+W0266,je suis,,I am,zhuh swee,4,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 4 cumulative practice item 41
+W0267,j'ai,,I have,zhay,4,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 4 cumulative practice item 42
+W0268,bonjour,,hello,bohn-ZHOOR,4,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 4 cumulative practice item 43
+W0269,la famille,,family,lah fah-MEE,4,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 4 cumulative practice item 44
+W0270,le cafe,,cafe,luh kah-FAY,4,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 4 cumulative practice item 45
+W0271,le bus,,bus,luh boos,4,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 4 cumulative practice item 46
+W0272,aujourd hui,,today,oh-zhoor-DWEE,4,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 4 cumulative practice item 47
+W0273,une petite table,,a small table,oon puh-TEET tahbl,4,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 4 cumulative practice item 48
+W0274,mon livre,,my book,mohn leevr,4,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 4 cumulative practice item 49
+W0275,du pain,,some bread,doo pan,4,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 4 cumulative practice item 50
+W0276,ou est-ce que,,where is it that,oo ess-kuh,4,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 4 cumulative practice item 51
+W0277,je me prepare,,I get ready,zhuh muh pray-PAHR,4,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 4 cumulative practice item 52
+W0278,un,,a / an masculine,listen and repeat,4,review from Week 3,active,yes,yes,yes,J'ai un livre dans mon sac.,I have a book in my bag.,recent review; Week 4 cumulative practice item 53
+W0279,une,,a / an feminine,listen and repeat,4,review from Week 3,active,yes,yes,yes,Samira a une lampe sur la table.,Samira has a lamp on the table.,recent review; Week 4 cumulative practice item 54
+W0280,le,,the masculine,listen and repeat,4,review from Week 3,active,yes,yes,yes,Le livre est sur le bureau.,The book is on the desk.,recent review; Week 4 cumulative practice item 55
+W0281,la,,the feminine,listen and repeat,4,review from Week 3,active,yes,yes,yes,La lampe est pres du lit.,The lamp is near the bed.,recent review; Week 4 cumulative practice item 56
+W0282,l',,the before vowel,listen and repeat,4,review from Week 3,active,yes,yes,yes,L'ordinateur est dans la classe.,The computer is in the class.,recent review; Week 4 cumulative practice item 57
+W0283,les,,the plural,listen and repeat,4,review from Week 3,active,yes,yes,yes,Les stylos sont sur la table.,The pens are on the table.,recent review; Week 4 cumulative practice item 58
+W0284,des,,some / plural a,listen and repeat,4,review from Week 3,active,yes,yes,yes,J'ai des cahiers pour la classe.,I have some notebooks for class.,recent review; Week 4 cumulative practice item 59
+W0285,livre,un,book,leevr,4,review from Week 3,active,yes,yes,yes,Alex a un livre bleu.,Alex has a blue book.,recent review; Week 4 cumulative practice item 60
+W0286,lampe,une,lamp,lahmp,4,review from Week 3,active,yes,yes,yes,La lampe est dans la chambre.,The lamp is in the bedroom.,recent review; Week 4 cumulative practice item 61
+W0287,table,une,table,TAHBL,4,review from Week 3,active,yes,yes,yes,Une table est pres de la fenetre.,A table is near the window.,recent review; Week 4 cumulative practice item 62
+W0288,je suis,,I am,zhuh swee,4,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 4 cumulative practice item 63
+W0289,j'ai,,I have,zhay,4,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 4 cumulative practice item 64
+W0290,bonjour,,hello,bohn-ZHOOR,4,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 4 cumulative practice item 65
+W0291,la famille,,family,lah fah-MEE,4,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 4 cumulative practice item 66
+W0292,le cafe,,cafe,luh kah-FAY,4,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 4 cumulative practice item 67
+W0293,le bus,,bus,luh boos,4,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 4 cumulative practice item 68
+W0294,aujourd hui,,today,oh-zhoor-DWEE,4,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 4 cumulative practice item 69
+W0295,une petite table,,a small table,oon puh-TEET tahbl,4,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 4 cumulative practice item 70
+W0296,mon livre,,my book,mohn leevr,4,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 4 cumulative practice item 71
+W0297,du pain,,some bread,doo pan,4,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 4 cumulative practice item 72
+W0298,ou est-ce que,,where is it that,oo ess-kuh,4,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 4 cumulative practice item 73
+W0299,je me prepare,,I get ready,zhuh muh pray-PAHR,4,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 4 cumulative practice item 74
+W0300,un,,a / an masculine,listen and repeat,4,review from Week 3,active,yes,yes,yes,J'ai un livre dans mon sac.,I have a book in my bag.,recent review; Week 4 cumulative practice item 75
+W0301,mon,,my masculine,listen and repeat,5,possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,new; Week 5 cumulative practice item 1
+W0302,ma,,my feminine,listen and repeat,5,possessives,active,yes,yes,yes,Ma lampe est jaune.,My lamp is yellow.,new; Week 5 cumulative practice item 2
+W0303,mes,,my plural,listen and repeat,5,possessives,active,yes,yes,yes,Mes cahiers sont dans mon sac.,My notebooks are in my bag.,new; Week 5 cumulative practice item 3
+W0304,ton,,your masculine informal,listen and repeat,5,possessives,active,yes,yes,yes,Ton sac est noir.,Your bag is black.,new; Week 5 cumulative practice item 4
+W0305,ta,,your feminine informal,listen and repeat,5,possessives,active,yes,yes,yes,Ta chambre est claire.,Your bedroom is bright.,new; Week 5 cumulative practice item 5
+W0306,tes,,your plural informal,listen and repeat,5,possessives,active,yes,yes,yes,Tes stylos sont rouges.,Your pens are red.,new; Week 5 cumulative practice item 6
+W0307,son,,his/her masculine,listen and repeat,5,possessives,active,yes,yes,yes,Son frere est en classe.,His/her brother is in class.,new; Week 5 cumulative practice item 7
+W0308,sa,,his/her feminine,listen and repeat,5,possessives,active,yes,yes,yes,Sa soeur est au cafe.,His/her sister is at the cafe.,new; Week 5 cumulative practice item 8
+W0309,ses,,his/her plural,listen and repeat,5,possessives,active,yes,yes,yes,Ses parents sont gentils.,His/her parents are kind.,new; Week 5 cumulative practice item 9
+W0310,notre,,our singular,listen and repeat,5,possessives,active,yes,yes,yes,Notre famille est petite.,Our family is small.,new; Week 5 cumulative practice item 10
+W0311,nos,,our plural,listen and repeat,5,possessives,active,yes,yes,yes,Nos livres sont sur la table.,Our books are on the table.,new; Week 5 cumulative practice item 11
+W0312,famille,une,family,fah-MEE,5,family,active,yes,yes,yes,La famille Martin habite pres du parc.,The Martin family lives near the park.,new; Week 5 cumulative practice item 12
+W0313,mere,une,mother,mehr,5,family,active,yes,yes,yes,Ma mere travaille aujourd hui.,My mother works today.,new; Week 5 cumulative practice item 13
+W0314,pere,un,father,pehr,5,family,active,yes,yes,yes,Son pere prend le bus.,His/her father takes the bus.,new; Week 5 cumulative practice item 14
+W0315,frere,un,brother,frehr,5,family,active,yes,yes,yes,Mon frere a un livre bleu.,My brother has a blue book.,new; Week 5 cumulative practice item 15
+W0316,soeur,une,sister,suhr,5,family,active,yes,yes,yes,Sa soeur est contente.,His/her sister is happy.,new; Week 5 cumulative practice item 16
+W0317,parents,,parents,listen and repeat,5,family,active,yes,yes,yes,Mes parents sont a la maison.,My parents are at home.,new; Week 5 cumulative practice item 17
+W0318,enfant,un,child,ahn-FAHN,5,family,active,yes,yes,yes,L'enfant a une petite chaise.,The child has a small chair.,new; Week 5 cumulative practice item 18
+W0319,fille,une,girl / daughter,fee,5,family,active,yes,yes,yes,La fille de Madame Dupont est etudiante.,Madame Dupont's daughter is a student.,new; Week 5 cumulative practice item 19
+W0320,fils,un,son,fees,5,family,active,yes,yes,yes,Son fils a un cahier vert.,His/her son has a green notebook.,new; Week 5 cumulative practice item 20
+W0321,ami / amie,,friend,listen and repeat,5,people,active,yes,yes,yes,Mon amie Samira parle avec Alex.,My friend Samira speaks with Alex.,new; Week 5 cumulative practice item 21
+W0322,voisin / voisine,,neighbor,listen and repeat,5,people,active,yes,yes,yes,Marc est mon voisin.,Marc is my neighbor.,new; Week 5 cumulative practice item 22
+W0323,maison,une,house / home,may-ZOHN,5,home,active,yes,yes,yes,Notre maison est pres du cafe.,Our house is near the cafe.,new; Week 5 cumulative practice item 23
+W0324,appartement,un,apartment,ah-par-tuh-MAHN,5,home,active,yes,yes,yes,L'appartement d'Alex est petit.,Alex's apartment is small.,new; Week 5 cumulative practice item 24
+W0325,ensemble,,together,listen and repeat,5,connection,active,yes,yes,yes,Nous revisons ensemble le dimanche.,We review together on Sunday.,new; Week 5 cumulative practice item 25
+W0326,gentil / gentille,,kind,listen and repeat,5,description,active,yes,yes,yes,Madame Dupont est gentille.,Madame Dupont is kind.,new; Week 5 cumulative practice item 26
+W0327,age / agee,,older / aged,listen and repeat,5,description,active,yes,yes,yes,Son pere est age mais actif.,His father is older but active.,new; Week 5 cumulative practice item 27
+W0328,jeune,,young,listen and repeat,5,description,active,yes,yes,yes,Sa soeur est jeune.,His/her sister is young.,new; Week 5 cumulative practice item 28
+W0329,connaitre,,to know a person,listen and repeat,5,verbs,active,yes,yes,yes,Samira connait ma famille.,Samira knows my family.,new; Week 5 cumulative practice item 29
+W0330,presenter,,to introduce,listen and repeat,5,verbs,active,yes,yes,yes,Alex presente sa famille.,Alex introduces his family.,new; Week 5 cumulative practice item 30
+W0331,un,,a / an masculine,listen and repeat,5,review from Week 3,active,yes,yes,yes,J'ai un livre dans mon sac.,I have a book in my bag.,recent review; Week 5 cumulative practice item 31
+W0332,une,,a / an feminine,listen and repeat,5,review from Week 3,active,yes,yes,yes,Samira a une lampe sur la table.,Samira has a lamp on the table.,recent review; Week 5 cumulative practice item 32
+W0333,le,,the masculine,listen and repeat,5,review from Week 3,active,yes,yes,yes,Le livre est sur le bureau.,The book is on the desk.,recent review; Week 5 cumulative practice item 33
+W0334,la,,the feminine,listen and repeat,5,review from Week 3,active,yes,yes,yes,La lampe est pres du lit.,The lamp is near the bed.,recent review; Week 5 cumulative practice item 34
+W0335,l',,the before vowel,listen and repeat,5,review from Week 3,active,yes,yes,yes,L'ordinateur est dans la classe.,The computer is in the class.,recent review; Week 5 cumulative practice item 35
+W0336,les,,the plural,listen and repeat,5,review from Week 3,active,yes,yes,yes,Les stylos sont sur la table.,The pens are on the table.,recent review; Week 5 cumulative practice item 36
+W0337,des,,some / plural a,listen and repeat,5,review from Week 3,active,yes,yes,yes,J'ai des cahiers pour la classe.,I have some notebooks for class.,recent review; Week 5 cumulative practice item 37
+W0338,livre,un,book,leevr,5,review from Week 3,active,yes,yes,yes,Alex a un livre bleu.,Alex has a blue book.,recent review; Week 5 cumulative practice item 38
+W0339,lampe,une,lamp,lahmp,5,review from Week 3,active,yes,yes,yes,La lampe est dans la chambre.,The lamp is in the bedroom.,recent review; Week 5 cumulative practice item 39
+W0340,table,une,table,TAHBL,5,review from Week 3,active,yes,yes,yes,Une table est pres de la fenetre.,A table is near the window.,recent review; Week 5 cumulative practice item 40
+W0341,petit / petite,,small,listen and repeat,5,review from Week 4,active,yes,yes,yes,J'ai une petite cle dans mon sac.,I have a small key in my bag.,recent review; Week 5 cumulative practice item 41
+W0342,grand / grande,,big / tall,listen and repeat,5,review from Week 4,active,yes,yes,yes,Le bureau est grand.,The desk is big.,recent review; Week 5 cumulative practice item 42
+W0343,rouge,,red,listen and repeat,5,review from Week 4,active,yes,yes,yes,Alex a un livre rouge.,Alex has a red book.,recent review; Week 5 cumulative practice item 43
+W0344,bleu / bleue,,blue,listen and repeat,5,review from Week 4,active,yes,yes,yes,Samira porte une chemise bleue.,Samira wears a blue shirt.,recent review; Week 5 cumulative practice item 44
+W0345,vert / verte,,green,listen and repeat,5,review from Week 4,active,yes,yes,yes,Le cahier vert est sur la table.,The green notebook is on the table.,recent review; Week 5 cumulative practice item 45
+W0346,jaune,,yellow,listen and repeat,5,review from Week 4,active,yes,yes,yes,La lampe jaune est pres du lit.,The yellow lamp is near the bed.,recent review; Week 5 cumulative practice item 46
+W0347,blanc / blanche,,white,listen and repeat,5,review from Week 4,active,yes,yes,yes,La table blanche est propre.,The white table is clean.,recent review; Week 5 cumulative practice item 47
+W0348,noir / noire,,black,listen and repeat,5,review from Week 4,active,yes,yes,yes,Marc a un sac noir.,Marc has a black bag.,recent review; Week 5 cumulative practice item 48
+W0349,gris / grise,,gray,listen and repeat,5,review from Week 4,active,yes,yes,yes,Le telephone est gris.,The phone is gray.,recent review; Week 5 cumulative practice item 49
+W0350,propre,,clean,listen and repeat,5,review from Week 4,active,yes,yes,yes,La classe est propre.,The classroom is clean.,recent review; Week 5 cumulative practice item 50
+W0351,je suis,,I am,zhuh swee,5,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 5 cumulative practice item 51
+W0352,j'ai,,I have,zhay,5,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 5 cumulative practice item 52
+W0353,bonjour,,hello,bohn-ZHOOR,5,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 5 cumulative practice item 53
+W0354,la famille,,family,lah fah-MEE,5,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 5 cumulative practice item 54
+W0355,le cafe,,cafe,luh kah-FAY,5,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 5 cumulative practice item 55
+W0356,le bus,,bus,luh boos,5,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 5 cumulative practice item 56
+W0357,aujourd hui,,today,oh-zhoor-DWEE,5,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 5 cumulative practice item 57
+W0358,une petite table,,a small table,oon puh-TEET tahbl,5,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 5 cumulative practice item 58
+W0359,mon livre,,my book,mohn leevr,5,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 5 cumulative practice item 59
+W0360,du pain,,some bread,doo pan,5,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 5 cumulative practice item 60
+W0361,ou est-ce que,,where is it that,oo ess-kuh,5,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 5 cumulative practice item 61
+W0362,je me prepare,,I get ready,zhuh muh pray-PAHR,5,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 5 cumulative practice item 62
+W0363,un,,a / an masculine,listen and repeat,5,review from Week 3,active,yes,yes,yes,J'ai un livre dans mon sac.,I have a book in my bag.,recent review; Week 5 cumulative practice item 63
+W0364,une,,a / an feminine,listen and repeat,5,review from Week 3,active,yes,yes,yes,Samira a une lampe sur la table.,Samira has a lamp on the table.,recent review; Week 5 cumulative practice item 64
+W0365,le,,the masculine,listen and repeat,5,review from Week 3,active,yes,yes,yes,Le livre est sur le bureau.,The book is on the desk.,recent review; Week 5 cumulative practice item 65
+W0366,la,,the feminine,listen and repeat,5,review from Week 3,active,yes,yes,yes,La lampe est pres du lit.,The lamp is near the bed.,recent review; Week 5 cumulative practice item 66
+W0367,l',,the before vowel,listen and repeat,5,review from Week 3,active,yes,yes,yes,L'ordinateur est dans la classe.,The computer is in the class.,recent review; Week 5 cumulative practice item 67
+W0368,les,,the plural,listen and repeat,5,review from Week 3,active,yes,yes,yes,Les stylos sont sur la table.,The pens are on the table.,recent review; Week 5 cumulative practice item 68
+W0369,des,,some / plural a,listen and repeat,5,review from Week 3,active,yes,yes,yes,J'ai des cahiers pour la classe.,I have some notebooks for class.,recent review; Week 5 cumulative practice item 69
+W0370,livre,un,book,leevr,5,review from Week 3,active,yes,yes,yes,Alex a un livre bleu.,Alex has a blue book.,recent review; Week 5 cumulative practice item 70
+W0371,lampe,une,lamp,lahmp,5,review from Week 3,active,yes,yes,yes,La lampe est dans la chambre.,The lamp is in the bedroom.,recent review; Week 5 cumulative practice item 71
+W0372,table,une,table,TAHBL,5,review from Week 3,active,yes,yes,yes,Une table est pres de la fenetre.,A table is near the window.,recent review; Week 5 cumulative practice item 72
+W0373,petit / petite,,small,listen and repeat,5,review from Week 4,active,yes,yes,yes,J'ai une petite cle dans mon sac.,I have a small key in my bag.,recent review; Week 5 cumulative practice item 73
+W0374,grand / grande,,big / tall,listen and repeat,5,review from Week 4,active,yes,yes,yes,Le bureau est grand.,The desk is big.,recent review; Week 5 cumulative practice item 74
+W0375,rouge,,red,listen and repeat,5,review from Week 4,active,yes,yes,yes,Alex a un livre rouge.,Alex has a red book.,recent review; Week 5 cumulative practice item 75
+W0376,je voudrais,,I would like,listen and repeat,6,polite request,active,yes,yes,yes,"Je voudrais du cafe, s il vous plait.","I would like some coffee, please.",new; Week 6 cumulative practice item 1
+W0377,du,,some masculine,listen and repeat,6,partitives,active,yes,yes,yes,Alex prend du pain.,Alex takes some bread.,new; Week 6 cumulative practice item 2
+W0378,de la,,some feminine,listen and repeat,6,partitives,active,yes,yes,yes,Samira prend de la soupe.,Samira has some soup.,new; Week 6 cumulative practice item 3
+W0379,de l',,some before vowel,listen and repeat,6,partitives,active,yes,yes,yes,Je voudrais de l'eau.,I would like some water.,new; Week 6 cumulative practice item 4
+W0380,pas de,,not any,listen and repeat,6,partitives,active,yes,yes,yes,Marc ne veut pas de dessert.,Marc does not want any dessert.,new; Week 6 cumulative practice item 5
+W0381,cafe,un,coffee / cafe,kah-FAY,6,food,active,yes,yes,yes,Je voudrais un cafe chaud.,I would like a hot coffee.,new; Week 6 cumulative practice item 6
+W0382,eau,une,water,oh,6,drink,active,yes,yes,yes,Samira boit de l'eau.,Samira drinks water.,new; Week 6 cumulative practice item 7
+W0383,the,un,tea,tay,6,drink,active,yes,yes,yes,Madame Dupont prend du the.,Madame Dupont has tea.,new; Week 6 cumulative practice item 8
+W0384,lait,un,milk,leh,6,drink,active,yes,yes,yes,Je ne veux pas de lait.,I do not want milk.,new; Week 6 cumulative practice item 9
+W0385,pain,un,bread,pan,6,food,active,yes,yes,yes,Alex mange du pain.,Alex eats bread.,new; Week 6 cumulative practice item 10
+W0386,soupe,une,soup,soop,6,food,active,yes,yes,yes,La soupe est chaude.,The soup is hot.,new; Week 6 cumulative practice item 11
+W0387,salade,une,salad,sah-LAHD,6,food,active,yes,yes,yes,Je voudrais une salade verte.,I would like a green salad.,new; Week 6 cumulative practice item 12
+W0388,sandwich,un,sandwich,sahn-DWEESH,6,food,active,yes,yes,yes,Marc prend un sandwich.,Marc has a sandwich.,new; Week 6 cumulative practice item 13
+W0389,pomme,une,apple,pohm,6,food,active,yes,yes,yes,Samira a une pomme rouge.,Samira has a red apple.,new; Week 6 cumulative practice item 14
+W0390,fromage,un,cheese,fro-MAHZH,6,food,active,yes,yes,yes,Je voudrais du fromage.,I would like some cheese.,new; Week 6 cumulative practice item 15
+W0391,dessert,un,dessert,deh-SEHR,6,food,active,yes,yes,yes,Marc ne veut pas de dessert.,Marc does not want dessert.,new; Week 6 cumulative practice item 16
+W0392,menu,un,menu,muh-NUU,6,restaurant,active,yes,yes,yes,Le menu est sur la table.,The menu is on the table.,new; Week 6 cumulative practice item 17
+W0393,serveur / serveuse,,server,listen and repeat,6,restaurant,active,yes,yes,yes,La serveuse est gentille.,The server is kind.,new; Week 6 cumulative practice item 18
+W0394,addition,une,bill,ah-dee-SYOHN,6,restaurant,active,yes,yes,yes,L'addition est sur la table.,The bill is on the table.,new; Week 6 cumulative practice item 19
+W0395,table,une,table,TAHBL,6,restaurant,active,yes,yes,yes,Notre table est propre.,Our table is clean.,new; Week 6 cumulative practice item 20
+W0396,chaud / chaude,,hot / warm,listen and repeat,6,description,active,yes,yes,yes,Le cafe est chaud.,The coffee is hot.,new; Week 6 cumulative practice item 21
+W0397,froid / froide,,cold,listen and repeat,6,description,active,yes,yes,yes,L'eau est froide.,The water is cold.,new; Week 6 cumulative practice item 22
+W0398,sucre,un,sugar,SUUKR,6,food,active,yes,yes,yes,Je prends du sucre avec le cafe.,I take sugar with coffee.,new; Week 6 cumulative practice item 23
+W0399,sel,un,salt,sehl,6,food,active,yes,yes,yes,Il y a du sel sur la table.,There is salt on the table.,new; Week 6 cumulative practice item 24
+W0400,assiette,une,plate,ah-SYEHT,6,restaurant,active,yes,yes,yes,L'assiette est blanche.,The plate is white.,new; Week 6 cumulative practice item 25
+W0401,verre,un,glass,vehr,6,restaurant,active,yes,yes,yes,Le verre est propre.,The glass is clean.,new; Week 6 cumulative practice item 26
+W0402,tasse,une,cup,tahs,6,restaurant,active,yes,yes,yes,La tasse est petite.,The cup is small.,new; Week 6 cumulative practice item 27
+W0403,avoir faim,,to be hungry,listen and repeat,6,food,active,yes,yes,yes,J'ai faim a midi.,I am hungry at noon.,new; Week 6 cumulative practice item 28
+W0404,avoir soif,,to be thirsty,listen and repeat,6,food,active,yes,yes,yes,J'ai soif apres la classe.,I am thirsty after class.,new; Week 6 cumulative practice item 29
+W0405,commander,,to order,listen and repeat,6,restaurant,active,yes,yes,yes,Nous commandons au cafe.,We order at the cafe.,new; Week 6 cumulative practice item 30
+W0406,petit / petite,,small,listen and repeat,6,review from Week 4,active,yes,yes,yes,J'ai une petite cle dans mon sac.,I have a small key in my bag.,recent review; Week 6 cumulative practice item 31
+W0407,grand / grande,,big / tall,listen and repeat,6,review from Week 4,active,yes,yes,yes,Le bureau est grand.,The desk is big.,recent review; Week 6 cumulative practice item 32
+W0408,rouge,,red,listen and repeat,6,review from Week 4,active,yes,yes,yes,Alex a un livre rouge.,Alex has a red book.,recent review; Week 6 cumulative practice item 33
+W0409,bleu / bleue,,blue,listen and repeat,6,review from Week 4,active,yes,yes,yes,Samira porte une chemise bleue.,Samira wears a blue shirt.,recent review; Week 6 cumulative practice item 34
+W0410,vert / verte,,green,listen and repeat,6,review from Week 4,active,yes,yes,yes,Le cahier vert est sur la table.,The green notebook is on the table.,recent review; Week 6 cumulative practice item 35
+W0411,jaune,,yellow,listen and repeat,6,review from Week 4,active,yes,yes,yes,La lampe jaune est pres du lit.,The yellow lamp is near the bed.,recent review; Week 6 cumulative practice item 36
+W0412,blanc / blanche,,white,listen and repeat,6,review from Week 4,active,yes,yes,yes,La table blanche est propre.,The white table is clean.,recent review; Week 6 cumulative practice item 37
+W0413,noir / noire,,black,listen and repeat,6,review from Week 4,active,yes,yes,yes,Marc a un sac noir.,Marc has a black bag.,recent review; Week 6 cumulative practice item 38
+W0414,gris / grise,,gray,listen and repeat,6,review from Week 4,active,yes,yes,yes,Le telephone est gris.,The phone is gray.,recent review; Week 6 cumulative practice item 39
+W0415,propre,,clean,listen and repeat,6,review from Week 4,active,yes,yes,yes,La classe est propre.,The classroom is clean.,recent review; Week 6 cumulative practice item 40
+W0416,mon,,my masculine,listen and repeat,6,review from Week 5,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,recent review; Week 6 cumulative practice item 41
+W0417,ma,,my feminine,listen and repeat,6,review from Week 5,active,yes,yes,yes,Ma lampe est jaune.,My lamp is yellow.,recent review; Week 6 cumulative practice item 42
+W0418,mes,,my plural,listen and repeat,6,review from Week 5,active,yes,yes,yes,Mes cahiers sont dans mon sac.,My notebooks are in my bag.,recent review; Week 6 cumulative practice item 43
+W0419,ton,,your masculine informal,listen and repeat,6,review from Week 5,active,yes,yes,yes,Ton sac est noir.,Your bag is black.,recent review; Week 6 cumulative practice item 44
+W0420,ta,,your feminine informal,listen and repeat,6,review from Week 5,active,yes,yes,yes,Ta chambre est claire.,Your bedroom is bright.,recent review; Week 6 cumulative practice item 45
+W0421,tes,,your plural informal,listen and repeat,6,review from Week 5,active,yes,yes,yes,Tes stylos sont rouges.,Your pens are red.,recent review; Week 6 cumulative practice item 46
+W0422,son,,his/her masculine,listen and repeat,6,review from Week 5,active,yes,yes,yes,Son frere est en classe.,His/her brother is in class.,recent review; Week 6 cumulative practice item 47
+W0423,sa,,his/her feminine,listen and repeat,6,review from Week 5,active,yes,yes,yes,Sa soeur est au cafe.,His/her sister is at the cafe.,recent review; Week 6 cumulative practice item 48
+W0424,ses,,his/her plural,listen and repeat,6,review from Week 5,active,yes,yes,yes,Ses parents sont gentils.,His/her parents are kind.,recent review; Week 6 cumulative practice item 49
+W0425,notre,,our singular,listen and repeat,6,review from Week 5,active,yes,yes,yes,Notre famille est petite.,Our family is small.,recent review; Week 6 cumulative practice item 50
+W0426,je suis,,I am,zhuh swee,6,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 6 cumulative practice item 51
+W0427,j'ai,,I have,zhay,6,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 6 cumulative practice item 52
+W0428,bonjour,,hello,bohn-ZHOOR,6,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 6 cumulative practice item 53
+W0429,la famille,,family,lah fah-MEE,6,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 6 cumulative practice item 54
+W0430,le cafe,,cafe,luh kah-FAY,6,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 6 cumulative practice item 55
+W0431,le bus,,bus,luh boos,6,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 6 cumulative practice item 56
+W0432,aujourd hui,,today,oh-zhoor-DWEE,6,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 6 cumulative practice item 57
+W0433,une petite table,,a small table,oon puh-TEET tahbl,6,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 6 cumulative practice item 58
+W0434,mon livre,,my book,mohn leevr,6,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 6 cumulative practice item 59
+W0435,du pain,,some bread,doo pan,6,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 6 cumulative practice item 60
+W0436,ou est-ce que,,where is it that,oo ess-kuh,6,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 6 cumulative practice item 61
+W0437,je me prepare,,I get ready,zhuh muh pray-PAHR,6,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 6 cumulative practice item 62
+W0438,petit / petite,,small,listen and repeat,6,review from Week 4,active,yes,yes,yes,J'ai une petite cle dans mon sac.,I have a small key in my bag.,recent review; Week 6 cumulative practice item 63
+W0439,grand / grande,,big / tall,listen and repeat,6,review from Week 4,active,yes,yes,yes,Le bureau est grand.,The desk is big.,recent review; Week 6 cumulative practice item 64
+W0440,rouge,,red,listen and repeat,6,review from Week 4,active,yes,yes,yes,Alex a un livre rouge.,Alex has a red book.,recent review; Week 6 cumulative practice item 65
+W0441,bleu / bleue,,blue,listen and repeat,6,review from Week 4,active,yes,yes,yes,Samira porte une chemise bleue.,Samira wears a blue shirt.,recent review; Week 6 cumulative practice item 66
+W0442,vert / verte,,green,listen and repeat,6,review from Week 4,active,yes,yes,yes,Le cahier vert est sur la table.,The green notebook is on the table.,recent review; Week 6 cumulative practice item 67
+W0443,jaune,,yellow,listen and repeat,6,review from Week 4,active,yes,yes,yes,La lampe jaune est pres du lit.,The yellow lamp is near the bed.,recent review; Week 6 cumulative practice item 68
+W0444,blanc / blanche,,white,listen and repeat,6,review from Week 4,active,yes,yes,yes,La table blanche est propre.,The white table is clean.,recent review; Week 6 cumulative practice item 69
+W0445,noir / noire,,black,listen and repeat,6,review from Week 4,active,yes,yes,yes,Marc a un sac noir.,Marc has a black bag.,recent review; Week 6 cumulative practice item 70
+W0446,gris / grise,,gray,listen and repeat,6,review from Week 4,active,yes,yes,yes,Le telephone est gris.,The phone is gray.,recent review; Week 6 cumulative practice item 71
+W0447,propre,,clean,listen and repeat,6,review from Week 4,active,yes,yes,yes,La classe est propre.,The classroom is clean.,recent review; Week 6 cumulative practice item 72
+W0448,mon,,my masculine,listen and repeat,6,review from Week 5,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,recent review; Week 6 cumulative practice item 73
+W0449,ma,,my feminine,listen and repeat,6,review from Week 5,active,yes,yes,yes,Ma lampe est jaune.,My lamp is yellow.,recent review; Week 6 cumulative practice item 74
+W0450,mes,,my plural,listen and repeat,6,review from Week 5,active,yes,yes,yes,Mes cahiers sont dans mon sac.,My notebooks are in my bag.,recent review; Week 6 cumulative practice item 75
+W0451,est-ce que,,question marker,listen and repeat,7,questions,active,yes,yes,yes,Est-ce que vous voulez une chemise ?,Do you want a shirt?,new; Week 7 cumulative practice item 1
+W0452,qu est-ce que,,what,listen and repeat,7,questions,active,yes,yes,yes,Qu est-ce que tu prends ?,What are you taking?,new; Week 7 cumulative practice item 2
+W0453,combien,,how much / how many,listen and repeat,7,questions,active,yes,yes,yes,Combien coute le sac ?,How much does the bag cost?,new; Week 7 cumulative practice item 3
+W0454,ou,,where,listen and repeat,7,questions,active,yes,yes,yes,Ou est le magasin ?,Where is the store?,new; Week 7 cumulative practice item 4
+W0455,quand,,when,listen and repeat,7,questions,active,yes,yes,yes,Quand est-ce que tu vas au magasin ?,When do you go to the store?,new; Week 7 cumulative practice item 5
+W0456,pourquoi,,why,listen and repeat,7,questions,active,yes,yes,yes,Pourquoi est-ce que tu prends le bus ?,Why do you take the bus?,new; Week 7 cumulative practice item 6
+W0457,comment,,how,listen and repeat,7,questions,active,yes,yes,yes,Comment est la chemise ?,What is the shirt like?,new; Week 7 cumulative practice item 7
+W0458,je veux,,I want,listen and repeat,7,verbs,active,yes,yes,yes,Je veux une robe rouge.,I want a red dress.,new; Week 7 cumulative practice item 8
+W0459,vous voulez,,you want,listen and repeat,7,verbs,active,yes,yes,yes,Vous voulez un cafe ?,Do you want a coffee?,new; Week 7 cumulative practice item 9
+W0460,je prends,,I take,listen and repeat,7,verbs,active,yes,yes,yes,Je prends le sac noir.,I take the black bag.,new; Week 7 cumulative practice item 10
+W0461,vous prenez,,you take,listen and repeat,7,verbs,active,yes,yes,yes,Vous prenez la chemise bleue ?,Are you taking the blue shirt?,new; Week 7 cumulative practice item 11
+W0462,magasin,un,store,mah-gah-ZAN,7,shopping,active,yes,yes,yes,Le magasin est pres du cafe.,The store is near the cafe.,new; Week 7 cumulative practice item 12
+W0463,vendeur / vendeuse,,salesperson,listen and repeat,7,shopping,active,yes,yes,yes,La vendeuse est gentille.,The salesperson is kind.,new; Week 7 cumulative practice item 13
+W0464,chemise,une,shirt,shuh-MEEZ,7,clothes,active,yes,yes,yes,Samira veut une chemise bleue.,Samira wants a blue shirt.,new; Week 7 cumulative practice item 14
+W0465,robe,une,dress,rohb,7,clothes,active,yes,yes,yes,La robe rouge est jolie.,The red dress is pretty.,new; Week 7 cumulative practice item 15
+W0466,manteau,un,coat,mahn-TOH,7,clothes,active,yes,yes,yes,Le manteau noir est cher.,The black coat is expensive.,new; Week 7 cumulative practice item 16
+W0467,pantalon,un,pants,pahn-tah-LOHN,7,clothes,active,yes,yes,yes,Le pantalon est trop grand.,The pants are too big.,new; Week 7 cumulative practice item 17
+W0468,chaussures,,shoes,listen and repeat,7,clothes,active,yes,yes,yes,Les chaussures sont noires.,The shoes are black.,new; Week 7 cumulative practice item 18
+W0469,prix,un,price,pree,7,shopping,active,yes,yes,yes,Le prix est correct.,The price is correct.,new; Week 7 cumulative practice item 19
+W0470,dollar,un,dollar,doh-LAHR,7,shopping,active,yes,yes,yes,Le sac coute dix dollars.,The bag costs ten dollars.,new; Week 7 cumulative practice item 20
+W0471,cher / chere,,expensive,listen and repeat,7,shopping,active,yes,yes,yes,Le manteau est trop cher.,The coat is too expensive.,new; Week 7 cumulative practice item 21
+W0472,pas cher,,inexpensive,listen and repeat,7,shopping,active,yes,yes,yes,Ce cahier n est pas cher.,This notebook is inexpensive.,new; Week 7 cumulative practice item 22
+W0473,taille,une,size,tahy,7,shopping,active,yes,yes,yes,Quelle taille voulez-vous ?,What size do you want?,new; Week 7 cumulative practice item 23
+W0474,petit sac,,small bag,listen and repeat,7,shopping,active,yes,yes,yes,Je prends un petit sac.,I take a small bag.,new; Week 7 cumulative practice item 24
+W0475,grand manteau,,big coat,listen and repeat,7,shopping,active,yes,yes,yes,Marc regarde un grand manteau.,Marc looks at a big coat.,new; Week 7 cumulative practice item 25
+W0476,quantite,une,quantity,kahn-tee-TAY,7,shopping,active,yes,yes,yes,Quelle quantite voulez-vous ?,What quantity do you want?,new; Week 7 cumulative practice item 26
+W0477,un kilo,,one kilogram,listen and repeat,7,shopping,active,yes,yes,yes,Je prends un kilo de pommes.,I take one kilogram of apples.,new; Week 7 cumulative practice item 27
+W0478,beaucoup de,,a lot of,listen and repeat,7,quantity,active,yes,yes,yes,Il y a beaucoup de livres.,There are many books.,new; Week 7 cumulative practice item 28
+W0479,peu de,,few / little,listen and repeat,7,quantity,active,yes,yes,yes,Il y a peu de chaises.,There are few chairs.,new; Week 7 cumulative practice item 29
+W0480,acheter,,to buy,listen and repeat,7,shopping,active,yes,yes,yes,Alex achete un sac pour la classe.,Alex buys a bag for class.,new; Week 7 cumulative practice item 30
+W0481,mon,,my masculine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,recent review; Week 7 cumulative practice item 31
+W0482,ma,,my feminine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ma lampe est jaune.,My lamp is yellow.,recent review; Week 7 cumulative practice item 32
+W0483,mes,,my plural,listen and repeat,7,review from Week 5,active,yes,yes,yes,Mes cahiers sont dans mon sac.,My notebooks are in my bag.,recent review; Week 7 cumulative practice item 33
+W0484,ton,,your masculine informal,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ton sac est noir.,Your bag is black.,recent review; Week 7 cumulative practice item 34
+W0485,ta,,your feminine informal,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ta chambre est claire.,Your bedroom is bright.,recent review; Week 7 cumulative practice item 35
+W0486,tes,,your plural informal,listen and repeat,7,review from Week 5,active,yes,yes,yes,Tes stylos sont rouges.,Your pens are red.,recent review; Week 7 cumulative practice item 36
+W0487,son,,his/her masculine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Son frere est en classe.,His/her brother is in class.,recent review; Week 7 cumulative practice item 37
+W0488,sa,,his/her feminine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Sa soeur est au cafe.,His/her sister is at the cafe.,recent review; Week 7 cumulative practice item 38
+W0489,ses,,his/her plural,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ses parents sont gentils.,His/her parents are kind.,recent review; Week 7 cumulative practice item 39
+W0490,notre,,our singular,listen and repeat,7,review from Week 5,active,yes,yes,yes,Notre famille est petite.,Our family is small.,recent review; Week 7 cumulative practice item 40
+W0491,je voudrais,,I would like,listen and repeat,7,review from Week 6,active,yes,yes,yes,"Je voudrais du cafe, s il vous plait.","I would like some coffee, please.",recent review; Week 7 cumulative practice item 41
+W0492,du,,some masculine,listen and repeat,7,review from Week 6,active,yes,yes,yes,Alex prend du pain.,Alex takes some bread.,recent review; Week 7 cumulative practice item 42
+W0493,de la,,some feminine,listen and repeat,7,review from Week 6,active,yes,yes,yes,Samira prend de la soupe.,Samira has some soup.,recent review; Week 7 cumulative practice item 43
+W0494,de l',,some before vowel,listen and repeat,7,review from Week 6,active,yes,yes,yes,Je voudrais de l'eau.,I would like some water.,recent review; Week 7 cumulative practice item 44
+W0495,pas de,,not any,listen and repeat,7,review from Week 6,active,yes,yes,yes,Marc ne veut pas de dessert.,Marc does not want any dessert.,recent review; Week 7 cumulative practice item 45
+W0496,cafe,un,coffee / cafe,kah-FAY,7,review from Week 6,active,yes,yes,yes,Je voudrais un cafe chaud.,I would like a hot coffee.,recent review; Week 7 cumulative practice item 46
+W0497,eau,une,water,oh,7,review from Week 6,active,yes,yes,yes,Samira boit de l'eau.,Samira drinks water.,recent review; Week 7 cumulative practice item 47
+W0498,the,un,tea,tay,7,review from Week 6,active,yes,yes,yes,Madame Dupont prend du the.,Madame Dupont has tea.,recent review; Week 7 cumulative practice item 48
+W0499,lait,un,milk,leh,7,review from Week 6,active,yes,yes,yes,Je ne veux pas de lait.,I do not want milk.,recent review; Week 7 cumulative practice item 49
+W0500,pain,un,bread,pan,7,review from Week 6,active,yes,yes,yes,Alex mange du pain.,Alex eats bread.,recent review; Week 7 cumulative practice item 50
+W0501,je suis,,I am,zhuh swee,7,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 7 cumulative practice item 51
+W0502,j'ai,,I have,zhay,7,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 7 cumulative practice item 52
+W0503,bonjour,,hello,bohn-ZHOOR,7,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 7 cumulative practice item 53
+W0504,la famille,,family,lah fah-MEE,7,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 7 cumulative practice item 54
+W0505,le cafe,,cafe,luh kah-FAY,7,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 7 cumulative practice item 55
+W0506,le bus,,bus,luh boos,7,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 7 cumulative practice item 56
+W0507,aujourd hui,,today,oh-zhoor-DWEE,7,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 7 cumulative practice item 57
+W0508,une petite table,,a small table,oon puh-TEET tahbl,7,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 7 cumulative practice item 58
+W0509,mon livre,,my book,mohn leevr,7,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 7 cumulative practice item 59
+W0510,du pain,,some bread,doo pan,7,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 7 cumulative practice item 60
+W0511,ou est-ce que,,where is it that,oo ess-kuh,7,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 7 cumulative practice item 61
+W0512,je me prepare,,I get ready,zhuh muh pray-PAHR,7,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 7 cumulative practice item 62
+W0513,mon,,my masculine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,recent review; Week 7 cumulative practice item 63
+W0514,ma,,my feminine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ma lampe est jaune.,My lamp is yellow.,recent review; Week 7 cumulative practice item 64
+W0515,mes,,my plural,listen and repeat,7,review from Week 5,active,yes,yes,yes,Mes cahiers sont dans mon sac.,My notebooks are in my bag.,recent review; Week 7 cumulative practice item 65
+W0516,ton,,your masculine informal,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ton sac est noir.,Your bag is black.,recent review; Week 7 cumulative practice item 66
+W0517,ta,,your feminine informal,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ta chambre est claire.,Your bedroom is bright.,recent review; Week 7 cumulative practice item 67
+W0518,tes,,your plural informal,listen and repeat,7,review from Week 5,active,yes,yes,yes,Tes stylos sont rouges.,Your pens are red.,recent review; Week 7 cumulative practice item 68
+W0519,son,,his/her masculine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Son frere est en classe.,His/her brother is in class.,recent review; Week 7 cumulative practice item 69
+W0520,sa,,his/her feminine,listen and repeat,7,review from Week 5,active,yes,yes,yes,Sa soeur est au cafe.,His/her sister is at the cafe.,recent review; Week 7 cumulative practice item 70
+W0521,ses,,his/her plural,listen and repeat,7,review from Week 5,active,yes,yes,yes,Ses parents sont gentils.,His/her parents are kind.,recent review; Week 7 cumulative practice item 71
+W0522,notre,,our singular,listen and repeat,7,review from Week 5,active,yes,yes,yes,Notre famille est petite.,Our family is small.,recent review; Week 7 cumulative practice item 72
+W0523,je voudrais,,I would like,listen and repeat,7,review from Week 6,active,yes,yes,yes,"Je voudrais du cafe, s il vous plait.","I would like some coffee, please.",recent review; Week 7 cumulative practice item 73
+W0524,du,,some masculine,listen and repeat,7,review from Week 6,active,yes,yes,yes,Alex prend du pain.,Alex takes some bread.,recent review; Week 7 cumulative practice item 74
+W0525,de la,,some feminine,listen and repeat,7,review from Week 6,active,yes,yes,yes,Samira prend de la soupe.,Samira has some soup.,recent review; Week 7 cumulative practice item 75
+W0526,il y a,,there is / there are,listen and repeat,8,place,active,yes,yes,yes,Il y a une banque pres du cafe.,There is a bank near the cafe.,new; Week 8 cumulative practice item 1
+W0527,a gauche,,on the left,listen and repeat,8,directions,active,yes,yes,yes,La banque est a gauche.,The bank is on the left.,new; Week 8 cumulative practice item 2
+W0528,a droite,,on the right,listen and repeat,8,directions,active,yes,yes,yes,Le cafe est a droite.,The cafe is on the right.,new; Week 8 cumulative practice item 3
+W0529,tout droit,,straight ahead,listen and repeat,8,directions,active,yes,yes,yes,Marche tout droit jusqu au parc.,Walk straight ahead to the park.,new; Week 8 cumulative practice item 4
+W0530,tourner,,to turn,listen and repeat,8,directions,active,yes,yes,yes,Tourne a gauche devant la banque.,Turn left in front of the bank.,new; Week 8 cumulative practice item 5
+W0531,marcher,,to walk,listen and repeat,8,directions,active,yes,yes,yes,Alex marche au parc.,Alex walks to the park.,new; Week 8 cumulative practice item 6
+W0532,prendre le bus,,to take the bus,listen and repeat,8,transport,active,yes,yes,yes,Je prends le bus pour aller en classe.,I take the bus to go to class.,new; Week 8 cumulative practice item 7
+W0533,metro,un,subway,may-TROH,8,transport,active,yes,yes,yes,Le metro est pres de la gare.,The subway is near the station.,new; Week 8 cumulative practice item 8
+W0534,station,une,station / stop,stah-SYOHN,8,transport,active,yes,yes,yes,La station est devant le parc.,The stop is in front of the park.,new; Week 8 cumulative practice item 9
+W0535,gare,une,train station,gahr,8,transport,active,yes,yes,yes,La gare est loin du cafe.,The train station is far from the cafe.,new; Week 8 cumulative practice item 10
+W0536,quartier,un,neighborhood,kar-TYAY,8,town,active,yes,yes,yes,Le quartier est calme.,The neighborhood is calm.,new; Week 8 cumulative practice item 11
+W0537,rue,une,street,roo,8,town,active,yes,yes,yes,La rue est longue.,The street is long.,new; Week 8 cumulative practice item 12
+W0538,parc,un,park,park,8,town,active,yes,yes,yes,Marc attend au parc.,Marc waits at the park.,new; Week 8 cumulative practice item 13
+W0539,banque,une,bank,bahnk,8,town,active,yes,yes,yes,La banque est a gauche.,The bank is on the left.,new; Week 8 cumulative practice item 14
+W0540,pharmacie,une,pharmacy,far-mah-SEE,8,town,active,yes,yes,yes,La pharmacie est pres de la banque.,The pharmacy is near the bank.,new; Week 8 cumulative practice item 15
+W0541,boulangerie,une,bakery,boo-lahn-zhuh-REE,8,town,active,yes,yes,yes,La boulangerie a du pain.,The bakery has bread.,new; Week 8 cumulative practice item 16
+W0542,ecole,une,school,ay-KOHL,8,town,active,yes,yes,yes,L'ecole est pres de la station.,The school is near the stop.,new; Week 8 cumulative practice item 17
+W0543,bureau de poste,un,post office,boo-ROH duh pohst,8,town,active,yes,yes,yes,Le bureau de poste est a droite.,The post office is on the right.,new; Week 8 cumulative practice item 18
+W0544,loin de,,far from,listen and repeat,8,place,active,yes,yes,yes,La gare est loin de ma maison.,The station is far from my house.,new; Week 8 cumulative practice item 19
+W0545,pres de,,near,listen and repeat,8,place,active,yes,yes,yes,Le cafe est pres du parc.,The cafe is near the park.,new; Week 8 cumulative practice item 20
+W0546,entre,,between,listen and repeat,8,place,active,yes,yes,yes,La banque est entre le cafe et la pharmacie.,The bank is between the cafe and the pharmacy.,new; Week 8 cumulative practice item 21
+W0547,en face de,,across from,listen and repeat,8,place,active,yes,yes,yes,L'ecole est en face du parc.,The school is across from the park.,new; Week 8 cumulative practice item 22
+W0548,jusqu a,,until / as far as,listen and repeat,8,directions,active,yes,yes,yes,Marche jusqu a la station.,Walk as far as the stop.,new; Week 8 cumulative practice item 23
+W0549,plan,un,map / plan,plahn,8,directions,active,yes,yes,yes,Samira regarde le plan du quartier.,Samira looks at the neighborhood map.,new; Week 8 cumulative practice item 24
+W0550,route,une,route,root,8,directions,active,yes,yes,yes,La route est facile.,The route is easy.,new; Week 8 cumulative practice item 25
+W0551,adresse,une,address,ah-DREHS,8,directions,active,yes,yes,yes,J'ai l'adresse du cafe.,I have the cafe address.,new; Week 8 cumulative practice item 26
+W0552,attendre,,to wait,listen and repeat,8,verbs,active,yes,yes,yes,Marc attend devant la boulangerie.,Marc waits in front of the bakery.,new; Week 8 cumulative practice item 27
+W0553,arriver,,to arrive,listen and repeat,8,verbs,active,yes,yes,yes,Alex arrive a la station.,Alex arrives at the stop.,new; Week 8 cumulative practice item 28
+W0554,partir,,to leave,listen and repeat,8,verbs,active,yes,yes,yes,Nous partons apres la classe.,We leave after class.,new; Week 8 cumulative practice item 29
+W0555,demander le chemin,,to ask directions,listen and repeat,8,directions,active,yes,yes,yes,Alex demande le chemin a Samira.,Alex asks Samira for directions.,new; Week 8 cumulative practice item 30
+W0556,je voudrais,,I would like,listen and repeat,8,review from Week 6,active,yes,yes,yes,"Je voudrais du cafe, s il vous plait.","I would like some coffee, please.",recent review; Week 8 cumulative practice item 31
+W0557,du,,some masculine,listen and repeat,8,review from Week 6,active,yes,yes,yes,Alex prend du pain.,Alex takes some bread.,recent review; Week 8 cumulative practice item 32
+W0558,de la,,some feminine,listen and repeat,8,review from Week 6,active,yes,yes,yes,Samira prend de la soupe.,Samira has some soup.,recent review; Week 8 cumulative practice item 33
+W0559,de l',,some before vowel,listen and repeat,8,review from Week 6,active,yes,yes,yes,Je voudrais de l'eau.,I would like some water.,recent review; Week 8 cumulative practice item 34
+W0560,pas de,,not any,listen and repeat,8,review from Week 6,active,yes,yes,yes,Marc ne veut pas de dessert.,Marc does not want any dessert.,recent review; Week 8 cumulative practice item 35
+W0561,cafe,un,coffee / cafe,kah-FAY,8,review from Week 6,active,yes,yes,yes,Je voudrais un cafe chaud.,I would like a hot coffee.,recent review; Week 8 cumulative practice item 36
+W0562,eau,une,water,oh,8,review from Week 6,active,yes,yes,yes,Samira boit de l'eau.,Samira drinks water.,recent review; Week 8 cumulative practice item 37
+W0563,the,un,tea,tay,8,review from Week 6,active,yes,yes,yes,Madame Dupont prend du the.,Madame Dupont has tea.,recent review; Week 8 cumulative practice item 38
+W0564,lait,un,milk,leh,8,review from Week 6,active,yes,yes,yes,Je ne veux pas de lait.,I do not want milk.,recent review; Week 8 cumulative practice item 39
+W0565,pain,un,bread,pan,8,review from Week 6,active,yes,yes,yes,Alex mange du pain.,Alex eats bread.,recent review; Week 8 cumulative practice item 40
+W0566,est-ce que,,question marker,listen and repeat,8,review from Week 7,active,yes,yes,yes,Est-ce que vous voulez une chemise ?,Do you want a shirt?,recent review; Week 8 cumulative practice item 41
+W0567,qu est-ce que,,what,listen and repeat,8,review from Week 7,active,yes,yes,yes,Qu est-ce que tu prends ?,What are you taking?,recent review; Week 8 cumulative practice item 42
+W0568,combien,,how much / how many,listen and repeat,8,review from Week 7,active,yes,yes,yes,Combien coute le sac ?,How much does the bag cost?,recent review; Week 8 cumulative practice item 43
+W0569,ou,,where,listen and repeat,8,review from Week 7,active,yes,yes,yes,Ou est le magasin ?,Where is the store?,recent review; Week 8 cumulative practice item 44
+W0570,quand,,when,listen and repeat,8,review from Week 7,active,yes,yes,yes,Quand est-ce que tu vas au magasin ?,When do you go to the store?,recent review; Week 8 cumulative practice item 45
+W0571,pourquoi,,why,listen and repeat,8,review from Week 7,active,yes,yes,yes,Pourquoi est-ce que tu prends le bus ?,Why do you take the bus?,recent review; Week 8 cumulative practice item 46
+W0572,comment,,how,listen and repeat,8,review from Week 7,active,yes,yes,yes,Comment est la chemise ?,What is the shirt like?,recent review; Week 8 cumulative practice item 47
+W0573,je veux,,I want,listen and repeat,8,review from Week 7,active,yes,yes,yes,Je veux une robe rouge.,I want a red dress.,recent review; Week 8 cumulative practice item 48
+W0574,vous voulez,,you want,listen and repeat,8,review from Week 7,active,yes,yes,yes,Vous voulez un cafe ?,Do you want a coffee?,recent review; Week 8 cumulative practice item 49
+W0575,je prends,,I take,listen and repeat,8,review from Week 7,active,yes,yes,yes,Je prends le sac noir.,I take the black bag.,recent review; Week 8 cumulative practice item 50
+W0576,je suis,,I am,zhuh swee,8,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 8 cumulative practice item 51
+W0577,j'ai,,I have,zhay,8,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 8 cumulative practice item 52
+W0578,bonjour,,hello,bohn-ZHOOR,8,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 8 cumulative practice item 53
+W0579,la famille,,family,lah fah-MEE,8,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 8 cumulative practice item 54
+W0580,le cafe,,cafe,luh kah-FAY,8,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 8 cumulative practice item 55
+W0581,le bus,,bus,luh boos,8,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 8 cumulative practice item 56
+W0582,aujourd hui,,today,oh-zhoor-DWEE,8,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 8 cumulative practice item 57
+W0583,une petite table,,a small table,oon puh-TEET tahbl,8,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 8 cumulative practice item 58
+W0584,mon livre,,my book,mohn leevr,8,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 8 cumulative practice item 59
+W0585,du pain,,some bread,doo pan,8,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 8 cumulative practice item 60
+W0586,ou est-ce que,,where is it that,oo ess-kuh,8,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 8 cumulative practice item 61
+W0587,je me prepare,,I get ready,zhuh muh pray-PAHR,8,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 8 cumulative practice item 62
+W0588,je voudrais,,I would like,listen and repeat,8,review from Week 6,active,yes,yes,yes,"Je voudrais du cafe, s il vous plait.","I would like some coffee, please.",recent review; Week 8 cumulative practice item 63
+W0589,du,,some masculine,listen and repeat,8,review from Week 6,active,yes,yes,yes,Alex prend du pain.,Alex takes some bread.,recent review; Week 8 cumulative practice item 64
+W0590,de la,,some feminine,listen and repeat,8,review from Week 6,active,yes,yes,yes,Samira prend de la soupe.,Samira has some soup.,recent review; Week 8 cumulative practice item 65
+W0591,de l',,some before vowel,listen and repeat,8,review from Week 6,active,yes,yes,yes,Je voudrais de l'eau.,I would like some water.,recent review; Week 8 cumulative practice item 66
+W0592,pas de,,not any,listen and repeat,8,review from Week 6,active,yes,yes,yes,Marc ne veut pas de dessert.,Marc does not want any dessert.,recent review; Week 8 cumulative practice item 67
+W0593,cafe,un,coffee / cafe,kah-FAY,8,review from Week 6,active,yes,yes,yes,Je voudrais un cafe chaud.,I would like a hot coffee.,recent review; Week 8 cumulative practice item 68
+W0594,eau,une,water,oh,8,review from Week 6,active,yes,yes,yes,Samira boit de l'eau.,Samira drinks water.,recent review; Week 8 cumulative practice item 69
+W0595,the,un,tea,tay,8,review from Week 6,active,yes,yes,yes,Madame Dupont prend du the.,Madame Dupont has tea.,recent review; Week 8 cumulative practice item 70
+W0596,lait,un,milk,leh,8,review from Week 6,active,yes,yes,yes,Je ne veux pas de lait.,I do not want milk.,recent review; Week 8 cumulative practice item 71
+W0597,pain,un,bread,pan,8,review from Week 6,active,yes,yes,yes,Alex mange du pain.,Alex eats bread.,recent review; Week 8 cumulative practice item 72
+W0598,est-ce que,,question marker,listen and repeat,8,review from Week 7,active,yes,yes,yes,Est-ce que vous voulez une chemise ?,Do you want a shirt?,recent review; Week 8 cumulative practice item 73
+W0599,qu est-ce que,,what,listen and repeat,8,review from Week 7,active,yes,yes,yes,Qu est-ce que tu prends ?,What are you taking?,recent review; Week 8 cumulative practice item 74
+W0600,combien,,how much / how many,listen and repeat,8,review from Week 7,active,yes,yes,yes,Combien coute le sac ?,How much does the bag cost?,recent review; Week 8 cumulative practice item 75
+W0601,je me leve,,I get up,listen and repeat,9,routine,active,yes,yes,yes,Je me leve a sept heures.,I get up at seven o clock.,new; Week 9 cumulative practice item 1
+W0602,tu te leves,,you get up,listen and repeat,9,routine,active,yes,yes,yes,Tu te leves tot le lundi.,You get up early on Monday.,new; Week 9 cumulative practice item 2
+W0603,il se leve / elle se leve,,he/she gets up,listen and repeat,9,routine,active,yes,yes,yes,Elle se leve avant la classe.,She gets up before class.,new; Week 9 cumulative practice item 3
+W0604,je me lave,,I wash,listen and repeat,9,routine,active,yes,yes,yes,Je me lave dans la salle de bain.,I wash in the bathroom.,new; Week 9 cumulative practice item 4
+W0605,je me prepare,,I get ready,listen and repeat,9,routine,active,yes,yes,yes,Je me prepare dans ma chambre.,I get ready in my bedroom.,new; Week 9 cumulative practice item 5
+W0606,je me couche,,I go to bed,listen and repeat,9,routine,active,yes,yes,yes,Je me couche a dix heures.,I go to bed at ten o clock.,new; Week 9 cumulative practice item 6
+W0607,se reveiller,,to wake up,listen and repeat,9,routine,active,yes,yes,yes,Alex se reveille tot.,Alex wakes up early.,new; Week 9 cumulative practice item 7
+W0608,s habiller,,to get dressed,listen and repeat,9,routine,active,yes,yes,yes,Samira s'habille le matin.,Samira gets dressed in the morning.,new; Week 9 cumulative practice item 8
+W0609,se brosser les dents,,to brush teeth,listen and repeat,9,routine,active,yes,yes,yes,Marc se brosse les dents.,Marc brushes his teeth.,new; Week 9 cumulative practice item 9
+W0610,matin,un,morning,mah-TAN,9,time,active,yes,yes,yes,"Le matin, je prends le bus.","In the morning, I take the bus.",new; Week 9 cumulative practice item 10
+W0611,midi,,noon,listen and repeat,9,time,active,yes,yes,yes,"A midi, je mange une salade.","At noon, I eat a salad.",new; Week 9 cumulative practice item 11
+W0612,apres-midi,,afternoon,listen and repeat,9,time,active,yes,yes,yes,"L'apres-midi, j'etudie.","In the afternoon, I study.",new; Week 9 cumulative practice item 12
+W0613,soir,un,evening,swahr,9,time,active,yes,yes,yes,"Le soir, je revise.","In the evening, I review.",new; Week 9 cumulative practice item 13
+W0614,tot,,early,listen and repeat,9,time,active,yes,yes,yes,Samira se leve tot.,Samira gets up early.,new; Week 9 cumulative practice item 14
+W0615,tard,,late,listen and repeat,9,time,active,yes,yes,yes,Marc se couche tard.,Marc goes to bed late.,new; Week 9 cumulative practice item 15
+W0616,toujours,,always,listen and repeat,9,frequency,active,yes,yes,yes,Je prends toujours mon cahier.,I always take my notebook.,new; Week 9 cumulative practice item 16
+W0617,souvent,,often,listen and repeat,9,frequency,active,yes,yes,yes,Nous mangeons souvent au cafe.,We often eat at the cafe.,new; Week 9 cumulative practice item 17
+W0618,parfois,,sometimes,listen and repeat,9,frequency,active,yes,yes,yes,"Parfois, il pleut le matin.","Sometimes, it rains in the morning.",new; Week 9 cumulative practice item 18
+W0619,salle de bain,une,bathroom,sahl duh ban,9,rooms,active,yes,yes,yes,La salle de bain est petite.,The bathroom is small.,new; Week 9 cumulative practice item 19
+W0620,cuisine,une,kitchen,kwee-ZEEN,9,rooms,active,yes,yes,yes,Je mange dans la cuisine.,I eat in the kitchen.,new; Week 9 cumulative practice item 20
+W0621,chambre,une,bedroom,SHAHMBR,9,rooms,active,yes,yes,yes,Je me prepare dans ma chambre.,I get ready in my bedroom.,new; Week 9 cumulative practice item 21
+W0622,canape,un,sofa,kah-nah-PAY,9,furniture,active,yes,yes,yes,Le canape est dans le salon.,The sofa is in the living room.,new; Week 9 cumulative practice item 22
+W0623,armoire,une,wardrobe,ar-MWAHR,9,furniture,active,yes,yes,yes,L'armoire est pres du lit.,The wardrobe is near the bed.,new; Week 9 cumulative practice item 23
+W0624,miroir,un,mirror,mee-RWAHR,9,furniture,active,yes,yes,yes,Le miroir est dans la salle de bain.,The mirror is in the bathroom.,new; Week 9 cumulative practice item 24
+W0625,serviette,une,towel,sehr-VYEHT,9,home,active,yes,yes,yes,La serviette est propre.,The towel is clean.,new; Week 9 cumulative practice item 25
+W0626,savon,un,soap,sah-VOHN,9,home,active,yes,yes,yes,Il y a du savon dans la salle de bain.,There is soap in the bathroom.,new; Week 9 cumulative practice item 26
+W0627,routine,une,routine,roo-TEEN,9,routine,active,yes,yes,yes,Ma routine est simple.,My routine is simple.,new; Week 9 cumulative practice item 27
+W0628,journee,une,day / daytime,zhoor-NAY,9,time,active,yes,yes,yes,Ma journee commence tot.,My day starts early.,new; Week 9 cumulative practice item 28
+W0629,commencer,,to begin,listen and repeat,9,verbs,active,yes,yes,yes,La journee commence a sept heures.,The day begins at seven.,new; Week 9 cumulative practice item 29
+W0630,finir,,to finish,listen and repeat,9,verbs,active,yes,yes,yes,Je finis le travail le soir.,I finish work in the evening.,new; Week 9 cumulative practice item 30
+W0631,est-ce que,,question marker,listen and repeat,9,review from Week 7,active,yes,yes,yes,Est-ce que vous voulez une chemise ?,Do you want a shirt?,recent review; Week 9 cumulative practice item 31
+W0632,qu est-ce que,,what,listen and repeat,9,review from Week 7,active,yes,yes,yes,Qu est-ce que tu prends ?,What are you taking?,recent review; Week 9 cumulative practice item 32
+W0633,combien,,how much / how many,listen and repeat,9,review from Week 7,active,yes,yes,yes,Combien coute le sac ?,How much does the bag cost?,recent review; Week 9 cumulative practice item 33
+W0634,ou,,where,listen and repeat,9,review from Week 7,active,yes,yes,yes,Ou est le magasin ?,Where is the store?,recent review; Week 9 cumulative practice item 34
+W0635,quand,,when,listen and repeat,9,review from Week 7,active,yes,yes,yes,Quand est-ce que tu vas au magasin ?,When do you go to the store?,recent review; Week 9 cumulative practice item 35
+W0636,pourquoi,,why,listen and repeat,9,review from Week 7,active,yes,yes,yes,Pourquoi est-ce que tu prends le bus ?,Why do you take the bus?,recent review; Week 9 cumulative practice item 36
+W0637,comment,,how,listen and repeat,9,review from Week 7,active,yes,yes,yes,Comment est la chemise ?,What is the shirt like?,recent review; Week 9 cumulative practice item 37
+W0638,je veux,,I want,listen and repeat,9,review from Week 7,active,yes,yes,yes,Je veux une robe rouge.,I want a red dress.,recent review; Week 9 cumulative practice item 38
+W0639,vous voulez,,you want,listen and repeat,9,review from Week 7,active,yes,yes,yes,Vous voulez un cafe ?,Do you want a coffee?,recent review; Week 9 cumulative practice item 39
+W0640,je prends,,I take,listen and repeat,9,review from Week 7,active,yes,yes,yes,Je prends le sac noir.,I take the black bag.,recent review; Week 9 cumulative practice item 40
+W0641,il y a,,there is / there are,listen and repeat,9,review from Week 8,active,yes,yes,yes,Il y a une banque pres du cafe.,There is a bank near the cafe.,recent review; Week 9 cumulative practice item 41
+W0642,a gauche,,on the left,listen and repeat,9,review from Week 8,active,yes,yes,yes,La banque est a gauche.,The bank is on the left.,recent review; Week 9 cumulative practice item 42
+W0643,a droite,,on the right,listen and repeat,9,review from Week 8,active,yes,yes,yes,Le cafe est a droite.,The cafe is on the right.,recent review; Week 9 cumulative practice item 43
+W0644,tout droit,,straight ahead,listen and repeat,9,review from Week 8,active,yes,yes,yes,Marche tout droit jusqu au parc.,Walk straight ahead to the park.,recent review; Week 9 cumulative practice item 44
+W0645,tourner,,to turn,listen and repeat,9,review from Week 8,active,yes,yes,yes,Tourne a gauche devant la banque.,Turn left in front of the bank.,recent review; Week 9 cumulative practice item 45
+W0646,marcher,,to walk,listen and repeat,9,review from Week 8,active,yes,yes,yes,Alex marche au parc.,Alex walks to the park.,recent review; Week 9 cumulative practice item 46
+W0647,prendre le bus,,to take the bus,listen and repeat,9,review from Week 8,active,yes,yes,yes,Je prends le bus pour aller en classe.,I take the bus to go to class.,recent review; Week 9 cumulative practice item 47
+W0648,metro,un,subway,may-TROH,9,review from Week 8,active,yes,yes,yes,Le metro est pres de la gare.,The subway is near the station.,recent review; Week 9 cumulative practice item 48
+W0649,station,une,station / stop,stah-SYOHN,9,review from Week 8,active,yes,yes,yes,La station est devant le parc.,The stop is in front of the park.,recent review; Week 9 cumulative practice item 49
+W0650,gare,une,train station,gahr,9,review from Week 8,active,yes,yes,yes,La gare est loin du cafe.,The train station is far from the cafe.,recent review; Week 9 cumulative practice item 50
+W0651,je suis,,I am,zhuh swee,9,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 9 cumulative practice item 51
+W0652,j'ai,,I have,zhay,9,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 9 cumulative practice item 52
+W0653,bonjour,,hello,bohn-ZHOOR,9,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 9 cumulative practice item 53
+W0654,la famille,,family,lah fah-MEE,9,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 9 cumulative practice item 54
+W0655,le cafe,,cafe,luh kah-FAY,9,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 9 cumulative practice item 55
+W0656,le bus,,bus,luh boos,9,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 9 cumulative practice item 56
+W0657,aujourd hui,,today,oh-zhoor-DWEE,9,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 9 cumulative practice item 57
+W0658,une petite table,,a small table,oon puh-TEET tahbl,9,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 9 cumulative practice item 58
+W0659,mon livre,,my book,mohn leevr,9,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 9 cumulative practice item 59
+W0660,du pain,,some bread,doo pan,9,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 9 cumulative practice item 60
+W0661,ou est-ce que,,where is it that,oo ess-kuh,9,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 9 cumulative practice item 61
+W0662,je me prepare,,I get ready,zhuh muh pray-PAHR,9,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 9 cumulative practice item 62
+W0663,est-ce que,,question marker,listen and repeat,9,review from Week 7,active,yes,yes,yes,Est-ce que vous voulez une chemise ?,Do you want a shirt?,recent review; Week 9 cumulative practice item 63
+W0664,qu est-ce que,,what,listen and repeat,9,review from Week 7,active,yes,yes,yes,Qu est-ce que tu prends ?,What are you taking?,recent review; Week 9 cumulative practice item 64
+W0665,combien,,how much / how many,listen and repeat,9,review from Week 7,active,yes,yes,yes,Combien coute le sac ?,How much does the bag cost?,recent review; Week 9 cumulative practice item 65
+W0666,ou,,where,listen and repeat,9,review from Week 7,active,yes,yes,yes,Ou est le magasin ?,Where is the store?,recent review; Week 9 cumulative practice item 66
+W0667,quand,,when,listen and repeat,9,review from Week 7,active,yes,yes,yes,Quand est-ce que tu vas au magasin ?,When do you go to the store?,recent review; Week 9 cumulative practice item 67
+W0668,pourquoi,,why,listen and repeat,9,review from Week 7,active,yes,yes,yes,Pourquoi est-ce que tu prends le bus ?,Why do you take the bus?,recent review; Week 9 cumulative practice item 68
+W0669,comment,,how,listen and repeat,9,review from Week 7,active,yes,yes,yes,Comment est la chemise ?,What is the shirt like?,recent review; Week 9 cumulative practice item 69
+W0670,je veux,,I want,listen and repeat,9,review from Week 7,active,yes,yes,yes,Je veux une robe rouge.,I want a red dress.,recent review; Week 9 cumulative practice item 70
+W0671,vous voulez,,you want,listen and repeat,9,review from Week 7,active,yes,yes,yes,Vous voulez un cafe ?,Do you want a coffee?,recent review; Week 9 cumulative practice item 71
+W0672,je prends,,I take,listen and repeat,9,review from Week 7,active,yes,yes,yes,Je prends le sac noir.,I take the black bag.,recent review; Week 9 cumulative practice item 72
+W0673,il y a,,there is / there are,listen and repeat,9,review from Week 8,active,yes,yes,yes,Il y a une banque pres du cafe.,There is a bank near the cafe.,recent review; Week 9 cumulative practice item 73
+W0674,a gauche,,on the left,listen and repeat,9,review from Week 8,active,yes,yes,yes,La banque est a gauche.,The bank is on the left.,recent review; Week 9 cumulative practice item 74
+W0675,a droite,,on the right,listen and repeat,9,review from Week 8,active,yes,yes,yes,Le cafe est a droite.,The cafe is on the right.,recent review; Week 9 cumulative practice item 75
+W0676,il pleut,,it is raining,listen and repeat,10,weather,active,yes,yes,yes,"Aujourd'hui, il pleut.","Today, it is raining.",new; Week 10 cumulative practice item 1
+W0677,il neige,,it is snowing,listen and repeat,10,weather,active,yes,yes,yes,"En hiver, il neige parfois.","In winter, it sometimes snows.",new; Week 10 cumulative practice item 2
+W0678,il fait froid,,it is cold,listen and repeat,10,weather,active,yes,yes,yes,Il fait froid le matin.,It is cold in the morning.,new; Week 10 cumulative practice item 3
+W0679,il fait chaud,,it is hot,listen and repeat,10,weather,active,yes,yes,yes,"En ete, il fait chaud.","In summer, it is hot.",new; Week 10 cumulative practice item 4
+W0680,il fait beau,,the weather is nice,listen and repeat,10,weather,active,yes,yes,yes,"Aujourd'hui, il fait beau.","Today, the weather is nice.",new; Week 10 cumulative practice item 5
+W0681,il y a du vent,,it is windy,listen and repeat,10,weather,active,yes,yes,yes,Il y a du vent pres du parc.,It is windy near the park.,new; Week 10 cumulative practice item 6
+W0682,soleil,un,sun,soh-LAY,10,weather,active,yes,yes,yes,Il y a du soleil dans la cuisine.,There is sun in the kitchen.,new; Week 10 cumulative practice item 7
+W0683,pluie,une,rain,plwee,10,weather,active,yes,yes,yes,La pluie est forte ce matin.,The rain is strong this morning.,new; Week 10 cumulative practice item 8
+W0684,neige,une,snow,nehzh,10,weather,active,yes,yes,yes,La neige est blanche.,The snow is white.,new; Week 10 cumulative practice item 9
+W0685,nuage,un,cloud,nwahzh,10,weather,active,yes,yes,yes,Il y a un nuage gris.,There is a gray cloud.,new; Week 10 cumulative practice item 10
+W0686,saison,une,season,seh-ZOHN,10,time,active,yes,yes,yes,L'hiver est une saison froide.,Winter is a cold season.,new; Week 10 cumulative practice item 11
+W0687,printemps,,spring,listen and repeat,10,season,active,yes,yes,yes,"Au printemps, il fait doux.","In spring, it is mild.",new; Week 10 cumulative practice item 12
+W0688,ete,,summer,listen and repeat,10,season,active,yes,yes,yes,"En ete, Marc marche au parc.","In summer, Marc walks to the park.",new; Week 10 cumulative practice item 13
+W0689,automne,,fall / autumn,listen and repeat,10,season,active,yes,yes,yes,"En automne, il y a du vent.","In autumn, it is windy.",new; Week 10 cumulative practice item 14
+W0690,hiver,,winter,listen and repeat,10,season,active,yes,yes,yes,"En hiver, je prends le bus.","In winter, I take the bus.",new; Week 10 cumulative practice item 15
+W0691,aujourd'hui,,today,listen and repeat,10,time,active,yes,yes,yes,"Aujourd'hui, je revise.","Today, I review.",new; Week 10 cumulative practice item 16
+W0692,demain,,tomorrow,listen and repeat,10,time,active,yes,yes,yes,"Demain, Samira travaille.","Tomorrow, Samira works.",new; Week 10 cumulative practice item 17
+W0693,ce matin,,this morning,listen and repeat,10,time,active,yes,yes,yes,"Ce matin, il fait froid.","This morning, it is cold.",new; Week 10 cumulative practice item 18
+W0694,ce soir,,this evening,listen and repeat,10,time,active,yes,yes,yes,"Ce soir, je me couche tot.","This evening, I go to bed early.",new; Week 10 cumulative practice item 19
+W0695,cette semaine,,this week,listen and repeat,10,time,active,yes,yes,yes,"Cette semaine, je travaille beaucoup.","This week, I work a lot.",new; Week 10 cumulative practice item 20
+W0696,quand,,when,listen and repeat,10,connector,active,yes,yes,yes,"Quand il pleut, je reste au cafe.","When it rains, I stay at the cafe.",new; Week 10 cumulative practice item 21
+W0697,si,,if,listen and repeat,10,connector,active,yes,yes,yes,"S'il fait beau, nous allons au parc.","If the weather is nice, we go to the park.",new; Week 10 cumulative practice item 22
+W0698,rester,,to stay,listen and repeat,10,verbs,active,yes,yes,yes,Samira reste a la maison.,Samira stays at home.,new; Week 10 cumulative practice item 23
+W0699,sortir,,to go out,listen and repeat,10,verbs,active,yes,yes,yes,Marc sort quand il fait beau.,Marc goes out when the weather is nice.,new; Week 10 cumulative practice item 24
+W0700,manteau,un,coat,mahn-TOH,10,clothes,active,yes,yes,yes,Je prends mon manteau noir.,I take my black coat.,new; Week 10 cumulative practice item 25
+W0701,parapluie,un,umbrella,pah-rah-PLWEE,10,weather,active,yes,yes,yes,J'ai un parapluie dans mon sac.,I have an umbrella in my bag.,new; Week 10 cumulative practice item 26
+W0702,botte,une,boot,boht,10,clothes,active,yes,yes,yes,Les bottes sont pres de la porte.,The boots are near the door.,new; Week 10 cumulative practice item 27
+W0703,doux / douce,,mild / soft,listen and repeat,10,weather,active,yes,yes,yes,"Au printemps, il fait doux.","In spring, it is mild.",new; Week 10 cumulative practice item 28
+W0704,fort / forte,,strong,listen and repeat,10,weather,active,yes,yes,yes,Le vent est fort.,The wind is strong.,new; Week 10 cumulative practice item 29
+W0705,prevoir,,to plan / forecast,listen and repeat,10,verbs,active,yes,yes,yes,Je prevois une sortie au parc.,I plan an outing to the park.,new; Week 10 cumulative practice item 30
+W0706,il y a,,there is / there are,listen and repeat,10,review from Week 8,active,yes,yes,yes,Il y a une banque pres du cafe.,There is a bank near the cafe.,recent review; Week 10 cumulative practice item 31
+W0707,a gauche,,on the left,listen and repeat,10,review from Week 8,active,yes,yes,yes,La banque est a gauche.,The bank is on the left.,recent review; Week 10 cumulative practice item 32
+W0708,a droite,,on the right,listen and repeat,10,review from Week 8,active,yes,yes,yes,Le cafe est a droite.,The cafe is on the right.,recent review; Week 10 cumulative practice item 33
+W0709,tout droit,,straight ahead,listen and repeat,10,review from Week 8,active,yes,yes,yes,Marche tout droit jusqu au parc.,Walk straight ahead to the park.,recent review; Week 10 cumulative practice item 34
+W0710,tourner,,to turn,listen and repeat,10,review from Week 8,active,yes,yes,yes,Tourne a gauche devant la banque.,Turn left in front of the bank.,recent review; Week 10 cumulative practice item 35
+W0711,marcher,,to walk,listen and repeat,10,review from Week 8,active,yes,yes,yes,Alex marche au parc.,Alex walks to the park.,recent review; Week 10 cumulative practice item 36
+W0712,prendre le bus,,to take the bus,listen and repeat,10,review from Week 8,active,yes,yes,yes,Je prends le bus pour aller en classe.,I take the bus to go to class.,recent review; Week 10 cumulative practice item 37
+W0713,metro,un,subway,may-TROH,10,review from Week 8,active,yes,yes,yes,Le metro est pres de la gare.,The subway is near the station.,recent review; Week 10 cumulative practice item 38
+W0714,station,une,station / stop,stah-SYOHN,10,review from Week 8,active,yes,yes,yes,La station est devant le parc.,The stop is in front of the park.,recent review; Week 10 cumulative practice item 39
+W0715,gare,une,train station,gahr,10,review from Week 8,active,yes,yes,yes,La gare est loin du cafe.,The train station is far from the cafe.,recent review; Week 10 cumulative practice item 40
+W0716,je me leve,,I get up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Je me leve a sept heures.,I get up at seven o clock.,recent review; Week 10 cumulative practice item 41
+W0717,tu te leves,,you get up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Tu te leves tot le lundi.,You get up early on Monday.,recent review; Week 10 cumulative practice item 42
+W0718,il se leve / elle se leve,,he/she gets up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Elle se leve avant la classe.,She gets up before class.,recent review; Week 10 cumulative practice item 43
+W0719,je me lave,,I wash,listen and repeat,10,review from Week 9,active,yes,yes,yes,Je me lave dans la salle de bain.,I wash in the bathroom.,recent review; Week 10 cumulative practice item 44
+W0720,je me prepare,,I get ready,listen and repeat,10,review from Week 9,active,yes,yes,yes,Je me prepare dans ma chambre.,I get ready in my bedroom.,recent review; Week 10 cumulative practice item 45
+W0721,je me couche,,I go to bed,listen and repeat,10,review from Week 9,active,yes,yes,yes,Je me couche a dix heures.,I go to bed at ten o clock.,recent review; Week 10 cumulative practice item 46
+W0722,se reveiller,,to wake up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Alex se reveille tot.,Alex wakes up early.,recent review; Week 10 cumulative practice item 47
+W0723,s habiller,,to get dressed,listen and repeat,10,review from Week 9,active,yes,yes,yes,Samira s'habille le matin.,Samira gets dressed in the morning.,recent review; Week 10 cumulative practice item 48
+W0724,se brosser les dents,,to brush teeth,listen and repeat,10,review from Week 9,active,yes,yes,yes,Marc se brosse les dents.,Marc brushes his teeth.,recent review; Week 10 cumulative practice item 49
+W0725,matin,un,morning,mah-TAN,10,review from Week 9,active,yes,yes,yes,"Le matin, je prends le bus.","In the morning, I take the bus.",recent review; Week 10 cumulative practice item 50
+W0726,je suis,,I am,zhuh swee,10,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 10 cumulative practice item 51
+W0727,j'ai,,I have,zhay,10,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 10 cumulative practice item 52
+W0728,bonjour,,hello,bohn-ZHOOR,10,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 10 cumulative practice item 53
+W0729,la famille,,family,lah fah-MEE,10,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 10 cumulative practice item 54
+W0730,le cafe,,cafe,luh kah-FAY,10,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 10 cumulative practice item 55
+W0731,le bus,,bus,luh boos,10,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 10 cumulative practice item 56
+W0732,aujourd hui,,today,oh-zhoor-DWEE,10,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 10 cumulative practice item 57
+W0733,une petite table,,a small table,oon puh-TEET tahbl,10,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 10 cumulative practice item 58
+W0734,mon livre,,my book,mohn leevr,10,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 10 cumulative practice item 59
+W0735,du pain,,some bread,doo pan,10,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 10 cumulative practice item 60
+W0736,ou est-ce que,,where is it that,oo ess-kuh,10,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 10 cumulative practice item 61
+W0737,je me prepare,,I get ready,zhuh muh pray-PAHR,10,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 10 cumulative practice item 62
+W0738,il y a,,there is / there are,listen and repeat,10,review from Week 8,active,yes,yes,yes,Il y a une banque pres du cafe.,There is a bank near the cafe.,recent review; Week 10 cumulative practice item 63
+W0739,a gauche,,on the left,listen and repeat,10,review from Week 8,active,yes,yes,yes,La banque est a gauche.,The bank is on the left.,recent review; Week 10 cumulative practice item 64
+W0740,a droite,,on the right,listen and repeat,10,review from Week 8,active,yes,yes,yes,Le cafe est a droite.,The cafe is on the right.,recent review; Week 10 cumulative practice item 65
+W0741,tout droit,,straight ahead,listen and repeat,10,review from Week 8,active,yes,yes,yes,Marche tout droit jusqu au parc.,Walk straight ahead to the park.,recent review; Week 10 cumulative practice item 66
+W0742,tourner,,to turn,listen and repeat,10,review from Week 8,active,yes,yes,yes,Tourne a gauche devant la banque.,Turn left in front of the bank.,recent review; Week 10 cumulative practice item 67
+W0743,marcher,,to walk,listen and repeat,10,review from Week 8,active,yes,yes,yes,Alex marche au parc.,Alex walks to the park.,recent review; Week 10 cumulative practice item 68
+W0744,prendre le bus,,to take the bus,listen and repeat,10,review from Week 8,active,yes,yes,yes,Je prends le bus pour aller en classe.,I take the bus to go to class.,recent review; Week 10 cumulative practice item 69
+W0745,metro,un,subway,may-TROH,10,review from Week 8,active,yes,yes,yes,Le metro est pres de la gare.,The subway is near the station.,recent review; Week 10 cumulative practice item 70
+W0746,station,une,station / stop,stah-SYOHN,10,review from Week 8,active,yes,yes,yes,La station est devant le parc.,The stop is in front of the park.,recent review; Week 10 cumulative practice item 71
+W0747,gare,une,train station,gahr,10,review from Week 8,active,yes,yes,yes,La gare est loin du cafe.,The train station is far from the cafe.,recent review; Week 10 cumulative practice item 72
+W0748,je me leve,,I get up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Je me leve a sept heures.,I get up at seven o clock.,recent review; Week 10 cumulative practice item 73
+W0749,tu te leves,,you get up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Tu te leves tot le lundi.,You get up early on Monday.,recent review; Week 10 cumulative practice item 74
+W0750,il se leve / elle se leve,,he/she gets up,listen and repeat,10,review from Week 9,active,yes,yes,yes,Elle se leve avant la classe.,She gets up before class.,recent review; Week 10 cumulative practice item 75
+W0751,je travaille,,I work,listen and repeat,11,present tense,active,yes,yes,yes,Je travaille au bureau.,I work at the office.,new; Week 11 cumulative practice item 1
+W0752,tu travailles,,you work,listen and repeat,11,present tense,active,yes,yes,yes,Tu travailles avec Marc.,You work with Marc.,new; Week 11 cumulative practice item 2
+W0753,il travaille / elle travaille,,he/she works,listen and repeat,11,present tense,active,yes,yes,yes,Elle travaille le matin.,She works in the morning.,new; Week 11 cumulative practice item 3
+W0754,nous travaillons,,we work,listen and repeat,11,present tense,active,yes,yes,yes,Nous travaillons ensemble.,We work together.,new; Week 11 cumulative practice item 4
+W0755,j'etudie,,I study,listen and repeat,11,present tense,active,yes,yes,yes,J'etudie le francais le soir.,I study French in the evening.,new; Week 11 cumulative practice item 5
+W0756,je prepare,,I prepare,listen and repeat,11,present tense,active,yes,yes,yes,Je prepare un document.,I prepare a document.,new; Week 11 cumulative practice item 6
+W0757,je revise,,I review,listen and repeat,11,present tense,active,yes,yes,yes,Je revise la lecon.,I review the lesson.,new; Week 11 cumulative practice item 7
+W0758,je finis,,I finish,listen and repeat,11,present tense,active,yes,yes,yes,Je finis l'exercice.,I finish the exercise.,new; Week 11 cumulative practice item 8
+W0759,je reponds,,I answer,listen and repeat,11,present tense,active,yes,yes,yes,Je reponds au message.,I answer the message.,new; Week 11 cumulative practice item 9
+W0760,je lis,,I read,listen and repeat,11,present tense,active,yes,yes,yes,Je lis un courriel.,I read an email.,new; Week 11 cumulative practice item 10
+W0761,j'ecris,,I write,listen and repeat,11,present tense,active,yes,yes,yes,J'ecris une note.,I write a note.,new; Week 11 cumulative practice item 11
+W0762,bureau,un,office / desk,boo-ROH,11,work,active,yes,yes,yes,Marc travaille dans un bureau.,Marc works in an office.,new; Week 11 cumulative practice item 12
+W0763,travail,un,work / job,trah-VAI,11,work,active,yes,yes,yes,Mon travail est utile.,My work is useful.,new; Week 11 cumulative practice item 13
+W0764,collegue,un / une,colleague,koh-LEG,11,work,active,yes,yes,yes,Mon collegue est gentil.,My colleague is kind.,new; Week 11 cumulative practice item 14
+W0765,patron / patronne,,boss,listen and repeat,11,work,active,yes,yes,yes,La patronne repond au message.,The boss answers the message.,new; Week 11 cumulative practice item 15
+W0766,client / cliente,,client,listen and repeat,11,work,active,yes,yes,yes,Le client attend au bureau.,The client waits at the office.,new; Week 11 cumulative practice item 16
+W0767,courriel,un,email,koo-RYEHL,11,work,active,yes,yes,yes,J'ecris un courriel court.,I write a short email.,new; Week 11 cumulative practice item 17
+W0768,message,un,message,meh-SAHZH,11,work,active,yes,yes,yes,Samira repond au message.,Samira answers the message.,new; Week 11 cumulative practice item 18
+W0769,document,un,document,doh-kuu-MAHN,11,work,active,yes,yes,yes,Le document est sur la table.,The document is on the table.,new; Week 11 cumulative practice item 19
+W0770,reunion,une,meeting,ray-uu-NYOHN,11,work,active,yes,yes,yes,La reunion commence a midi.,The meeting begins at noon.,new; Week 11 cumulative practice item 20
+W0771,projet,un,project,proh-ZHEH,11,work,active,yes,yes,yes,Le projet est difficile mais utile.,The project is difficult but useful.,new; Week 11 cumulative practice item 21
+W0772,pause,une,break,pohz,11,work,active,yes,yes,yes,Je prends une pause au cafe.,I take a break at the cafe.,new; Week 11 cumulative practice item 22
+W0773,formation,une,training,for-mah-SYOHN,11,study,active,yes,yes,yes,La formation est utile.,The training is useful.,new; Week 11 cumulative practice item 23
+W0774,cours,un,course,koor,11,study,active,yes,yes,yes,Le cours de francais est le soir.,The French course is in the evening.,new; Week 11 cumulative practice item 24
+W0775,exercice,un,exercise,eg-zehr-SEES,11,study,active,yes,yes,yes,L'exercice est assez facile.,The exercise is fairly easy.,new; Week 11 cumulative practice item 25
+W0776,lecon,une,lesson,luh-SOHN,11,study,active,yes,yes,yes,Je revise la lecon.,I review the lesson.,new; Week 11 cumulative practice item 26
+W0777,note,une,note / grade,noht,11,study,active,yes,yes,yes,J'ecris une note courte.,I write a short note.,new; Week 11 cumulative practice item 27
+W0778,professeur,un,teacher,proh-feh-SUHR,11,study,active,yes,yes,yes,Le professeur corrige les exercices.,The teacher corrects the exercises.,new; Week 11 cumulative practice item 28
+W0779,utile,,useful,listen and repeat,11,description,active,yes,yes,yes,Ce document est utile.,This document is useful.,new; Week 11 cumulative practice item 29
+W0780,a temps plein,,full-time,listen and repeat,11,work,active,yes,yes,yes,Marc travaille a temps plein.,Marc works full-time.,new; Week 11 cumulative practice item 30
+W0781,je me leve,,I get up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me leve a sept heures.,I get up at seven o clock.,recent review; Week 11 cumulative practice item 31
+W0782,tu te leves,,you get up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Tu te leves tot le lundi.,You get up early on Monday.,recent review; Week 11 cumulative practice item 32
+W0783,il se leve / elle se leve,,he/she gets up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Elle se leve avant la classe.,She gets up before class.,recent review; Week 11 cumulative practice item 33
+W0784,je me lave,,I wash,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me lave dans la salle de bain.,I wash in the bathroom.,recent review; Week 11 cumulative practice item 34
+W0785,je me prepare,,I get ready,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me prepare dans ma chambre.,I get ready in my bedroom.,recent review; Week 11 cumulative practice item 35
+W0786,je me couche,,I go to bed,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me couche a dix heures.,I go to bed at ten o clock.,recent review; Week 11 cumulative practice item 36
+W0787,se reveiller,,to wake up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Alex se reveille tot.,Alex wakes up early.,recent review; Week 11 cumulative practice item 37
+W0788,s habiller,,to get dressed,listen and repeat,11,review from Week 9,active,yes,yes,yes,Samira s'habille le matin.,Samira gets dressed in the morning.,recent review; Week 11 cumulative practice item 38
+W0789,se brosser les dents,,to brush teeth,listen and repeat,11,review from Week 9,active,yes,yes,yes,Marc se brosse les dents.,Marc brushes his teeth.,recent review; Week 11 cumulative practice item 39
+W0790,matin,un,morning,mah-TAN,11,review from Week 9,active,yes,yes,yes,"Le matin, je prends le bus.","In the morning, I take the bus.",recent review; Week 11 cumulative practice item 40
+W0791,il pleut,,it is raining,listen and repeat,11,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il pleut.","Today, it is raining.",recent review; Week 11 cumulative practice item 41
+W0792,il neige,,it is snowing,listen and repeat,11,review from Week 10,active,yes,yes,yes,"En hiver, il neige parfois.","In winter, it sometimes snows.",recent review; Week 11 cumulative practice item 42
+W0793,il fait froid,,it is cold,listen and repeat,11,review from Week 10,active,yes,yes,yes,Il fait froid le matin.,It is cold in the morning.,recent review; Week 11 cumulative practice item 43
+W0794,il fait chaud,,it is hot,listen and repeat,11,review from Week 10,active,yes,yes,yes,"En ete, il fait chaud.","In summer, it is hot.",recent review; Week 11 cumulative practice item 44
+W0795,il fait beau,,the weather is nice,listen and repeat,11,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il fait beau.","Today, the weather is nice.",recent review; Week 11 cumulative practice item 45
+W0796,il y a du vent,,it is windy,listen and repeat,11,review from Week 10,active,yes,yes,yes,Il y a du vent pres du parc.,It is windy near the park.,recent review; Week 11 cumulative practice item 46
+W0797,soleil,un,sun,soh-LAY,11,review from Week 10,active,yes,yes,yes,Il y a du soleil dans la cuisine.,There is sun in the kitchen.,recent review; Week 11 cumulative practice item 47
+W0798,pluie,une,rain,plwee,11,review from Week 10,active,yes,yes,yes,La pluie est forte ce matin.,The rain is strong this morning.,recent review; Week 11 cumulative practice item 48
+W0799,neige,une,snow,nehzh,11,review from Week 10,active,yes,yes,yes,La neige est blanche.,The snow is white.,recent review; Week 11 cumulative practice item 49
+W0800,nuage,un,cloud,nwahzh,11,review from Week 10,active,yes,yes,yes,Il y a un nuage gris.,There is a gray cloud.,recent review; Week 11 cumulative practice item 50
+W0801,je suis,,I am,zhuh swee,11,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 11 cumulative practice item 51
+W0802,j'ai,,I have,zhay,11,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 11 cumulative practice item 52
+W0803,bonjour,,hello,bohn-ZHOOR,11,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 11 cumulative practice item 53
+W0804,la famille,,family,lah fah-MEE,11,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 11 cumulative practice item 54
+W0805,le cafe,,cafe,luh kah-FAY,11,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 11 cumulative practice item 55
+W0806,le bus,,bus,luh boos,11,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 11 cumulative practice item 56
+W0807,aujourd hui,,today,oh-zhoor-DWEE,11,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 11 cumulative practice item 57
+W0808,une petite table,,a small table,oon puh-TEET tahbl,11,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 11 cumulative practice item 58
+W0809,mon livre,,my book,mohn leevr,11,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 11 cumulative practice item 59
+W0810,du pain,,some bread,doo pan,11,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 11 cumulative practice item 60
+W0811,ou est-ce que,,where is it that,oo ess-kuh,11,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 11 cumulative practice item 61
+W0812,je me prepare,,I get ready,zhuh muh pray-PAHR,11,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 11 cumulative practice item 62
+W0813,je me leve,,I get up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me leve a sept heures.,I get up at seven o clock.,recent review; Week 11 cumulative practice item 63
+W0814,tu te leves,,you get up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Tu te leves tot le lundi.,You get up early on Monday.,recent review; Week 11 cumulative practice item 64
+W0815,il se leve / elle se leve,,he/she gets up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Elle se leve avant la classe.,She gets up before class.,recent review; Week 11 cumulative practice item 65
+W0816,je me lave,,I wash,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me lave dans la salle de bain.,I wash in the bathroom.,recent review; Week 11 cumulative practice item 66
+W0817,je me prepare,,I get ready,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me prepare dans ma chambre.,I get ready in my bedroom.,recent review; Week 11 cumulative practice item 67
+W0818,je me couche,,I go to bed,listen and repeat,11,review from Week 9,active,yes,yes,yes,Je me couche a dix heures.,I go to bed at ten o clock.,recent review; Week 11 cumulative practice item 68
+W0819,se reveiller,,to wake up,listen and repeat,11,review from Week 9,active,yes,yes,yes,Alex se reveille tot.,Alex wakes up early.,recent review; Week 11 cumulative practice item 69
+W0820,s habiller,,to get dressed,listen and repeat,11,review from Week 9,active,yes,yes,yes,Samira s'habille le matin.,Samira gets dressed in the morning.,recent review; Week 11 cumulative practice item 70
+W0821,se brosser les dents,,to brush teeth,listen and repeat,11,review from Week 9,active,yes,yes,yes,Marc se brosse les dents.,Marc brushes his teeth.,recent review; Week 11 cumulative practice item 71
+W0822,matin,un,morning,mah-TAN,11,review from Week 9,active,yes,yes,yes,"Le matin, je prends le bus.","In the morning, I take the bus.",recent review; Week 11 cumulative practice item 72
+W0823,il pleut,,it is raining,listen and repeat,11,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il pleut.","Today, it is raining.",recent review; Week 11 cumulative practice item 73
+W0824,il neige,,it is snowing,listen and repeat,11,review from Week 10,active,yes,yes,yes,"En hiver, il neige parfois.","In winter, it sometimes snows.",recent review; Week 11 cumulative practice item 74
+W0825,il fait froid,,it is cold,listen and repeat,11,review from Week 10,active,yes,yes,yes,Il fait froid le matin.,It is cold in the morning.,recent review; Week 11 cumulative practice item 75
+W0826,j'ai parle,,I spoke,listen and repeat,12,past,active,yes,yes,yes,"Hier, j'ai parle avec Samira.","Yesterday, I spoke with Samira.",new; Week 12 cumulative practice item 1
+W0827,tu as parle,,you spoke,listen and repeat,12,past,active,yes,yes,yes,Tu as parle avec Madame Dupont.,You spoke with Madame Dupont.,new; Week 12 cumulative practice item 2
+W0828,il a parle / elle a parle,,he/she spoke,listen and repeat,12,past,active,yes,yes,yes,Elle a parle avec Marc.,She spoke with Marc.,new; Week 12 cumulative practice item 3
+W0829,nous avons parle,,we spoke,listen and repeat,12,past,active,yes,yes,yes,Nous avons parle au cafe.,We spoke at the cafe.,new; Week 12 cumulative practice item 4
+W0830,j'ai travaille,,I worked,listen and repeat,12,past,active,yes,yes,yes,"Hier, j'ai travaille au bureau.","Yesterday, I worked at the office.",new; Week 12 cumulative practice item 5
+W0831,j'ai etudie,,I studied,listen and repeat,12,past,active,yes,yes,yes,"Le soir, j'ai etudie le francais.","In the evening, I studied French.",new; Week 12 cumulative practice item 6
+W0832,j'ai mange,,I ate,listen and repeat,12,past,active,yes,yes,yes,"A midi, j'ai mange une salade.","At noon, I ate a salad.",new; Week 12 cumulative practice item 7
+W0833,j'ai bu,,I drank,listen and repeat,12,past,active,yes,yes,yes,J'ai bu de l'eau au cafe.,I drank water at the cafe.,new; Week 12 cumulative practice item 8
+W0834,j'ai pris,,I took,listen and repeat,12,past,active,yes,yes,yes,J'ai pris le bus le matin.,I took the bus in the morning.,new; Week 12 cumulative practice item 9
+W0835,j'ai ecrit,,I wrote,listen and repeat,12,past,active,yes,yes,yes,J'ai ecrit une note courte.,I wrote a short note.,new; Week 12 cumulative practice item 10
+W0836,j'ai lu,,I read,listen and repeat,12,past,active,yes,yes,yes,J'ai lu une lecon facile.,I read an easy lesson.,new; Week 12 cumulative practice item 11
+W0837,j'ai vu,,I saw,listen and repeat,12,past,active,yes,yes,yes,J'ai vu Marc devant le cafe.,I saw Marc in front of the cafe.,new; Week 12 cumulative practice item 12
+W0838,j'ai fait,,I did / made,listen and repeat,12,past,active,yes,yes,yes,J'ai fait un exercice.,I did an exercise.,new; Week 12 cumulative practice item 13
+W0839,j'ai eu,,I had,listen and repeat,12,past,active,yes,yes,yes,J'ai eu une journee occupee.,I had a busy day.,new; Week 12 cumulative practice item 14
+W0840,hier,,yesterday,listen and repeat,12,past time,active,yes,yes,yes,"Hier, j'ai travaille.","Yesterday, I worked.",new; Week 12 cumulative practice item 15
+W0841,avant-hier,,the day before yesterday,listen and repeat,12,past time,active,yes,yes,yes,"Avant-hier, j'ai pris le bus.","The day before yesterday, I took the bus.",new; Week 12 cumulative practice item 16
+W0842,la semaine derniere,,last week,listen and repeat,12,past time,active,yes,yes,yes,"La semaine derniere, j'ai etudie.","Last week, I studied.",new; Week 12 cumulative practice item 17
+W0843,le mois dernier,,last month,listen and repeat,12,past time,active,yes,yes,yes,"Le mois dernier, j'ai visite le musee.","Last month, I visited the museum.",new; Week 12 cumulative practice item 18
+W0844,deja,,already,listen and repeat,12,past time,active,yes,yes,yes,J'ai deja lu la lecon.,I already read the lesson.,new; Week 12 cumulative practice item 19
+W0845,journal,un,diary / newspaper,zhoor-NAHL,12,writing,active,yes,yes,yes,J'ai ecrit dans mon journal.,I wrote in my diary.,new; Week 12 cumulative practice item 20
+W0846,voyage,un,trip,vwah-YAHZH,12,travel,active,yes,yes,yes,J'ai raconte un petit voyage.,I told about a short trip.,new; Week 12 cumulative practice item 21
+W0847,trajet,un,journey / commute,trah-ZHEH,12,travel,active,yes,yes,yes,J'ai raconte mon trajet en bus.,I told about my bus commute.,new; Week 12 cumulative practice item 22
+W0848,billet,un,ticket,bee-YEH,12,travel,active,yes,yes,yes,J'ai pris un billet a la gare.,I took a ticket at the station.,new; Week 12 cumulative practice item 23
+W0849,valise,une,suitcase,vah-LEEZ,12,travel,active,yes,yes,yes,J'ai prepare ma valise.,I prepared my suitcase.,new; Week 12 cumulative practice item 24
+W0850,hotel,un,hotel,oh-TEL,12,travel,active,yes,yes,yes,J'ai vu un hotel pres de la gare.,I saw a hotel near the station.,new; Week 12 cumulative practice item 25
+W0851,gare,une,train station,gahr,12,travel,active,yes,yes,yes,J'ai attendu a la gare.,I waited at the station.,new; Week 12 cumulative practice item 26
+W0852,musee,un,museum,muu-ZAY,12,travel,active,yes,yes,yes,J'ai visite un musee avec Samira.,I visited a museum with Samira.,new; Week 12 cumulative practice item 27
+W0853,photo,une,photo,foh-TOH,12,travel,active,yes,yes,yes,J'ai vu une photo de ma famille.,I saw a photo of my family.,new; Week 12 cumulative practice item 28
+W0854,souvenir,un,memory / souvenir,soo-vuh-NEER,12,travel,active,yes,yes,yes,J'ai achete un petit souvenir.,I bought a small souvenir.,new; Week 12 cumulative practice item 29
+W0855,d'abord,,first,listen and repeat,12,sequence,active,yes,yes,yes,"D'abord, j'ai pris le bus.","First, I took the bus.",new; Week 12 cumulative practice item 30
+W0856,ensuite,,then,listen and repeat,12,sequence,active,yes,yes,yes,"Ensuite, j'ai travaille.","Then, I worked.",new; Week 12 cumulative practice item 31
+W0857,apres,,after,listen and repeat,12,sequence,active,yes,yes,yes,"Apres, j'ai mange au cafe.","After, I ate at the cafe.",new; Week 12 cumulative practice item 32
+W0858,finalement,,finally,listen and repeat,12,sequence,active,yes,yes,yes,"Finalement, j'ai ecrit dans mon journal.","Finally, I wrote in my diary.",new; Week 12 cumulative practice item 33
+W0859,il pleut,,it is raining,listen and repeat,12,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il pleut.","Today, it is raining.",recent review; Week 12 cumulative practice item 34
+W0860,il neige,,it is snowing,listen and repeat,12,review from Week 10,active,yes,yes,yes,"En hiver, il neige parfois.","In winter, it sometimes snows.",recent review; Week 12 cumulative practice item 35
+W0861,il fait froid,,it is cold,listen and repeat,12,review from Week 10,active,yes,yes,yes,Il fait froid le matin.,It is cold in the morning.,recent review; Week 12 cumulative practice item 36
+W0862,il fait chaud,,it is hot,listen and repeat,12,review from Week 10,active,yes,yes,yes,"En ete, il fait chaud.","In summer, it is hot.",recent review; Week 12 cumulative practice item 37
+W0863,il fait beau,,the weather is nice,listen and repeat,12,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il fait beau.","Today, the weather is nice.",recent review; Week 12 cumulative practice item 38
+W0864,il y a du vent,,it is windy,listen and repeat,12,review from Week 10,active,yes,yes,yes,Il y a du vent pres du parc.,It is windy near the park.,recent review; Week 12 cumulative practice item 39
+W0865,soleil,un,sun,soh-LAY,12,review from Week 10,active,yes,yes,yes,Il y a du soleil dans la cuisine.,There is sun in the kitchen.,recent review; Week 12 cumulative practice item 40
+W0866,pluie,une,rain,plwee,12,review from Week 10,active,yes,yes,yes,La pluie est forte ce matin.,The rain is strong this morning.,recent review; Week 12 cumulative practice item 41
+W0867,neige,une,snow,nehzh,12,review from Week 10,active,yes,yes,yes,La neige est blanche.,The snow is white.,recent review; Week 12 cumulative practice item 42
+W0868,nuage,un,cloud,nwahzh,12,review from Week 10,active,yes,yes,yes,Il y a un nuage gris.,There is a gray cloud.,recent review; Week 12 cumulative practice item 43
+W0869,je travaille,,I work,listen and repeat,12,review from Week 11,active,yes,yes,yes,Je travaille au bureau.,I work at the office.,recent review; Week 12 cumulative practice item 44
+W0870,tu travailles,,you work,listen and repeat,12,review from Week 11,active,yes,yes,yes,Tu travailles avec Marc.,You work with Marc.,recent review; Week 12 cumulative practice item 45
+W0871,il travaille / elle travaille,,he/she works,listen and repeat,12,review from Week 11,active,yes,yes,yes,Elle travaille le matin.,She works in the morning.,recent review; Week 12 cumulative practice item 46
+W0872,nous travaillons,,we work,listen and repeat,12,review from Week 11,active,yes,yes,yes,Nous travaillons ensemble.,We work together.,recent review; Week 12 cumulative practice item 47
+W0873,j'etudie,,I study,listen and repeat,12,review from Week 11,active,yes,yes,yes,J'etudie le francais le soir.,I study French in the evening.,recent review; Week 12 cumulative practice item 48
+W0874,je prepare,,I prepare,listen and repeat,12,review from Week 11,active,yes,yes,yes,Je prepare un document.,I prepare a document.,recent review; Week 12 cumulative practice item 49
+W0875,je revise,,I review,listen and repeat,12,review from Week 11,active,yes,yes,yes,Je revise la lecon.,I review the lesson.,recent review; Week 12 cumulative practice item 50
+W0876,je finis,,I finish,listen and repeat,12,review from Week 11,active,yes,yes,yes,Je finis l'exercice.,I finish the exercise.,recent review; Week 12 cumulative practice item 51
+W0877,je reponds,,I answer,listen and repeat,12,review from Week 11,active,yes,yes,yes,Je reponds au message.,I answer the message.,recent review; Week 12 cumulative practice item 52
+W0878,je lis,,I read,listen and repeat,12,review from Week 11,active,yes,yes,yes,Je lis un courriel.,I read an email.,recent review; Week 12 cumulative practice item 53
+W0879,je suis,,I am,zhuh swee,12,review: etre,active,yes,yes,yes,Je suis en classe avec Samira.,I am in class with Samira.,older review; Week 12 cumulative practice item 54
+W0880,j'ai,,I have,zhay,12,review: avoir,active,yes,yes,yes,J'ai un cahier et un stylo.,I have a notebook and a pen.,older review; Week 12 cumulative practice item 55
+W0881,bonjour,,hello,bohn-ZHOOR,12,review: greeting,active,yes,yes,yes,"Bonjour, je m'appelle Alex.","Hello, my name is Alex.",older review; Week 12 cumulative practice item 56
+W0882,la famille,,family,lah fah-MEE,12,review: family,active,yes,yes,yes,La famille de Marc est au cafe.,Marc's family is at the cafe.,older review; Week 12 cumulative practice item 57
+W0883,le cafe,,cafe,luh kah-FAY,12,review: place,active,yes,yes,yes,Samira prend un cafe au cafe.,Samira has a coffee at the cafe.,older review; Week 12 cumulative practice item 58
+W0884,le bus,,bus,luh boos,12,review: transport,active,yes,yes,yes,Alex prend le bus pour aller en classe.,Alex takes the bus to go to class.,older review; Week 12 cumulative practice item 59
+W0885,aujourd hui,,today,oh-zhoor-DWEE,12,review: time,active,yes,yes,yes,"Aujourd'hui, il fait froid.","Today, it is cold.",older review; Week 12 cumulative practice item 60
+W0886,une petite table,,a small table,oon puh-TEET tahbl,12,review: adjectives,active,yes,yes,yes,Il y a une petite table dans la cuisine.,There is a small table in the kitchen.,older review; Week 12 cumulative practice item 61
+W0887,mon livre,,my book,mohn leevr,12,review: possessives,active,yes,yes,yes,Mon livre est sur le bureau.,My book is on the desk.,older review; Week 12 cumulative practice item 62
+W0888,du pain,,some bread,doo pan,12,review: food,active,yes,yes,yes,Je voudrais du pain et de l eau.,I would like some bread and water.,older review; Week 12 cumulative practice item 63
+W0889,ou est-ce que,,where is it that,oo ess-kuh,12,review: questions,active,yes,yes,yes,Ou est-ce que Madame Dupont travaille ?,Where does Madame Dupont work?,older review; Week 12 cumulative practice item 64
+W0890,je me prepare,,I get ready,zhuh muh pray-PAHR,12,review: routine,active,yes,yes,yes,"Le matin, je me prepare dans ma chambre.","In the morning, I get ready in my bedroom.",older review; Week 12 cumulative practice item 65
+W0891,il pleut,,it is raining,listen and repeat,12,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il pleut.","Today, it is raining.",recent review; Week 12 cumulative practice item 66
+W0892,il neige,,it is snowing,listen and repeat,12,review from Week 10,active,yes,yes,yes,"En hiver, il neige parfois.","In winter, it sometimes snows.",recent review; Week 12 cumulative practice item 67
+W0893,il fait froid,,it is cold,listen and repeat,12,review from Week 10,active,yes,yes,yes,Il fait froid le matin.,It is cold in the morning.,recent review; Week 12 cumulative practice item 68
+W0894,il fait chaud,,it is hot,listen and repeat,12,review from Week 10,active,yes,yes,yes,"En ete, il fait chaud.","In summer, it is hot.",recent review; Week 12 cumulative practice item 69
+W0895,il fait beau,,the weather is nice,listen and repeat,12,review from Week 10,active,yes,yes,yes,"Aujourd'hui, il fait beau.","Today, the weather is nice.",recent review; Week 12 cumulative practice item 70
+W0896,il y a du vent,,it is windy,listen and repeat,12,review from Week 10,active,yes,yes,yes,Il y a du vent pres du parc.,It is windy near the park.,recent review; Week 12 cumulative practice item 71
+W0897,soleil,un,sun,soh-LAY,12,review from Week 10,active,yes,yes,yes,Il y a du soleil dans la cuisine.,There is sun in the kitchen.,recent review; Week 12 cumulative practice item 72
+W0898,pluie,une,rain,plwee,12,review from Week 10,active,yes,yes,yes,La pluie est forte ce matin.,The rain is strong this morning.,recent review; Week 12 cumulative practice item 73
+W0899,neige,une,snow,nehzh,12,review from Week 10,active,yes,yes,yes,La neige est blanche.,The snow is white.,recent review; Week 12 cumulative practice item 74
+W0900,nuage,un,cloud,nwahzh,12,review from Week 10,active,yes,yes,yes,Il y a un nuage gris.,There is a gray cloud.,recent review; Week 12 cumulative practice item 75

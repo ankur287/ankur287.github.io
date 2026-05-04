@@ -4,76 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>French Course Home</title>
-  <style>
-    :root{
-      --bg:#f7f8fc;
-      --card:#ffffff;
-      --ink:#1f2937;
-      --muted:#6b7280;
-      --line:#dbe2ea;
-      --accent:#1d4ed8;
-      --accent-soft:#dbeafe;
-      --ok:#166534;
-      --ok-bg:#dcfce7;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-    .wrap{max-width:980px;margin:0 auto;padding:16px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:0 0 16px;box-shadow:0 2px 10px rgba(15,23,42,.04)}
-    .hero{background:linear-gradient(135deg,#eff6ff,#ffffff)}
-    h1,h2,h3{line-height:1.25;margin:0 0 12px}
-    p,li{font-size:1rem}
-    .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 14px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
-    .button.secondary{background:#fff;color:var(--accent);border:1px solid var(--line)}
-    .tag{display:inline-block;padding:4px 8px;border-radius:999px;background:var(--accent-soft);color:#1e3a8a;font-size:.82rem;font-weight:700;margin:4px 6px 0 0}
-    .tag.done{background:var(--ok-bg);color:var(--ok)}
-    .progress{width:100%;height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin-top:12px}
-    .progress .bar{height:100%;width:6.7%;background:linear-gradient(90deg,#2563eb,#60a5fa)}
-    .week-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    @media (min-width:700px){.grid{grid-template-columns:1fr 1fr}}
-  </style>
+  <style>:root{--bg:#f7f8fc;--card:#fff;--ink:#1f2937;--muted:#5f6b7a;--line:#dbe2ea;--accent:#1d4ed8;--accent-soft:#dbeafe;--ok:#166534;--bad:#991b1b;--warn:#92400e}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}.wrap{max-width:1040px;margin:0 auto;padding:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;margin:0 0 16px;box-shadow:0 2px 10px rgba(15,23,42,.04)}.hero{background:#fff}h1,h2,h3{line-height:1.25;margin:0 0 12px;letter-spacing:0}p,li{font-size:1rem}.muted{color:var(--muted)}.nav,.button-row,.footer-nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.nav{margin:0 0 16px}.footer-nav{justify-content:space-between}.button,button,.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none;font-weight:700;cursor:pointer;font-size:1rem}.secondary,button.secondary,.nav a.secondary{background:#fff;color:var(--accent);border-color:var(--line)}.tag{display:inline-block;padding:3px 7px;border-radius:999px;background:var(--accent-soft);color:#1e3a8a;font-size:.78rem;font-weight:700;margin:2px 4px 2px 0}.grid-2{display:grid;grid-template-columns:1fr;gap:12px}.grid-3{display:grid;grid-template-columns:1fr;gap:10px}.word-card,.question{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff}.reveal,.notice{border-left:4px solid var(--accent);padding:10px 12px;background:#eff6ff;margin-top:10px}.watchout{border-left:4px solid var(--warn);padding:10px 12px;background:#fffbeb;margin-top:12px}.feedback{margin-top:8px;font-weight:700}.feedback.ok{color:var(--ok)}.feedback.bad{color:var(--bad)}.score{font-size:1.1rem;font-weight:700;padding:12px;border-radius:8px;background:#f1f5f9;margin-top:12px}.progress{width:100%;height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,#1d4ed8,#38bdf8)}.table{width:100%;border-collapse:collapse;overflow:auto}.table th,.table td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}.tight{margin-top:0}.quiz-question{border:1px solid var(--line);border-radius:8px;padding:12px;margin:0 0 12px;background:#fff}.rubric td,.rubric th{font-size:.95rem}@media (min-width:720px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}@media (max-width:520px){.wrap{padding:12px}.button,button,.nav a{width:100%}.footer-nav{display:block}.footer-nav .button{margin-bottom:10px}}</style>
 </head>
 <body>
   <main class="wrap">
     <section class="card hero">
       <h1>French Course</h1>
-      <p>A cumulative beginner French course for CLB 7 preparation, focused on reading, listening, writing, and memory through review.</p>
-      <p class="muted">Current progress: Week 2 generated out of 30 planned weeks. Each week now has a 75-item vocabulary bank with grouped sequence cards.</p>
-      <div class="progress" aria-label="course progress"><div class="bar"></div></div>
+      <p>A cumulative beginner French course for CLB 7 preparation, focused on reading, listening, writing, and memory through embedded review.</p>
+      <p class="muted">Current progress: Week 12 generated out of 30 planned weeks. Week 12 is current; Weeks 1-11 are completed.</p>
+      <div class="progress" aria-label="course progress"><div class="bar" style="width:40%"></div></div>
     </section>
-
-    <section class="grid">
-      <article class="card">
-        <h2>Week 1 — Bonjour, je suis Alex</h2>
-        <span class="tag done">completed</span>
-        <span class="tag">75 vocab items</span>
-        <span class="tag">être</span>
-        <p>Greetings, introductions, classroom words, learning words, days and months as grouped cards, and simple sentences with <strong>être</strong>.</p>
-        <div class="week-actions">
-          <a class="button" href="Week_1/index.html">Open Week 1</a>
-          <a class="button secondary" href="Week_1/quiz.html">Week 1 Quiz</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Week 2 — J'ai dix ans</h2>
-        <span class="tag">current</span>
-        <span class="tag">75 vocab items</span>
-        <span class="tag">avoir</span>
-        <p>Age, family, objects, personal information, question words, negation, and active review of Week 1.</p>
-        <div class="week-actions">
-          <a class="button" href="Week_2/index.html">Open Week 2</a>
-          <a class="button secondary" href="Week_2/quiz.html">Week 2 Quiz</a>
-        </div>
-      </article>
+    <section class="grid-2">
+      <article class="card"><h2>Week 1 - Bonjour, je suis Alex</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">etre</span><p>Greetings, introductions, classroom words, days, and simple sentences with etre.</p><div class="button-row"><a class="button" href="Week_1/index.html">Open Week 1</a><a class="button secondary" href="Week_1/quiz.html">Week 1 Quiz</a></div></article>
+<article class="card"><h2>Week 2 - J'ai dix ans</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">avoir</span><p>Age, family basics, numbers, common objects, and active review of Week 1.</p><div class="button-row"><a class="button" href="Week_2/index.html">Open Week 2</a><a class="button secondary" href="Week_2/quiz.html">Week 2 Quiz</a></div></article>
+      <article class="card"><h2>Week 3 - Un livre, une lampe</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">definite</span><p>articles, classroom nouns, and household nouns. Review: etre and avoir in descriptions of things people have.</p><div class="button-row"><a class="button" href="Week_3/index.html">Open Week 3</a><a class="button secondary" href="Week_3/quiz.html">Week 3 Quiz</a></div></article>
+<article class="card"><h2>Week 4 - Une petite lampe rouge</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">adjective</span><p>colors, size, and common adjectives. Review: articles and gender from Week 3.</p><div class="button-row"><a class="button" href="Week_4/index.html">Open Week 4</a><a class="button secondary" href="Week_4/quiz.html">Week 4 Quiz</a></div></article>
+<article class="card"><h2>Week 5 - Ma famille, mon livre</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">possessive</span><p>family relationships and possessives. Review: adjective agreement with family and objects.</p><div class="button-row"><a class="button" href="Week_5/index.html">Open Week 5</a><a class="button secondary" href="Week_5/quiz.html">Week 5 Quiz</a></div></article>
+<article class="card"><h2>Week 6 - Je voudrais du cafe</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">partitives</span><p>food, drinks, and cafe requests. Review: possessives and articles in cafe sentences.</p><div class="button-row"><a class="button" href="Week_6/index.html">Open Week 6</a><a class="button secondary" href="Week_6/quiz.html">Week 6 Quiz</a></div></article>
+<article class="card"><h2>Week 7 - Vous voulez une chemise bleue ?</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">question</span><p>shopping, clothes, prices, and quantities. Review: numbers, articles, adjectives, and partitives.</p><div class="button-row"><a class="button" href="Week_7/index.html">Open Week 7</a><a class="button secondary" href="Week_7/quiz.html">Week 7 Quiz</a></div></article>
+<article class="card"><h2>Week 8 - Il y a une banque a gauche</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">il</span><p>transport, town places, and directions. Review: question forms and shopping language.</p><div class="button-row"><a class="button" href="Week_8/index.html">Open Week 8</a><a class="button secondary" href="Week_8/quiz.html">Week 8 Quiz</a></div></article>
+<article class="card"><h2>Week 9 - Je me leve le matin</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">reflexive</span><p>rooms, furniture, daily activities, and routine sequence. Review: place expressions and time from earlier weeks.</p><div class="button-row"><a class="button" href="Week_9/index.html">Open Week 9</a><a class="button secondary" href="Week_9/quiz.html">Week 9 Quiz</a></div></article>
+<article class="card"><h2>Week 10 - Il pleut aujourd hui</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">weather</span><p>weather, seasons, dates, and planning expressions. Review: reflexive routine verbs.</p><div class="button-row"><a class="button" href="Week_10/index.html">Open Week 10</a><a class="button secondary" href="Week_10/quiz.html">Week 10 Quiz</a></div></article>
+<article class="card"><h2>Week 11 - Je travaille et j&#39;etudie</h2><span class="tag done">completed</span><span class="tag">75 practice items</span><span class="tag">regular</span><p>jobs, workplace, study tasks, and present-tense verbs. Review: weather and time expressions.</p><div class="button-row"><a class="button" href="Week_11/index.html">Open Week 11</a><a class="button secondary" href="Week_11/quiz.html">Week 11 Quiz</a></div></article>
+<article class="card"><h2>Week 12 - Hier, j&#39;ai travaille</h2><span class="tag ">current</span><span class="tag">75 practice items</span><span class="tag">passe</span><p>yesterday, travel, errands, and completed actions. Review: present-tense anchors and cumulative daily-life language.</p><div class="button-row"><a class="button" href="Week_12/index.html">Open Week 12</a><a class="button secondary" href="Week_12/quiz.html">Week 12 Quiz</a></div></article>
     </section>
-
-    <section class="card">
-      <h2>Coming Next</h2>
-      <p>Week 3 will build on <strong>être</strong> and <strong>avoir</strong> with articles and gender awareness, while continuing to test words from Weeks 1 and 2.</p>
-    </section>
+    <section class="card"><h2>Coming Next</h2><p>Week 13 will introduce the imperfect and contrast it with the passe compose while continuing to recycle Weeks 1-12.</p></section>
   </main>
 </body>
 </html>

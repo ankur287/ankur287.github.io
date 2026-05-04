@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 8 Vocabulary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav"><a class="secondary" href="../index.html">Course home</a><a class="secondary" href="../Week_7/index.html">Week 7</a><a class="secondary" href="../Week_9/index.html">Week 9</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="reading.html">Reading</a><a href="listening.html">Listening</a><a href="writing.html">Writing</a><a href="quiz.html">Quiz</a></nav>
+
+    <section class="card hero">
+      <h1>Week 8 Vocabulary</h1>
+      <p><strong>New this week:</strong> transport, town places, and directions. <strong>Review inside examples:</strong> question forms and shopping language.</p>
+      <div class="button-row"><button type="button" class="secondary" onclick="toggleAll(true)">Show all English</button><button type="button" class="secondary" onclick="toggleAll(false)">Hide all English</button></div>
+    </section>
+    <section class="card">
+      <h2>Random Bidirectional Drill</h2>
+      <div class="button-row"><button type="button" onclick="generateRandomDrill('fr-en')">French to English</button><button type="button" onclick="generateRandomDrill('en-fr')">English to French</button><button type="button" class="secondary" onclick="revealRandomDrill()">Reveal answer</button></div>
+      <div class="question"><p><strong>Prompt:</strong> <span id="drillPrompt">Choose a direction.</span></p><div id="drillAnswer" class="reveal" hidden></div></div>
+    </section>
+    <section class="card"><h2>New This Week</h2><div class="grid-2"><article class="word-card">
+    <h3>1. il y a <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Il y a une banque pres du cafe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('il y a')">Play word</button>
+      <button type="button" onclick="speakText('Il y a une banque pres du cafe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-1')">Reveal English</button>
+    </div>
+    <div id="v-1" class="reveal" hidden>
+      <p><strong>Meaning:</strong> there is / there are</p>
+      <p><strong>Example meaning:</strong> There is a bank near the cafe.</p>
+      <p><strong>Tags:</strong> place; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>2. a gauche <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La banque est a gauche.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('a gauche')">Play word</button>
+      <button type="button" onclick="speakText('La banque est a gauche.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-2')">Reveal English</button>
+    </div>
+    <div id="v-2" class="reveal" hidden>
+      <p><strong>Meaning:</strong> on the left</p>
+      <p><strong>Example meaning:</strong> The bank is on the left.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>3. a droite <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le cafe est a droite.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('a droite')">Play word</button>
+      <button type="button" onclick="speakText('Le cafe est a droite.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-3')">Reveal English</button>
+    </div>
+    <div id="v-3" class="reveal" hidden>
+      <p><strong>Meaning:</strong> on the right</p>
+      <p><strong>Example meaning:</strong> The cafe is on the right.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>4. tout droit <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Marche tout droit jusqu au parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('tout droit')">Play word</button>
+      <button type="button" onclick="speakText('Marche tout droit jusqu au parc.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-4')">Reveal English</button>
+    </div>
+    <div id="v-4" class="reveal" hidden>
+      <p><strong>Meaning:</strong> straight ahead</p>
+      <p><strong>Example meaning:</strong> Walk straight ahead to the park.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>5. tourner <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Tourne a gauche devant la banque.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('tourner')">Play word</button>
+      <button type="button" onclick="speakText('Tourne a gauche devant la banque.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-5')">Reveal English</button>
+    </div>
+    <div id="v-5" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to turn</p>
+      <p><strong>Example meaning:</strong> Turn left in front of the bank.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>6. marcher <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex marche au parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('marcher')">Play word</button>
+      <button type="button" onclick="speakText('Alex marche au parc.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-6')">Reveal English</button>
+    </div>
+    <div id="v-6" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to walk</p>
+      <p><strong>Example meaning:</strong> Alex walks to the park.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>7. prendre le bus <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je prends le bus pour aller en classe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('prendre le bus')">Play word</button>
+      <button type="button" onclick="speakText('Je prends le bus pour aller en classe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-7')">Reveal English</button>
+    </div>
+    <div id="v-7" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to take the bus</p>
+      <p><strong>Example meaning:</strong> I take the bus to go to class.</p>
+      <p><strong>Tags:</strong> transport; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>8. un metro <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> may-TROH</p>
+    <p><strong>Example:</strong> Le metro est pres de la gare.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un metro')">Play word</button>
+      <button type="button" onclick="speakText('Le metro est pres de la gare.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-8')">Reveal English</button>
+    </div>
+    <div id="v-8" class="reveal" hidden>
+      <p><strong>Meaning:</strong> subway</p>
+      <p><strong>Example meaning:</strong> The subway is near the station.</p>
+      <p><strong>Tags:</strong> transport; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>9. une station <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> stah-SYOHN</p>
+    <p><strong>Example:</strong> La station est devant le parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une station')">Play word</button>
+      <button type="button" onclick="speakText('La station est devant le parc.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-9')">Reveal English</button>
+    </div>
+    <div id="v-9" class="reveal" hidden>
+      <p><strong>Meaning:</strong> station / stop</p>
+      <p><strong>Example meaning:</strong> The stop is in front of the park.</p>
+      <p><strong>Tags:</strong> transport; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>10. une gare <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> gahr</p>
+    <p><strong>Example:</strong> La gare est loin du cafe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une gare')">Play word</button>
+      <button type="button" onclick="speakText('La gare est loin du cafe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-10')">Reveal English</button>
+    </div>
+    <div id="v-10" class="reveal" hidden>
+      <p><strong>Meaning:</strong> train station</p>
+      <p><strong>Example meaning:</strong> The train station is far from the cafe.</p>
+      <p><strong>Tags:</strong> transport; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>11. un quartier <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> kar-TYAY</p>
+    <p><strong>Example:</strong> Le quartier est calme.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un quartier')">Play word</button>
+      <button type="button" onclick="speakText('Le quartier est calme.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-11')">Reveal English</button>
+    </div>
+    <div id="v-11" class="reveal" hidden>
+      <p><strong>Meaning:</strong> neighborhood</p>
+      <p><strong>Example meaning:</strong> The neighborhood is calm.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>12. une rue <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> roo</p>
+    <p><strong>Example:</strong> La rue est longue.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une rue')">Play word</button>
+      <button type="button" onclick="speakText('La rue est longue.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-12')">Reveal English</button>
+    </div>
+    <div id="v-12" class="reveal" hidden>
+      <p><strong>Meaning:</strong> street</p>
+      <p><strong>Example meaning:</strong> The street is long.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>13. un parc <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> park</p>
+    <p><strong>Example:</strong> Marc attend au parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un parc')">Play word</button>
+      <button type="button" onclick="speakText('Marc attend au parc.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-13')">Reveal English</button>
+    </div>
+    <div id="v-13" class="reveal" hidden>
+      <p><strong>Meaning:</strong> park</p>
+      <p><strong>Example meaning:</strong> Marc waits at the park.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>14. une banque <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> bahnk</p>
+    <p><strong>Example:</strong> La banque est a gauche.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une banque')">Play word</button>
+      <button type="button" onclick="speakText('La banque est a gauche.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-14')">Reveal English</button>
+    </div>
+    <div id="v-14" class="reveal" hidden>
+      <p><strong>Meaning:</strong> bank</p>
+      <p><strong>Example meaning:</strong> The bank is on the left.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>15. une pharmacie <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> far-mah-SEE</p>
+    <p><strong>Example:</strong> La pharmacie est pres de la banque.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une pharmacie')">Play word</button>
+      <button type="button" onclick="speakText('La pharmacie est pres de la banque.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-15')">Reveal English</button>
+    </div>
+    <div id="v-15" class="reveal" hidden>
+      <p><strong>Meaning:</strong> pharmacy</p>
+      <p><strong>Example meaning:</strong> The pharmacy is near the bank.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>16. une boulangerie <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> boo-lahn-zhuh-REE</p>
+    <p><strong>Example:</strong> La boulangerie a du pain.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une boulangerie')">Play word</button>
+      <button type="button" onclick="speakText('La boulangerie a du pain.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-16')">Reveal English</button>
+    </div>
+    <div id="v-16" class="reveal" hidden>
+      <p><strong>Meaning:</strong> bakery</p>
+      <p><strong>Example meaning:</strong> The bakery has bread.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>17. une ecole <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> ay-KOHL</p>
+    <p><strong>Example:</strong> L&#39;ecole est pres de la station.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une ecole')">Play word</button>
+      <button type="button" onclick="speakText('L&#39;ecole est pres de la station.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-17')">Reveal English</button>
+    </div>
+    <div id="v-17" class="reveal" hidden>
+      <p><strong>Meaning:</strong> school</p>
+      <p><strong>Example meaning:</strong> The school is near the stop.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>18. un bureau de poste <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> boo-ROH duh pohst</p>
+    <p><strong>Example:</strong> Le bureau de poste est a droite.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un bureau de poste')">Play word</button>
+      <button type="button" onclick="speakText('Le bureau de poste est a droite.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-18')">Reveal English</button>
+    </div>
+    <div id="v-18" class="reveal" hidden>
+      <p><strong>Meaning:</strong> post office</p>
+      <p><strong>Example meaning:</strong> The post office is on the right.</p>
+      <p><strong>Tags:</strong> town; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>19. loin de <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La gare est loin de ma maison.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('loin de')">Play word</button>
+      <button type="button" onclick="speakText('La gare est loin de ma maison.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-19')">Reveal English</button>
+    </div>
+    <div id="v-19" class="reveal" hidden>
+      <p><strong>Meaning:</strong> far from</p>
+      <p><strong>Example meaning:</strong> The station is far from my house.</p>
+      <p><strong>Tags:</strong> place; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>20. pres de <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le cafe est pres du parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('pres de')">Play word</button>
+      <button type="button" onclick="speakText('Le cafe est pres du parc.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-20')">Reveal English</button>
+    </div>
+    <div id="v-20" class="reveal" hidden>
+      <p><strong>Meaning:</strong> near</p>
+      <p><strong>Example meaning:</strong> The cafe is near the park.</p>
+      <p><strong>Tags:</strong> place; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>21. entre <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La banque est entre le cafe et la pharmacie.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('entre')">Play word</button>
+      <button type="button" onclick="speakText('La banque est entre le cafe et la pharmacie.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-21')">Reveal English</button>
+    </div>
+    <div id="v-21" class="reveal" hidden>
+      <p><strong>Meaning:</strong> between</p>
+      <p><strong>Example meaning:</strong> The bank is between the cafe and the pharmacy.</p>
+      <p><strong>Tags:</strong> place; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>22. en face de <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> L&#39;ecole est en face du parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('en face de')">Play word</button>
+      <button type="button" onclick="speakText('L&#39;ecole est en face du parc.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-22')">Reveal English</button>
+    </div>
+    <div id="v-22" class="reveal" hidden>
+      <p><strong>Meaning:</strong> across from</p>
+      <p><strong>Example meaning:</strong> The school is across from the park.</p>
+      <p><strong>Tags:</strong> place; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>23. jusqu a <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Marche jusqu a la station.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('jusqu a')">Play word</button>
+      <button type="button" onclick="speakText('Marche jusqu a la station.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-23')">Reveal English</button>
+    </div>
+    <div id="v-23" class="reveal" hidden>
+      <p><strong>Meaning:</strong> until / as far as</p>
+      <p><strong>Example meaning:</strong> Walk as far as the stop.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>24. un plan <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> plahn</p>
+    <p><strong>Example:</strong> Samira regarde le plan du quartier.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un plan')">Play word</button>
+      <button type="button" onclick="speakText('Samira regarde le plan du quartier.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-24')">Reveal English</button>
+    </div>
+    <div id="v-24" class="reveal" hidden>
+      <p><strong>Meaning:</strong> map / plan</p>
+      <p><strong>Example meaning:</strong> Samira looks at the neighborhood map.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>25. une route <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> root</p>
+    <p><strong>Example:</strong> La route est facile.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une route')">Play word</button>
+      <button type="button" onclick="speakText('La route est facile.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-25')">Reveal English</button>
+    </div>
+    <div id="v-25" class="reveal" hidden>
+      <p><strong>Meaning:</strong> route</p>
+      <p><strong>Example meaning:</strong> The route is easy.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>26. une adresse <span class="tag">new</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> ah-DREHS</p>
+    <p><strong>Example:</strong> J&#39;ai l&#39;adresse du cafe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une adresse')">Play word</button>
+      <button type="button" onclick="speakText('J&#39;ai l&#39;adresse du cafe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-26')">Reveal English</button>
+    </div>
+    <div id="v-26" class="reveal" hidden>
+      <p><strong>Meaning:</strong> address</p>
+      <p><strong>Example meaning:</strong> I have the cafe address.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>27. attendre <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Marc attend devant la boulangerie.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('attendre')">Play word</button>
+      <button type="button" onclick="speakText('Marc attend devant la boulangerie.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-27')">Reveal English</button>
+    </div>
+    <div id="v-27" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to wait</p>
+      <p><strong>Example meaning:</strong> Marc waits in front of the bakery.</p>
+      <p><strong>Tags:</strong> verbs; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>28. arriver <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex arrive a la station.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('arriver')">Play word</button>
+      <button type="button" onclick="speakText('Alex arrive a la station.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-28')">Reveal English</button>
+    </div>
+    <div id="v-28" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to arrive</p>
+      <p><strong>Example meaning:</strong> Alex arrives at the stop.</p>
+      <p><strong>Tags:</strong> verbs; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>29. partir <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Nous partons apres la classe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('partir')">Play word</button>
+      <button type="button" onclick="speakText('Nous partons apres la classe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-29')">Reveal English</button>
+    </div>
+    <div id="v-29" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to leave</p>
+      <p><strong>Example meaning:</strong> We leave after class.</p>
+      <p><strong>Tags:</strong> verbs; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>30. demander le chemin <span class="tag">new</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex demande le chemin a Samira.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('demander le chemin')">Play word</button>
+      <button type="button" onclick="speakText('Alex demande le chemin a Samira.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-30')">Reveal English</button>
+    </div>
+    <div id="v-30" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to ask directions</p>
+      <p><strong>Example meaning:</strong> Alex asks Samira for directions.</p>
+      <p><strong>Tags:</strong> directions; appears in reading; appears in writing</p>
+    </div>
+  </article></div></section>
+    <section class="card"><h2>Review Words From Recent Weeks</h2><div class="grid-2"><article class="word-card">
+    <h3>1. je voudrais <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je voudrais du cafe, s il vous plait.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('je voudrais')">Play word</button>
+      <button type="button" onclick="speakText('Je voudrais du cafe, s il vous plait.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-1')">Reveal English</button>
+    </div>
+    <div id="v-1" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I would like</p>
+      <p><strong>Example meaning:</strong> I would like some coffee, please.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>2. du <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex prend du pain.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('du')">Play word</button>
+      <button type="button" onclick="speakText('Alex prend du pain.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-2')">Reveal English</button>
+    </div>
+    <div id="v-2" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some masculine</p>
+      <p><strong>Example meaning:</strong> Alex takes some bread.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>3. de la <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Samira prend de la soupe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('de la')">Play word</button>
+      <button type="button" onclick="speakText('Samira prend de la soupe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-3')">Reveal English</button>
+    </div>
+    <div id="v-3" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some feminine</p>
+      <p><strong>Example meaning:</strong> Samira has some soup.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>4. de l&#39; <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je voudrais de l&#39;eau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('de l&#39;')">Play word</button>
+      <button type="button" onclick="speakText('Je voudrais de l&#39;eau.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-4')">Reveal English</button>
+    </div>
+    <div id="v-4" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some before vowel</p>
+      <p><strong>Example meaning:</strong> I would like some water.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>5. pas de <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Marc ne veut pas de dessert.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('pas de')">Play word</button>
+      <button type="button" onclick="speakText('Marc ne veut pas de dessert.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-5')">Reveal English</button>
+    </div>
+    <div id="v-5" class="reveal" hidden>
+      <p><strong>Meaning:</strong> not any</p>
+      <p><strong>Example meaning:</strong> Marc does not want any dessert.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>6. un cafe <span class="tag">recent review</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> kah-FAY</p>
+    <p><strong>Example:</strong> Je voudrais un cafe chaud.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un cafe')">Play word</button>
+      <button type="button" onclick="speakText('Je voudrais un cafe chaud.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-6')">Reveal English</button>
+    </div>
+    <div id="v-6" class="reveal" hidden>
+      <p><strong>Meaning:</strong> coffee / cafe</p>
+      <p><strong>Example meaning:</strong> I would like a hot coffee.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>7. une eau <span class="tag">recent review</span></h3>
+    <p><strong>Article:</strong> une</p>
+    <p><strong>Pronunciation:</strong> oh</p>
+    <p><strong>Example:</strong> Samira boit de l&#39;eau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une eau')">Play word</button>
+      <button type="button" onclick="speakText('Samira boit de l&#39;eau.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-7')">Reveal English</button>
+    </div>
+    <div id="v-7" class="reveal" hidden>
+      <p><strong>Meaning:</strong> water</p>
+      <p><strong>Example meaning:</strong> Samira drinks water.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>8. un the <span class="tag">recent review</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> tay</p>
+    <p><strong>Example:</strong> Madame Dupont prend du the.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un the')">Play word</button>
+      <button type="button" onclick="speakText('Madame Dupont prend du the.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-8')">Reveal English</button>
+    </div>
+    <div id="v-8" class="reveal" hidden>
+      <p><strong>Meaning:</strong> tea</p>
+      <p><strong>Example meaning:</strong> Madame Dupont has tea.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>9. un lait <span class="tag">recent review</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> leh</p>
+    <p><strong>Example:</strong> Je ne veux pas de lait.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un lait')">Play word</button>
+      <button type="button" onclick="speakText('Je ne veux pas de lait.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-9')">Reveal English</button>
+    </div>
+    <div id="v-9" class="reveal" hidden>
+      <p><strong>Meaning:</strong> milk</p>
+      <p><strong>Example meaning:</strong> I do not want milk.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>10. un pain <span class="tag">recent review</span></h3>
+    <p><strong>Article:</strong> un</p>
+    <p><strong>Pronunciation:</strong> pan</p>
+    <p><strong>Example:</strong> Alex mange du pain.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('un pain')">Play word</button>
+      <button type="button" onclick="speakText('Alex mange du pain.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-10')">Reveal English</button>
+    </div>
+    <div id="v-10" class="reveal" hidden>
+      <p><strong>Meaning:</strong> bread</p>
+      <p><strong>Example meaning:</strong> Alex eats bread.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>11. est-ce que <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Est-ce que vous voulez une chemise ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('est-ce que')">Play word</button>
+      <button type="button" onclick="speakText('Est-ce que vous voulez une chemise ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-11')">Reveal English</button>
+    </div>
+    <div id="v-11" class="reveal" hidden>
+      <p><strong>Meaning:</strong> question marker</p>
+      <p><strong>Example meaning:</strong> Do you want a shirt?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>12. qu est-ce que <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Qu est-ce que tu prends ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('qu est-ce que')">Play word</button>
+      <button type="button" onclick="speakText('Qu est-ce que tu prends ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-12')">Reveal English</button>
+    </div>
+    <div id="v-12" class="reveal" hidden>
+      <p><strong>Meaning:</strong> what</p>
+      <p><strong>Example meaning:</strong> What are you taking?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>13. combien <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Combien coute le sac ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('combien')">Play word</button>
+      <button type="button" onclick="speakText('Combien coute le sac ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-13')">Reveal English</button>
+    </div>
+    <div id="v-13" class="reveal" hidden>
+      <p><strong>Meaning:</strong> how much / how many</p>
+      <p><strong>Example meaning:</strong> How much does the bag cost?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>14. ou <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Ou est le magasin ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('ou')">Play word</button>
+      <button type="button" onclick="speakText('Ou est le magasin ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-14')">Reveal English</button>
+    </div>
+    <div id="v-14" class="reveal" hidden>
+      <p><strong>Meaning:</strong> where</p>
+      <p><strong>Example meaning:</strong> Where is the store?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>15. quand <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Quand est-ce que tu vas au magasin ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('quand')">Play word</button>
+      <button type="button" onclick="speakText('Quand est-ce que tu vas au magasin ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-15')">Reveal English</button>
+    </div>
+    <div id="v-15" class="reveal" hidden>
+      <p><strong>Meaning:</strong> when</p>
+      <p><strong>Example meaning:</strong> When do you go to the store?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>16. pourquoi <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Pourquoi est-ce que tu prends le bus ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('pourquoi')">Play word</button>
+      <button type="button" onclick="speakText('Pourquoi est-ce que tu prends le bus ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-16')">Reveal English</button>
+    </div>
+    <div id="v-16" class="reveal" hidden>
+      <p><strong>Meaning:</strong> why</p>
+      <p><strong>Example meaning:</strong> Why do you take the bus?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>17. comment <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Comment est la chemise ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('comment')">Play word</button>
+      <button type="button" onclick="speakText('Comment est la chemise ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-17')">Reveal English</button>
+    </div>
+    <div id="v-17" class="reveal" hidden>
+      <p><strong>Meaning:</strong> how</p>
+      <p><strong>Example meaning:</strong> What is the shirt like?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>18. je veux <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je veux une robe rouge.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('je veux')">Play word</button>
+      <button type="button" onclick="speakText('Je veux une robe rouge.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-18')">Reveal English</button>
+    </div>
+    <div id="v-18" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I want</p>
+      <p><strong>Example meaning:</strong> I want a red dress.</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>19. vous voulez <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Vous voulez un cafe ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('vous voulez')">Play word</button>
+      <button type="button" onclick="speakText('Vous voulez un cafe ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-19')">Reveal English</button>
+    </div>
+    <div id="v-19" class="reveal" hidden>
+      <p><strong>Meaning:</strong> you want</p>
+      <p><strong>Example meaning:</strong> Do you want a coffee?</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>20. je prends <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je prends le sac noir.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('je prends')">Play word</button>
+      <button type="button" onclick="speakText('Je prends le sac noir.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-20')">Reveal English</button>
+    </div>
+    <div id="v-20" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I take</p>
+      <p><strong>Example meaning:</strong> I take the black bag.</p>
+      <p><strong>Tags:</strong> review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>21. je voudrais <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je voudrais du cafe, s il vous plait.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('je voudrais')">Play word</button>
+      <button type="button" onclick="speakText('Je voudrais du cafe, s il vous plait.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-21')">Reveal English</button>
+    </div>
+    <div id="v-21" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I would like</p>
+      <p><strong>Example meaning:</strong> I would like some coffee, please.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>22. du <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex prend du pain.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('du')">Play word</button>
+      <button type="button" onclick="speakText('Alex prend du pain.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-22')">Reveal English</button>
+    </div>
+    <div id="v-22" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some masculine</p>
+      <p><strong>Example meaning:</strong> Alex takes some bread.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>23. de la <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Samira prend de la soupe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('de la')">Play word</button>
+      <button type="button" onclick="speakText('Samira prend de la soupe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-23')">Reveal English</button>
+    </div>
+    <div id="v-23" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some feminine</p>
+      <p><strong>Example meaning:</strong> Samira has some soup.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>24. de l&#39; <span class="tag">recent review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je voudrais de l&#39;eau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('de l&#39;')">Play word</button>
+      <button type="button" onclick="speakText('Je voudrais de l&#39;eau.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-24')">Reveal English</button>
+    </div>
+    <div id="v-24" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some before vowel</p>
+      <p><strong>Example meaning:</strong> I would like some water.</p>
+      <p><strong>Tags:</strong> review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article></div></section>
+    <section class="card"><h2>Older Core Words Returning This Week</h2><div class="grid-2"><article class="word-card">
+    <h3>1. je suis <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> zhuh swee</p>
+    <p><strong>Example:</strong> Je suis en classe avec Samira.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('je suis')">Play word</button>
+      <button type="button" onclick="speakText('Je suis en classe avec Samira.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-1')">Reveal English</button>
+    </div>
+    <div id="v-1" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I am</p>
+      <p><strong>Example meaning:</strong> I am in class with Samira.</p>
+      <p><strong>Tags:</strong> review: etre; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>2. j&#39;ai <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> zhay</p>
+    <p><strong>Example:</strong> J&#39;ai un cahier et un stylo.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('j&#39;ai')">Play word</button>
+      <button type="button" onclick="speakText('J&#39;ai un cahier et un stylo.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-2')">Reveal English</button>
+    </div>
+    <div id="v-2" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I have</p>
+      <p><strong>Example meaning:</strong> I have a notebook and a pen.</p>
+      <p><strong>Tags:</strong> review: avoir; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>3. bonjour <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> bohn-ZHOOR</p>
+    <p><strong>Example:</strong> Bonjour, je m&#39;appelle Alex.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('bonjour')">Play word</button>
+      <button type="button" onclick="speakText('Bonjour, je m&#39;appelle Alex.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-3')">Reveal English</button>
+    </div>
+    <div id="v-3" class="reveal" hidden>
+      <p><strong>Meaning:</strong> hello</p>
+      <p><strong>Example meaning:</strong> Hello, my name is Alex.</p>
+      <p><strong>Tags:</strong> review: greeting; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>4. la famille <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> lah fah-MEE</p>
+    <p><strong>Example:</strong> La famille de Marc est au cafe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('la famille')">Play word</button>
+      <button type="button" onclick="speakText('La famille de Marc est au cafe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-4')">Reveal English</button>
+    </div>
+    <div id="v-4" class="reveal" hidden>
+      <p><strong>Meaning:</strong> family</p>
+      <p><strong>Example meaning:</strong> Marc&#39;s family is at the cafe.</p>
+      <p><strong>Tags:</strong> review: family; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>5. le cafe <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> luh kah-FAY</p>
+    <p><strong>Example:</strong> Samira prend un cafe au cafe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('le cafe')">Play word</button>
+      <button type="button" onclick="speakText('Samira prend un cafe au cafe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-5')">Reveal English</button>
+    </div>
+    <div id="v-5" class="reveal" hidden>
+      <p><strong>Meaning:</strong> cafe</p>
+      <p><strong>Example meaning:</strong> Samira has a coffee at the cafe.</p>
+      <p><strong>Tags:</strong> review: place; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>6. le bus <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> luh boos</p>
+    <p><strong>Example:</strong> Alex prend le bus pour aller en classe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('le bus')">Play word</button>
+      <button type="button" onclick="speakText('Alex prend le bus pour aller en classe.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-6')">Reveal English</button>
+    </div>
+    <div id="v-6" class="reveal" hidden>
+      <p><strong>Meaning:</strong> bus</p>
+      <p><strong>Example meaning:</strong> Alex takes the bus to go to class.</p>
+      <p><strong>Tags:</strong> review: transport; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>7. aujourd hui <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> oh-zhoor-DWEE</p>
+    <p><strong>Example:</strong> Aujourd&#39;hui, il fait froid.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('aujourd hui')">Play word</button>
+      <button type="button" onclick="speakText('Aujourd&#39;hui, il fait froid.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-7')">Reveal English</button>
+    </div>
+    <div id="v-7" class="reveal" hidden>
+      <p><strong>Meaning:</strong> today</p>
+      <p><strong>Example meaning:</strong> Today, it is cold.</p>
+      <p><strong>Tags:</strong> review: time; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>8. une petite table <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> oon puh-TEET tahbl</p>
+    <p><strong>Example:</strong> Il y a une petite table dans la cuisine.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('une petite table')">Play word</button>
+      <button type="button" onclick="speakText('Il y a une petite table dans la cuisine.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-8')">Reveal English</button>
+    </div>
+    <div id="v-8" class="reveal" hidden>
+      <p><strong>Meaning:</strong> a small table</p>
+      <p><strong>Example meaning:</strong> There is a small table in the kitchen.</p>
+      <p><strong>Tags:</strong> review: adjectives; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>9. mon livre <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> mohn leevr</p>
+    <p><strong>Example:</strong> Mon livre est sur le bureau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('mon livre')">Play word</button>
+      <button type="button" onclick="speakText('Mon livre est sur le bureau.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-9')">Reveal English</button>
+    </div>
+    <div id="v-9" class="reveal" hidden>
+      <p><strong>Meaning:</strong> my book</p>
+      <p><strong>Example meaning:</strong> My book is on the desk.</p>
+      <p><strong>Tags:</strong> review: possessives; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>10. du pain <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> doo pan</p>
+    <p><strong>Example:</strong> Je voudrais du pain et de l eau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('du pain')">Play word</button>
+      <button type="button" onclick="speakText('Je voudrais du pain et de l eau.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-10')">Reveal English</button>
+    </div>
+    <div id="v-10" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some bread</p>
+      <p><strong>Example meaning:</strong> I would like some bread and water.</p>
+      <p><strong>Tags:</strong> review: food; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>11. ou est-ce que <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> oo ess-kuh</p>
+    <p><strong>Example:</strong> Ou est-ce que Madame Dupont travaille ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('ou est-ce que')">Play word</button>
+      <button type="button" onclick="speakText('Ou est-ce que Madame Dupont travaille ?')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-11')">Reveal English</button>
+    </div>
+    <div id="v-11" class="reveal" hidden>
+      <p><strong>Meaning:</strong> where is it that</p>
+      <p><strong>Example meaning:</strong> Where does Madame Dupont work?</p>
+      <p><strong>Tags:</strong> review: questions; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>12. je me prepare <span class="tag">older review</span></h3>
+    
+    <p><strong>Pronunciation:</strong> zhuh muh pray-PAHR</p>
+    <p><strong>Example:</strong> Le matin, je me prepare dans ma chambre.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText('je me prepare')">Play word</button>
+      <button type="button" onclick="speakText('Le matin, je me prepare dans ma chambre.')">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-12')">Reveal English</button>
+    </div>
+    <div id="v-12" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I get ready</p>
+      <p><strong>Example meaning:</strong> In the morning, I get ready in my bedroom.</p>
+      <p><strong>Tags:</strong> review: routine; appears in reading; appears in writing</p>
+    </div>
+  </article></div></section>
+    <section class="card"><h2>Built With Words You Already Know</h2><p>Alex cherche la banque dans le quartier. Samira explique : Il y a une banque a gauche de la pharmacie et un cafe a droite du parc. Pour aller a la banque, prends le bus jusqu&#39;a la station, marche tout droit, puis tourne a gauche.</p><button type="button" onclick="speakText('Alex cherche la banque dans le quartier. Samira explique : Il y a une banque a gauche de la pharmacie et un cafe a droite du parc. Pour aller a la banque, prends le bus jusqu&#39;a la station, marche tout droit, puis tourne a gauche.')">Play review sentence chain</button></section>
+    <section class="card"><h2>Mini Practice</h2><ol class="tight"><li>Reveal five new cards, then hide them and say the English meaning.</li><li>Use three review cards in one new sentence about Alex or Samira.</li><li>Run the random drill twice in each direction.</li></ol></section>
+    <div class="footer-nav"><a class="button secondary" href="index.html">Week home</a><a class="button" href="grammar.html">Next: Grammar</a></div>
+    <script>
+      const vocab = [{"french":"il y a","english":"there is / there are","topic":"place","example":"Il y a une banque pres du cafe.","exampleEnglish":"There is a bank near the cafe.","phonetic":"listen and repeat","article":"","status":"new","n":1,"week":8},{"french":"a gauche","english":"on the left","topic":"directions","example":"La banque est a gauche.","exampleEnglish":"The bank is on the left.","phonetic":"listen and repeat","article":"","status":"new","n":2,"week":8},{"french":"a droite","english":"on the right","topic":"directions","example":"Le cafe est a droite.","exampleEnglish":"The cafe is on the right.","phonetic":"listen and repeat","article":"","status":"new","n":3,"week":8},{"french":"tout droit","english":"straight ahead","topic":"directions","example":"Marche tout droit jusqu au parc.","exampleEnglish":"Walk straight ahead to the park.","phonetic":"listen and repeat","article":"","status":"new","n":4,"week":8},{"french":"tourner","english":"to turn","topic":"directions","example":"Tourne a gauche devant la banque.","exampleEnglish":"Turn left in front of the bank.","phonetic":"listen and repeat","article":"","status":"new","n":5,"week":8},{"french":"marcher","english":"to walk","topic":"directions","example":"Alex marche au parc.","exampleEnglish":"Alex walks to the park.","phonetic":"listen and repeat","article":"","status":"new","n":6,"week":8},{"french":"prendre le bus","english":"to take the bus","topic":"transport","example":"Je prends le bus pour aller en classe.","exampleEnglish":"I take the bus to go to class.","phonetic":"listen and repeat","article":"","status":"new","n":7,"week":8},{"french":"metro","english":"subway","topic":"transport","example":"Le metro est pres de la gare.","exampleEnglish":"The subway is near the station.","phonetic":"may-TROH","article":"un","status":"new","n":8,"week":8},{"french":"station","english":"station / stop","topic":"transport","example":"La station est devant le parc.","exampleEnglish":"The stop is in front of the park.","phonetic":"stah-SYOHN","article":"une","status":"new","n":9,"week":8},{"french":"gare","english":"train station","topic":"transport","example":"La gare est loin du cafe.","exampleEnglish":"The train station is far from the cafe.","phonetic":"gahr","article":"une","status":"new","n":10,"week":8},{"french":"quartier","english":"neighborhood","topic":"town","example":"Le quartier est calme.","exampleEnglish":"The neighborhood is calm.","phonetic":"kar-TYAY","article":"un","status":"new","n":11,"week":8},{"french":"rue","english":"street","topic":"town","example":"La rue est longue.","exampleEnglish":"The street is long.","phonetic":"roo","article":"une","status":"new","n":12,"week":8},{"french":"parc","english":"park","topic":"town","example":"Marc attend au parc.","exampleEnglish":"Marc waits at the park.","phonetic":"park","article":"un","status":"new","n":13,"week":8},{"french":"banque","english":"bank","topic":"town","example":"La banque est a gauche.","exampleEnglish":"The bank is on the left.","phonetic":"bahnk","article":"une","status":"new","n":14,"week":8},{"french":"pharmacie","english":"pharmacy","topic":"town","example":"La pharmacie est pres de la banque.","exampleEnglish":"The pharmacy is near the bank.","phonetic":"far-mah-SEE","article":"une","status":"new","n":15,"week":8},{"french":"boulangerie","english":"bakery","topic":"town","example":"La boulangerie a du pain.","exampleEnglish":"The bakery has bread.","phonetic":"boo-lahn-zhuh-REE","article":"une","status":"new","n":16,"week":8},{"french":"ecole","english":"school","topic":"town","example":"L'ecole est pres de la station.","exampleEnglish":"The school is near the stop.","phonetic":"ay-KOHL","article":"une","status":"new","n":17,"week":8},{"french":"bureau de poste","english":"post office","topic":"town","example":"Le bureau de poste est a droite.","exampleEnglish":"The post office is on the right.","phonetic":"boo-ROH duh pohst","article":"un","status":"new","n":18,"week":8},{"french":"loin de","english":"far from","topic":"place","example":"La gare est loin de ma maison.","exampleEnglish":"The station is far from my house.","phonetic":"listen and repeat","article":"","status":"new","n":19,"week":8},{"french":"pres de","english":"near","topic":"place","example":"Le cafe est pres du parc.","exampleEnglish":"The cafe is near the park.","phonetic":"listen and repeat","article":"","status":"new","n":20,"week":8},{"french":"entre","english":"between","topic":"place","example":"La banque est entre le cafe et la pharmacie.","exampleEnglish":"The bank is between the cafe and the pharmacy.","phonetic":"listen and repeat","article":"","status":"new","n":21,"week":8},{"french":"en face de","english":"across from","topic":"place","example":"L'ecole est en face du parc.","exampleEnglish":"The school is across from the park.","phonetic":"listen and repeat","article":"","status":"new","n":22,"week":8},{"french":"jusqu a","english":"until / as far as","topic":"directions","example":"Marche jusqu a la station.","exampleEnglish":"Walk as far as the stop.","phonetic":"listen and repeat","article":"","status":"new","n":23,"week":8},{"french":"plan","english":"map / plan","topic":"directions","example":"Samira regarde le plan du quartier.","exampleEnglish":"Samira looks at the neighborhood map.","phonetic":"plahn","article":"un","status":"new","n":24,"week":8},{"french":"route","english":"route","topic":"directions","example":"La route est facile.","exampleEnglish":"The route is easy.","phonetic":"root","article":"une","status":"new","n":25,"week":8},{"french":"adresse","english":"address","topic":"directions","example":"J'ai l'adresse du cafe.","exampleEnglish":"I have the cafe address.","phonetic":"ah-DREHS","article":"une","status":"new","n":26,"week":8},{"french":"attendre","english":"to wait","topic":"verbs","example":"Marc attend devant la boulangerie.","exampleEnglish":"Marc waits in front of the bakery.","phonetic":"listen and repeat","article":"","status":"new","n":27,"week":8},{"french":"arriver","english":"to arrive","topic":"verbs","example":"Alex arrive a la station.","exampleEnglish":"Alex arrives at the stop.","phonetic":"listen and repeat","article":"","status":"new","n":28,"week":8},{"french":"partir","english":"to leave","topic":"verbs","example":"Nous partons apres la classe.","exampleEnglish":"We leave after class.","phonetic":"listen and repeat","article":"","status":"new","n":29,"week":8},{"french":"demander le chemin","english":"to ask directions","topic":"directions","example":"Alex demande le chemin a Samira.","exampleEnglish":"Alex asks Samira for directions.","phonetic":"listen and repeat","article":"","status":"new","n":30,"week":8},{"french":"je voudrais","english":"I would like","topic":"review from Week 6","example":"Je voudrais du cafe, s il vous plait.","exampleEnglish":"I would like some coffee, please.","phonetic":"listen and repeat","article":"","status":"recent review","n":31,"week":8},{"french":"du","english":"some masculine","topic":"review from Week 6","example":"Alex prend du pain.","exampleEnglish":"Alex takes some bread.","phonetic":"listen and repeat","article":"","status":"recent review","n":32,"week":8},{"french":"de la","english":"some feminine","topic":"review from Week 6","example":"Samira prend de la soupe.","exampleEnglish":"Samira has some soup.","phonetic":"listen and repeat","article":"","status":"recent review","n":33,"week":8},{"french":"de l'","english":"some before vowel","topic":"review from Week 6","example":"Je voudrais de l'eau.","exampleEnglish":"I would like some water.","phonetic":"listen and repeat","article":"","status":"recent review","n":34,"week":8},{"french":"pas de","english":"not any","topic":"review from Week 6","example":"Marc ne veut pas de dessert.","exampleEnglish":"Marc does not want any dessert.","phonetic":"listen and repeat","article":"","status":"recent review","n":35,"week":8},{"french":"cafe","english":"coffee / cafe","topic":"review from Week 6","example":"Je voudrais un cafe chaud.","exampleEnglish":"I would like a hot coffee.","phonetic":"kah-FAY","article":"un","status":"recent review","n":36,"week":8},{"french":"eau","english":"water","topic":"review from Week 6","example":"Samira boit de l'eau.","exampleEnglish":"Samira drinks water.","phonetic":"oh","article":"une","status":"recent review","n":37,"week":8},{"french":"the","english":"tea","topic":"review from Week 6","example":"Madame Dupont prend du the.","exampleEnglish":"Madame Dupont has tea.","phonetic":"tay","article":"un","status":"recent review","n":38,"week":8},{"french":"lait","english":"milk","topic":"review from Week 6","example":"Je ne veux pas de lait.","exampleEnglish":"I do not want milk.","phonetic":"leh","article":"un","status":"recent review","n":39,"week":8},{"french":"pain","english":"bread","topic":"review from Week 6","example":"Alex mange du pain.","exampleEnglish":"Alex eats bread.","phonetic":"pan","article":"un","status":"recent review","n":40,"week":8},{"french":"est-ce que","english":"question marker","topic":"review from Week 7","example":"Est-ce que vous voulez une chemise ?","exampleEnglish":"Do you want a shirt?","phonetic":"listen and repeat","article":"","status":"recent review","n":41,"week":8},{"french":"qu est-ce que","english":"what","topic":"review from Week 7","example":"Qu est-ce que tu prends ?","exampleEnglish":"What are you taking?","phonetic":"listen and repeat","article":"","status":"recent review","n":42,"week":8},{"french":"combien","english":"how much / how many","topic":"review from Week 7","example":"Combien coute le sac ?","exampleEnglish":"How much does the bag cost?","phonetic":"listen and repeat","article":"","status":"recent review","n":43,"week":8},{"french":"ou","english":"where","topic":"review from Week 7","example":"Ou est le magasin ?","exampleEnglish":"Where is the store?","phonetic":"listen and repeat","article":"","status":"recent review","n":44,"week":8},{"french":"quand","english":"when","topic":"review from Week 7","example":"Quand est-ce que tu vas au magasin ?","exampleEnglish":"When do you go to the store?","phonetic":"listen and repeat","article":"","status":"recent review","n":45,"week":8},{"french":"pourquoi","english":"why","topic":"review from Week 7","example":"Pourquoi est-ce que tu prends le bus ?","exampleEnglish":"Why do you take the bus?","phonetic":"listen and repeat","article":"","status":"recent review","n":46,"week":8},{"french":"comment","english":"how","topic":"review from Week 7","example":"Comment est la chemise ?","exampleEnglish":"What is the shirt like?","phonetic":"listen and repeat","article":"","status":"recent review","n":47,"week":8},{"french":"je veux","english":"I want","topic":"review from Week 7","example":"Je veux une robe rouge.","exampleEnglish":"I want a red dress.","phonetic":"listen and repeat","article":"","status":"recent review","n":48,"week":8},{"french":"vous voulez","english":"you want","topic":"review from Week 7","example":"Vous voulez un cafe ?","exampleEnglish":"Do you want a coffee?","phonetic":"listen and repeat","article":"","status":"recent review","n":49,"week":8},{"french":"je prends","english":"I take","topic":"review from Week 7","example":"Je prends le sac noir.","exampleEnglish":"I take the black bag.","phonetic":"listen and repeat","article":"","status":"recent review","n":50,"week":8},{"french":"je suis","english":"I am","phonetic":"zhuh swee","topic":"review: etre","example":"Je suis en classe avec Samira.","exampleEnglish":"I am in class with Samira.","status":"older review","n":51,"week":8},{"french":"j'ai","english":"I have","phonetic":"zhay","topic":"review: avoir","example":"J'ai un cahier et un stylo.","exampleEnglish":"I have a notebook and a pen.","status":"older review","n":52,"week":8},{"french":"bonjour","english":"hello","phonetic":"bohn-ZHOOR","topic":"review: greeting","example":"Bonjour, je m'appelle Alex.","exampleEnglish":"Hello, my name is Alex.","status":"older review","n":53,"week":8},{"french":"la famille","english":"family","phonetic":"lah fah-MEE","topic":"review: family","example":"La famille de Marc est au cafe.","exampleEnglish":"Marc's family is at the cafe.","status":"older review","n":54,"week":8},{"french":"le cafe","english":"cafe","phonetic":"luh kah-FAY","topic":"review: place","example":"Samira prend un cafe au cafe.","exampleEnglish":"Samira has a coffee at the cafe.","status":"older review","n":55,"week":8},{"french":"le bus","english":"bus","phonetic":"luh boos","topic":"review: transport","example":"Alex prend le bus pour aller en classe.","exampleEnglish":"Alex takes the bus to go to class.","status":"older review","n":56,"week":8},{"french":"aujourd hui","english":"today","phonetic":"oh-zhoor-DWEE","topic":"review: time","example":"Aujourd'hui, il fait froid.","exampleEnglish":"Today, it is cold.","status":"older review","n":57,"week":8},{"french":"une petite table","english":"a small table","phonetic":"oon puh-TEET tahbl","topic":"review: adjectives","example":"Il y a une petite table dans la cuisine.","exampleEnglish":"There is a small table in the kitchen.","status":"older review","n":58,"week":8},{"french":"mon livre","english":"my book","phonetic":"mohn leevr","topic":"review: possessives","example":"Mon livre est sur le bureau.","exampleEnglish":"My book is on the desk.","status":"older review","n":59,"week":8},{"french":"du pain","english":"some bread","phonetic":"doo pan","topic":"review: food","example":"Je voudrais du pain et de l eau.","exampleEnglish":"I would like some bread and water.","status":"older review","n":60,"week":8},{"french":"ou est-ce que","english":"where is it that","phonetic":"oo ess-kuh","topic":"review: questions","example":"Ou est-ce que Madame Dupont travaille ?","exampleEnglish":"Where does Madame Dupont work?","status":"older review","n":61,"week":8},{"french":"je me prepare","english":"I get ready","phonetic":"zhuh muh pray-PAHR","topic":"review: routine","example":"Le matin, je me prepare dans ma chambre.","exampleEnglish":"In the morning, I get ready in my bedroom.","status":"older review","n":62,"week":8},{"french":"je voudrais","english":"I would like","topic":"review from Week 6","example":"Je voudrais du cafe, s il vous plait.","exampleEnglish":"I would like some coffee, please.","phonetic":"listen and repeat","article":"","status":"recent review","n":63,"week":8},{"french":"du","english":"some masculine","topic":"review from Week 6","example":"Alex prend du pain.","exampleEnglish":"Alex takes some bread.","phonetic":"listen and repeat","article":"","status":"recent review","n":64,"week":8},{"french":"de la","english":"some feminine","topic":"review from Week 6","example":"Samira prend de la soupe.","exampleEnglish":"Samira has some soup.","phonetic":"listen and repeat","article":"","status":"recent review","n":65,"week":8},{"french":"de l'","english":"some before vowel","topic":"review from Week 6","example":"Je voudrais de l'eau.","exampleEnglish":"I would like some water.","phonetic":"listen and repeat","article":"","status":"recent review","n":66,"week":8},{"french":"pas de","english":"not any","topic":"review from Week 6","example":"Marc ne veut pas de dessert.","exampleEnglish":"Marc does not want any dessert.","phonetic":"listen and repeat","article":"","status":"recent review","n":67,"week":8},{"french":"cafe","english":"coffee / cafe","topic":"review from Week 6","example":"Je voudrais un cafe chaud.","exampleEnglish":"I would like a hot coffee.","phonetic":"kah-FAY","article":"un","status":"recent review","n":68,"week":8},{"french":"eau","english":"water","topic":"review from Week 6","example":"Samira boit de l'eau.","exampleEnglish":"Samira drinks water.","phonetic":"oh","article":"une","status":"recent review","n":69,"week":8},{"french":"the","english":"tea","topic":"review from Week 6","example":"Madame Dupont prend du the.","exampleEnglish":"Madame Dupont has tea.","phonetic":"tay","article":"un","status":"recent review","n":70,"week":8},{"french":"lait","english":"milk","topic":"review from Week 6","example":"Je ne veux pas de lait.","exampleEnglish":"I do not want milk.","phonetic":"leh","article":"un","status":"recent review","n":71,"week":8},{"french":"pain","english":"bread","topic":"review from Week 6","example":"Alex mange du pain.","exampleEnglish":"Alex eats bread.","phonetic":"pan","article":"un","status":"recent review","n":72,"week":8},{"french":"est-ce que","english":"question marker","topic":"review from Week 7","example":"Est-ce que vous voulez une chemise ?","exampleEnglish":"Do you want a shirt?","phonetic":"listen and repeat","article":"","status":"recent review","n":73,"week":8},{"french":"qu est-ce que","english":"what","topic":"review from Week 7","example":"Qu est-ce que tu prends ?","exampleEnglish":"What are you taking?","phonetic":"listen and repeat","article":"","status":"recent review","n":74,"week":8},{"french":"combien","english":"how much / how many","topic":"review from Week 7","example":"Combien coute le sac ?","exampleEnglish":"How much does the bag cost?","phonetic":"listen and repeat","article":"","status":"recent review","n":75,"week":8}];
+      function label(i){return (i.article ? i.article + ' ' : '') + i.french}
+      function generateRandomDrill(direction){const i=vocab[Math.floor(Math.random()*vocab.length)];const p=document.getElementById('drillPrompt');const a=document.getElementById('drillAnswer');a.hidden=true;if(direction==='fr-en'){p.textContent=label(i);a.innerHTML='<p><strong>English:</strong> '+i.english+'</p><p><strong>Example:</strong> '+i.example+'</p><p><strong>Example meaning:</strong> '+i.exampleEnglish+'</p>'}else{p.textContent=i.english;a.innerHTML='<p><strong>French:</strong> '+label(i)+'</p><p><strong>Example:</strong> '+i.example+'</p><p><strong>Example meaning:</strong> '+i.exampleEnglish+'</p>'}}
+      function revealRandomDrill(){document.getElementById('drillAnswer').hidden=false}
+      function toggleOne(id){const e=document.getElementById(id);e.hidden=!e.hidden}
+      function toggleAll(show){document.querySelectorAll('.reveal').forEach(e=>e.hidden=!show)}
+    </script>
+  </main>
+  <script src="audio.js"></script>
+</body>
+</html>
