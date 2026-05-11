@@ -39,3 +39,8 @@
 - Every important new word must appear in vocab, an example, reading or listening, quiz, next week, and later cumulative review.
 - Every new grammar point must appear in explanation, controlled examples, reading or listening, assessment, and later review.
 - If learner_state shows overload, reduce new content and increase review.
+
+## New-load rule
+- Count only active production cards as new vocabulary.
+- Current support cards may appear for recognition, but they should not be treated as required production until they recur.
+- If a week feels overloaded, reduce active new cards before reducing review.

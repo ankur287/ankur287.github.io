@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "storybook-generator"
+version = "0.1.0"
+description = "A locally-run children's storybook generator."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.0",
+    "ollama>=0.3",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+images = [
+    "torch>=2.2",
+    "diffusers>=0.27",
+    "transformers>=4.40",
+    "accelerate>=0.30",
+    "Pillow>=10.0",
+]
+dev = ["ruff", "mypy"]
+
+[project.scripts]
+storybook = "storybook_generator.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+storybook_generator = ["templates/**/*", "static/**/*"]
+

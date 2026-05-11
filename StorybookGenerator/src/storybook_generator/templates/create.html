@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Story — Storybook Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FFF8F0;
+      --cream-dark: #F5EDE0;
+      --brown: #3D2B1F;
+      --brown-light: #7A5C47;
+      --orange: #E8633D;
+      --orange-hover: #D4512B;
+      --green: #5B8A72;
+      --green-hover: #4A7260;
+      --red: #C0392B;
+      --shadow: rgba(61, 43, 31, 0.12);
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--cream);
+      color: var(--brown);
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 32px 24px 24px;
+    }
+
+    header h1 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--brown);
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 15px;
+      color: var(--brown-light);
+    }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .form-container {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .help-text {
+      font-size: 13px;
+      color: var(--brown-light);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--cream-dark);
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      color: var(--brown);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(232, 99, 61, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1.5px solid var(--cream-dark);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .radio-option:hover {
+      border-color: var(--orange);
+      background: rgba(232, 99, 61, 0.05);
+    }
+
+    input[type="radio"] {
+      cursor: pointer;
+      accent-color: var(--orange);
+    }
+
+    .radio-option input[type="radio"]:checked + label {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    button {
+      flex: 1;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-submit {
+      background: var(--orange);
+      color: white;
+    }
+
+    .btn-submit:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(232, 99, 61, 0.3);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-cancel {
+      background: var(--cream-dark);
+      color: var(--brown);
+    }
+
+    .btn-cancel:hover {
+      background: var(--cream);
+    }
+
+    /* Loading state */
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin-right: 8px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Error/success messages */
+    .error {
+      background: #FDEAEA;
+      border: 1.5px solid #E8B89A;
+      color: #9B2B2B;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .success {
+      background: #DFF2E9;
+      border: 1.5px solid #A5D6C8;
+      color: #2E6B4E;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .required::after {
+      content: " *";
+      color: var(--red);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>✨ Create a Story</h1>
+    <p>Tell us about your story idea, and we'll write it for your child.</p>
+  </header>
+
+  <main>
+    <div class="form-container">
+
+      <div id="error-message" class="error" style="display: none;"></div>
+      <div id="success-message" class="success" style="display: none;"></div>
+
+      <form id="storyForm">
+
+        <!-- Story Topic -->
+        <div class="form-group">
+          <label for="story_topic" class="required">What's your story about?</label>
+          <textarea id="story_topic" name="story_topic" required placeholder="Describe the story idea as you'd tell a friend. E.g., 'A shy bunny who learns to make friends' or 'A girl nervous about starting school'"></textarea>
+          <div class="help-text">Be as specific as you'd like — include the child's interests, situations, or lessons you want them to learn.</div>
+        </div>
+
+        <!-- Child Age -->
+        <div class="form-group">
+          <label for="child_age" class="required">How old is the child?</label>
+          <select id="child_age" name="child_age" required>
+            <option value="">Select age...</option>
+            <option value="2">2 years</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5">5 years</option>
+            <option value="6">6 years</option>
+            <option value="7">7 years</option>
+            <option value="8">8 years</option>
+            <option value="9">9 years</option>
+            <option value="10">10+ years</option>
+          </select>
+          <div class="help-text">Age determines story length, vocabulary, and complexity.</div>
+        </div>
+
+        <!-- Child Name -->
+        <div class="form-group">
+          <label for="child_name">Child's name (optional)</label>
+          <input type="text" id="child_name" name="child_name" placeholder="So the character feels personal to them">
+          <div class="help-text">If provided, the main character will be named after them.</div>
+        </div>
+
+        <!-- Main Character -->
+        <div class="form-group">
+          <label for="main_character">Who or what is the story about? (optional)</label>
+          <input type="text" id="main_character" name="main_character" placeholder="E.g., 'a red panda', 'a robot who wants to feel emotions'">
+          <div class="help-text">Leave blank to let the story generator choose.</div>
+        </div>
+
+        <!-- Story Theme -->
+        <div class="form-group">
+          <label>What feeling should the story have? (optional)</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="theme_heartwarming" name="story_theme" value="Heartwarming" checked>
+              <label for="theme_heartwarming">Heartwarming</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="theme_adventurous" name="story_theme" value="Adventurous">
+              <label for="theme_adventurous">Adventurous</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="theme_funny" name="story_theme" value="Funny">
+              <label for="theme_funny">Funny</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="theme_magical" name="story_theme" value="Magical">
+              <label for="theme_magical">Magical</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="theme_calm" name="story_theme" value="Gentle and Calm">
+              <label for="theme_calm">Calm</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Moral/Lesson -->
+        <div class="form-group">
+          <label for="moral_lesson">What should your child learn? (optional)</label>
+          <input type="text" id="moral_lesson" name="moral_lesson" placeholder="E.g., 'being kind to strangers', 'it's okay to ask for help'">
+          <div class="help-text">Leave blank to let the story suggest its own lesson.</div>
+        </div>
+
+        <!-- Dedication -->
+        <div class="form-group">
+          <label for="dedicated_to">Make it a gift? (optional)</label>
+          <input type="text" id="dedicated_to" name="dedicated_to" placeholder="E.g., 'For Lily, who makes every day brighter'">
+          <div class="help-text">A dedication will appear on the second page.</div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+          <button type="submit" class="btn-submit" id="submitBtn">
+            Generate Story
+          </button>
+          <button type="button" class="btn-cancel" onclick="window.location.href='/'">
+            Cancel
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('storyForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const errorDiv = document.getElementById('error-message');
+    const successDiv = document.getElementById('success-message');
+
+    // Listen to progress updates via SSE
+    let progressSource = null;
+
+    function startProgressListener() {
+      if (progressSource) progressSource.close();
+      progressSource = new EventSource('/api/progress');
+      progressSource.onmessage = (e) => {
+        submitBtn.innerHTML = `<span class="spinner"></span>${e.data}`;
+      };
+      progressSource.onerror = () => {
+        if (progressSource) progressSource.close();
+      };
+    }
+
+    function stopProgressListener() {
+      if (progressSource) {
+        progressSource.close();
+        progressSource = null;
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorDiv.style.display = 'none';
+      successDiv.style.display = 'none';
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span>Starting...';
+
+      startProgressListener();
+
+      const formData = {
+        story_topic: document.getElementById('story_topic').value,
+        child_age: document.getElementById('child_age').value,
+        child_name: document.getElementById('child_name').value || null,
+        main_character: document.getElementById('main_character').value || null,
+        story_theme: document.getElementById('story_theme').value,
+        moral_lesson: document.getElementById('moral_lesson').value || null,
+        dedicated_to: document.getElementById('dedicated_to').value || null,
+      };
+
+      try {
+        const response = await fetch('/api/story/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        stopProgressListener();
+
+        if (!response.ok) {
+          errorDiv.textContent = data.error || 'Failed to generate story.';
+          errorDiv.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Generate Story';
+        } else {
+          // Redirect to the generated story
+          window.location.href = `/story/${data.story_id}`;
+        }
+      } catch (err) {
+        stopProgressListener();
+        errorDiv.textContent = `Error: ${err.message}`;
+        errorDiv.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Generate Story';
+      }
+    });
+  </script>
+
+</body>
+</html>

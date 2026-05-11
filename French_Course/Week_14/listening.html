@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 14 Listening</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav"><a class="secondary" href="../index.html">Course home</a><a class="secondary" href="../Week_13/index.html">Week 13</a><a class="secondary" href="../Week_15/index.html">Week 15</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="reading.html">Reading</a><a href="listening.html">Listening</a><a href="writing.html">Writing</a><a href="quiz.html">Quiz</a></nav>
+
+    <section class="card hero"><h1>Week 14 Listening</h1><p>The listening stays close to the reading level and reuses older grammar inside the new task.</p></section>
+    <section class="card"><h2>Listening Warm-Up</h2><p>Il faut boire de l&#39;eau. Hier, j&#39;ai parle avec Samira. Avant, j&#39;habitais pres du parc.</p><button type="button" onclick="speakText(&quot;Il faut boire de l&#39;eau. Hier, j&#39;ai parle avec Samira. Avant, j&#39;habitais pres du parc.&quot;)">Play warm-up</button></section>
+    <section class="card"><h2>Main Listening Passage</h2><p id="listeningPassage" data-text="Madame Dupont dit : Bonjour Alex, ou avez-vous mal ? Alex repond : J&#39;ai mal a la tete et au dos. Hier, j&#39;ai pris le bus sous la pluie. Madame Dupont dit : Il faut boire de l&#39;eau et vous devez vous reposer aujourd&#39;hui.">Madame Dupont dit : Bonjour Alex, ou avez-vous mal ? Alex repond : J&#39;ai mal a la tete et au dos. Hier, j&#39;ai pris le bus sous la pluie. Madame Dupont dit : Il faut boire de l&#39;eau et vous devez vous reposer aujourd&#39;hui.</p></section>
+    <section class="card"><h2>Audio Player</h2><div class="button-row"><button type="button" onclick="playPassage('listeningPassage')">Play passage</button><button type="button" class="secondary" onclick="stopSpeech()">Pause / stop</button><button type="button" class="secondary" onclick="restartSpeech('listeningPassage')">Restart</button></div></section>
+    <section class="card"><h2>First Listen Task</h2><p>Listen once. Identify the people, place, and main action.</p><details><summary>Answer reveal</summary><p>The passage uses Alex, Samira, Marc, or Madame Dupont in a familiar daily-life setting.</p></details></section>
+    <section class="card"><h2>Second Listen Task</h2><p>Listen again. Write three words you hear from this week and two review words.</p><details><summary>Possible answers</summary><p>il faut, je dois, vous devez, j&#39;ai besoin de; j&#39;ai parle, avant</p></details></section>
+    <section class="card"><h2>Dictation / Gap-Fill</h2><ol class="tight"><li>Madame Dupont dit : Bonjour Alex, ou ___</li><li>Je dois rester a la maison.</li><li>Avant, j&#39;habitais pres du parc.</li></ol><details><summary>Answer reveal</summary><p>Replay the passage and compare with the visible text above.</p></details></section>
+    <section class="card"><h2>Listening Test</h2><div class="question"><p>1. What is the main situation?</p><details><summary>Answer reveal</summary><p>Check the main listening passage and support your answer with one phrase.</p></details></div><div class="question"><p>2. Which new grammar pattern do you hear?</p><details><summary>Answer reveal</summary><p>Check the main listening passage and support your answer with one phrase.</p></details></div><div class="question"><p>3. Which older review item returns?</p><details><summary>Answer reveal</summary><p>Check the main listening passage and support your answer with one phrase.</p></details></div><div class="question"><p>4. Is the tone polite, descriptive, or narrative?</p><details><summary>Answer reveal</summary><p>Check the main listening passage and support your answer with one phrase.</p></details></div></section>
+    <section class="card"><h2>Answer Reveal</h2><details><summary>Show full listening text</summary><p>Madame Dupont dit : Bonjour Alex, ou avez-vous mal ? Alex repond : J&#39;ai mal a la tete et au dos. Hier, j&#39;ai pris le bus sous la pluie. Madame Dupont dit : Il faut boire de l&#39;eau et vous devez vous reposer aujourd&#39;hui.</p></details></section>
+    <div class="footer-nav"><a class="button secondary" href="reading.html">Reading</a><a class="button" href="writing.html">Next: Writing</a></div>
+  </main>
+  <script src="audio.js"></script>
+
+</body>
+</html>

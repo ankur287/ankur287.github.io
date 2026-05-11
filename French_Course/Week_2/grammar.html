@@ -8,168 +8,17 @@
 </head>
 <body>
   <main class="wrap">
-    <nav class="nav">
-      <a class="secondary" href="../index.html">Course home</a>
-      <a class="secondary" href="index.html">Week 2 home</a>
-      <a class="secondary" href="vocabulary.html">Vocabulary</a>
-      <a href="reading.html">Next: Reading</a>
-    </nav>
+    <nav class="nav"><a class="secondary" href="../index.html">Course home</a><a class="secondary" href="../Week_1/index.html">Week 1</a><a class="secondary" href="../Week_3/index.html">Week 3</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="reading.html">Reading</a><a href="listening.html">Listening</a><a href="writing.html">Writing</a><a href="quiz.html">Quiz</a></nav>
 
-    <section class="card hero">
-      <h1>Week 2 Grammar</h1>
-      <p><strong>Main target:</strong> <em>avoir</em> basics + saying age.</p>
-      <p><strong>Review target:</strong> <em>être</em> basics from Week 1.</p>
-    </section>
-
-    <section class="card">
-      <h2>1. Main grammar target</h2>
-      <p>Use <strong>avoir</strong> to say what someone has. In French, you also use <strong>avoir</strong> to say age.</p>
-
-      <table class="table">
-        <tr><th>French</th><th>Meaning</th></tr>
-        <tr><td>j'ai</td><td>I have</td></tr>
-        <tr><td>tu as</td><td>you have</td></tr>
-        <tr><td>il a / elle a</td><td>he has / she has</td></tr>
-        <tr><td>nous avons</td><td>we have</td></tr>
-        <tr><td>vous avez</td><td>you have</td></tr>
-      </table>
-
-      <div class="grid-2">
-        <div class="word-card">
-          <p><strong>Example 1:</strong> J'ai un livre.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`J'ai un livre.`)">Play</button>
-            <button type="button" class="secondary" onclick="toggleOne('g1')">Show English</button>
-          </div>
-          <div id="g1" class="reveal" hidden>I have a book.</div>
-        </div>
-        <div class="word-card">
-          <p><strong>Example 2:</strong> Samira a un téléphone.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`Samira a un téléphone.`)">Play</button>
-            <button type="button" class="secondary" onclick="toggleOne('g2')">Show English</button>
-          </div>
-          <div id="g2" class="reveal" hidden>Samira has a phone.</div>
-        </div>
-        <div class="word-card">
-          <p><strong>Example 3:</strong> Nous avons une classe.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`Nous avons une classe.`)">Play</button>
-            <button type="button" class="secondary" onclick="toggleOne('g3')">Show English</button>
-          </div>
-          <div id="g3" class="reveal" hidden>We have a class.</div>
-        </div>
-        <div class="word-card">
-          <p><strong>Example 4:</strong> Vous avez un livre.</p>
-          <div class="button-row">
-            <button type="button" onclick="speakText(`Vous avez un livre.`)">Play</button>
-            <button type="button" class="secondary" onclick="toggleOne('g4')">Show English</button>
-          </div>
-          <div id="g4" class="reveal" hidden>You have a book.</div>
-        </div>
-      </div>
-
-      <div class="notice">
-        <strong>Age pattern:</strong> French says <strong>“I have ten years”</strong>, not “I am ten.”<br>
-        <strong>J'ai dix ans.</strong>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>2. Review grammar target</h2>
-      <p>Week 1 used <strong>être</strong> to say who someone is.</p>
-      <table class="table">
-        <tr><th>Être</th><th>Meaning</th></tr>
-        <tr><td>je suis</td><td>I am</td></tr>
-        <tr><td>tu es</td><td>you are</td></tr>
-        <tr><td>il est / elle est</td><td>he is / she is</td></tr>
-        <tr><td>nous sommes</td><td>we are</td></tr>
-        <tr><td>vous êtes</td><td>you are</td></tr>
-      </table>
-      <div class="notice">
-        <strong>Quick contrast:</strong><br>
-        <strong>Je suis Alex.</strong> = I am Alex.<br>
-        <strong>J'ai un téléphone.</strong> = I have a phone.
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>3. Pattern ladder</h2>
-      <ol class="tight">
-        <li>Je suis Alex.</li>
-        <li>J'ai un livre.</li>
-        <li>J'ai dix ans.</li>
-        <li>Je m'appelle Alex. J'ai dix ans.</li>
-        <li>Je suis Alex. J'ai un frère et un téléphone.</li>
-      </ol>
-      <div class="button-row">
-        <button type="button" onclick="speakText(`Je suis Alex. J'ai un livre. J'ai dix ans. Je m'appelle Alex. J'ai dix ans. Je suis Alex. J'ai un frère et un téléphone.`)">Play ladder</button>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>4. Compare and notice</h2>
-      <div class="grid-2">
-        <div class="word-card">
-          <p><strong>Je suis Samira.</strong></p>
-          <p class="muted">identity</p>
-        </div>
-        <div class="word-card">
-          <p><strong>J'ai un frère.</strong></p>
-          <p class="muted">possession</p>
-        </div>
-        <div class="word-card">
-          <p><strong>Elle est Madame Dupont.</strong></p>
-          <p class="muted">who she is</p>
-        </div>
-        <div class="word-card">
-          <p><strong>Elle a un livre.</strong></p>
-          <p class="muted">what she has</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>5. Mini production prompts</h2>
-      <div class="question">
-        <p>Write in French: “I have a sister.”</p>
-        <details><summary>Possible answer</summary><p>J'ai une sœur.</p></details>
-      </div>
-      <div class="question">
-        <p>Write in French: “Marc is 10 years old.”</p>
-        <details><summary>Possible answer</summary><p>Marc a dix ans.</p></details>
-      </div>
-      <div class="question">
-        <p>Combine identity + age: “My name is Alex. I am ten years old.”</p>
-        <details><summary>Possible answer</summary><p>Je m'appelle Alex. J'ai dix ans.</p></details>
-      </div>
-
-      <div class="watchout">
-        <strong>Watch out:</strong>
-        <ul class="tight">
-          <li>Do not say <strong>Je suis dix ans</strong>.</li>
-          <li>Use <strong>j'ai</strong> before a vowel sound, not <strong>je ai</strong>.</li>
-          <li>Keep Week 1 and Week 2 separate in meaning: <strong>être</strong> = be, <strong>avoir</strong> = have.</li>
-        </ul>
-      </div>
-
-      <div class="notice">
-        <strong>Reminder from earlier weeks:</strong> you still need the Week 1 frames at the start of your sentences: <strong>Bonjour</strong>, <strong>je m'appelle</strong>, <strong>je suis</strong>.
-      </div>
-    </section>
-
-    <div class="footer-nav">
-      <a class="button secondary" href="vocabulary.html">← Vocabulary</a>
-      <a class="button" href="reading.html">Next: Reading →</a>
-    </div>
+    <section class="card hero"><h1>Week 2 Grammar</h1><p><strong>Main target:</strong> avoir basics and age. <strong>Review target:</strong> etre, greetings, classroom words, days, and months from Week 1.</p></section>
+    <section class="card"><h2>Main Grammar Target</h2><p>write a short personal profile with identity, age, family/object details, and one negative sentence.</p><table class="table"><tr><th>Pattern</th><th>Use</th><th>Example</th></tr><tr><td>j&#39;ai</td><td>I have / I am for age</td><td>J&#39;ai dix ans.</td></tr><tr><td>tu as</td><td>you have</td><td>Tu as un telephone.</td></tr><tr><td>il/elle a</td><td>he/she has</td><td>Elle a une soeur.</td></tr><tr><td>nous avons</td><td>we have</td><td>Nous avons un livre.</td></tr><tr><td>je n ai pas de</td><td>I do not have any</td><td>Je n&#39;ai pas de telephone.</td></tr><tr><td>etre + avoir contrast</td><td>identity vs possession</td><td>Je suis Alex. J&#39;ai un cahier.</td></tr></table></section>
+    <section class="card"><h2>Review Grammar Target</h2><p>Older grammar is not separate homework here. It appears inside the new examples, the reading, the listening, the writing prompts, and the quiz.</p><div class="notice">etre, greetings, classroom words, days, and months from Week 1</div></section>
+    <section class="card"><h2>Pattern Ladder</h2><ol class="tight"><li>Samira a six ans. Alex a dix ans.</li><li>J&#39;ai un livre.</li><li>Tu as un téléphone.</li><li>Il a dix ans.</li><li>Elle a une sœur.</li><li>Nous avons un livre.</li></ol><button type="button" onclick="speakText(&quot;Samira a six ans. Alex a dix ans. J&#39;ai un livre. Tu as un téléphone. Il a dix ans. Elle a une sœur. Nous avons un livre.&quot;)">Play ladder</button></section>
+    <section class="card"><h2>Compare And Notice</h2><div class="grid-2"><div class="word-card"><p><strong>Samira a six ans. Alex a dix ans.</strong></p><details><summary>English and why</summary><p>Samira is six years old. Alex is ten years old.</p><p>This sentence combines Week 2&#39;s target with older review language.</p></details></div><div class="word-card"><p><strong>J&#39;ai un livre.</strong></p><details><summary>English and why</summary><p>I have a book.</p><p>This sentence combines Week 2&#39;s target with older review language.</p></details></div><div class="word-card"><p><strong>Tu as un téléphone.</strong></p><details><summary>English and why</summary><p>You have a phone.</p><p>This sentence combines Week 2&#39;s target with older review language.</p></details></div><div class="word-card"><p><strong>Il a dix ans.</strong></p><details><summary>English and why</summary><p>He is ten years old.</p><p>This sentence combines Week 2&#39;s target with older review language.</p></details></div><div class="word-card"><p><strong>Elle a une sœur.</strong></p><details><summary>English and why</summary><p>She has a sister.</p><p>This sentence combines Week 2&#39;s target with older review language.</p></details></div><div class="word-card"><p><strong>Nous avons un livre.</strong></p><details><summary>English and why</summary><p>We have a book.</p><p>This sentence combines Week 2&#39;s target with older review language.</p></details></div></div><div class="watchout"><strong>Watch out:</strong> Use avoir for age in French: j ai dix ans. Use etre for identity: je suis Alex.</div></section>
+    <section class="card"><h2>Mini Production Prompts</h2><div class="question"><p>Write one sentence about Alex using the new grammar.</p><details><summary>Model</summary><p>Bonjour, je m&#39;appelle Alex.</p></details></div><div class="question"><p>Write one sentence about Samira that includes one older review item.</p><details><summary>Model</summary><p>Je suis en classe.</p></details></div><div class="question"><p>Make one question and one answer using this week plus review.</p><details><summary>Model</summary><p>Samira dit : Bonjour, je suis Samira et j&#39;ai un livre.</p></details></div></section>
+    <div class="footer-nav"><a class="button secondary" href="vocabulary.html">Vocabulary</a><a class="button" href="reading.html">Next: Reading</a></div>
   </main>
-
-  <script>
-    function toggleOne(id){
-      const el=document.getElementById(id);
-      el.hidden=!el.hidden;
-    }
-  </script>
   <script src="audio.js"></script>
+
 </body>
 </html>

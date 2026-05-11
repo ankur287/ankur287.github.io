@@ -62,3 +62,12 @@ Every writing test should score:
 
 ## Feedback
 Feedback should be specific, encouraging, and focused on 2-3 key improvements.
+
+## CLB 7 final readiness checks
+Weeks 25-30 should repeatedly test:
+- main idea, purpose, register, detail, inference, and evidence in reading
+- speaker, purpose, main idea, two details, pronoun/reference tracking, and next step in listening
+- summary, evidence, opinion, formal request, organization, and grammar control in writing
+- timed completion with a short planning step and a final checking step
+
+Quiz questions should be sentence-based whenever possible. Vocabulary recall should appear inside meaningful sentences, not as isolated translation only.

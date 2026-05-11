@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 30 Vocabulary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav"><a class="secondary" href="../index.html">Course home</a><a class="secondary" href="../Week_29/index.html">Week 29</a><a href="vocabulary.html">Vocabulary</a><a href="grammar.html">Grammar</a><a href="reading.html">Reading</a><a href="listening.html">Listening</a><a href="writing.html">Writing</a><a href="quiz.html">Quiz</a></nav>
+
+    <section class="card hero">
+      <h1>Week 30 Vocabulary</h1>
+      <p><strong>New this week:</strong> minimal new language, final review, confidence, and next-step planning. <strong>Review inside examples:</strong> personalized weak points and cumulative CLB tasks.</p>
+      <p class="muted">Active new load: 10 core cards. Support/recognition: 5 cards. The remaining 60 cards are recent and older review so the page stays cumulative.</p>
+      <div class="button-row"><button type="button" class="secondary" onclick="toggleAll(true)">Show all English</button><button type="button" class="secondary" onclick="toggleAll(false)">Hide all English</button></div>
+    </section>
+    <section class="card">
+      <h2>Random Bidirectional Drill</h2>
+      <div class="button-row"><button type="button" onclick="generateRandomDrill('fr-en')">French to English</button><button type="button" onclick="generateRandomDrill('en-fr')">English to French</button><button type="button" class="secondary" onclick="revealRandomDrill()">Reveal answer</button></div>
+      <div class="question"><p><strong>Prompt:</strong> <span id="drillPrompt">Choose a direction.</span></p><div id="drillAnswer" class="reveal" hidden></div></div>
+    </section>
+    <section class="card"><h2>New This Week</h2><div class="grid-2"><article class="word-card">
+    <h3>1. revision finale <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La revision finale commence aujourd hui.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;revision finale&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La revision finale commence aujourd hui.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-1')">Reveal English</button>
+    </div>
+    <div id="v-1" class="reveal" hidden>
+      <p><strong>Meaning:</strong> final review</p>
+      <p><strong>Example meaning:</strong> The final review begins today.</p>
+      <p><strong>Tags:</strong> final review; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>2. je peux continuer <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je peux continuer apres la semaine trente.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je peux continuer&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je peux continuer apres la semaine trente.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-2')">Reveal English</button>
+    </div>
+    <div id="v-2" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I can continue</p>
+      <p><strong>Example meaning:</strong> I can continue after week thirty.</p>
+      <p><strong>Tags:</strong> confidence; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>3. j ai progresse <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> J ai progresse avec la lecture.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;j ai progresse&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;J ai progresse avec la lecture.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-3')">Reveal English</button>
+    </div>
+    <div id="v-3" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I have progressed</p>
+      <p><strong>Example meaning:</strong> I have progressed with reading.</p>
+      <p><strong>Tags:</strong> confidence; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>4. je comprends mieux <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je comprends mieux les textes.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je comprends mieux&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je comprends mieux les textes.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-4')">Reveal English</button>
+    </div>
+    <div id="v-4" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I understand better</p>
+      <p><strong>Example meaning:</strong> I understand texts better.</p>
+      <p><strong>Tags:</strong> confidence; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>5. je peux resumer <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je peux resumer un avis.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je peux resumer&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je peux resumer un avis.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-5')">Reveal English</button>
+    </div>
+    <div id="v-5" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I can summarize</p>
+      <p><strong>Example meaning:</strong> I can summarize a notice.</p>
+      <p><strong>Tags:</strong> confidence; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>6. je peux repondre <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je peux repondre avec preuve.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je peux repondre&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je peux repondre avec preuve.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-6')">Reveal English</button>
+    </div>
+    <div id="v-6" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I can answer</p>
+      <p><strong>Example meaning:</strong> I can answer with evidence.</p>
+      <p><strong>Tags:</strong> confidence; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>7. mon prochain objectif <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Mon prochain objectif est la pratique.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;mon prochain objectif&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Mon prochain objectif est la pratique.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-7')">Reveal English</button>
+    </div>
+    <div id="v-7" class="reveal" hidden>
+      <p><strong>Meaning:</strong> my next goal</p>
+      <p><strong>Example meaning:</strong> My next goal is practice.</p>
+      <p><strong>Tags:</strong> next steps; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>8. continuer a pratiquer <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je vais continuer a pratiquer.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;continuer a pratiquer&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je vais continuer a pratiquer.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-8')">Reveal English</button>
+    </div>
+    <div id="v-8" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to continue practicing</p>
+      <p><strong>Example meaning:</strong> I am going to continue practicing.</p>
+      <p><strong>Tags:</strong> next steps; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>9. chaque semaine <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je vais reviser chaque semaine.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;chaque semaine&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je vais reviser chaque semaine.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-9')">Reveal English</button>
+    </div>
+    <div id="v-9" class="reveal" hidden>
+      <p><strong>Meaning:</strong> each week</p>
+      <p><strong>Example meaning:</strong> I am going to review each week.</p>
+      <p><strong>Tags:</strong> next steps; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>10. un plan de revision <span class="tag">new</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Mon plan de revision est simple.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;un plan de revision&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Mon plan de revision est simple.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-10')">Reveal English</button>
+    </div>
+    <div id="v-10" class="reveal" hidden>
+      <p><strong>Meaning:</strong> review plan</p>
+      <p><strong>Example meaning:</strong> My review plan is simple.</p>
+      <p><strong>Tags:</strong> next steps; appears in reading; appears in writing</p>
+    </div>
+  </article></div><h3>Controlled Support / Recognition</h3><div class="grid-2"><article class="word-card">
+    <h3>11. mes points forts <span class="tag">current support</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Mes points forts sont la lecture.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;mes points forts&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Mes points forts sont la lecture.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-11')">Reveal English</button>
+    </div>
+    <div id="v-11" class="reveal" hidden>
+      <p><strong>Meaning:</strong> my strengths</p>
+      <p><strong>Example meaning:</strong> My strengths are reading.</p>
+      <p><strong>Tags:</strong> reflection; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>12. mes points faibles <span class="tag">current support</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Mes points faibles sont les verbes.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;mes points faibles&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Mes points faibles sont les verbes.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-12')">Reveal English</button>
+    </div>
+    <div id="v-12" class="reveal" hidden>
+      <p><strong>Meaning:</strong> my weak points</p>
+      <p><strong>Example meaning:</strong> My weak points are verbs.</p>
+      <p><strong>Tags:</strong> reflection; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>13. ameliorer <span class="tag">current support</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je veux ameliorer mon ecriture.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;ameliorer&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je veux ameliorer mon ecriture.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-13')">Reveal English</button>
+    </div>
+    <div id="v-13" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to improve</p>
+      <p><strong>Example meaning:</strong> I want to improve my writing.</p>
+      <p><strong>Tags:</strong> reflection; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>14. pratiquer regulierement <span class="tag">current support</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Il faut pratiquer regulierement.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;pratiquer regulierement&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Il faut pratiquer regulierement.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-14')">Reveal English</button>
+    </div>
+    <div id="v-14" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to practice regularly</p>
+      <p><strong>Example meaning:</strong> It is necessary to practice regularly.</p>
+      <p><strong>Tags:</strong> next steps; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>15. reussir le prochain test <span class="tag">current support</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je veux reussir le prochain test.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;reussir le prochain test&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je veux reussir le prochain test.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-15')">Reveal English</button>
+    </div>
+    <div id="v-15" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to succeed on the next test</p>
+      <p><strong>Example meaning:</strong> I want to succeed on the next test.</p>
+      <p><strong>Tags:</strong> goal; appears in reading; appears in writing</p>
+    </div>
+  </article></div></section>
+    <section class="card"><h2>Review Words From Recent Weeks</h2><div class="grid-2"><article class="word-card">
+    <h3>16. deduire <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je peux deduire la reponse.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;deduire&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je peux deduire la reponse.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-16')">Reveal English</button>
+    </div>
+    <div id="v-16" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to infer</p>
+      <p><strong>Example meaning:</strong> I can infer the answer.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>17. un mock CLB <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Madame Dupont organise un mock CLB.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;un mock CLB&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Madame Dupont organise un mock CLB.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-17')">Reveal English</button>
+    </div>
+    <div id="v-17" class="reveal" hidden>
+      <p><strong>Meaning:</strong> mock CLB</p>
+      <p><strong>Example meaning:</strong> Madame Dupont organizes a mock CLB.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>18. on peut deduire que <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> On peut deduire que Alex est inquiet.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;on peut deduire que&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;On peut deduire que Alex est inquiet.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-18')">Reveal English</button>
+    </div>
+    <div id="v-18" class="reveal" hidden>
+      <p><strong>Meaning:</strong> one can infer that</p>
+      <p><strong>Example meaning:</strong> One can infer that Alex is worried.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>19. un test blanc <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je fais un test blanc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;un test blanc&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je fais un test blanc.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-19')">Reveal English</button>
+    </div>
+    <div id="v-19" class="reveal" hidden>
+      <p><strong>Meaning:</strong> practice test</p>
+      <p><strong>Example meaning:</strong> I do a practice test.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>20. un indice <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je trouve un indice dans le texte.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;un indice&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je trouve un indice dans le texte.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-20')">Reveal English</button>
+    </div>
+    <div id="v-20" class="reveal" hidden>
+      <p><strong>Meaning:</strong> clue</p>
+      <p><strong>Example meaning:</strong> I find a clue in the text.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>21. pendant vingt minutes <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je travaille pendant vingt minutes.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;pendant vingt minutes&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je travaille pendant vingt minutes.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-21')">Reveal English</button>
+    </div>
+    <div id="v-21" class="reveal" hidden>
+      <p><strong>Meaning:</strong> for twenty minutes</p>
+      <p><strong>Example meaning:</strong> I work for twenty minutes.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>22. directement <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le texte ne le dit pas directement.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;directement&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Le texte ne le dit pas directement.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-22')">Reveal English</button>
+    </div>
+    <div id="v-22" class="reveal" hidden>
+      <p><strong>Meaning:</strong> directly</p>
+      <p><strong>Example meaning:</strong> The text does not say it directly.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>23. le temps limite <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le temps limite est court.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;le temps limite&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Le temps limite est court.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-23')">Reveal English</button>
+    </div>
+    <div id="v-23" class="reveal" hidden>
+      <p><strong>Meaning:</strong> time limit</p>
+      <p><strong>Example meaning:</strong> The time limit is short.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>24. indirectement <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La reponse est donnee indirectement.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;indirectement&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La reponse est donnee indirectement.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-24')">Reveal English</button>
+    </div>
+    <div id="v-24" class="reveal" hidden>
+      <p><strong>Meaning:</strong> indirectly</p>
+      <p><strong>Example meaning:</strong> The answer is given indirectly.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>25. gerer le temps <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je dois gerer le temps.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;gerer le temps&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je dois gerer le temps.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-25')">Reveal English</button>
+    </div>
+    <div id="v-25" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to manage time</p>
+      <p><strong>Example meaning:</strong> I must manage time.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>26. renvoyer a <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Il renvoie a Alex.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;renvoyer a&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Il renvoie a Alex.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-26')">Reveal English</button>
+    </div>
+    <div id="v-26" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to refer to</p>
+      <p><strong>Example meaning:</strong> It refers to Alex.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>27. faire un plan <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> D abord, je fais un plan.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;faire un plan&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;D abord, je fais un plan.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-27')">Reveal English</button>
+    </div>
+    <div id="v-27" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to make a plan</p>
+      <p><strong>Example meaning:</strong> First, I make a plan.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>28. le pronom <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le pronom est il.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;le pronom&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Le pronom est il.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-28')">Reveal English</button>
+    </div>
+    <div id="v-28" class="reveal" hidden>
+      <p><strong>Meaning:</strong> pronoun</p>
+      <p><strong>Example meaning:</strong> The pronoun is he/it.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>29. relire <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je relis ma reponse.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;relire&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je relis ma reponse.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-29')">Reveal English</button>
+    </div>
+    <div id="v-29" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to reread</p>
+      <p><strong>Example meaning:</strong> I reread my answer.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>30. la reference <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La reference est claire.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;la reference&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La reference est claire.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-30')">Reveal English</button>
+    </div>
+    <div id="v-30" class="reveal" hidden>
+      <p><strong>Meaning:</strong> reference</p>
+      <p><strong>Example meaning:</strong> The reference is clear.</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>31. corriger <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je corrige mes verbes.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;corriger&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je corrige mes verbes.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-31')">Reveal English</button>
+    </div>
+    <div id="v-31" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to correct</p>
+      <p><strong>Example meaning:</strong> I correct my verbs.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>32. qui parle <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Qui parle dans ce passage ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;qui parle&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Qui parle dans ce passage ?&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-32')">Reveal English</button>
+    </div>
+    <div id="v-32" class="reveal" hidden>
+      <p><strong>Meaning:</strong> who is speaking</p>
+      <p><strong>Example meaning:</strong> Who is speaking in this passage?</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>33. verifier les verbes <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je verifie les verbes.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;verifier les verbes&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je verifie les verbes.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-33')">Reveal English</button>
+    </div>
+    <div id="v-33" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to check verbs</p>
+      <p><strong>Example meaning:</strong> I check the verbs.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>34. qui repond <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Qui repond a Samira ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;qui repond&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Qui repond a Samira ?&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-34')">Reveal English</button>
+    </div>
+    <div id="v-34" class="reveal" hidden>
+      <p><strong>Meaning:</strong> who answers</p>
+      <p><strong>Example meaning:</strong> Who answers Samira?</p>
+      <p><strong>Tags:</strong> recent review from Week 28; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>35. verifier les articles <span class="tag">recent review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je verifie les articles.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;verifier les articles&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je verifie les articles.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-35')">Reveal English</button>
+    </div>
+    <div id="v-35" class="reveal" hidden>
+      <p><strong>Meaning:</strong> to check articles</p>
+      <p><strong>Example meaning:</strong> I check the articles.</p>
+      <p><strong>Tags:</strong> recent review from Week 29; appears in reading; appears in writing</p>
+    </div>
+  </article></div></section>
+    <section class="card"><h2>Older Core Words Returning This Week</h2><div class="grid-2"><article class="word-card">
+    <h3>36. bonjour <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> bohn-ZHOOR</p>
+    <p><strong>Example:</strong> Bonjour, je m&#39;appelle Alex.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;bonjour&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Bonjour, je m&#39;appelle Alex.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-36')">Reveal English</button>
+    </div>
+    <div id="v-36" class="reveal" hidden>
+      <p><strong>Meaning:</strong> hello / good day</p>
+      <p><strong>Example meaning:</strong> Hello, my name is Alex.</p>
+      <p><strong>Tags:</strong> older review from Week 1; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>37. numbers 0-10 <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> zay-ROH, uhn, duh...</p>
+    <p><strong>Example:</strong> Samira a six ans. Alex a dix ans.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;numbers 0-10&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Samira a six ans. Alex a dix ans.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-37')">Reveal English</button>
+    </div>
+    <div id="v-37" class="reveal" hidden>
+      <p><strong>Meaning:</strong> zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix</p>
+      <p><strong>Example meaning:</strong> Samira is six years old. Alex is ten years old.</p>
+      <p><strong>Tags:</strong> older review from Week 2; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>38. un <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> J&#39;ai un livre dans mon sac.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;un&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;J&#39;ai un livre dans mon sac.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-38')">Reveal English</button>
+    </div>
+    <div id="v-38" class="reveal" hidden>
+      <p><strong>Meaning:</strong> a / an masculine</p>
+      <p><strong>Example meaning:</strong> I have a book in my bag.</p>
+      <p><strong>Tags:</strong> older review from Week 3; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>39. petit / petite <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> J&#39;ai une petite cle dans mon sac.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;petit / petite&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;J&#39;ai une petite cle dans mon sac.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-39')">Reveal English</button>
+    </div>
+    <div id="v-39" class="reveal" hidden>
+      <p><strong>Meaning:</strong> small</p>
+      <p><strong>Example meaning:</strong> I have a small key in my bag.</p>
+      <p><strong>Tags:</strong> older review from Week 4; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>40. mon <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Mon livre est sur le bureau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;mon&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Mon livre est sur le bureau.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-40')">Reveal English</button>
+    </div>
+    <div id="v-40" class="reveal" hidden>
+      <p><strong>Meaning:</strong> my masculine</p>
+      <p><strong>Example meaning:</strong> My book is on the desk.</p>
+      <p><strong>Tags:</strong> older review from Week 5; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>41. je voudrais <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je voudrais du cafe, s il vous plait.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je voudrais&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je voudrais du cafe, s il vous plait.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-41')">Reveal English</button>
+    </div>
+    <div id="v-41" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I would like</p>
+      <p><strong>Example meaning:</strong> I would like some coffee, please.</p>
+      <p><strong>Tags:</strong> older review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>42. est-ce que <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Est-ce que vous voulez une chemise ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;est-ce que&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Est-ce que vous voulez une chemise ?&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-42')">Reveal English</button>
+    </div>
+    <div id="v-42" class="reveal" hidden>
+      <p><strong>Meaning:</strong> question marker</p>
+      <p><strong>Example meaning:</strong> Do you want a shirt?</p>
+      <p><strong>Tags:</strong> older review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>43. il y a <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Il y a une banque pres du cafe.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;il y a&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Il y a une banque pres du cafe.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-43')">Reveal English</button>
+    </div>
+    <div id="v-43" class="reveal" hidden>
+      <p><strong>Meaning:</strong> there is / there are</p>
+      <p><strong>Example meaning:</strong> There is a bank near the cafe.</p>
+      <p><strong>Tags:</strong> older review from Week 8; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>44. je me leve <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je me leve a sept heures.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je me leve&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je me leve a sept heures.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-44')">Reveal English</button>
+    </div>
+    <div id="v-44" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I get up</p>
+      <p><strong>Example meaning:</strong> I get up at seven o clock.</p>
+      <p><strong>Tags:</strong> older review from Week 9; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>45. il pleut <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Aujourd&#39;hui, il pleut.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;il pleut&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Aujourd&#39;hui, il pleut.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-45')">Reveal English</button>
+    </div>
+    <div id="v-45" class="reveal" hidden>
+      <p><strong>Meaning:</strong> it is raining</p>
+      <p><strong>Example meaning:</strong> Today, it is raining.</p>
+      <p><strong>Tags:</strong> older review from Week 10; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>46. je travaille <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je travaille au bureau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je travaille&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je travaille au bureau.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-46')">Reveal English</button>
+    </div>
+    <div id="v-46" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I work</p>
+      <p><strong>Example meaning:</strong> I work at the office.</p>
+      <p><strong>Tags:</strong> older review from Week 11; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>47. j&#39;ai parle <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Hier, j&#39;ai parle avec Samira.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;j&#39;ai parle&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Hier, j&#39;ai parle avec Samira.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-47')">Reveal English</button>
+    </div>
+    <div id="v-47" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I spoke</p>
+      <p><strong>Example meaning:</strong> Yesterday, I spoke with Samira.</p>
+      <p><strong>Tags:</strong> older review from Week 12; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>48. avant <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Avant, j&#39;habitais pres du parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;avant&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Avant, j&#39;habitais pres du parc.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-48')">Reveal English</button>
+    </div>
+    <div id="v-48" class="reveal" hidden>
+      <p><strong>Meaning:</strong> before / in the past</p>
+      <p><strong>Example meaning:</strong> Before, I lived near the park.</p>
+      <p><strong>Tags:</strong> older review from Week 13; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>49. il faut <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Il faut boire de l&#39;eau.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;il faut&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Il faut boire de l&#39;eau.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-49')">Reveal English</button>
+    </div>
+    <div id="v-49" class="reveal" hidden>
+      <p><strong>Meaning:</strong> it is necessary / one must</p>
+      <p><strong>Example meaning:</strong> It is necessary to drink water.</p>
+      <p><strong>Tags:</strong> older review from Week 14; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>50. je pense que <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je pense que la lecon est utile.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je pense que&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je pense que la lecon est utile.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-50')">Reveal English</button>
+    </div>
+    <div id="v-50" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I think that</p>
+      <p><strong>Example meaning:</strong> I think the lesson is useful.</p>
+      <p><strong>Tags:</strong> older review from Week 15; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>51. je vais <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je vais appeler la clinique.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je vais&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je vais appeler la clinique.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-51')">Reveal English</button>
+    </div>
+    <div id="v-51" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I am going to</p>
+      <p><strong>Example meaning:</strong> I am going to call the clinic.</p>
+      <p><strong>Tags:</strong> older review from Week 16; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>52. je voudrais <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je voudrais prendre rendez-vous.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;je voudrais&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je voudrais prendre rendez-vous.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-52')">Reveal English</button>
+    </div>
+    <div id="v-52" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I would like</p>
+      <p><strong>Example meaning:</strong> I would like to make an appointment.</p>
+      <p><strong>Tags:</strong> older review from Week 17; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>53. le <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Je prends le bus. Je le prends.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;le&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Je prends le bus. Je le prends.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-53')">Reveal English</button>
+    </div>
+    <div id="v-53" class="reveal" hidden>
+      <p><strong>Meaning:</strong> it / him</p>
+      <p><strong>Example meaning:</strong> I take the bus. I take it.</p>
+      <p><strong>Tags:</strong> older review from Week 18; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>54. qui <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La note qui aide Alex est courte.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;qui&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La note qui aide Alex est courte.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-54')">Reveal English</button>
+    </div>
+    <div id="v-54" class="reveal" hidden>
+      <p><strong>Meaning:</strong> who / that</p>
+      <p><strong>Example meaning:</strong> The note that helps Alex is short.</p>
+      <p><strong>Tags:</strong> older review from Week 19; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>55. le francais canadien <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Nous reconnaissons le francais canadien.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;le francais canadien&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Nous reconnaissons le francais canadien.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-55')">Reveal English</button>
+    </div>
+    <div id="v-55" class="reveal" hidden>
+      <p><strong>Meaning:</strong> Canadian French</p>
+      <p><strong>Example meaning:</strong> We recognize Canadian French.</p>
+      <p><strong>Tags:</strong> older review from Week 20; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>56. il faut que <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Il faut que je revise.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;il faut que&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Il faut que je revise.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-56')">Reveal English</button>
+    </div>
+    <div id="v-56" class="reveal" hidden>
+      <p><strong>Meaning:</strong> it is necessary that</p>
+      <p><strong>Example meaning:</strong> It is necessary that I review.</p>
+      <p><strong>Tags:</strong> older review from Week 21; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>57. est ecrit / ecrite <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La note est ecrite par Samira.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;est ecrit / ecrite&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La note est ecrite par Samira.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-57')">Reveal English</button>
+    </div>
+    <div id="v-57" class="reveal" hidden>
+      <p><strong>Meaning:</strong> is written</p>
+      <p><strong>Example meaning:</strong> The note is written by Samira.</p>
+      <p><strong>Tags:</strong> older review from Week 22; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>58. cependant <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex est fatigue; cependant, il continue.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;cependant&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Alex est fatigue; cependant, il continue.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-58')">Reveal English</button>
+    </div>
+    <div id="v-58" class="reveal" hidden>
+      <p><strong>Meaning:</strong> however</p>
+      <p><strong>Example meaning:</strong> Alex is tired; however, he continues.</p>
+      <p><strong>Tags:</strong> older review from Week 23; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>59. formel / formelle <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Ce message est formel.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;formel / formelle&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Ce message est formel.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-59')">Reveal English</button>
+    </div>
+    <div id="v-59" class="reveal" hidden>
+      <p><strong>Meaning:</strong> formal</p>
+      <p><strong>Example meaning:</strong> This message is formal.</p>
+      <p><strong>Tags:</strong> older review from Week 24; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>60. lis la question <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Lis la question avant le texte.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;lis la question&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Lis la question avant le texte.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-60')">Reveal English</button>
+    </div>
+    <div id="v-60" class="reveal" hidden>
+      <p><strong>Meaning:</strong> read the question</p>
+      <p><strong>Example meaning:</strong> Read the question before the text.</p>
+      <p><strong>Tags:</strong> older review from Week 25; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>61. une nouvelle <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La nouvelle est courte.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;une nouvelle&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La nouvelle est courte.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-61')">Reveal English</button>
+    </div>
+    <div id="v-61" class="reveal" hidden>
+      <p><strong>Meaning:</strong> news item</p>
+      <p><strong>Example meaning:</strong> The news item is short.</p>
+      <p><strong>Tags:</strong> older review from Week 26; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>62. un rapport <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le rapport est court.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;un rapport&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Le rapport est court.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-62')">Reveal English</button>
+    </div>
+    <div id="v-62" class="reveal" hidden>
+      <p><strong>Meaning:</strong> report</p>
+      <p><strong>Example meaning:</strong> The report is short.</p>
+      <p><strong>Tags:</strong> older review from Week 27; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>63. salut <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> sah-LUU</p>
+    <p><strong>Example:</strong> Salut, Samira !</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;salut&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Salut, Samira !&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-63')">Reveal English</button>
+    </div>
+    <div id="v-63" class="reveal" hidden>
+      <p><strong>Meaning:</strong> hi / bye</p>
+      <p><strong>Example meaning:</strong> Hi, Samira!</p>
+      <p><strong>Tags:</strong> older review from Week 1; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>64. j&#39;ai <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> zhay</p>
+    <p><strong>Example:</strong> J&#39;ai un livre.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;j&#39;ai&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;J&#39;ai un livre.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-64')">Reveal English</button>
+    </div>
+    <div id="v-64" class="reveal" hidden>
+      <p><strong>Meaning:</strong> I have</p>
+      <p><strong>Example meaning:</strong> I have a book.</p>
+      <p><strong>Tags:</strong> older review from Week 2; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>65. une <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Samira a une lampe sur la table.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;une&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Samira a une lampe sur la table.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-65')">Reveal English</button>
+    </div>
+    <div id="v-65" class="reveal" hidden>
+      <p><strong>Meaning:</strong> a / an feminine</p>
+      <p><strong>Example meaning:</strong> Samira has a lamp on the table.</p>
+      <p><strong>Tags:</strong> older review from Week 3; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>66. grand / grande <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Le bureau est grand.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;grand / grande&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Le bureau est grand.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-66')">Reveal English</button>
+    </div>
+    <div id="v-66" class="reveal" hidden>
+      <p><strong>Meaning:</strong> big / tall</p>
+      <p><strong>Example meaning:</strong> The desk is big.</p>
+      <p><strong>Tags:</strong> older review from Week 4; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>67. ma <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Ma lampe est jaune.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;ma&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Ma lampe est jaune.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-67')">Reveal English</button>
+    </div>
+    <div id="v-67" class="reveal" hidden>
+      <p><strong>Meaning:</strong> my feminine</p>
+      <p><strong>Example meaning:</strong> My lamp is yellow.</p>
+      <p><strong>Tags:</strong> older review from Week 5; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>68. du <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Alex prend du pain.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;du&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Alex prend du pain.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-68')">Reveal English</button>
+    </div>
+    <div id="v-68" class="reveal" hidden>
+      <p><strong>Meaning:</strong> some masculine</p>
+      <p><strong>Example meaning:</strong> Alex takes some bread.</p>
+      <p><strong>Tags:</strong> older review from Week 6; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>69. qu est-ce que <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Qu est-ce que tu prends ?</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;qu est-ce que&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Qu est-ce que tu prends ?&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-69')">Reveal English</button>
+    </div>
+    <div id="v-69" class="reveal" hidden>
+      <p><strong>Meaning:</strong> what</p>
+      <p><strong>Example meaning:</strong> What are you taking?</p>
+      <p><strong>Tags:</strong> older review from Week 7; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>70. a gauche <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> La banque est a gauche.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;a gauche&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;La banque est a gauche.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-70')">Reveal English</button>
+    </div>
+    <div id="v-70" class="reveal" hidden>
+      <p><strong>Meaning:</strong> on the left</p>
+      <p><strong>Example meaning:</strong> The bank is on the left.</p>
+      <p><strong>Tags:</strong> older review from Week 8; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>71. tu te leves <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Tu te leves tot le lundi.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;tu te leves&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Tu te leves tot le lundi.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-71')">Reveal English</button>
+    </div>
+    <div id="v-71" class="reveal" hidden>
+      <p><strong>Meaning:</strong> you get up</p>
+      <p><strong>Example meaning:</strong> You get up early on Monday.</p>
+      <p><strong>Tags:</strong> older review from Week 9; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>72. il neige <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> En hiver, il neige parfois.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;il neige&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;En hiver, il neige parfois.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-72')">Reveal English</button>
+    </div>
+    <div id="v-72" class="reveal" hidden>
+      <p><strong>Meaning:</strong> it is snowing</p>
+      <p><strong>Example meaning:</strong> In winter, it sometimes snows.</p>
+      <p><strong>Tags:</strong> older review from Week 10; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>73. tu travailles <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Tu travailles avec Marc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;tu travailles&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Tu travailles avec Marc.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-73')">Reveal English</button>
+    </div>
+    <div id="v-73" class="reveal" hidden>
+      <p><strong>Meaning:</strong> you work</p>
+      <p><strong>Example meaning:</strong> You work with Marc.</p>
+      <p><strong>Tags:</strong> older review from Week 11; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>74. tu as parle <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Tu as parle avec Madame Dupont.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;tu as parle&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Tu as parle avec Madame Dupont.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-74')">Reveal English</button>
+    </div>
+    <div id="v-74" class="reveal" hidden>
+      <p><strong>Meaning:</strong> you spoke</p>
+      <p><strong>Example meaning:</strong> You spoke with Madame Dupont.</p>
+      <p><strong>Tags:</strong> older review from Week 12; appears in reading; appears in writing</p>
+    </div>
+  </article><article class="word-card">
+    <h3>75. quand <span class="tag">older review</span></h3>
+    <p><strong>Pronunciation:</strong> listen and repeat</p>
+    <p><strong>Example:</strong> Quand j&#39;etais enfant, je jouais au parc.</p>
+    <div class="button-row">
+      <button type="button" class="secondary" onclick="speakText(&quot;quand&quot;)">Play word</button>
+      <button type="button" onclick="speakText(&quot;Quand j&#39;etais enfant, je jouais au parc.&quot;)">Play sentence</button>
+      <button type="button" class="secondary" onclick="toggleOne('v-75')">Reveal English</button>
+    </div>
+    <div id="v-75" class="reveal" hidden>
+      <p><strong>Meaning:</strong> when</p>
+      <p><strong>Example meaning:</strong> When I was a child, I used to play at the park.</p>
+      <p><strong>Tags:</strong> older review from Week 13; appears in reading; appears in writing</p>
+    </div>
+  </article></div></section>
+    <section class="card"><h2>Built With Words You Already Know</h2><p>Pour la revision finale, Alex ouvre le site depuis la premiere semaine. Il reconnait les salutations, les questions, les routines, les temps du passe, les opinions, les demandes polies, les pronoms et les connecteurs. Madame Dupont donne un dernier texte qui combine un avis formel, une expression canadienne, une phrase passive et une question CLB.</p><button type="button" onclick="speakText(&quot;Pour la revision finale, Alex ouvre le site depuis la premiere semaine. Il reconnait les salutations, les questions, les routines, les temps du passe, les opinions, les demandes polies, les pronoms et les connecteurs. Madame Dupont donne un dernier texte qui combine un avis formel, une expression canadienne, une phrase passive et une question CLB.&quot;)">Play review sentence chain</button></section>
+    <section class="card"><h2>Mini Practice</h2><ol class="tight"><li>Reveal five new cards, then hide them and say the English meaning.</li><li>Use three review cards in one new sentence about Alex or Samira.</li><li>Run the random drill twice in each direction.</li></ol></section>
+    <div class="footer-nav"><a class="button secondary" href="index.html">Week home</a><a class="button" href="grammar.html">Next: Grammar</a></div>
+    <script>
+      const vocab = [{"french":"revision finale","english":"final review","topic":"final review","example":"La revision finale commence aujourd hui.","exampleEnglish":"The final review begins today.","phonetic":"listen and repeat","article":"","status":"new","n":1,"week":30},{"french":"je peux continuer","english":"I can continue","topic":"confidence","example":"Je peux continuer apres la semaine trente.","exampleEnglish":"I can continue after week thirty.","phonetic":"listen and repeat","article":"","status":"new","n":2,"week":30},{"french":"j ai progresse","english":"I have progressed","topic":"confidence","example":"J ai progresse avec la lecture.","exampleEnglish":"I have progressed with reading.","phonetic":"listen and repeat","article":"","status":"new","n":3,"week":30},{"french":"je comprends mieux","english":"I understand better","topic":"confidence","example":"Je comprends mieux les textes.","exampleEnglish":"I understand texts better.","phonetic":"listen and repeat","article":"","status":"new","n":4,"week":30},{"french":"je peux resumer","english":"I can summarize","topic":"confidence","example":"Je peux resumer un avis.","exampleEnglish":"I can summarize a notice.","phonetic":"listen and repeat","article":"","status":"new","n":5,"week":30},{"french":"je peux repondre","english":"I can answer","topic":"confidence","example":"Je peux repondre avec preuve.","exampleEnglish":"I can answer with evidence.","phonetic":"listen and repeat","article":"","status":"new","n":6,"week":30},{"french":"mon prochain objectif","english":"my next goal","topic":"next steps","example":"Mon prochain objectif est la pratique.","exampleEnglish":"My next goal is practice.","phonetic":"listen and repeat","article":"","status":"new","n":7,"week":30},{"french":"continuer a pratiquer","english":"to continue practicing","topic":"next steps","example":"Je vais continuer a pratiquer.","exampleEnglish":"I am going to continue practicing.","phonetic":"listen and repeat","article":"","status":"new","n":8,"week":30},{"french":"chaque semaine","english":"each week","topic":"next steps","example":"Je vais reviser chaque semaine.","exampleEnglish":"I am going to review each week.","phonetic":"listen and repeat","article":"","status":"new","n":9,"week":30},{"french":"un plan de revision","english":"review plan","topic":"next steps","example":"Mon plan de revision est simple.","exampleEnglish":"My review plan is simple.","phonetic":"listen and repeat","article":"","status":"new","n":10,"week":30},{"french":"mes points forts","english":"my strengths","topic":"reflection","example":"Mes points forts sont la lecture.","exampleEnglish":"My strengths are reading.","phonetic":"listen and repeat","article":"","status":"current support","n":11,"week":30},{"french":"mes points faibles","english":"my weak points","topic":"reflection","example":"Mes points faibles sont les verbes.","exampleEnglish":"My weak points are verbs.","phonetic":"listen and repeat","article":"","status":"current support","n":12,"week":30},{"french":"ameliorer","english":"to improve","topic":"reflection","example":"Je veux ameliorer mon ecriture.","exampleEnglish":"I want to improve my writing.","phonetic":"listen and repeat","article":"","status":"current support","n":13,"week":30},{"french":"pratiquer regulierement","english":"to practice regularly","topic":"next steps","example":"Il faut pratiquer regulierement.","exampleEnglish":"It is necessary to practice regularly.","phonetic":"listen and repeat","article":"","status":"current support","n":14,"week":30},{"french":"reussir le prochain test","english":"to succeed on the next test","topic":"goal","example":"Je veux reussir le prochain test.","exampleEnglish":"I want to succeed on the next test.","phonetic":"listen and repeat","article":"","status":"current support","n":15,"week":30},{"french":"deduire","english":"to infer","topic":"recent review from Week 28","example":"Je peux deduire la reponse.","exampleEnglish":"I can infer the answer.","phonetic":"listen and repeat","article":"","status":"recent review","n":16,"week":30},{"french":"un mock CLB","english":"mock CLB","topic":"recent review from Week 29","example":"Madame Dupont organise un mock CLB.","exampleEnglish":"Madame Dupont organizes a mock CLB.","phonetic":"listen and repeat","article":"","status":"recent review","n":17,"week":30},{"french":"on peut deduire que","english":"one can infer that","topic":"recent review from Week 28","example":"On peut deduire que Alex est inquiet.","exampleEnglish":"One can infer that Alex is worried.","phonetic":"listen and repeat","article":"","status":"recent review","n":18,"week":30},{"french":"un test blanc","english":"practice test","topic":"recent review from Week 29","example":"Je fais un test blanc.","exampleEnglish":"I do a practice test.","phonetic":"listen and repeat","article":"","status":"recent review","n":19,"week":30},{"french":"un indice","english":"clue","topic":"recent review from Week 28","example":"Je trouve un indice dans le texte.","exampleEnglish":"I find a clue in the text.","phonetic":"listen and repeat","article":"","status":"recent review","n":20,"week":30},{"french":"pendant vingt minutes","english":"for twenty minutes","topic":"recent review from Week 29","example":"Je travaille pendant vingt minutes.","exampleEnglish":"I work for twenty minutes.","phonetic":"listen and repeat","article":"","status":"recent review","n":21,"week":30},{"french":"directement","english":"directly","topic":"recent review from Week 28","example":"Le texte ne le dit pas directement.","exampleEnglish":"The text does not say it directly.","phonetic":"listen and repeat","article":"","status":"recent review","n":22,"week":30},{"french":"le temps limite","english":"time limit","topic":"recent review from Week 29","example":"Le temps limite est court.","exampleEnglish":"The time limit is short.","phonetic":"listen and repeat","article":"","status":"recent review","n":23,"week":30},{"french":"indirectement","english":"indirectly","topic":"recent review from Week 28","example":"La reponse est donnee indirectement.","exampleEnglish":"The answer is given indirectly.","phonetic":"listen and repeat","article":"","status":"recent review","n":24,"week":30},{"french":"gerer le temps","english":"to manage time","topic":"recent review from Week 29","example":"Je dois gerer le temps.","exampleEnglish":"I must manage time.","phonetic":"listen and repeat","article":"","status":"recent review","n":25,"week":30},{"french":"renvoyer a","english":"to refer to","topic":"recent review from Week 28","example":"Il renvoie a Alex.","exampleEnglish":"It refers to Alex.","phonetic":"listen and repeat","article":"","status":"recent review","n":26,"week":30},{"french":"faire un plan","english":"to make a plan","topic":"recent review from Week 29","example":"D abord, je fais un plan.","exampleEnglish":"First, I make a plan.","phonetic":"listen and repeat","article":"","status":"recent review","n":27,"week":30},{"french":"le pronom","english":"pronoun","topic":"recent review from Week 28","example":"Le pronom est il.","exampleEnglish":"The pronoun is he/it.","phonetic":"listen and repeat","article":"","status":"recent review","n":28,"week":30},{"french":"relire","english":"to reread","topic":"recent review from Week 29","example":"Je relis ma reponse.","exampleEnglish":"I reread my answer.","phonetic":"listen and repeat","article":"","status":"recent review","n":29,"week":30},{"french":"la reference","english":"reference","topic":"recent review from Week 28","example":"La reference est claire.","exampleEnglish":"The reference is clear.","phonetic":"listen and repeat","article":"","status":"recent review","n":30,"week":30},{"french":"corriger","english":"to correct","topic":"recent review from Week 29","example":"Je corrige mes verbes.","exampleEnglish":"I correct my verbs.","phonetic":"listen and repeat","article":"","status":"recent review","n":31,"week":30},{"french":"qui parle","english":"who is speaking","topic":"recent review from Week 28","example":"Qui parle dans ce passage ?","exampleEnglish":"Who is speaking in this passage?","phonetic":"listen and repeat","article":"","status":"recent review","n":32,"week":30},{"french":"verifier les verbes","english":"to check verbs","topic":"recent review from Week 29","example":"Je verifie les verbes.","exampleEnglish":"I check the verbs.","phonetic":"listen and repeat","article":"","status":"recent review","n":33,"week":30},{"french":"qui repond","english":"who answers","topic":"recent review from Week 28","example":"Qui repond a Samira ?","exampleEnglish":"Who answers Samira?","phonetic":"listen and repeat","article":"","status":"recent review","n":34,"week":30},{"french":"verifier les articles","english":"to check articles","topic":"recent review from Week 29","example":"Je verifie les articles.","exampleEnglish":"I check the articles.","phonetic":"listen and repeat","article":"","status":"recent review","n":35,"week":30},{"french":"bonjour","english":"hello / good day","topic":"older review from Week 1","example":"Bonjour, je m'appelle Alex.","exampleEnglish":"Hello, my name is Alex.","phonetic":"bohn-ZHOOR","article":"","status":"older review","n":36,"week":30},{"french":"numbers 0-10","english":"zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix","topic":"older review from Week 2","example":"Samira a six ans. Alex a dix ans.","exampleEnglish":"Samira is six years old. Alex is ten years old.","phonetic":"zay-ROH, uhn, duh...","article":"","status":"older review","n":37,"week":30},{"french":"un","english":"a / an masculine","topic":"older review from Week 3","example":"J'ai un livre dans mon sac.","exampleEnglish":"I have a book in my bag.","phonetic":"listen and repeat","article":"","status":"older review","n":38,"week":30},{"french":"petit / petite","english":"small","topic":"older review from Week 4","example":"J'ai une petite cle dans mon sac.","exampleEnglish":"I have a small key in my bag.","phonetic":"listen and repeat","article":"","status":"older review","n":39,"week":30},{"french":"mon","english":"my masculine","topic":"older review from Week 5","example":"Mon livre est sur le bureau.","exampleEnglish":"My book is on the desk.","phonetic":"listen and repeat","article":"","status":"older review","n":40,"week":30},{"french":"je voudrais","english":"I would like","topic":"older review from Week 6","example":"Je voudrais du cafe, s il vous plait.","exampleEnglish":"I would like some coffee, please.","phonetic":"listen and repeat","article":"","status":"older review","n":41,"week":30},{"french":"est-ce que","english":"question marker","topic":"older review from Week 7","example":"Est-ce que vous voulez une chemise ?","exampleEnglish":"Do you want a shirt?","phonetic":"listen and repeat","article":"","status":"older review","n":42,"week":30},{"french":"il y a","english":"there is / there are","topic":"older review from Week 8","example":"Il y a une banque pres du cafe.","exampleEnglish":"There is a bank near the cafe.","phonetic":"listen and repeat","article":"","status":"older review","n":43,"week":30},{"french":"je me leve","english":"I get up","topic":"older review from Week 9","example":"Je me leve a sept heures.","exampleEnglish":"I get up at seven o clock.","phonetic":"listen and repeat","article":"","status":"older review","n":44,"week":30},{"french":"il pleut","english":"it is raining","topic":"older review from Week 10","example":"Aujourd'hui, il pleut.","exampleEnglish":"Today, it is raining.","phonetic":"listen and repeat","article":"","status":"older review","n":45,"week":30},{"french":"je travaille","english":"I work","topic":"older review from Week 11","example":"Je travaille au bureau.","exampleEnglish":"I work at the office.","phonetic":"listen and repeat","article":"","status":"older review","n":46,"week":30},{"french":"j'ai parle","english":"I spoke","topic":"older review from Week 12","example":"Hier, j'ai parle avec Samira.","exampleEnglish":"Yesterday, I spoke with Samira.","phonetic":"listen and repeat","article":"","status":"older review","n":47,"week":30},{"french":"avant","english":"before / in the past","topic":"older review from Week 13","example":"Avant, j'habitais pres du parc.","exampleEnglish":"Before, I lived near the park.","phonetic":"listen and repeat","article":"","status":"older review","n":48,"week":30},{"french":"il faut","english":"it is necessary / one must","topic":"older review from Week 14","example":"Il faut boire de l'eau.","exampleEnglish":"It is necessary to drink water.","phonetic":"listen and repeat","article":"","status":"older review","n":49,"week":30},{"french":"je pense que","english":"I think that","topic":"older review from Week 15","example":"Je pense que la lecon est utile.","exampleEnglish":"I think the lesson is useful.","phonetic":"listen and repeat","article":"","status":"older review","n":50,"week":30},{"french":"je vais","english":"I am going to","topic":"older review from Week 16","example":"Je vais appeler la clinique.","exampleEnglish":"I am going to call the clinic.","phonetic":"listen and repeat","article":"","status":"older review","n":51,"week":30},{"french":"je voudrais","english":"I would like","topic":"older review from Week 17","example":"Je voudrais prendre rendez-vous.","exampleEnglish":"I would like to make an appointment.","phonetic":"listen and repeat","article":"","status":"older review","n":52,"week":30},{"french":"le","english":"it / him","topic":"older review from Week 18","example":"Je prends le bus. Je le prends.","exampleEnglish":"I take the bus. I take it.","phonetic":"listen and repeat","article":"","status":"older review","n":53,"week":30},{"french":"qui","english":"who / that","topic":"older review from Week 19","example":"La note qui aide Alex est courte.","exampleEnglish":"The note that helps Alex is short.","phonetic":"listen and repeat","article":"","status":"older review","n":54,"week":30},{"french":"le francais canadien","english":"Canadian French","topic":"older review from Week 20","example":"Nous reconnaissons le francais canadien.","exampleEnglish":"We recognize Canadian French.","phonetic":"listen and repeat","article":"","status":"older review","n":55,"week":30},{"french":"il faut que","english":"it is necessary that","topic":"older review from Week 21","example":"Il faut que je revise.","exampleEnglish":"It is necessary that I review.","phonetic":"listen and repeat","article":"","status":"older review","n":56,"week":30},{"french":"est ecrit / ecrite","english":"is written","topic":"older review from Week 22","example":"La note est ecrite par Samira.","exampleEnglish":"The note is written by Samira.","phonetic":"listen and repeat","article":"","status":"older review","n":57,"week":30},{"french":"cependant","english":"however","topic":"older review from Week 23","example":"Alex est fatigue; cependant, il continue.","exampleEnglish":"Alex is tired; however, he continues.","phonetic":"listen and repeat","article":"","status":"older review","n":58,"week":30},{"french":"formel / formelle","english":"formal","topic":"older review from Week 24","example":"Ce message est formel.","exampleEnglish":"This message is formal.","phonetic":"listen and repeat","article":"","status":"older review","n":59,"week":30},{"french":"lis la question","english":"read the question","topic":"older review from Week 25","example":"Lis la question avant le texte.","exampleEnglish":"Read the question before the text.","phonetic":"listen and repeat","article":"","status":"older review","n":60,"week":30},{"french":"une nouvelle","english":"news item","topic":"older review from Week 26","example":"La nouvelle est courte.","exampleEnglish":"The news item is short.","phonetic":"listen and repeat","article":"","status":"older review","n":61,"week":30},{"french":"un rapport","english":"report","topic":"older review from Week 27","example":"Le rapport est court.","exampleEnglish":"The report is short.","phonetic":"listen and repeat","article":"","status":"older review","n":62,"week":30},{"french":"salut","english":"hi / bye","topic":"older review from Week 1","example":"Salut, Samira !","exampleEnglish":"Hi, Samira!","phonetic":"sah-LUU","article":"","status":"older review","n":63,"week":30},{"french":"j'ai","english":"I have","topic":"older review from Week 2","example":"J'ai un livre.","exampleEnglish":"I have a book.","phonetic":"zhay","article":"","status":"older review","n":64,"week":30},{"french":"une","english":"a / an feminine","topic":"older review from Week 3","example":"Samira a une lampe sur la table.","exampleEnglish":"Samira has a lamp on the table.","phonetic":"listen and repeat","article":"","status":"older review","n":65,"week":30},{"french":"grand / grande","english":"big / tall","topic":"older review from Week 4","example":"Le bureau est grand.","exampleEnglish":"The desk is big.","phonetic":"listen and repeat","article":"","status":"older review","n":66,"week":30},{"french":"ma","english":"my feminine","topic":"older review from Week 5","example":"Ma lampe est jaune.","exampleEnglish":"My lamp is yellow.","phonetic":"listen and repeat","article":"","status":"older review","n":67,"week":30},{"french":"du","english":"some masculine","topic":"older review from Week 6","example":"Alex prend du pain.","exampleEnglish":"Alex takes some bread.","phonetic":"listen and repeat","article":"","status":"older review","n":68,"week":30},{"french":"qu est-ce que","english":"what","topic":"older review from Week 7","example":"Qu est-ce que tu prends ?","exampleEnglish":"What are you taking?","phonetic":"listen and repeat","article":"","status":"older review","n":69,"week":30},{"french":"a gauche","english":"on the left","topic":"older review from Week 8","example":"La banque est a gauche.","exampleEnglish":"The bank is on the left.","phonetic":"listen and repeat","article":"","status":"older review","n":70,"week":30},{"french":"tu te leves","english":"you get up","topic":"older review from Week 9","example":"Tu te leves tot le lundi.","exampleEnglish":"You get up early on Monday.","phonetic":"listen and repeat","article":"","status":"older review","n":71,"week":30},{"french":"il neige","english":"it is snowing","topic":"older review from Week 10","example":"En hiver, il neige parfois.","exampleEnglish":"In winter, it sometimes snows.","phonetic":"listen and repeat","article":"","status":"older review","n":72,"week":30},{"french":"tu travailles","english":"you work","topic":"older review from Week 11","example":"Tu travailles avec Marc.","exampleEnglish":"You work with Marc.","phonetic":"listen and repeat","article":"","status":"older review","n":73,"week":30},{"french":"tu as parle","english":"you spoke","topic":"older review from Week 12","example":"Tu as parle avec Madame Dupont.","exampleEnglish":"You spoke with Madame Dupont.","phonetic":"listen and repeat","article":"","status":"older review","n":74,"week":30},{"french":"quand","english":"when","topic":"older review from Week 13","example":"Quand j'etais enfant, je jouais au parc.","exampleEnglish":"When I was a child, I used to play at the park.","phonetic":"listen and repeat","article":"","status":"older review","n":75,"week":30}];
+      function label(i){return (i.article ? i.article + ' ' : '') + i.french}
+      function generateRandomDrill(direction){const i=vocab[Math.floor(Math.random()*vocab.length)];const p=document.getElementById('drillPrompt');const a=document.getElementById('drillAnswer');a.hidden=true;if(direction==='fr-en'){p.textContent=label(i);a.innerHTML='<p><strong>English:</strong> '+i.english+'</p><p><strong>Example:</strong> '+i.example+'</p><p><strong>Example meaning:</strong> '+i.exampleEnglish+'</p>'}else{p.textContent=i.english;a.innerHTML='<p><strong>French:</strong> '+label(i)+'</p><p><strong>Example:</strong> '+i.example+'</p><p><strong>Example meaning:</strong> '+i.exampleEnglish+'</p>'}}
+      function revealRandomDrill(){document.getElementById('drillAnswer').hidden=false}
+      function toggleOne(id){const e=document.getElementById(id);e.hidden=!e.hidden}
+      function toggleAll(show){document.querySelectorAll('.reveal').forEach(e=>e.hidden=!show)}
+    </script>
+  </main>
+  <script src="audio.js"></script>
+
+</body>
+</html>

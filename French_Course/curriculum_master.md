@@ -1,5 +1,19 @@
 # Curriculum Master Plan — 30 Weeks
 
+## CLB 7 Readiness Outcome
+By the end of Week 30, the course should prepare the learner to handle CLB 7-style reading, listening, and writing tasks with familiar routines:
+- identify main idea, purpose, tone/register, key details, inference, and textual evidence
+- follow short notices, emails, reports, news-style updates, service messages, and instructions
+- write controlled summaries, formal messages, opinion/evidence paragraphs, practical requests, and next-step responses
+- use timed mock routines: preview task, locate evidence, answer clearly, check grammar, and revise
+
+This course gives the learning path and practice base. Exam readiness still depends on timed repetition, feedback on writing, and external speaking practice.
+
+## Scale Rule
+- Each week has 75 practice cards, but not 75 new words.
+- Active new load is controlled: about 18-24 cards in the foundation, 14-16 cards in the middle, and about 10 cards during CLB strategy/mock weeks.
+- The rest of each week is current support, recent review, and older cumulative review.
+
 ## Phase 1 — Foundations
 ### Week 1
 - Main grammar: subject pronouns + être basics
